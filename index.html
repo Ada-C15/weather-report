@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Weather Report</title>
+        <link href="styles/index.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <header class="header">
+            <h1>Weather Report</h1>
+            <h3>
+                For the city of </h3>
+                <span id="header-city-name" class="header-name">
+                    ::before
+                    Seattle
+                    ::after
+                </span>
+            <!-- </h3> -->
+        </header>
+
+        <section class="sky-section">
+            <div id="garden-inside">
+                <p id="sky">☁️☁️☁️🌞☁️☁️☁️</p>
+            </div>
+        </section>
+
+        <section class="temperature-box">
+            <h2>Temperature</h2>
+            <div class="arrow-temp">
+                <div class="arrow-border">
+                    <span><i id="up" class="arrow"></i></span>
+                    <span><i id="down" class="arrow"></i></span>
+                </div>
+                <span id="temp-degree">70</span>
+            </div>
+        </section>
+
+        <section class="sky-box">
+            <h2>Sky</h2>
+            <select id="sky-options">
+                <option>🌈Sunny☀️</option>
+                <option>⛅️Cloudy☁️</option>
+                <option>⛈Rainy☔️</option>
+                <option>❄️Snowy☃️</option>
+            </select>
+        </section>
+
+        <section class="city-box">
+            <h2>City Name</h2>
+            <input id="city-input" type="text" value="Seattle">
+            <button id="enter-button" class="city-enter">Enter</button>
+        </section>
+
+        <section class="garden-box">
+            <div id="garden-inside">
+                <p id="ground">🌸🌿🌼 🐜🐜 🌷🌻🌿 🐜 ☘️🌱 🐜 🌻🌷</p>
+            </div>
+        </section>
+
+        <!-- <section class="garden-box">
+            <h2>Weather Garden</h2>
+            <div id="garden-inside">
+                <p id="sky">☁️☁️☁️🌞☁️☁️☁️</p>
+                <p id="ground">🌸🌿🌼 🐜🐜 🌷🌻🌿 🐜 ☘️🌱 🐜 🌻🌷</p>
+            </div>
+        </section> -->
+
+
+
+            <!-- <section>
+                <h2 id="facts__heading">Plants are Amazing!</h2>
+                <ol id="facts__list">
+                    <li id="facts__fact--important">They purify the air!</li>
+                    <li>Decrease your stress levels</li>
+                    <li>They boost productivity</li>
+                    <li>Plants reduce noise pollution</li>
+                    <li>Most common houseplants came from the tropics</li>
+                </ol>
+            </section>
+            <section>
+                <button id="addPlantButton">Add Plant</button>
+            </section>
+        
+            <section id="plantContainer">
+                <h2 id="plantCount">Plant Count: 0</h2>
+            </section>
+            <div class="container">
+                <span id='1' onclick="color(this)" class='color clr1'></span>
+                <span id='2' onclick="color(this)" class='color clr2'></span>
+            </div> -->
+        <script src="scripts/index.js"></script>
+    </body>
+</html>
