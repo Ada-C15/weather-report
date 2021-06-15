@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <title>Weather</title>
+        <link rel="stylesheet" href=".styles/index.css"/>
+    </head>
+    <body>
+        <header>
+            <section class = "city-header">
+                <h1><em>your </em>Weather Report</h1>
+                <h2>for the city of:</h2>
+                <h2 id="city-change"><em>your city</em></h2>
+            </section>
+        </header>
+        <section class = "weather-forms">
+            <h3>City</h3>
+            <!---a input form and a reset buttona drop--->
+                <input type="text">
+                <button>Set Weather</button>
+            <h3>Sky</h3>
+            <!--- a drop down menu with sunny, cloudy, snowy, rainy-->
+                <select>
+                    <option>Sunny</option>
+                    <option>Cloudy</option>
+                    <option>Rainy</option>
+                    <option>Snowy</option>
+                </select>
+            <h3>Temperature</h3>
+            <!--clickable option to increase or decrease temp hot cold--->
+                <button id = "increase-temp">hot</button>
+                <p>70</p>
+                <button id= "decrease-temp">cold</button>
+        </section>
+        <section class="weather-garden">
+            <h2><em>your</em> Weather Garden</h2>
+            <figure>
+                <p>set some weather</p>
+                <p>set some soil</p>
+            </figure>
+        </section>
+        <footer>&copy; 2021 Andrea Palacios</footer>
+    </body>
+</html>
