@@ -22,12 +22,14 @@ const subtractTemp = (event) => {
     temperatureCountContainer.textContent = `Temperature ${state.currentTemp}℉`;
 };
 const changeLandscape = (event) => {
+    // skyImageContainer.removeChild(x);
     let option = document.querySelector('#sky');
     let optionValue = option.value;
     var x = document.createElement("IMG");
     x.setAttribute("src", skyImages[optionValue][0]);
     x.setAttribute("alt", skyImages[optionValue][1]);
-    skyImageContainer.appendChild(x);
+    skyImageContainer.replaceChild(x, skyImageContainer.childNodes[0]);
+    // skyImageContainer.appendChild(x);
 };
 
 const registerEventHandlers = (event) => {
