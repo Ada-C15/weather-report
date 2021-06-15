@@ -33,12 +33,12 @@ body {
   color: rgb(46, 39, 39);
 
 }
-/*hr {
+*/hr {
   width: 90%;
   margin: auto;
   border: 1px solid;
 }
-*/
+
 main {
   width: 100%;
   max-width: 700px;
@@ -120,6 +120,8 @@ main {
 
 .temperature{
   color: white;
+  display: flex;
+  flex-grow: 1;
 }
 
 .temperature-bar-number{
@@ -140,3 +142,7 @@ main {
   color: rgba(90, 65, 42, 0.856);
 }
 
+.gardenContainer{
+ 
+  
+}

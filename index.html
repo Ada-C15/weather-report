@@ -40,25 +40,25 @@
               <i class="fas fa-cloud"></i>
           </button>
 
-          <button id="getSunny" class="button" title="Sunny Conditions" aria-label="Get the sunny weather conditions for your home location">
+          <button id="getSunny" onclick="addSun()" class="button" title="Sunny Conditions" aria-label="Get the sunny weather conditions for your home location">
               <i class="fas fa-sun"></i> 
           </button>
 
-          <button id="getSnowy" class="button" title="Snowy Conditions" aria-label="Get the snowy weather conditions for your home location">
+          <button id="getSnowy" onclick="addSnow()" class="button" title="Snowy Conditions" aria-label="Get the snowy weather conditions for your home location">
               <i class="fas fa-snowflake"></i>
           </button>
 
-          <button id="getNight" class="button" title="get night" aria-label="night time">
+          <button id="getNight"  onclick="addNight()" class="button" title="get night" aria-label="night time">
               <i class="fas fa-moon"></i>
           </button>
 
-          <button id="refresh" class="button" title="refresh weather" aria-label="Refresh the current weather conditions">
+          <button id="refresh" onclick="addRefresh()" class="button" title="refresh weather" aria-label="Refresh the current weather conditions">
               <i class="fas fa-sync-alt"></i>
           </button>
         </section>
       <hr>
 
-      <section id="Temperature" class="Temperature" role="Temperature" aria-labelledby="dailyTemperature">
+      <section id="temperature" class="temperature" role="temperature" aria-labelledby="dailyTemperature">
         <h2 id="dailyTemperature" class="dailyTemperature">Temperature Counter</h2>
 
         <button id="highTemp" class="button" title="Increase Temperature" aria-label="Increase Temperature">
@@ -67,7 +67,7 @@
 
         <input id="temperature-bar-number" class="temperature-bar-number" type="number" role="adjusttemperature" size="20" autocomplete="off" placeholder="Adjust the temperature">
 
-        <button id="lowTemp" class="button" title="Decrease Temperature" aria-label="Decrease Temperature">
+        <button id="lowTemp"  class="button" title="Decrease Temperature" aria-label="Decrease Temperature">
               <i class="fas fa-temperature-low"></i>
         </button>
       </section>

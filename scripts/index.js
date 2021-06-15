@@ -2,7 +2,7 @@ const getPrecipitation = document.querySelector("#getPrecipitation");
 const addRain = () => {
   const gardenContainer = document.querySelector("#gardenContainer");
   const rainSpan = document.createElement("span");
-  rainSpan.innerText = "\n☔️️️ ️️🐸 💧 🐸 ☔️";
+  rainSpan.innerText = "☔️️️ ️️🐸 💧 🐸 ☔️";
   gardenContainer.appendChild(rainSpan);
 };
 console.log("precipitation:" + getPrecipitation);
@@ -13,7 +13,7 @@ const getCloudy = document.querySelector("#getCloudy");
 const addClouds = () => {
   const gardenContainer = document.querySelector("#gardenContainer");
   const cloudSpan = document.createElement("span");
-  cloudSpan.innerText = "\n☁️ 🪴 ☁️";
+  cloudSpan.innerText = "☁️ 🪴 ☁️";
   gardenContainer.appendChild(cloudSpan);
 };
 // getCloudy.addEventListener("click", addClouds);
@@ -26,7 +26,7 @@ const addSun = () => {
   sunSpan.innerText = "🌞 🌻 🌻 🌞";
   gardenContainer.appendChild(sunSpan);
 };
-getSunny.addEventListener("click", addSun);
+//getSunny.addEventListener("click", addSun);
 
 //---------------------------------------------------------------------
 
@@ -37,7 +37,7 @@ const addSnow = () => {
   snowSpan.innerText = "☃️ ❄️ 🎄 ❄️ ☃️";
   gardenContainer.appendChild(snowSpan);
 };
-getSnowy.addEventListener("click", addSnow);
+//getSnowy.addEventListener("click", addSnow);
 
 //---------------------------------------------------------------------
 const input = document.querySelector("#temperature-bar-number");
