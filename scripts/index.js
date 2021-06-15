@@ -116,7 +116,7 @@ const HotDay = (event) => {
 const selectElement = document.querySelector('#skies');
 
 selectElement.addEventListener('change', (event) => {
-  const result = document.querySelector('.result');
+  const result = document.querySelector('#result');
 
   if (event.target.value == "snowy") {
       result.textContent = "🌨❄️☃️🌨❄️☃️";
@@ -125,13 +125,35 @@ selectElement.addEventListener('change', (event) => {
   } else if (event.target.value == "cloudy") {
       result.textContent = "☁️ 🌫☁️ 🌫";
   } else if (event.target.value == "sunny") {
-      result.textContent = "☀️ 🔥🌤 ☀️ 🔥🌤 ";
+      result.textContent = "☀️ 🔥🌤 ☀️🔥🌤 ";
   };
 
 
 //   result.textContent = `You like ${event.target.value}`;
 
 });
+
+// OBTAIN CITY NAME
+
+const input = document.querySelector('input');
+const cityName = document.querySelector('#city');
+
+input.addEventListener('input', (event) => {
+    cityName.textContent = event.target.value;
+})
+
+// input.addEventListener('input', updateValue);
+// function updateValue(e) {
+//   log.textContent = e.target.value;
+// }
+
+// RESET CITY NAME
+
+const resetCity = (event) => {
+    const cityName = document.querySelector("#city");
+    cityName.textContent = "Ada";
+  };
+
 
 // REGISTER HANDLERS
   
@@ -142,6 +164,9 @@ const registerEventHandlers= (event) => {
 
     const decreaseButton = document.querySelector("#decreaseTempButton");
     decreaseButton.addEventListener("click", decreaseTemp);
+
+    const resetButton = document.querySelector("#resetButton");
+    resetButton.addEventListener("click", resetCity);
 
   };
 
