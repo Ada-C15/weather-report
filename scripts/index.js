@@ -22,20 +22,20 @@ const decreaseTemperature = () => {
 
 // changes the font color of the temperature based on how hot or cold it is
 const changeTempColor = currentTemp => {
-    // const tempValue = document.getElementById("temp-integer");
-    let color = "";
+    const tempContent = document.getElementById("temp-content");
+    let color = "yellow";
     if (currentTemp > 80) {
-        color = "red"
+        color = "red";
     } else if (currentTemp >= 70) {
-        color = "orange"
+        color = "orange";
     } else if (currentTemp >= 60) {
-        color = "yellow"
+        color = "yellow";
     } else if (currentTemp >= 50) {
-        color = "green"
+        color = "green";
     } else if (currentTemp < 50) {
-        color = "teal"
+        color = "teal";
     }
-    currentTemp.classList = color;
+    tempContent.classList = color;
 }
 
 const changeLandscape = currentTemp => {
