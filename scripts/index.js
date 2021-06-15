@@ -39,7 +39,7 @@ const updateSky = () => {
     }
     skyContainer.textContent = sky;
     const gardenContent = document.getElementById("gardenContent");
-    gardenContent.classList = `garden-content ${skycolor}`;
+    gardenContent.classList = `garden-content ${skyColor}`;
 }
 const registerEventHandlers = () => {
     
