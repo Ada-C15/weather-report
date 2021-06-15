@@ -3,6 +3,7 @@ const update = temp=>{
     const tempContainer=document.getElementById("temp")
     tempContainer.textContent=`${temp}`;
     updateColorofTemp(temp);
+    updateGarden(temp);
 }
 
 const increatTemp = ()=>{
@@ -29,7 +30,22 @@ const updateColorofTemp=(currentTemp)=>{
     }
     tempContainer.classList=color;
 }
-
+const updateGarden=(currentTemp)=>{
+    const gardenContainer=document.getElementById("landscape");
+    let garden="🌵🌻";
+    if (currentTemp>=100) {
+        gardern="🌾"
+    }else if(currentTemp>=90){
+        garden="🍀";
+    }else if(currentTemp>=80){
+        garden="💐"
+    }else if(currentTemp>=70){
+        garden="🌸"
+    }else if(currentTemp>=60){
+        garden="🌼"
+    }
+    gardenContainer.textContent=garden;
+}
 const registerEventHandlers=()=>{
     update(temp);
     const increaseTempValue=document.getElementById("plustemp")
