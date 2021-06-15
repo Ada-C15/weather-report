@@ -1,52 +1,85 @@
+const state = {
+  temperature: 45
+};
+
 const getPrecipitation = document.querySelector("#getPrecipitation");
 const addRain = () => {
-  const gardenContainer = document.querySelector("#gardenContainer");
   const rainSpan = document.createElement("span");
-  rainSpan.innerText = "☔️️️ ️️🐸 💧 🐸 ☔️";
+  const gardenContainer = document.querySelector("#gardenContainer");
+  rainSpan.innerText = "☔️️️ ️️💧 💧 💧 💧 💧 💧 💧 💧 ☔️";
   gardenContainer.appendChild(rainSpan);
 };
-console.log("precipitation:" + getPrecipitation);
-// getPrecipitation.addEventListener("click", addRain);
+getPrecipitation.addEventListener("click", addRain);
 //----------------------------------------------------------------------
 
-const getCloudy = document.querySelector("#getCloudy");
+//const getCloudy = document.querySelector("#getCloudy");
 const addClouds = () => {
-  const gardenContainer = document.querySelector("#gardenContainer");
   const cloudSpan = document.createElement("span");
-  cloudSpan.innerText = "☁️ 🪴 ☁️";
+  const gardenContainer = document.querySelector("#gardenContainer");
+  cloudSpan.innerText = "☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️ ☁️";
   gardenContainer.appendChild(cloudSpan);
 };
-// getCloudy.addEventListener("click", addClouds);
+//getCloudy.addEventListener("click", addClouds);
 
 //---------------------------------------------------------------------
-const getSunny = document.querySelector("#getSunny");
+//const getSunny = document.querySelector("#getSunny");
 const addSun = () => {
   const gardenContainer = document.querySelector("#gardenContainer");
   const sunSpan = document.createElement("span");
-  sunSpan.innerText = "🌞 🌻 🌻 🌞";
+  sunSpan.innerText = "🌞 🌞 🌞 🌞 🌞 🌞 🌞 🌞 🌞 🌞 🌞";
   gardenContainer.appendChild(sunSpan);
 };
 //getSunny.addEventListener("click", addSun);
 
 //---------------------------------------------------------------------
 
-const getSnowy = document.querySelector("#getSnowy");
+//const getSnowy = document.querySelector("#getSnowy");
 const addSnow = () => {
   const gardenContainer = document.querySelector("#gardenContainer");
   const snowSpan = document.createElement("span");
-  snowSpan.innerText = "☃️ ❄️ 🎄 ❄️ ☃️";
+  snowSpan.innerText = "☃️ ❄️ ❄️ ❄️ ❄️ ❄️ ❄️ ❄️ ❄️ ❄️ ☃️";
   gardenContainer.appendChild(snowSpan);
 };
 //getSnowy.addEventListener("click", addSnow);
 
 //---------------------------------------------------------------------
-const input = document.querySelector("#temperature-bar-number");
-const btnIncrement = document.querySelector("#highTemp");
-btnIncrement.addEventListener("click", () => {
-  input.value = parseInt(input.value) + 1;
-});
+//const getNight = document.querySelector("#getNight");
+const addNight = () => {
+  const gardenContainer = document.querySelector("#gardenContainer");
+  const nightSpan = document.createElement("span");
+  nightSpan.innerText = "🌚 🌚 🌚 🌚 🌚 🌚 🌚 🌚 🌚 🌚 🌚 🌚";
+  gardenContainer.appendChild(nightSpan);
+};
+//getNight.addEventListener("click", addNight);
+//---------------------------------------------------------------------
 
-const btnDecrement = document.querySelector("#lowTemp");
-btnDecrement.addEventListener("click", () => {
-  input.value = parseInt(input.value) - 1;
-});
+//const temperatureBarNumber = document.querySelector("#temperatureBarNumber");
+const increaseTemp = () => {
+  //const highTemp = document.querySelector("#highTemp");
+  const highTemp = document.querySelector("#highTemp");
+  const temperatureBarNumber = document.createElement("span");
+  increaseTemp.textContent = state.temperature;
+  state.temperature += 1;
+};
+
+//---------------------------------------------------------------------
+const registerEventHandlers = (event) => {
+  const getPrecipitation = document.querySelector("#getPrecipitation");
+  getPrecipitation.addEventListener("click", addRain);
+
+  const getCloudy = document.querySelector("#getCloudy");
+  getCloudy.addEventListener("click", addClouds);
+
+  const getSunny = document.querySelector("#getSunny");
+  getSunny.addEventListener("click", addSun);
+
+  const getSnowy = document.querySelector("#getSnowy");
+  getSnowy.addEventListener("click", addSnow);
+
+  const getNight = document.querySelector("#getNight");
+  getNight.addEventListener("click", addNight);
+
+  const highTemp = document.querySelector("#highTemp");
+};
+
+document.addEventListener("DOmContentLoaded", registerEventHandlers);

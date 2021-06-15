@@ -2,7 +2,6 @@
   margin: 10px;
   padding: 3px;
   box-sizing: border-box;
-  /* background-image: url("../images/noon.jpg"); */
   background-color: transparent;
 }
 
@@ -18,22 +17,13 @@ body {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  background-image: url("../images/noon.jpg");
+  background-image: url("../images/purple1.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   background-blend-mode: overlay;
 }
 
-/*html {
-  background-color: rgba(0, 0, 255, 0.5);
-  background-size: cover;
-  background-blend-mode: overlay;
-  font-size: 16px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: rgb(46, 39, 39);
-
-}
-*/hr {
+hr {
   width: 90%;
   margin: auto;
   border: 1px solid;
@@ -46,22 +36,18 @@ main {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  color: rgba(36, 31, 31, 0.856);
-  background-color: rgba(65, 55, 55, 0.13)67);
+  color: rgba(232, 224, 216, 0.902);
+  background-color: rgba(65, 55, 55, 0.1367);
   border: 1px solid white;
   border-radius: 10px;
-  box-shadow: 1px 1px 2.5px #fff; */
-}
-
-.block {
-  display: block;
+  box-shadow: 1px 1px 2.5px #fff;
 }
 
 .button {
   min-width: 48px;
   min-height: 48px;
-  color: rgba(90, 65, 42, 0.856);
-  border: 2px solid rgba(36, 31, 31, 0.856);
+  color: rgba(247, 247, 247, 0.815);
+  border: 2px solid rgba(247, 247, 247, 0.815);
   border-radius: 100px;
   outline: none;
   font-size: 2.25rem;
@@ -76,7 +62,7 @@ main {
 .button:hover,
 .button:focus {
   cursor: pointer;
-  box-shadow: 4px 2px 5px #000;
+  box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.603);
   border-color: #fff;
 }
 
@@ -89,60 +75,59 @@ main {
   padding: 0.5rem 0.25rem;
 }
 
-.searchBarButton{
+.searchBarButton {
   border: none;
-  box-shadow: 4px 2px 5px #000;
+  box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.63);
 }
 
 .searchBarButton:hover,
-.searchBarButton:focus{
-  box-shadow: 4px 2px 5px #000;
+.searchBarButton:focus {
+  box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.63);
   border-color: #fff;
 }
 
 .searchBarText::placeholder {
-  color: rgba(90, 65, 42, 0.856);
+  color: rgba(232, 224, 216, 0.902);
 }
 
-.searchBarText{
+.searchBarText {
   padding: 1rem 1rem 1rem;
   display: flex;
   justify-content: center;
-  border: 2px solid rgba(90, 65, 42, 0.856);
+  border: 2px solid rgba(232, 224, 216, 0.902);
   border-radius: 100px;
 }
 
 .searchBarText:hover,
-.searchBarText:focus{
-  box-shadow: 4px 2px 5px #000;
+.searchBarText:focus {
+  box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.637);
   border-color: #fff;
 }
 
-.temperature{
-  color: white;
+.temperature {
+  color: rgba(232, 224, 216, 0.902);
   display: flex;
   flex-grow: 1;
 }
 
-.temperature-bar-number{
+.temperatureBarNumber {
   padding: 1rem 1rem 1rem;
   display: flex;
   justify-content: center;
-  border: 2px solid rgba(90, 65, 42, 0.856);
+  border: 2px solid rgba(232, 224, 216, 0.902);
   border-radius: 100px;
 }
 
-.temperature-bar-number:hover,
-.temperature-bar-number:focus{
+.temperatureBarNumber:hover,
+.temperatureBarNumber:focus {
   box-shadow: 4px 2px 5px #000;
   border-color: #fff;
 }
 
-.temperature-bar-number::placeholder{
-  color: rgba(90, 65, 42, 0.856);
+.temperatureBarNumber::placeholder {
+  color: rgba(232, 224, 216, 0.902);
+  font-size: 14px;
 }
 
-.gardenContainer{
- 
-  
+.gardenContainer {
 }
