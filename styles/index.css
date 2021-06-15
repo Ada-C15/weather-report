@@ -8,7 +8,7 @@ div section {
     border-radius: 10px;
     margin: 2em;
     padding: 1em;
-    min-width: 120px;
+    min-width: 140px;
 }
 
 h1 {
@@ -23,6 +23,9 @@ h3 {
 header {
     text-align: center;
     margin: 5em;
+}
+header span {
+    font-size: 2em;
 }
 
 main {
@@ -39,12 +42,12 @@ main div {
     grid-column-end: 3;
 }
 
-main #snapshot {
+main .snapshot {
     grid-column-start: 2;
     grid-column-end: 3;
 }
 
-#snapshot {
+.snapshot {
     background-color: azure;
     text-align: center;
     border-radius: 10px;
@@ -53,7 +56,22 @@ main #snapshot {
     min-height: 150px;
 }
 
-#snapshot div {
+.snapshot div {
     display: flex;
     flex-direction: column;
+}
+
+.temperature {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.temperature > span {
+    padding: .5em;
+}
+
+#temp_number {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
 }
