@@ -13,12 +13,14 @@ const increaseTemp = () => {
     state.currentTemp += 1;
     updateTemp();
     updateTempColor();
+    updateLandscape();
 };
 
 const decreaseTemp = () => {
     state.currentTemp -= 1;
     updateTemp();
     updateTempColor();
+    updateLandscape();
 };
 
 const updateTempColor = () => {
@@ -36,6 +38,25 @@ const updateTempColor = () => {
         color = "blue";
     };
     tempValueContainer.classList = color;
+}
+
+// potentially combine this in with updateTempColor
+const updateLandscape = () => {
+    const landscapeContainer = document.querySelector("#landscapeContainer");
+    let landscape = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃"
+    if (state.currentTemp >= 80) {
+        landscape = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+    } else if (state.currentTemp >= 70) {
+        landscape = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
+    } else if (state.currentTemp >= 60) {
+        landscape = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
+    } else if (state.currentTemp >= 50) {
+        landscape = "💚🐸💚🐸💚🐸💚🐸💚🐸💚🐸";
+    } else {
+        landscape = "❄️💙❄️💙❄️💙❄️💙❄️💙❄️💙❄️💙";
+    };
+    landscapeContainer.textContent = landscape;
+    
 }
 
 
