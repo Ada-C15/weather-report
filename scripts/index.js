@@ -5,9 +5,9 @@ const incrementTemp = () => {
     const tempCountContainer = document.querySelector("#tempCount")
     tempTrack += 1;
     tempCountContainer.textContent = `${tempTrack}`;
-    console.log("It Works")
+    // console.log("It Works")
     
-    console.log(tempTrack)
+    // console.log(tempTrack)
 };
 const registerEventHandlers = () => {
     const upArrow = document.querySelector("#add-temp");
@@ -15,3 +15,19 @@ const registerEventHandlers = () => {
 };
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
 
+
+const decreasedTemp = () => {
+    const newTemp = document.createElement("span");
+    const tempContainor = document.querySelector("#dec-temp");
+    const tempCountCont= document.querySelector("#tempCount")
+    tempTrack -= 1;
+    tempCountCont.textContent = `${tempTrack}`;
+    console.log("It Works")
+    
+    console.log(tempTrack)
+};
+const decreasedEventHandlers = () => {
+    const downArrow = document.querySelector("#dec-temp");
+    downArrow.addEventListener("click", decreasedTemp);
+};
+document.addEventListener("DOMContentLoaded", decreasedEventHandlers);
