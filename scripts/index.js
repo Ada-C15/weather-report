@@ -7,8 +7,10 @@ const state = {
   
 const increaseTemp = (event) => {
     state.tempCount += 1;
-    const count = document.querySelector("#tempCount");
-    count.textContent = `Temperature: ${state.tempCount}`;
+    // const count = document.querySelector("#tempCount");
+    // count.textContent = `Temperature: ${state.tempCount}`;
+    const count = document.querySelector("#num");
+    count.textContent = state.tempCount;
 
     if (state.tempCount <= 10) {
         colorBlue();
@@ -31,8 +33,8 @@ const increaseTemp = (event) => {
   
 const decreaseTemp = (event) => {
     state.tempCount -= 1;
-    const count = document.querySelector("#tempCount")
-    count.textContent = `Temperature: ${state.tempCount}`;
+    const count = document.querySelector("#num");
+    count.textContent = state.tempCount;
 
     if (state.tempCount <= 10) {
         colorBlue();
@@ -57,28 +59,29 @@ const decreaseTemp = (event) => {
 // TEMP COLORS
 
 const colorBlue = (event) => {
-    const currentTemp = document.querySelector("#tempCount"); // HTML element event will occur on
-    currentTemp.className = `${currentTemp.className} blue`;
+    const currentTemp = document.querySelector("#num"); // HTML element event will occur on
+    currentTemp.className = `blue`;
   };
 
 const colorGreen = (event) => {
-    const currentTemp = document.querySelector("#tempCount"); 
-    currentTemp.className = `${currentTemp.className} green`;
+    const currentTemp = document.querySelector("#num"); 
+    // currentTemp.className = `${currentTemp.className} green`; // don't carry classes over
+    currentTemp.className = `green`;
   };  
 
 const colorYellow = (event) => {
-    const currentTemp = document.querySelector("#tempCount");
-    currentTemp.className = `${currentTemp.className} yellow`;
+    const currentTemp = document.querySelector("#num");
+    currentTemp.className = `yellow`;
   };  
 
 const colorOrange = (event) => {
-    const currentTemp = document.querySelector("#tempCount");
-    currentTemp.className = `${currentTemp.className} orange`;
+    const currentTemp = document.querySelector("#num");
+    currentTemp.className = `orange`;
   }; 
 
 const colorRed = (event) => {
-    const currentTemp = document.querySelector("#tempCount");
-    currentTemp.className = `${currentTemp.className} red`;
+    const currentTemp = document.querySelector("#num");
+    currentTemp.className = `red`;
   };
 
 // GARDEN LANDSCAPES
