@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<h
     <head>
         <meta charset="utf-8">
         <link href="./styles/index.css" rel="stylesheet"/>
@@ -8,11 +8,12 @@
         </style>
     </head>
     <body>
+        <h1>WEATHER REPORT</h1>
         <header class="main-header">
             <section id="sky-container"></section>
                 <h2 class="title">SKY</h2>  
                 <p>Hey, what type of sky is happening out there?</p> 
-                <select class="choice" name="sky" id="sky-select">
+                <select class="controls" name="sky" id="sky-select">
                     <option value="sun">Brilliant Sun</option>
                     <option value="clouds">Dashes of Clouds</option>
                     <option value="clear">Clear</option>
@@ -21,9 +22,11 @@
             </section>  
             <section id="city-name-container">
                 <h2 class="title">CITY NAME</h2>
-                <p>Content</p>
+                <p>Which city are you looking for?</p>
+                <input><label class="controls" name="city">City:</label></input>
+                <input type="reset" value="Reset">
             </section>
-        </header>
+        </header>   
         <section class="weather-garden-container">
             <h2 class="title">WEATHER GARDEN</h2>   
             <p>Content</p>
