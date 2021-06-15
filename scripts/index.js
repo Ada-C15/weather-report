@@ -1,7 +1,8 @@
 // let tempValue = 65;
 
 const state = {
-    currentTemp: 65
+    currentTemp: 65,
+    currentSky: "Sunny"
 };
 
 const updateTemp = () => {
@@ -59,6 +60,23 @@ const updateLandscape = () => {
     
 }
 
+const updateSky = () => {
+    const skyContainer = document.querySelector("#skyContainer");
+    const skySelection = document.querySelector("#skySelection").value;
+    state.currentSky = skySelection;
+    let sky = "☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️";
+    if (state.currentSky === 'sunny') {
+        sky = "☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️";
+    } else if (state.currentSky === 'cloudy') {
+        sky = "☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️";
+    } else if (state.currentSky === 'rainy') {
+        sky = "🌧💧🌧💧🌧💧🌧💧🌧💧🌧💧";
+    } else {
+        sky = "❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️";
+    };
+    skyContainer.textContent = sky;
+};
+
 
 const registerEventHandlers = () => {
     const increaseTempControl = document.querySelector("#increase_temp");
@@ -66,6 +84,10 @@ const registerEventHandlers = () => {
 
     const decreaseTempControl = document.querySelector("#decrease_temp");
     decreaseTempControl.addEventListener('click', decreaseTemp);
+
+    const changeSky = document.querySelector("#skySelection");
+    changeSky.addEventListener('change', updateSky);
+
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
