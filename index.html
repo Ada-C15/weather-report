@@ -7,13 +7,20 @@
     </head>
     <body>
         <header>
-            <h1>🌈 Weather Report 🌈</h1>
+            <h1 class="title">🌈 Weather Report 🌈 with long text to see if it goes into another column or if it wraps around </h1>
             <p>for the town of</p>
             <p>🌈 Issaquah 🌈</p>
         </header>
 
         <section class="temperature_section">
             <h2>Temperature</h2>
+            <div class="temperature_info">
+                <p id="tempValue" class="temp_color">65</p>
+                <div class="temp_controls">
+                    <button id="increase_temp">⬆</button>
+                    <button id="decrease_temp">⬇</button>
+                </div>
+            </div>
         </section>
 
         <section class="sky_section">
