@@ -12,6 +12,16 @@ body {
 
 button {
     background-color: #E17966;
+    color: #EDF5F3;
+    border: none;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+#weather-dropdown, #city {
+    border: none;
+    font-size: 20px;
+    margin-top: 20px;
 }
 
 header {
@@ -31,6 +41,17 @@ header img {
     max-width: 100px;
 }
 
+p {
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+#sky p, #landscape p {
+    padding: 10px;
+    margin: 10px;
+    cursor: default;
+}
+
 #grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -42,12 +63,16 @@ header img {
 #temp-content {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
 #temp-integer {
     font-size: 60px;
+}
+
+#up-down-arrows {
+    font-size: 20px;
 }
 
 #sky-section, #city-section, #temperature-section {
