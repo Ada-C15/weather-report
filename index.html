@@ -9,27 +9,56 @@
 
 <body>
     <div id="app-container">
+
         <section id="top-banner">
             <h1>Weather Application</h1>
         </section>
 
         <section id="temp-container">
             <h2>Temperature</h2>
-            <div id="temp-display">
-                <h2>0</h2>
-            </div>
+            <h2 id="tempDisplay">0</h2>
+
             <div class="button-container">
-                <button id="increase-temp"> + </button>
-                <button id="decrease-temp"> - </button>
+                <button class="btn" id="increaseTempBtn"> turn up the heat </button>
+                <button class="btn" id="decreaseTempBtn"> cool it down </button>
             </div>
         </section>
+
+        <section>
+            <div id="sky-container">
+                <h2>Sky</h2>
+                <div class="dropdown">
+                    <button class="btn">Pick a sky</button>
+                    <div class="dropdown-content">
+                        <a id="weatherRainy">Rainy</a>
+                        <a id="weatherCloudy">Cloudy</a>
+                        <a id="weatherClear">Clear</a>
+                        <a id="weatherSnowy">Snowy</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div id="city-container">
+                <h2>City</h2>
+            </div>
+        </section>
+        
 
         <section id="landscape-display">
             <h2>enjoy the garden</h2>
             <div id="landscape-container">
-                
+                <!-- contains all emojis -->
+                <div id="sky-icon-container">
+                    xxx
+                </div>
+                <div id="land-icon-container">
+                    xxx
+                </div>
             </div>
         </section>
+
     </div>
 </body>
 
