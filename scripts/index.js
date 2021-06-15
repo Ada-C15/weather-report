@@ -1,35 +1,47 @@
 let currentTemp = 67;
 
-// increases temperature
-const increaseTemperature = () => {
-    const currentTemp = document.getElementById("temp-integer");
-    currentTemp.value += 1;
+// helper function to be used when increasing/decreasing temp
+const updateTemperature = currentTemp => {
+    const tempValue = document.getElementById("temp-integer");
+    tempValue.textContent = currentTemp;
 }
 
+// increases temperature
+const increaseTemperature = () => {
+    currentTemp += 1;
+    updateTemperature(currentTemp);
+};
+
 const decreaseTemperature = () => {
-    const currentTemp = document.getElementById("temp-integer");
-    currentTemp.value += 1;
-}
+    currentTemp -= 1;
+    updateTemperature(currentTemp);
+};
 
 // const changeTempColor = (currentTemp)
 
 const changeSky = () => {
-    const weatherDropdown = document.getElementById("weather-dropdown").value;
+    const skyDropdown = document.getElementById("sky-dropdown").value;
     const skyForecast = document.getElementById("sky");
-    if weatherDropdown === "Sunny" {
-        skyForecast = "☁️ ☁️ ☁️ ☀ ☁️ ☁️";
+    // why do we make this variable rather than just use skyForecast and manipulate that directly?
+    let sky = "☁️ ☁️ ☁️ ☀ ☁️ ☁️";
+    let skyColor = "";
+    if (skyDropdown === "Sunny") {
+        sky = "☁️ ☁️ ☁️ ☀ ☁️ ☁️"
+        // skyColor = "sunny";
     }
-    else if weatherDropdown === "Cloudy" {
-        skyForecast = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁";️
+    else if (skyDropdown === "Cloudy") {
+        sky = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️"
     }
-    else if weatherDropdown === "Rainy" {
-        skyForecast = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+    else if (skyDropdown === "Rainy") {
+        sky = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧"
     }
-    else if weatherDropdown === "Snowy" {
-        skyForecast = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
+    else if (skyDropdown === "Snowy") {
+        sky = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨"
     }
-    // skyForecast.textContent = sky;
-}
+    skyForecast.textContent = sky;
+    // const weatherContent = document.getElementById("weather-content");
+    // weatherContent.classList = `weather__content ${skyColor}`;
+};
 
 // updates header with city name input
 const updateCityName = () => {
@@ -55,8 +67,8 @@ const registerEventHandlers = () => {
     tempDecreaseBtn.addEventListener("click", decreaseTemperature);
 
     changeSky();
-    const inputSkyStatus = document.getElementById("weather-dropdown");
-    inputSkyStatus.addEventListener("change", changeSky);
+    const skyDropdown = document.getElementById("sky-dropdown");
+    skyDropdown.addEventListener("change", changeSky);
 
     updateCityName();
     const inputCityName = document.getElementById("city");
@@ -65,6 +77,6 @@ const registerEventHandlers = () => {
     resetCityName();
     const cityNameResetBtn = document.getElementById("reset-button");
     cityNameResetBtn.addEventListener("click", resetCityName);
-}
+};
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
