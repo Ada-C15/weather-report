@@ -47,6 +47,11 @@ p {
     cursor: pointer;
 }
 
+select {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
 #sky p, #landscape p {
     padding: 10px;
     margin: 10px;
@@ -108,3 +113,24 @@ footer {
     width: 100%;
     background-color: #A4BBC3;
     margin-bottom: -20px;
+}
+
+.red {
+    color: red;
+}
+
+.teal {
+    color: teal;
+}
+
+.orange {
+    color: orange;
+}
+
+.green {
+    color: green;
+}
+
+.yellow {
+    color: yellow;
+}
