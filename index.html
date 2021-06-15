@@ -10,47 +10,48 @@
 <body>
     <header>
         <img src="assets/shibahead.png">
-        <h1>🐕 Shiba Weather Report! 🐕</h1>
+        <h1>Shiba Weather Report!</h1>
+        <img src="assets/shibahead.png">
     </header>
     <main>
-        <section>
-            <h2>For the city of <span id=city-name>Seattle</span></h2>
-        </section>
+        <h2>✨For the city of <span id=city-name>Dogeville</span>✨</h2>
+        <div id=grid-container>
+            <section id=temperature-section>
+                <h2>Temperature</h2>
+                <div id=temp-content>
+                    <div id="up-down-arrows">
+                        <p id="increase-temp">⬆️</p>
+                        <p id="decrease-temp">⬇️</p>
+                    </div>
+                    <span id="temp-integer">67</span>
+                </div>
+            </section>
+            <section id="sky-section">
+                <h2>Sky</h2>
+                <div>
+                    <select id="weather-dropdown">
+                        <option value="sunny">Sunny</option>
+                        <option value="cloudy">Cloudy</option>
+                        <option value="rainy">Rainy</option>
+                        <option value="snowy">Snowy</option>
+                    </select>
+                </div>
+            </section>
+            <section id="city-section">
+                <h2>City</h2>
+                <div>
+                    <input type="text" id="city" value="Dogeville">
+                    <button id="reset-button">Reset</button>
+                </div>
+            </section>
+        </div>
         <section id="weather-section">
+            <h2>✨Your Weather Forecast✨</h2>
             <div id="sky">
                 <p>🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧</p>
             </div>
             <div id="landscape">
                 <p>🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃</p>
-            </div>
-        </section>
-        <section id=temperature>
-            <h2>Temperature</h2>
-            <div id="up-down-arrows">
-                <p id="increase-temp">⬆️</p>
-                <p id="decrease-temp">⬇️</p>
-            </div>
-            <div id="temp-integer">
-                <p>67</p>
-            </div>
-        </section>
-        <section id="weather-type">
-            <h2>Sky</h2>
-            <div>
-                <select id="weather-dropdown">
-                    <option value="sunny">Sunny</option>
-                    <option value="cloudy">Cloudy</option>
-                    <option value="rainy">Rainy</option>
-                    <option value="snowy">Snowy</option>
-                </select>
-            </div>
-        </section>
-        <section id="city-section">
-            <h2>City</h2>
-            <div>
-                <label for="city">City: </label>
-                <input type="text" id="city" value="Dogeville">
-                <button id="reset-button">Reset</button>
             </div>
         </section>
     </main>
