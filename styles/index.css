@@ -1,0 +1,56 @@
+body {
+    background-color: #82E0E0;
+    font-family: fantasy;
+}
+
+div section {
+    background-color: azure;
+    border-radius: 10px;
+    margin: 2em;
+    padding: 1em;
+    min-width: 120px;
+}
+
+h1 {
+    color: rgb(249, 247, 247);
+    font-size: 4em;
+}
+
+header {
+    text-align: center;
+    margin: 5em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+main div {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+main #Snapshot {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    
+}
+
+#Snapshot {
+    background-color: azure;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 500px;
+    text-align: center;
+    
+}
+
+#Snapshot div {
+    display: flex;
+    flex-direction: column;
+}
