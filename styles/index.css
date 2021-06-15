@@ -17,6 +17,12 @@ body {
     border: solid black 2px;
 }
 
+/* input */
+input {
+    font-size: 1.5rem;
+    border: none;
+}
+
 /* Dropdown Button */
 .btn {
     background-color: #04AA6D;
