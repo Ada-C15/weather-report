@@ -1,0 +1,87 @@
+html{
+    font-family: 'Futura',sans-serif;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 1rem;
+
+    /* background-color: #89c2d9; */
+    /* background-color: #284b63; Azul Oscuro */
+    background-color: #012a4a;
+    color:white;
+    /* color: #343434; */
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+/* --OPTION 1-- */
+/* .weather-options{
+    width: 100%;
+    padding: 10px;
+}
+
+.weather-option {
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	align-items:center;
+    margin-bottom: 40px;
+    list-style: none;
+} */
+
+
+/* OPTION 2 */
+/* .options{
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: aqua;
+}
+
+.options > section { 
+    font-size: 20px;
+    padding-top: 30px;
+    width: calc(50% - 1.5rem);
+    background-color: brown;
+    border: darkblue;
+} */
+
+
+/* OPTION 3 */
+header, footer{
+    grid-column: span 3;
+    text-align: center;
+}
+
+.temperature{
+    grid-row: 2;
+
+    display: flex; 
+    flex-direction: row;
+}
+
+.temperature > div { 
+    padding-top: 20px;
+    width: calc(50% - 1.5rem);
+    background-color: brown;
+    text-align:right;
+} 
+
+.sky{
+    grid-row: 3;
+}
+
+.city-name{
+    grid-row: 4;
+}
+
+.temperature, .sky, .city-name{
+    /* display: block; */
+    background-color: #d8e2dc;
+    color: #012a4a;
+    border-radius: 4px;
+    padding: 5px;
+}
