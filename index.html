@@ -11,27 +11,38 @@
     
     <header class="title">
                 <h1 class="main-text">  Weather Report for: </h1>
-                <h2> *Whether or not this report matches the weather you are experiencing is completely coincidental.* </h2>
+                <h2> *Whether or not this report matches the weather you are experiencing is completely coincidental* </h2>
             </div>
         </figure>
     </header>
 
-    <section class="display-items">
-        <div class="temperature" >
+    <section class="weather-display">
+        <div class="weather-item" id=temperature>
             <h3 id="temperatureCount">Temperature 65℉</h3>
             <button id="addTemperatureButton">+🔥</button>
             <button id="subtractTemperatureButton">-🧊</button>
         </div>
 
-        <div class="sky">
-            <h3>Sky</h3>
+        <div class="weather-item">
+            <!-- <h3>Sky</h3> -->
+            <label for="sky">Sky</label>
+            <select class="sky" id="sky">
+                <option value="" selected>None Selected</option>
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="rainy">Rainy</option>
+                <option value="snowy">Snowy</option>
+            </select>
+            <section id="skyImageContainer">
+
+            </section>
 
         </div>
-        <div class="city">
-            <h3>City</h3>
+        <div class="weather-item" id="location">
+            <h3>Location</h3>
 
         </div>
-        <div class="landscape">
+        <div class="weather-item" id="landscape">
             <h3>Display Space</h3>
 
         </div>
