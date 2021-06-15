@@ -1,5 +1,11 @@
 h1 {
-    font-family: 'Architects Daughter', cursive;
+    font-family: 'Architects Daughter', regular;
 }
 
-/* font-family: 'Montserrat', sans-serif; */
+h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.header-city-name {
+    font-family: 'Montserrat', sans-serif;
+}
