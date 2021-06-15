@@ -3,12 +3,21 @@ body {
     font-family: fantasy;
 }
 
+div button {
+    min-width: 30px;
+    min-height: 30px;
+}
+
 div section {
     background-color: azure;
     border-radius: 10px;
     margin: 2em;
     padding: 1em;
     min-width: 140px;
+}
+
+#ground {
+    font-size: 1.5em;
 }
 
 h1 {
@@ -47,6 +56,10 @@ main .snapshot {
     grid-column-end: 3;
 }
 
+#sky {
+    font-size: 2em;
+}
+
 .snapshot {
     background-color: azure;
     text-align: center;
@@ -74,4 +87,24 @@ main .snapshot {
 #temp_number {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 1.5em;
+}
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: gold;
+}
+
+.green {
+    color: green;
+}
+
+.teal {
+    color: teal;
 }
