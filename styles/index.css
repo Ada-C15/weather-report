@@ -1,0 +1,151 @@
+
+
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
+
+#headCityName {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 95px;
+    color:lightgray;
+    opacity: .8;
+}
+
+button {
+    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bolder;
+    background-color: lightgrey;
+    border-width: 2px;
+    border-style: inset;
+}
+
+#tempInc:hover {
+    color: #13331b
+}
+
+button:hover {
+    background-color: slategray;
+}
+
+input {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bolder;
+    background-color: lightgrey;
+}
+
+#sky.sunny{
+    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/sunny-leaves.jpeg");
+}
+
+#sky.cloudy {
+    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/cloudy-leaves.jpeg");
+}
+
+#sky, .rainy {
+    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/rainy-leaves.jpeg");
+}
+
+#sky, .snowy {
+    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/snowy-leaves.jpeg");
+}
+
+#sky, .stormy {
+    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/stormy-leaves.jpeg");
+}
+
+#sky {
+    min-height: 100%;
+    background-color: skyblue;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer div {
+    height: 300px;
+    width: 100%;
+}
+
+section#tempSection {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background-color: darkgray;
+    opacity: .6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+#tempDisplay {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: 75px;
+    color: black;
+    text-align: center;
+}
+
+section#skySection {
+    height: 300px;
+    width: 300px;
+    opacity: .8;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    margin-bottom: 20px;
+}
+
+#skySelect {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bolder;
+    border-color: black;
+    border-width: 3px;
+    background-color: grey;
+    opacity: .8;
+}
+
+#tempInc i {
+    font-size: xx-large;
+    margin-right: 8px;
+    margin-left: 2px;
+
+}
+
+#tempDec i {
+    font-size: xx-large;
+}
+
+section.sunny {
+    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/sunnysky.jpeg");
+}
+section.cloudy {
+    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/cloudy-leaves.jpeg");
+}
+
+footer div.rainy {
+    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/rainy-leaves.jpeg");
+}
+
+footer div.snowy {
+    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/snowy-leaves.jpeg");
+}
+
+footer div.stormy {
+    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/stormy-leaves.jpeg");
+}
