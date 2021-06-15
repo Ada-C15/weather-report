@@ -8,28 +8,39 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles/index.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     </head>
     <body>
         <h1>Weather Report</h1>
         <h2>How is the weather today in Seattle?</h2>
-        <section id="temperature">
-            <h3>Temperature</h3>
-            <button>Up</button>
-            <button>Down</button>
-            <p>45</p>
-        </section>
-        <section id="sky">
-            <h3>Sky</h3>
-            <!-- Dropdown List -->
-        </section>        
-        <section id="cityName">
-            <h3>City Name</h3>
-            <!-- Input and reset options> -->
-        </section>     
-        <section id="weatherGarden">
-            <h3>Weather Garden</h3>
-            <!-- Displays image related to sky setting -->
-        </section>
+        <section id="container">
+            <section class="box" id="temperature">
+                <h3>Temperature</h3>
+                <button id="upTemperature">Up</button>
+                <button id="downTemperature">Down</button>
+                <p id="currentTemp">45</p>
+            </section>
+            <section class="box" id="sky">
+                <label for="skies">Sky</label>
+                <select name="skies" id="skies">
+                <option value="sunny">Sunny</option>
+                <option value="rainy">Rainy</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="snowy">Snowy</option>
+                </select>
+            </section>        
+            <section class="box" id="cityName">
+                <h3>City Name</h3>
+                <input type="text">
+                <button>Reset City</button>
+            </section>    
+            <section id="weatherGarden">
+                <h3>Weather Garden</h3>
+                <!-- Displays image related to sky setting -->
+            </section>
+        </section> 
+        
 
         
         <script src="scripts/index.js" type="text/javascript"></script>
