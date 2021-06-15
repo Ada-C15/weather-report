@@ -1,0 +1,142 @@
+* {
+  margin: 10px;
+  padding: 3px;
+  box-sizing: border-box;
+  /* background-image: url("../images/noon.jpg"); */
+  background-color: transparent;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.5 rem;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  background-image: url("../images/noon.jpg");
+  background-blend-mode: overlay;
+}
+
+/*html {
+  background-color: rgba(0, 0, 255, 0.5);
+  background-size: cover;
+  background-blend-mode: overlay;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: rgb(46, 39, 39);
+
+}
+/*hr {
+  width: 90%;
+  margin: auto;
+  border: 1px solid;
+}
+*/
+main {
+  width: 100%;
+  max-width: 700px;
+  max-height: 1050px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  color: rgba(36, 31, 31, 0.856);
+  background-color: rgba(65, 55, 55, 0.13)67);
+  border: 1px solid white;
+  border-radius: 10px;
+  box-shadow: 1px 1px 2.5px #fff; */
+}
+
+.block {
+  display: block;
+}
+
+.button {
+  min-width: 48px;
+  min-height: 48px;
+  color: rgba(90, 65, 42, 0.856);
+  border: 2px solid rgba(36, 31, 31, 0.856);
+  border-radius: 100px;
+  outline: none;
+  font-size: 2.25rem;
+  font-weight: 700;
+  background-color: transparent;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button:hover,
+.button:focus {
+  cursor: pointer;
+  box-shadow: 4px 2px 5px #000;
+  border-color: #fff;
+}
+
+.navButtons {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0.5rem 0.25rem;
+}
+
+.searchBarButton{
+  border: none;
+  box-shadow: 4px 2px 5px #000;
+}
+
+.searchBarButton:hover,
+.searchBarButton:focus{
+  box-shadow: 4px 2px 5px #000;
+  border-color: #fff;
+}
+
+.searchBarText::placeholder {
+  color: rgba(90, 65, 42, 0.856);
+}
+
+.searchBarText{
+  padding: 1rem 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgba(90, 65, 42, 0.856);
+  border-radius: 100px;
+}
+
+.searchBarText:hover,
+.searchBarText:focus{
+  box-shadow: 4px 2px 5px #000;
+  border-color: #fff;
+}
+
+.temperature{
+  color: white;
+}
+
+.temperature-bar-number{
+  padding: 1rem 1rem 1rem;
+  display: flex;
+  justify-content: center;
+  border: 2px solid rgba(90, 65, 42, 0.856);
+  border-radius: 100px;
+}
+
+.temperature-bar-number:hover,
+.temperature-bar-number:focus{
+  box-shadow: 4px 2px 5px #000;
+  border-color: #fff;
+}
+
+.temperature-bar-number::placeholder{
+  color: rgba(90, 65, 42, 0.856);
+}
+

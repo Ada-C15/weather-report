@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather Report App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" /> <!--cdjns.com font awesome-->
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> <!--google font Montserrat-->
+  <link rel="stylesheet" href="styles/index.css">
+  <script src="scripts/index.js"></script>
+</head>
+<body>
+  <main>
+      <!---will add style to it so that H1 becomes invisible but be still accessible to the screen readers-->
+      <h1> Weather Report for the city of: </h1>
+      <section id="searchBar" class="searchBar"></section>
+          <!--add the form for the search bar-->
+          <form id="searchBarForm" class="searchBarForm" role="search"></form>
+              <label for="searchBarText">Enter a location</label>
+              <input id="searchBarText" class="searchBarText" type="text" role="searchbox" size="40" autocomplete="off" placeholder="City">
+              <button id="searchBarButton" class="Button" title="Submit Location" aria-label="Enter the City">
+                <!--Submit-->
+                <i class="fa fa-location-arrow"></i>
+              </button>
+          </form>
+
+      <section id="currentForecast" class="current-forecast" role="region" aria-labelledby="currentforcastLocation">
+          <h2 id="forecastConditions" class="forecastConditions">Select Current Conditions</h2>
+      </section>
+
+      <nav id="navButtons" class="navButtons"><nav>
+      <section>
+          <button id="getPrecipitation" onclick="addRain()" class="button" title="Precipitation" aria-label="Get the rainy weather conditions for your location">
+            <i class="fas fa-cloud-showers-heavy"></i>
+          </button>
+
+          <button id="getCloudy" onclick="addClouds()" class="button" title="Cloudy Conditions" aria-label="Get the cloudy weather conditions for your home location">
+              <i class="fas fa-cloud"></i>
+          </button>
+
+          <button id="getSunny" class="button" title="Sunny Conditions" aria-label="Get the sunny weather conditions for your home location">
+              <i class="fas fa-sun"></i> 
+          </button>
+
+          <button id="getSnowy" class="button" title="Snowy Conditions" aria-label="Get the snowy weather conditions for your home location">
+              <i class="fas fa-snowflake"></i>
+          </button>
+
+          <button id="getNight" class="button" title="get night" aria-label="night time">
+              <i class="fas fa-moon"></i>
+          </button>
+
+          <button id="refresh" class="button" title="refresh weather" aria-label="Refresh the current weather conditions">
+              <i class="fas fa-sync-alt"></i>
+          </button>
+        </section>
+      <hr>
+
+      <section id="Temperature" class="Temperature" role="Temperature" aria-labelledby="dailyTemperature">
+        <h2 id="dailyTemperature" class="dailyTemperature">Temperature Counter</h2>
+
+        <button id="highTemp" class="button" title="Increase Temperature" aria-label="Increase Temperature">
+            <i class="fas fa-thermometer-full"></i>
+        </button>
+
+        <input id="temperature-bar-number" class="temperature-bar-number" type="number" role="adjusttemperature" size="20" autocomplete="off" placeholder="Adjust the temperature">
+
+        <button id="lowTemp" class="button" title="Decrease Temperature" aria-label="Decrease Temperature">
+              <i class="fas fa-temperature-low"></i>
+        </button>
+      </section>
+
+      <hr>
+      <section id="gardenContainer" class="gardenContainer" role="createGarden" aria-labelledby="createGarden">
+          <h2 id="createGarden" class="createGarden">Weather Garden</h2>
+      </section>
+
+  </main>
+</body>
+</html>
