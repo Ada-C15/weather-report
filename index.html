@@ -7,9 +7,9 @@
     </head>
     <body>
         <header>
-            <h1 class="title">🌈 Weather Report 🌈 with long text to see if it goes into another column or if it wraps around </h1>
+            <h1 class="title">🌈 Weather Report 🌈</h1>
             <p>for the town of</p>
-            <p>🌈 Issaquah 🌈</p>
+            <p id="cityName">🌈 Issaquah 🌈</p>
         </header>
 
         <section class="temperature_section">
@@ -25,7 +25,7 @@
 
         <section class="sky_section">
             <h2>Sky</h2>
-            <select name ="sky" id="skySelection">
+            <select name="sky" id="skySelection">
                 <option value="sunny">Sunny</option>
                 <option value="cloudy">Cloudy</option>
                 <option value="rainy">Rainy</option>
@@ -35,6 +35,8 @@
 
         <section class="city_section">
             <h2>City</h2>
+            <input type="text" id="cityNameInput" name="cityNameUserInput" placeholder="Issaquah">
+            <button id="cityResetButton">Reset</button> 
         </section>
 
         <section class="garden_section">

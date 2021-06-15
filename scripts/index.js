@@ -1,8 +1,7 @@
-// let tempValue = 65;
-
 const state = {
     currentTemp: 65,
-    currentSky: "Sunny"
+    currentSky: "Sunny",
+    cityNameDefault: "Seattle"
 };
 
 const updateTemp = () => {
@@ -77,6 +76,11 @@ const updateSky = () => {
     skyContainer.textContent = sky;
 };
 
+const updateCityName = () => {
+    const headerCityName = document.querySelector("#cityName");
+    const inputCityName = document.querySelector("#cityNameInput").value;
+    headerCityName.textContent = inputCityName;
+}
 
 const registerEventHandlers = () => {
     const increaseTempControl = document.querySelector("#increase_temp");
@@ -87,6 +91,9 @@ const registerEventHandlers = () => {
 
     const changeSky = document.querySelector("#skySelection");
     changeSky.addEventListener('change', updateSky);
+
+    const changeCityName = document.querySelector("#cityNameInput");
+    changeCityName.addEventListener('input', updateCityName);
 
 }
 
