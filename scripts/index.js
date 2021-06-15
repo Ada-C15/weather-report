@@ -4,11 +4,20 @@ const updateCityName = () => {
     headerCityName.textContent = cityNameInput;
 }
 
+const resetCityName = () => {
+    const cityNameImput = document.getElementById("cityNameInput");
+    cityNameImput.value = "";
+    updateCityName();
+}
+
 
 const registerEventHandlers = () => {
-    updateCityName();
+    
     const cityNameInput = document.getElementById("cityNameInput");
     cityNameInput.addEventListener("input", updateCityName);
+
+    const cityNameResetBtn = document.getElementById("cityNameReset");
+    cityNameResetBtn.addEventListener("click", resetCityName)
 
 };
 
