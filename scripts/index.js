@@ -1,40 +1,51 @@
-let tempValue = 65;
+// let tempValue = 65;
 
 const state = {
     currentTemp: 65
 };
 
-const updateTemp = (tempValue) => {
-    const tempValueContainer = document.getElementById("tempValue");
-    tempValueContainer.textContent = tempValue;
+const updateTemp = () => {
+    const tempValueContainer = document.querySelector("#tempValue");
+    tempValueContainer.textContent = state.currentTemp;
 };
 
 const increaseTemp = () => {
-    tempValue += 1;
-    updateTemp(tempValue);
+    state.currentTemp += 1;
+    updateTemp();
+    updateTempColor();
 };
 
 const decreaseTemp = () => {
-    tempValue -= 1;
-    updateTemp(tempValue);
+    state.currentTemp -= 1;
+    updateTemp();
+    updateTempColor();
 };
 
-// const updateTempColor = (tempValue) => {
-//     const tempValueContainer = document.getElementById("tempValue");
-//     let color = "yellow";
-//     if 
-// }
-
-const registerEventHandlers = () => {
-
-    updateTemp(tempValue);
-
-    const increaseTempControl = document.getElementById("increase_temp");
-    increaseTempControl.addEventListener('click', increaseTemp);
-
-    const decreaseTempControl = document.getElementById("decrease_temp");
-    decreaseTempControl.addEventListener('click', decreaseTemp);
+const updateTempColor = () => {
+    const tempValueContainer = document.querySelector("#tempValue")
+    let color = "yellow";
+    if (state.currentTemp >= 80) {
+        color = "red";
+    } else if (state.currentTemp >= 70) {
+        color = "orange";
+    } else if (state.currentTemp >= 60) {
+        color = "yellow";
+    } else if (state.currentTemp >= 50) {
+        color = "green";
+    } else {
+        color = "blue";
+    };
+    tempValueContainer.classList = color;
 }
 
 
+const registerEventHandlers = () => {
+    const increaseTempControl = document.querySelector("#increase_temp");
+    increaseTempControl.addEventListener('click', increaseTemp);
+
+    const decreaseTempControl = document.querySelector("#decrease_temp");
+    decreaseTempControl.addEventListener('click', decreaseTemp);
+}
+
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
+

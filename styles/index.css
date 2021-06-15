@@ -65,7 +65,27 @@ h2 {
 
 #tempValue {
     font-size: 3rem;
-    color: yellow;
+    /* color: yellow; */
     margin-right: 15px;
     /* margin: 10px; */
+}
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
 }
