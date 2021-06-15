@@ -12,8 +12,12 @@ div section {
 }
 
 h1 {
-    color: rgb(249, 247, 247);
+    color: rgb(47, 60, 60);
     font-size: 4em;
+}
+
+h3 {
+    text-transform: uppercase;
 }
 
 header {
@@ -35,22 +39,21 @@ main div {
     grid-column-end: 3;
 }
 
-main #Snapshot {
+main #snapshot {
     grid-column-start: 2;
     grid-column-end: 3;
-    
 }
 
-#Snapshot {
+#snapshot {
     background-color: azure;
     text-align: center;
     border-radius: 10px;
-    max-width: 500px;
     text-align: center;
-    
+    min-width: 500px;
+    min-height: 150px;
 }
 
-#Snapshot div {
+#snapshot div {
     display: flex;
     flex-direction: column;
 }
