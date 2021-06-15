@@ -1,0 +1,42 @@
+body {
+    background-color: #cfe0dd;
+    color: #555b6e;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 2rem;
+}
+
+h1 {
+    grid-row: 1;
+}
+
+.temperature_section, .sky_section, .city_section, .garden_section {
+    border-radius: 8px;
+    padding: 1.5rem;
+    background-color: white;
+}
+
+.temperature_section {
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.sky_section {
+    grid-row: 2;
+    grid-column: 2;
+}
+
+.city_section {
+    grid-row: 2;
+    grid-column: 3;
+}
+
+.garden_section {
+    grid-row: 3;
+
+    /* make it span more than just column 2 */
+    grid-column: 2;
+}
