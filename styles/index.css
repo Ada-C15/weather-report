@@ -2,14 +2,14 @@ h1 {
     font-family: 'Architects Daughter', regular;
 }
 
-/* h2 {
-    font-family: 'Montserrat', sans-serif;
-} */
+h2 {
+    font-family: 'Architects Daughter', regular;
+}
 
 .header-city-name {
     font-family: 'Montserrat', sans-serif;
 }
 
-.city-name {
+/* .city-name {
     font-family: 'Architects Daughter', regular;
-}
+} */
