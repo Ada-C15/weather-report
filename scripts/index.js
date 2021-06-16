@@ -1,10 +1,6 @@
 const state = {
     temp: 65,
-    // use these to change background color incrementally?
-    // red: 255,
-    // green: 247,
-    // blue: 0
-    // color: rgb(255, 247, 0)
+    tempRange: "mild",
     sky: "sunny",
     city: "Seattle"
 };
@@ -15,7 +11,6 @@ const tempUp = (event) => {
     const count = document.querySelector("#tempDisplay");
     count.textContent = `${state.temp}`;
     checkTemp();
-    // Add something here that changes background color to slightly more red each click
 };
 
 const tempDown = (event) => {
@@ -27,114 +22,45 @@ const tempDown = (event) => {
 
 const checkTemp = (event) => {
     if (state.temp === 105) {
-        extremeTemp();
+        state.tempRange = "extreme"
+        textColor("#tempDisplay", "black");
+    } else if (state.temp === 90 || state.temp === 104) {
+        state.tempRange = "hot"
+        textColor("#tempDisplay", "red");
+    } else if (state.temp === 75 || state.temp === 89) {
+        state.tempRange = "warm"
+        textColor("#tempDisplay", "rgb(255, 162, 0)");
+    } else if (state.temp === 60 || state.temp === 74) {
+        state.tempRange = "mild"
+        textColor("#tempDisplay", "rgb(255, 247, 0)");
+    } else if (state.temp === 45 || state.temp === 59) {
+        state.tempRange = "cool"
+        textColor("#tempDisplay", "rgb(73, 150, 26)");
+    } else if (state.temp === 30 || state.temp === 44) {
+        state.tempRange = "cold"
+        textColor("#tempDisplay", "rgb(0, 94, 255)");
+    } else if (state.temp === 29) {
+        state.tempRange = "freezing"
+        textColor("#tempDisplay", "rgb(0, 251, 255)");
     }
-    // use temp = x so program doesnt have to change it each time
-    if (state.temp === 90 || state.temp === 104) {
-        hotTemp();
-    }
-    if (state.temp === 75 || state.temp === 89) {
-        warmTemp();
-    }
-    if (state.temp === 60 || state.temp === 74) {
-        mildTemp();
-    }
-    if (state.temp === 45 || state.temp === 59) {
-        coolTemp();
-    }
-    if (state.temp === 30 || state.temp === 44) {
-        coldTemp();
-    }
-    if (state.temp === 29) {
-        freezingTemp();
-    }
+    const landscape = document.querySelector("#landscape");
+    landscape.className = state.tempRange;
 }
 
 const textColor = function(selector, color) {
     document.querySelector(selector).style.color = color;
 }
 
-const backgroundColor = function(selector, color) {
-    document.querySelector(selector).style.backgroundColor = color;
-}
+// const backgroundColor = function(selector, color) {
+//     document.querySelector(selector).style.backgroundColor = color;
+// }
 
-const extremeTemp = (event) => {
-    textColor("#tempDisplay", "black");
-    textColor("#landscape h3", "white");
-    textColor("#groundDisplay", "white");
-    backgroundColor("#landscape", "black");
-    const count = document.querySelector("#groundDisplay")
-    count.textContent = "🌵____🌵_______🌵_🌡__🌵__🌵";
-};
-
-const hotTemp = (event) => {
-    textColor("#tempDisplay", "red");
-    textColor("#landscape h3", "black");
-    textColor("#groundDisplay", "black");
-    backgroundColor("#landscape", "rgb(255, 0, 0, 0.5)");
-    const count = document.querySelector("#groundDisplay");
-    count.textContent = "🌵_🐍__🌵_🦂__🦂__🌵_🐍__🌵__🌵";
-};
-
-const warmTemp = (event) => {
-    textColor("#tempDisplay", "rgb(255, 162, 0)");
-    textColor("#landscape h3", "black");
-    textColor("#groundDisplay", "black");
-    backgroundColor("#landscape", "rgb(255, 162, 0, 0.5)");
-    const count = document.querySelector("#groundDisplay");
-    count.textContent = "🌴_🌸__🌴_⛱__⛱__🌴_⛱__🌴__🌴";
-};
-
-const mildTemp = (event) => {
-    textColor("#tempDisplay", "rgb(255, 247, 0)");
-    textColor("#landscape h3", "black");
-    textColor("#groundDisplay", "black");
-    backgroundColor("#landscape", "rgb(255, 247, 0, 0.5)");
-    const count = document.querySelector("#groundDisplay");
-    count.textContent = "🌳_🌿__🌳_🌿__🌿__🌳_🌿__🌳__🌳";
-};
-
-const coolTemp = (event) => {
-    textColor("#tempDisplay", "rgb(73, 150, 26)");
-    textColor("#landscape h3", "black");
-    textColor("#groundDisplay", "black");
-    backgroundColor("#landscape", "rgb(73, 150, 26, 0.5)");
-    const count = document.querySelector("#groundDisplay");
-    count.textContent = "🌳_🌲__🌳_🌲__🌲__🌳_🌲__🌳__🌳";
-};
-
-const coldTemp = (event) => {
-    textColor("#tempDisplay", "rgb(0, 94, 255)");
-    textColor("#landscape h3", "black");
-    textColor("#groundDisplay", "black");
-    backgroundColor("#landscape", "rgb(0, 94, 255, 0.5)");
-    const count = document.querySelector("#groundDisplay");
-    count.textContent = "🌲_🏔__🌲_🏔__🏔__🌲_🏔__🌲__🌲";
-};
-
-const freezingTemp = (event) => {
-    textColor("#tempDisplay", "rgb(0, 251, 255)");
-    textColor("#landscape h3", "black");
-    textColor("#groundDisplay", "white");
-    backgroundColor("#landscape", "rgb(0, 251, 255, 0.5)");
-    const count = document.querySelector("#groundDisplay");
-    count.textContent = "🌲_☃️__🌲_🏔__☃️__🌲_🏔__🌲__🌲";
-};
-
-// SKY FUNCTIONALITY //
 const selectSky = (event) => {
     state.sky = event.target.value;
-    skyDisplays = {
-        "sunny": "☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️",
-        "partlyCloudy": "⛅🌤️⛅⛅🌤️⛅🌤️🌤️⛅⛅🌤️🌤️🌤️⛅⛅🌤️",
-        "cloudy": "☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️",
-        "rainy": "🌧️🌧️🌧️💧🌧️🌧️💧💧🌧️🌧️🌧️🌧️💧🌧️🌧️🌧️",
-        "thunder": "🌩️⚡⛈️🌩⚡⛈️🌩️⚡⚡🌩️⛈️⚡⛈️🌩️⚡⛈️",
-        "snowy": "🌨️❄️❄️❄️🌨️🌨️❄️🌨️🌨️❄️🌨️❄️❄️🌨️🌨️🌨️"
-    }
-    const sky = document.querySelector("#skyDisplay");
-    sky.textContent = `${skyDisplays[state.sky]}`;
+    const body = document.querySelector("body");
+    body.className = state.sky
 };
+
 
 // CITY FUNCTIONALITY //
 const selectCity = (event) => {

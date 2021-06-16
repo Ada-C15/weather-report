@@ -7,19 +7,12 @@
         <meta name="description" content="">
         <link rel="stylesheet" href="styles/index.css">
     </head>
-    <body>
+    <body class="sunny">
         <header>
             <h1>Weather Time!</h1>
             <h3 id="cityDisplay">For the city of: Seattle</h3>
         </header>
         <main>
-            <section id="temp">
-                <h3>Temperature</h3>
-                <p id=tempDisplay>65</p>
-                <button id="tempUp">▲</button>
-                <button id="tempDown">▼</button>
-            </section>
-
             <section id="sky">
                 <h3>Sky</h3>
                 <select id="skyChoices">
@@ -32,16 +25,23 @@
                 </select>
             </section>
 
+            <section id="temp">
+                <h3>Temperature</h3>
+                <p id=tempDisplay>65</p>
+                <button id="tempUp">▲</button>
+                <button id="tempDown">▼</button>
+            </section>
+
             <section id="city">
                 <h3>City Name</h3>
                 <input id="cityChoice" type="text" value="Seattle"/>
                 <button id="reset">Reset</button>
             </section>
-
-            <section id="landscape">
+            
+            <section id="landscape" class="mild">
                 <h3>Landscape Display</h3>
-                <p id="skyDisplay">☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️</p>
-                <p id="groundDisplay">🌳_🌿__🌳_🌿__🌿__🌳_🌿__🌳__🌳</p>
+                <!-- <p id="skyDisplay">☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️</p> -->
+                <!-- <p id="groundDisplay">🌳_🌿__🌳_🌿__🌿__🌳_🌿__🌳__🌳</p> -->
             </section>
 
         </main>
