@@ -1,5 +1,21 @@
+// -----------------------*** EVENTS ***------------------------
+const registerEventHandlers = () => {
+    const incTempButton = document.querySelector("#increaseTemp");
+    incTempButton.addEventListener('click', increaseTemperature);
+    const decTempButton = document.querySelector("#decreaseTemp");
+    decTempButton.addEventListener('click', decreaseTemperature);
+    const skySelection = document.querySelector("#skySelect");
+    skySelection.addEventListener('change', updateGarden);
+    const cityNameInput = document.querySelector("#cityNameInput");
+    cityNameInput.addEventListener('input', updateCity);
+    const resetCityButton = document.querySelector("#resetCityButton");
+    resetCityButton.addEventListener('click', resetCity);
+};
+
+document.addEventListener("DOMContentLoaded", registerEventHandlers);
+
+
 // ---------------------** TEMPERATURE SECTION **----------------------
-// ---------------------**       WAVE 1        **----------------------
 const state = {
     currentTemp: 70
 };
@@ -21,18 +37,6 @@ const tempValueColor = () => {
         return ["#c71f37", "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"]; //Red
     }
 }
-
-const registerEventHandlers = () => {
-    const incTempButton = document.querySelector("#increaseTemp");
-    incTempButton.addEventListener('click', increaseTemperature);
-    const decTempButton = document.querySelector("#decreaseTemp");
-    decTempButton.addEventListener('click', decreaseTemperature);
-    const skySelection = document.querySelector("#skySelect");
-    skySelection.addEventListener('change', updateGarden);
-};
-
-document.addEventListener("DOMContentLoaded", registerEventHandlers);
-
 
 const increaseTemperature = () => {
     state.currentTemp += 1;
@@ -56,10 +60,8 @@ const decreaseTemperature = () => {
 
 
 // ----------------------** SKY SELECTION **------------------------
-// ----------------------**     WAVE 2    **------------------------
-
+// This part (switch) was so cool to learn and implement!!
 const updateGarden = () => {
-    console.log("Testing");
     const skySelect = document.querySelector("#skySelect");
     const skyDisplay = document.querySelector("#skyDisplay");
     switch (skySelect.selectedIndex){
@@ -82,4 +84,19 @@ const updateGarden = () => {
 }
 
 
+// -------------------** CITY NAME SELECTION **---------------------
 
+const updateCity = () => {
+    const cityName = document.querySelector("#cityNameInput");
+    const headerCityName = document.querySelector("#headerCityName");
+    headerCityName.textContent = cityName.value;
+}
+
+
+// ---------------------** RESET CITY NAME  **----------------------
+
+const resetCity = () => {
+    const cityName = document.querySelector("#cityNameInput");
+    cityName.value = "Seattle";
+    updateCity();
+}

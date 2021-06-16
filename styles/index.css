@@ -4,23 +4,23 @@ html{
 
 body{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 1rem;
-
-    /* background-color: #89c2d9; */
-    /* background-color: #284b63; Azul Oscuro */
     background-color: #012a4a;
     color:white;
-    /* color: #343434; */
-    margin: 0;
-    padding: 0;
+    padding: 20px;
     font-size: 16px;
-    /* display: flex; */
 }
 
 header, footer{
     grid-column: span 3;
     text-align: center;
+}
+
+#headerCityName{
+    color: tomato;
+    font-size: 20px;
+    text-decoration:underline;
 }
 
 .temperature{
@@ -70,10 +70,24 @@ input{
     background-color: #adb5bd;
 }
 
+.garden{
+    grid-column: 2;
+    grid-row: span 3;
+    text-align: center;
+    background-color: #aed9e0;
+    border-radius: 6px;
+    display: block;
+    font-size: 18px;
+}
+
 .temperature, .sky, .city-name{
     background-color: #d8e2dc;
     color: #012a4a;
     border-radius: 4px;
     padding: 5px;
     display: inline;
+}
+
+#gardenContent{
+    font-size: 30px;
 }
