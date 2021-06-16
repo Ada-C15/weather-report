@@ -14,6 +14,12 @@ button {
     font-size: 0.5em;
     padding: 5px;
 }
+input {
+    padding: 5px;
+    font-size: 0.9em;
+    font-family: monospace;
+
+}
 
 #container {
     border-radius: 10px;
@@ -29,7 +35,7 @@ button {
     width: 100%;
     margin-top: 20%;
     margin: auto;
-    background-image: url(overcast.gif);
+    background-image: url(sunny.gif);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -78,27 +84,31 @@ button {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    padding-top: 0.5em;
 }
 
-#setLocationandSky {
-    flex-direction: column;
-    height: 50%;
-    margin-top: 0.5em;
+#locationButtons {
+    margin-top: 5px;
+    margin-right: 36%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#setSky {
+    width: 25%;
+    margin-left: 4%;
 }
 
 #setTemperature {
-    /* background-color: green; */
-    width: 30%;
-    margin-top: 0.5em;
-    width: 40%;
+    width: 35%;
     text-align: center;
-    /* margin-left: 30px; */
 }
 
-#buttons {
+#tempButtons {
     display: flex;
     flex-direction: row;
-    margin: 5px;
+    margin: 3px;
 }
 
 #upButton, #downButton {

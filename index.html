@@ -9,53 +9,47 @@
     <body>
         <div id="container">
             <section id="display">
-
                 <section id="temperaturePanel">
                     <span id="temperature">75</span><span> F</span><br>
                     <span id="location">Fort Worth</span>
-
                 </section>
-
                 <section id="landscapePanel">
                     <img src ="styles/flowers.png" id="landscape" alt="landscape">
                 </section>
             </section>
-            
+
             <section id="userSettingsContainer">
-
-                <section id="setLocationandSky">
-                    <section id="setLocation">
-                        <form>
-                            <label for="setLocation">Location</label><br>
-                            <input name="searchTxt" type="text" maxlength="25" id="searchTxt" class="searchField"/>
+                <section id="setLocation">
+                    <form>
+                        <label for="setLocation">Location:</label><br>
+                        <input name="searchTxt" type="text" maxlength="25" id="searchTxt" class="searchField" value = "Fort Worth"/>
+                        <section id="locationButtons">
                             <button type="button" id="enter">ENTER</button>
-                        </form>
-
-                    </section>
-
-                    <section id="setSky">
-                        <label for="skies">Sky:</label><br>
-                        <select id="skies" name="skies">
-                            <option value="rainy">Rainy</option>
-                            <option value="sunny">Sunny</option>
-                            <option value="overcast">Overcast</option>
-                            <option value="nightsky">Night Sky</option>
-                            <option value="dawn">Dawn</option>
-                        </select>
-                    </section>
-
+                            <input type="submit" value="RESET"/>
+                        </section>
+                    </form>
                 </section>
 
+                <section id="setSky">
+                    <label for="skies">Sky:</label><br>
+                    <select id="skies" name="skies">
+                        <option value="sunny">Sunny</option>
+                        <option value="overcast">Overcast</option>
+                        <option value="cloudy">Cloudy</option>
+                        <option value="rainy">Rainy</option>
+                        <option value="dawn">Dawn</option>
+                        <option value="dusk">Dusk</option>
+                        <option value="nightsky">Night Sky</option>
+                        <option value="cyberpunk">Cyber Punk</option>
+                    </select>
+                </section>
                 <section id="setTemperature">
                     <label for="temp">Temperature:</label>
-
-                    <section id="buttons"> 
+                    <section id="tempButtons"> 
                         <button id="downButton">DOWN</button>
                         <button id="upButton">UP</button>
-
                     </section>
                 </section>
-
             </section>
         </div>
         <script src="scripts/index.js"></script>

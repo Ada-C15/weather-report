@@ -1,6 +1,7 @@
 const state = {
     temperature: 75,
-    location: " ",
+    location: "",
+    sky: ""
 };
 
 const changeColorandLandscape = () => {
@@ -12,10 +13,10 @@ const changeColorandLandscape = () => {
         landscape.src = "styles/desert.png";
     } else if (state.temperature > 70) {
         thermostat.style.color = "orange"
-        landscape.src = "styles/flowers.png";;
+        landscape.src = "styles/grass.png";;
     } else if (state.temperature > 60) {
         thermostat.style.color = "yellow"
-        landscape.src = "styles/grass.png";
+        landscape.src = "styles/flowers.png";
     } else if (state.temperature > 50) {
         thermostat.style.color = "green"
         landscape.src = "styles/snow.png";;
@@ -38,21 +39,30 @@ const decreaseTemperature = () => {
     changeColorandLandscape()
 }
 
-
-// const updateSky = () => {
-//     const sky = document.querySelector("#display");
-//     if (rain) {
-//         sky.src = "styles/rain.gif";
-//     }else if (sunny) {
-//         sky.src = "styles/sunny.gif";
-//     }else if (overcast) {
-//         sky.src = "styles/overcase.gif";
-//     }else if (nightsky) {
-//         sky.src = "styles/nightsky.gif";
-//     }else if (dawn) {
-//         sky.src = "styles/dawn.gif";
-//     }
-// }
+const updateSkies = () => {
+    let userSelect = document.querySelector("#skies");
+    output = userSelect.value;
+    state.sky = output
+    console.log(state.sky)
+    const sky = document.querySelector("#display");
+    if (state.sky == "rainy") {
+        sky.style.backgroundImage = "url(styles/rain.gif)";
+    }else if (state.sky == "sunny") {
+        sky.style.backgroundImage = "url(styles/sunny.gif)";
+    }else if (state.sky == "cloudy") {
+        sky.style.backgroundImage = "url(styles/cloudy.gif)";
+    }else if (state.sky == "overcast") {
+        sky.style.backgroundImage = "url(styles/overcast.gif)";
+    }else if (state.sky == "nightsky") {
+        sky.style.backgroundImage = "url(styles/night.gif)";
+    }else if (state.sky == "dawn") {
+        sky.style.backgroundImage = "url(styles/dawn.gif)";
+    }else if (state.sky == "dusk") {
+        sky.style.backgroundImage = "url(styles/dusk.gif)";
+    }else if (state.sky == "cyberpunk") {
+        sky.style.backgroundImage = "url(styles/cyberpunk.gif)";
+    }
+}
 
 const updateLocation = () => {
     let userInput = document.getElementById("searchTxt").value;
@@ -63,11 +73,13 @@ const updateLocation = () => {
 
 const registerEventHandlers = () => {
     const upButton = document.querySelector("#upButton");
-    upButton.addEventListener("click", increaseTemperature);
     const downButton = document.querySelector("#downButton");
-    downButton.addEventListener("click", decreaseTemperature);
     const updateLocationButton = document.querySelector("#enter");
-    updateLocationButton.addEventListener("click", updateLocation)
+    const updateSky = document.querySelector("#skies");
+    upButton.addEventListener("click", increaseTemperature);
+    downButton.addEventListener("click", decreaseTemperature);
+    updateLocationButton.addEventListener("click", updateLocation);
+    updateSky.addEventListener("change", updateSkies)
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
