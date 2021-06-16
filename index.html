@@ -8,20 +8,19 @@
   <body>
     <main id="home">
       <header class="header">
+        <img src="./assets/weather02.gif" alt="weather" id="weather_pic" />
         <h1>Weather Report</h1>
-        <span>
-            For the lovely city of
+        <span class="header_msg">
+            ~~For the lovely city of
             <span id="headerCityName" class="header__city-name">Seattle</span>
         </span>
       </header>
       <section class="temperature_section">
           <h2>Temperature</h2>
           <div class="temperature_content">
-              <div class="temperature_controls">
-                  <span id="increaseTemp">⬆️ </span>
-                  <span id="decreaseTemp">⬇️</span>
-              </div>
-              <span id="tempValue">70</span>
+            <span id="tempValue">70</span>
+            <span id="increaseTemp">⬆️ </span>
+            <span id="decreaseTemp">⬇️</span>
           </div>
       </section>
       <section class="sky_section">
@@ -33,12 +32,12 @@
               <option>Snowy</option>
           </select>
       </section>
-      <section>
+      <section class="city_section">
           <h2>City Name</h2>
           <input type="text" id="cityNameInput" value="Seattle">
           <button id="cityNameReset" class="city-name_reset-btn">Reset</button>
       </section>
-      <section>
+      <section class="garden_section">
           <h2>Weather Garden</h2>
           <div id="gardenContent" class="garden_content">
               <div id="sky">☀️☀️☀️☀️☀️☀️☀️☀️</div>
