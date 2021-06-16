@@ -1,44 +1,50 @@
 <!DOCTYPE html>
-<h
+
     <head>
         <meta charset="utf-8">
         <link href="./styles/index.css" rel="stylesheet"/>
+        <script src="./scripts/index.js"></script>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&display=swap');
         </style>
     </head>
     <body>
-        <h1>WEATHER REPORT</h1>
-        <header class="main-header">
-            <section id="sky-container"></section>
-                <h2 class="title">SKY</h2>  
-                <p>Hey, what type of sky is happening out there?</p> 
-                <select class="controls" name="sky" id="sky-select">
-                    <option value="sun">Brilliant Sun</option>
-                    <option value="clouds">Dashes of Clouds</option>
-                    <option value="clear">Clear</option>
-                    <option value="rain">Rain Drops</option>
-                </select>
-            </section>  
-            <section id="city-name-container">
-                <h2 class="title">CITY NAME</h2>
-                <p>Which city are you looking for?</p>
-                <input><label class="controls" name="city">City:</label></input>
-                <input type="reset" value="Reset">
-            </section>
+        <header class="main-header"></header>
+            <h1>WEATHER REPORT</h1>
+            <span>Weather for
+                <span id="cityHeaderName"></span></span>
+        
+        
+        <section id="skyContainer"></section>
+            <h2 class="title">SKY</h2>  
+            <p>Hey, what type of sky is happening out there?</p> 
+            <select class="controls" name="sky" id="sky-select">
+                <option value="sun">Brilliant Sun</option>
+                <option value="clouds">Dashes of Clouds</option>
+                <option value="clear">Clear</option>
+                <option value="rain">Rain Drops</option>
+            </select>
+        </section>  
+        <section id="cityNameContainer">
+            <h2 class="title">CITY NAME</h2>
+            <button onclick="document.querySelector('#cityInput').value =''" >Reset City</button>
+            <input type="text" value="Seattle" id="cityInput">
+        </section>
         </header>   
-        <section class="weather-garden-container">
+        <section class="weatherGardenContainer">
             <h2 class="title">WEATHER GARDEN</h2>   
-            <p>Content</p>
-        </section>
+            <p>lists of emojos go here that depend on the temperature</p>
+            </section>
         <div></div>
-        <section class="temp-container">
+        <section id="tempContainer">
+            <h2 class="title">TEMPERATURE</h2>  
+            <button onclick="increaseTemp()"class="button" >⬆️</button>
+            <span id="temperature">70</span>
+            <button class="button" onclick="decreaseTemp()" id ="decreaseTemp">⬇️</button>
 
         </section>
-        <div></div>
-        <section class="weather-garden">
-
-        </section>
+        
+        
     </body>
 
     </html>
