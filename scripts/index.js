@@ -1,8 +1,24 @@
 let tempValue = 71;
+let sky = ""
 
-// const updateSky = function(option) {
-
-// }
+const selectSky = function(sky) {
+    const skyOption = document.getElementById("skySelect")
+    const getInput = skyOption.options[skyOption.selectedIndex].value;
+    // console.log(getInput)
+    const skyContainer = document.getElementById("sky");
+    // console.log(skyContainer)
+    
+    if (getInput === "Sunny") {
+        sky = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️'
+    } else if (getInput === "Cloudy") {
+        sky = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️'
+    } else if (getInput === "Rainy") {
+        sky = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧'
+    } else if (getInput === "Snowy") {
+        sky = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨'
+    }
+    skyContainer.textContent = sky;
+}
 
 
 const updateTemp = function(tempValue) {
@@ -30,6 +46,8 @@ const updateTemp = function(tempValue) {
 }
 
 const registerEventHandlers = function() {
+    updateTemp(tempValue);
+
     const incButton = document.querySelector("#increaseTempControl")
     incButton.addEventListener("click", function() {
         tempValue += 1
@@ -41,9 +59,14 @@ const registerEventHandlers = function() {
         tempValue -= 1
         updateTemp(tempValue)
     })
-}
 
-updateTemp(tempValue)
-registerEventHandlers()
+    selectSky(sky);
+    const skyMenu = document.querySelector("#skySelect");
+    skyMenu.addEventListener("change", selectSky)
 
-// document.addEventListener("DOMContentLoaded", registerEventHandlers);
+};
+
+
+// registerEventHandlers()
+
+document.addEventListener("DOMContentLoaded", registerEventHandlers);
