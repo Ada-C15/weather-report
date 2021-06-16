@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report 🔎 </title>
+    <link href="./styles/index.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <h1>Weather Report : ☀️ ⛅️ ⛈ ❄️ :</h1>
+        <button id="dark-mode">Dark mode 🌙</button>
+    </header>
+    <section class="option-container">
+        <div id="city-name-sec" class="info-sec">
+            <h2>City Name 🌃</h2>
+            <input type="text" id="city-name-input" placeholder="Enter a city name">
+            <button id="city-name-reset">Reset</button>
+        </div>
+        <div id="temperature-sec" class="info-sec">
+            <h2>Temperature 🌡</h2>
+            <div id="temperature-control">
+                <div id="temperature-array">
+                    <button id="add-temp-button">⏫</button>
+                    <button id="reduce-temp-button">⏬</button>
+                </div>
+                <span id="temp-value">70</span>
+            </div>
+        </div>
+        <div id="sky-sec" class="info-sec">
+            <h2>Weather 🌳</h2>
+            <select id="weather-choice">
+                <option>Sunny</option>
+                <option>Cloudy</option>
+                <option>Rainy</option>
+                <option>Snowy</option>
+            </select>
+        </div>
+    </section>
+    <section id="weather-garden-sec">
+        <h2>Weather garden for the beatutiful city of <span id="city-name-header"></span> 🏙</h2>
+        <div id="garden-view">
+            <div id="sky-view"></div>
+            <div id="ground-view"></div>
+        </div>
+    </section>
+    <script src="./scripts/index.js"></script>
+</body>
+</html>
