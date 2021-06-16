@@ -2,8 +2,9 @@
 const state =  {
     temperature : 70
 };
-
+//function to update garden emojis
 const gardenWeatherEmojis = () => {
+    console.log("gardenWeatherEmojis called")
     const gardenLandscape = document.querySelector("#landscape");
     
     if (state.temperature >= 80) {
@@ -16,7 +17,33 @@ const gardenWeatherEmojis = () => {
         gardenLandscape.textContent= "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
     }
 };
-// not working
+
+const updateSky = () => {
+    console.log("updateSkyCalled")
+    // gardenSky.value allows us access what the user has chosen in dropdown menu
+    const gardenSky = document.querySelector("#skySelect");
+    let sky = '';
+    // skyColor values need to coordinate with CSS file for color values
+    let skyColor = '';
+    if (gardenSky.value === "sun"){
+        sky = '🔥🔥🔥🔥☀🔥🔥🔥☀🔥🔥🔥🔥';
+        skyColor = 'sunny';
+    } else if (gardenSky.value === "clouds"){
+        sky = '🌥🌥🌥🌥 🌥🌥🌥🌥 🌥🌥🌥🌥';
+        skyColor = "cloudy";
+    } else if (gardenSky.value  === "clear") {
+        sky = '🌎🌎🌎 🌎🌎🌎 🌎🌎🌎 🌎🌎🌎';
+        skyColor = "clear";
+    } else if (gardenSky.value === 'rain') {
+        sky = "🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊";
+        skyColor = "rainy";
+    }
+    console.log(gardenSky,"gardenSky value")
+    const emojiPlacement = document.querySelector("#emojiSky")
+    emojiPlacement.textContent = sky;
+};
+
+
 // function to update id=temperature in tempContainer
 const increaseTemp = () => {
     console.log("increaseTemp called")
@@ -25,39 +52,19 @@ const increaseTemp = () => {
     temperature.textContent = `${state.temperature}`
     gardenWeatherEmojis()
 };
-// not working
+
 // function to update id=temperature in tempContainer
 const decreaseTemp = () => {
     console.log("decreaseTemp called")
     const temperature = document.querySelector("#temperature")
     state.temperature -= 1;
     temperature.textContent = `${state.temperature}`
+    gardenWeatherEmojis()
 };
 // not working
 // function to update emojis in weatherGardenContainer by id=landscape  
 
-// const updateSky = () => {
-//     console.log("updateSkyCalled")
-//     const inputSky = document.querySelector("#skySelect").value;
-//     const skyContainer = document.getElementById("sky");
-//     let sky = '';
-//     let skyColor = '';
-//     if (inputSky === "Brilliant Sun");
-//         sky = '🔥🔥🔥🔥☀🔥🔥🔥☀🔥🔥🔥🔥';
-//         skyColor = 'sunny'
-//     if(inputSky === "Dashes of Clouds");
-//         sky = '🌥🌥🌥🌥 🌥🌥🌥🌥 🌥🌥🌥🌥';
-//         skyColor = "cloudy"
-//     if (inputSky === "Clear");
-//         sky = '🌎🌎🌎 🌎🌎🌎 🌎🌎🌎 🌎🌎🌎'
-//         skyColor = "clear"
-//     if (inputSky === 'Rain Drops');
-//         sky = "🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊🌊"
-//         skyColor = "rainy"
-//     skyContainer.textContent = sky;
-//     const gardenContent = document.querySelector("#gardenContent");
-//     gardenContent.classList = `gardenContent ${skyColor}`;
-// };
+
 
 
 //function that registers all event handlers when called
@@ -69,6 +76,8 @@ const registerEventHandlers = () => {
     const decreaseTempButton = document.querySelector("#decreaseTemp");
     decreaseTempButton.addEventListener("click", decreaseTemp);
 
+    const updateSkyDropDown = document.querySelector("#skySelect")
+    updateSkyDropDown.addEventListener("change",updateSky)
 
     
     // updateSky()
