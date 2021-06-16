@@ -1,5 +1,6 @@
 html{
     font-family: 'Futura',sans-serif;
+    margin: 20px;
 }
 
 body{
@@ -65,7 +66,7 @@ input{
     letter-spacing: 1px;
 }
 
-#cityResetButton{
+#resetCityButton{
     font-size: 18px;
     background-color: #adb5bd;
 }
@@ -84,10 +85,27 @@ input{
     background-color: #d8e2dc;
     color: #012a4a;
     border-radius: 4px;
-    padding: 5px;
+    padding: 25px;
     display: inline;
 }
 
 #gardenContent{
-    font-size: 30px;
+    font-size: 40px;
 }
+
+#landscape{
+    position:absolute;                 
+    bottom: 35vh;
+    padding-left: 2vw;
+}
+
+.image{
+    grid-column: 3;
+    grid-row: span 3;
+    padding-top: 7vh;
+    padding-left: 5vw;
+}
+
+
+
+

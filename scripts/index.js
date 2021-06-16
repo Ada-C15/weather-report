@@ -97,6 +97,6 @@ const updateCity = () => {
 
 const resetCity = () => {
     const cityName = document.querySelector("#cityNameInput");
-    cityName.value = "Seattle";
+    cityName.value = "Querétaro";
     updateCity();
 }
