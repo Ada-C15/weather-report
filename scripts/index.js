@@ -24,6 +24,16 @@ const cooler = () => {
 
 };
 
+const changeCity = () => {
+
+    const cityChange = document.querySelector("#city");
+    const title = document.querySelector("#seattle");
+    title.textContent = cityChange.value;
+    
+}; 
+
+
+
 const registerEventHandlers = () => {
     const weatherButton = document.querySelector("#warm");
 
@@ -32,6 +42,11 @@ const registerEventHandlers = () => {
     weatherButton.addEventListener("click", hotter);
 
     weatherButtonDown.addEventListener("click", cooler);
+
+    const changeCityName = document.querySelector("#city");
+    changeCityName = addEventListener("input", changeCity)
+
+    
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
