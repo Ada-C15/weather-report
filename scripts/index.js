@@ -5,7 +5,8 @@ const state = {
     // green: 247,
     // blue: 0
     // color: rgb(255, 247, 0)
-    sky: "sunny"
+    sky: "sunny",
+    city: "Seattle"
 };
 
 // TEMPERATURE FUNCTIONALITY//
@@ -127,12 +128,19 @@ const selectSky = (event) => {
         "sunny": "☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️",
         "partlyCloudy": "⛅🌤️⛅⛅🌤️⛅🌤️🌤️⛅⛅🌤️🌤️🌤️⛅⛅🌤️",
         "cloudy": "☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️",
-        "rainy": "🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️",
+        "rainy": "🌧️🌧️🌧️💧🌧️🌧️💧💧🌧️🌧️🌧️🌧️💧🌧️🌧️🌧️",
         "thunder": "🌩️⚡⛈️🌩⚡⛈️🌩️⚡⚡🌩️⛈️⚡⛈️🌩️⚡⛈️",
         "snowy": "🌨️❄️❄️❄️🌨️🌨️❄️🌨️🌨️❄️🌨️❄️❄️🌨️🌨️🌨️"
     }
-    const skyDisplay = document.querySelector("#skyDisplay");
-    skyDisplay.textContent = `${skyDisplays[state.sky]}`;
+    const sky = document.querySelector("#skyDisplay");
+    sky.textContent = `${skyDisplays[state.sky]}`;
+};
+
+// CITY FUNCTIONALITY //
+const selectCity = (event) => {
+    state.city = event.target.value;
+    const city = document.querySelector("#cityDisplay");
+    city.textContent = `For the city of: ${state.city}`;
 };
 
 // REGISTER EVENT HANDLERS //
@@ -145,6 +153,9 @@ const registerEventHandlers = (event) => {
 
     const skyDisplay = document.querySelector("#skyChoices");
     skyDisplay.addEventListener("change", selectSky)
+
+    const cityInput = document.querySelector("#cityChoice");
+    cityInput.addEventListener("change", selectCity)
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
