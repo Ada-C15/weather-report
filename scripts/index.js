@@ -65,12 +65,10 @@ const resetCityInput = () => {
 
 }
 
-
-
 function getSkyType() {
     const skySelect = document.getElementById("sky-select");
     const skyType = skySelect.value;
-    const weatherImage = document.getElementById("weather-image"); //html knows this is an img tag => it has 'src' attribute
+    const weatherImage = document.getElementById("weather-image");
     if (skyType === "hot") {
         weatherImage.src = "assets/hotImg.jpeg"
     } else if (skyType === "hotter") {
