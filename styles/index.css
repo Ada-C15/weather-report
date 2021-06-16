@@ -31,6 +31,7 @@ select {
     margin-top: 50px;
 }
 
+
 .botton span {
     float: right;
     line-height: 35px;
@@ -48,11 +49,19 @@ select {
     width: calc(400px - 30px);
     height: calc(250px - 30px);
     background: rgb(248, 246, 246);
-    float: left;
-    margin: 15px;
+    /* float: left; */
+    bottom: -100px;
+    margin: 30px;
     box-sizing: border-box;
-    overflow: hidden;
     border-radius: 10px;
+}
+
+.box-container {
+    background: gray;
+    position: absolute;
+    top: 20%;
+    left: 500%;
+    
 }
 
 .container .box .icon{
@@ -86,13 +95,13 @@ select {
     color: aquamarine;
 }
 #garden-box {
-    position: flex;
-    left: 500px;
-    top: -500px;
-    bottom: 600px;
-    background:	#D8D8D8;
+    background:	transparent;
     width: 600px;
     height: 300px;
+}
+
+#garden {
+    background: transparent;
 }
 
 #reset_button {
@@ -103,6 +112,11 @@ select {
 #tempCount {
     font-size: 40px;
 }
+
+/* #garden-title {
+    margin-left: 800px;
+    margin-top: 200px;
+} */
 
 
 .container .box .content {
@@ -132,6 +146,7 @@ select {
 .container .box:nth-child(1) .icon{
     background: #319635;
 }
+
 
 
 
