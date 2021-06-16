@@ -10,14 +10,14 @@
         <main>
             <h1>Weather Report</h1>
             <section>
-                <h2 id="cityName">For the City of </h2>
+                <h2 id="cityName">For the City of Seattle</h2>
             </section>
-            <section id="temp-section">
+            <section id="tempSection">
                 <h2><br>Change the Temperature!</h2>
-                <button id="addTempUpButton">Up Temp</button>
-                <button id="addTempDownButton">Down Temp</button>
+                <button id="tempUpButton">Up Temp</button>
+                <button id="tempDownButton">Down Temp</button>
             </section>
-            <section id="sky-section">
+            <section id="skySection">
                 <h2><br>Sky View!</h2>
                 <p>Change the sky view!</p>
                 <select id="skyDropdown">
@@ -27,9 +27,17 @@
                     <option>Snowy</option>
                 </select>
             </section>
-            <section id="city-section">
+            <section id="citySection">
                 <h2><br>City Name!</h2>
-                <button id="addCityName">Change the City</button>
+                <input id="changeCity" type="text" value="Seattle">
+                <button id="cityNameReset">Reset the City</button>
+            </section>
+            <section id="landscapeView">
+                <h2>Landscape View</h2>
+                <section id="landscapeDecorators">
+                    <p id="sky">☁️☁️☁️☁️☁️☁️☁️☁️</p>
+                    <p id="landscape"><br><br>🌲🪨🌳🌲🪨🌳🌲🪨🌳</p>
+                </section>
             </section>
         </main>
         <script src="scripts/index.js"></script>

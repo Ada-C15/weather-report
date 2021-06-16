@@ -15,7 +15,7 @@ h1 {
     font-size: 30px;
 }
 
-#city-section, #temp-section, #sky-section{
+#citySection, #tempSection, #skySection{
     text-align: center;
     width: 250px;
     height: 175px;
@@ -36,4 +36,15 @@ h1 {
     background-color: rgb(34, 29, 37); 
 }
 
-
+#landscapeView {
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 250px;
+    height: 175px;
+    border-radius: 14px;
+    box-sizing:content-box;
+    background-color: rgb(228, 184, 163);
+}
