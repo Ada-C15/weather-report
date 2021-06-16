@@ -71,9 +71,28 @@ const resetCityName = () => {
     city_name.textContent = name.value
 }
 
-const selectSky = () => {
+const skySelector = () => {
     const sky_selection = document.querySelector("#sky_selection")
     displaySky(sky_selection.value)
 }
 
+const registerEvent = () => {
+    const upButton = document.querySelector("#upButton");
+    upButton.addEventListener("click", increaseTemp);
+
+    const downButton = document.querySelector("#downButton");
+    downButton.addEventListener("click", decreaseTemp);
+
+    const inputCityName = document.querySelector("#name_input_box");
+    inputCityName.addEventListener("input", cityNameChange)
+
+    const resetNameButton = document.querySelector("#city_name_reset")
+    resetNameButton.addEventListener("click", resetCityName)
+
+    const skySelector = document.querySelector("#sky_selection")
+    console.log(skySelector)
+    skySelector.addEventListener("change", selectSky)
+};
+
+document.addEventListener("DOMContentLoaded", registerEvent);
 
