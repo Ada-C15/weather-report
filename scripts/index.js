@@ -57,10 +57,7 @@ const groundContainter = document.getElementById('land-icon-container');
 // get menu options
 const dropdownOptions = document.querySelectorAll('.dropdown .option');
 
-// What do we want to happen?
-// skyOption is selected, which updates state, which updates the sky emojis. 
-
-// each option has an event listener.
+// each sky option has an event listener.
 dropdownOptions.forEach(option => option.addEventListener('click',handleOptionSelected));
 
 // when options is selected, pass option content to select sky emojis
