@@ -143,6 +143,12 @@ const selectCity = (event) => {
     city.textContent = `For the city of: ${state.city}`;
 };
 
+const resetCity = (event) => {
+    document.querySelector("#cityChoice").value = "Seattle";
+    const city = document.querySelector("#cityDisplay");
+    city.textContent = "For the city of: Seattle";
+};
+
 // REGISTER EVENT HANDLERS //
 const registerEventHandlers = (event) => {
     const tempUpButton = document.querySelector("#tempUp");
@@ -156,6 +162,9 @@ const registerEventHandlers = (event) => {
 
     const cityInput = document.querySelector("#cityChoice");
     cityInput.addEventListener("change", selectCity)
+
+    const resetCityButton = document.querySelector("#reset");
+    resetCityButton.addEventListener("click", resetCity);
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
