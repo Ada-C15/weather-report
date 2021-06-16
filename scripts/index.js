@@ -1,10 +1,16 @@
+//To dos:
+//Change temp text color 
+//reset city name input box (currently - index.html button onclick)
+// change garden
+
+
 // Temperature
 const state = {
     current_temp:75
 }
 
 const changeTempColor = (event) => {
-    // const currentTemp = document.querySelector("#current_temp");
+    const currentTemp = document.querySelector("#current_temp");
     let color = "orange";
         if (state.current_temp > 80) {
             color = "red";
@@ -20,11 +26,30 @@ const changeTempColor = (event) => {
     currentTemp.classList = color;
 }   
 
+const changeGarden = (event) => {
+    const gardenContainer = document.querySelector("#garden");
+    let gardenContainer.textContent = "";
+        if (state.current_temp > 80) {
+            gardenContainer.textContent = "🌻 🍻 🏖 🏊🏻‍♀️ 🌞";
+        } else if (state.current_temp >= 70) {
+            gardenContainer.textContent = "🌸 🐕 🏕 🥂 ⚽️";
+        } else if (state.current_temp >= 60) {
+            gardenContainer.textContent = "🌿 🦌 🗽 🧘🏻‍♀️ 🎡 ";
+        } else if (state.current_temp >= 50) {
+            gardenContainer.textContent = "🍁 🍂 🏮 ⛩ 🐿";
+        } else if (state.current_temp < 50) {
+            gardenContainer.textContent = "⛄️ 🐧 🌬 ☕️ ⛷";
+        }
+}  
+
+
+
 const increaseTemp = (event) => {
     const currentTemp = document.querySelector("#current_temp");
     state.current_temp += 1;
     currentTemp.textContent = state.current_temp;
     changeTempColor();
+    changeGarden();
 };
 
 const decreaseTemp = (event) => {
@@ -32,6 +57,7 @@ const decreaseTemp = (event) => {
     state.current_temp -= 1;
     currentTemp.textContent = state.current_temp;
     changeTempColor();
+    changeGarden();
 };
 
 
@@ -49,6 +75,16 @@ const selectSky = (event) => {
     };
 };
 
+//City 
+const changeCity = (event) => {
+    const cityName = document.querySelector("#headercity");
+    cityName.textContent = event.target.value;
+}  
+const resetCity = (event) => {
+    const cityName = document.querySelector("#headercity");
+    cityName.textContent = "";
+  };
+
 
 //Registering event handler: someElement.addEventListener("event name",reatToEvent);
 const registerEventHanglers = (event) => {
@@ -60,7 +96,10 @@ const registerEventHanglers = (event) => {
     const skySelection= document.querySelector("#SkyOptions");
     skySelection.addEventListener("change", selectSky);
 
-    
+    const cityInput = document.querySelector("#cityname");
+    cityInput.addEventListener("input", changeCity);
+    const resetButton = document.querySelector("#resetButton");
+    resetButton.addEventListener("click", resetCity);
 }
 
 //document-level event handler registration

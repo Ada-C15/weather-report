@@ -14,17 +14,15 @@
     <!-- header: 'Weather Report'  -->
     <header class = "header">
         <h1> 🌸🌟Stella's Weather Report🌟🌸</h1>
-        <span> ✨I'm living in <span id = headercity> city💫</span></span>
+        <span> ✨For the lovely city of <span id = "headercity"></span>💫</span>
     </header>
 
     <!-- section:temperature  -->
     <section class ="tempContainer">
         <h2>Temperature</h2>
-        <div class = "change_temperature">
             <button id = "increase_temp">⬆️</button> 
             <button id = "decrease_temp">⬇️</button>
             <span id = "current_temp">75</span>   
-        </div>
 
     </section>
         
@@ -43,14 +41,16 @@
     <!-- section: city name  -->
     <section class ="cityContainer">
         <h2>City Name</h2>
-
+            <label>Where do you live?</label>
+            <input type="text" id="cityname">
+            <button id="resetButton" onclick="document.querySelector('cityname').value = ''">Reset</button>
     </section>
 
     <!-- section: Weather Gardern  -->
     <section class ="gardenContainer">
         <h2>Weather Garden</h2>
         <section id= "sky_result"> </section>
-
+        <section id= "garden"> </section>
     </section>
 
     </main>
