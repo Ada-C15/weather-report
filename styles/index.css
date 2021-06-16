@@ -1,26 +1,28 @@
 * {
     box-sizing: border-box;
 }
-
+/* 
 #flex-container {
     display: flex;
-}
+} */
 
 body {
     display: grid;
-    grid-template-columns: 2fr 5 fr;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: auto auto auto auto auto;
-    background: pink;
+    background: fuchsia;
     font-family: Arial, Helvetica, sans-serif
 }
 
 #left-side {
-    flex: 1;
+    grid-column: 2;
 }
 
+
 #right-side {
-    flex: 1;
-}
+    grid-row: 3;
+    grid-column: 4;
+} 
 
 header {
     padding-left: 50px;
@@ -54,21 +56,23 @@ h2 {
 /* TEMPERATURE BLOCK */
 
 .temperature-block {
-    background: aquamarine;
-    padding-top: 50px;
-    padding-right: 50px;
-    padding-bottom: 50px;
-    padding-left: 50px;
-    margin-left: 50px;
-    margin-right: 75px;
-    margin-block-start: 50px;
-    margin-block-end: 50px;
+    background: pink;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    margin-left: 40px;
+    margin-right: 65px;
+    margin-block-start: 40px;
+    margin-block-end: 40px;
+    border-radius: 25px;
+    grid-row: 2;
 }
 
 /* SKY BLOCK */
 
 .sky-block {
-    background: aquamarine;
+    background: pink;
     padding-top: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
@@ -77,6 +81,8 @@ h2 {
     margin-right: 75px;
     margin-block-start: 50px;
     margin-block-end: 50px;
+    border-radius: 25px;
+    grid-row: 3;
 }
 
 #sky {
@@ -89,7 +95,7 @@ h2 {
 /* CITY NAME BLOCK */
 
 .city-name-block {
-    background: aquamarine;
+    background: pink;
     padding-top: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
@@ -98,13 +104,15 @@ h2 {
     margin-right: 75px;
     margin-block-start: 50px;
     margin-block-end: 50px;
+    border-radius: 25px;
+    grid-row: 4;
 }
 
 
 /* WEATHER GARDEN BLOCK */
 
 #weather-garden-block {
-    background: aquamarine;
+    background: pink;
     padding-top: 50px;
     padding-right: 50px;
     padding-bottom: 50px;
@@ -113,6 +121,7 @@ h2 {
     margin-right: 75px;
     margin-block-start: 50px;
     margin-block-end: 50px;
+    border-radius: 25px;
 }
 
 .garden-gooodies {
@@ -139,10 +148,6 @@ h2 {
 
 .yellow {
     color: gold;
-}
-
-.yellow-green {
-    color: yellowgreen;
 }
 
 .green {

@@ -20,7 +20,6 @@ const updateSky = () => {
         skyArt = "🔆☀️🌞";
     }
     skyContainer.textContent = skyArt;
-    console.log("ahhhhhhhhhh")
 };
 
 
@@ -84,7 +83,6 @@ const updateCityName = () => {
     const inputName = document.getElementById("city-name-bar").value;
     const headerCityName = document.getElementById("header-city-name");
     headerCityName.textContent = inputName;
-    console.log("hello is anyone there")
 };
 
 const resetCityName = () => {
