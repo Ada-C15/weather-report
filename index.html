@@ -1,31 +1,59 @@
 <html lang='en'>
 <head> 
     <meta charset='UFT-8'>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewpoint" content="width=device-width,initial-scale=1.0">
     <title> Weather Report </title> 
-    <link href="styles/index.css" rel=StyleSheet>
+    <link href="styles/index.css" rel=stylesheet type ="text/css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
         </style>
 </head>
 
-
 <body>
-<!-- header: 'Weather Report'  -->
-<header class = "header">
-    <h1> Stella's Weather Report</h1>
-    
-</header>
+    <main>
+    <!-- header: 'Weather Report'  -->
+    <header class = "header">
+        <h1> 🌸🌟Stella's Weather Report🌟🌸</h1>
+        <span> ✨I'm living in <span id = headercity> city💫</span></span>
+    </header>
 
-<!-- section:temerature  -->
+    <!-- section:temperature  -->
+    <section class ="tempContainer">
+        <h2>Temperature</h2>
+        <div class = "change_temperature">
+            <button id = "increase_temp">⬆️</button> 
+            <button id = "decrease_temp">⬇️</button>
+            <span id = "current_temp">75</span>   
+        </div>
 
+    </section>
+        
+    <!-- section:sky -->
+    <section class ="skyContainer">
+        <h2>Sky</h2>
+        <select id="SkyOptions">
+            <option value="">💫Select Your Sky</option>
+            <option value="sunny">☀️Sunny</option>
+            <option value="cloudy">🌥Cloudy</option>
+            <option value="rainy">☔️Rainy</option>
+            <option value="snowy">☃️Snowy</option>
+            </select>
+    </section>
 
-<!-- section:sky -->
+    <!-- section: city name  -->
+    <section class ="cityContainer">
+        <h2>City Name</h2>
 
+    </section>
 
-<!-- section: city name  -->
+    <!-- section: Weather Gardern  -->
+    <section class ="gardenContainer">
+        <h2>Weather Garden</h2>
+        <section id= "sky_result"> </section>
 
+    </section>
 
-
+    </main>
+    <script src="scripts/index.js"></script>
+    </body>
 </html>
