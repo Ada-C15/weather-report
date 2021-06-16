@@ -1,0 +1,129 @@
+
+/* General styling */
+body {
+    font-family: Verdana, Geneva, 
+    Tahoma, sans-serif;
+    background: linear-gradient(to bottom, #ff66ff 0%, #ccffff 100%);
+}
+h3 {
+    text-align: left;
+    font-size: 1.3em;
+    font-weight: normal;
+}
+/* label */
+label {
+    text-align: left;
+    font-size: 1.3em;
+}
+.button {
+    background-color: #ffe6e6;
+    color: navy;
+    padding: .3em 1em;
+    text-align: center;
+    display: inline-block;
+    font-size: 1em;
+}
+#locationInput {
+    width: 20vw;
+    height: 2em;
+    background-color: #ffe6e6;
+    color: navy;
+    font-size: 1em;
+}
+
+/* Header flex-box*/
+header {
+    display: flex;
+    flex-direction: column;
+    overflow: visible;
+    position: relative;
+    align-items: flex-start;
+    justify-content: safe;
+    min-height: 350px;
+    margin-top: 3em;
+}
+/* Flex organizing */
+ul {
+    list-style-type: none;
+    flex: 1 1 auto;
+    /* justify-content: space-evenly; */
+}
+h1 {
+    text-align: left;
+    font-size: 3em;
+    font-variant: small-caps;
+    font-weight: lighter;
+    font-style: italic;
+}
+#sassy-subtitle {
+    text-align: left;
+    font-size: 1em;
+    font-weight: lighter;
+    font-style: italic; 
+}
+#locationDisplay {
+    font-size: 2em;
+    font-weight: lighter;
+    font-style: italic;
+}
+
+/* Layout for main display area */
+.left-column {
+    float: inline-start;
+    position: relative;
+    text-align: left;
+    width: 40%;
+    padding-left: 1em;
+    margin-top: 0;
+    margin-left: 2em;
+}
+.weather-item {
+    padding-bottom: 1.5em;
+}
+.right-column {
+    display: flex;
+    flex-flow: row-wrap;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+    float: right;
+    width: 45%;
+    padding: .5em;
+}
+.weather-display:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+@media screen and (max-width:600px) {
+    .weather-item, .landscape {
+    width: 100%;
+    }
+}
+
+/* Landscape flexbox */
+.landscape {
+    flex: 1 1 auto;
+    /* justify-self: center; */
+    max-height: 80vh;
+    width: 100%;
+    position: relative;
+    object-fit: scale-down; 
+    padding: .2em; 
+    overflow: scroll;
+}
+/* Temperature count colors */
+#temperatureCount {
+    color: black;
+}
+/* Footer */
+footer {
+    text-align: center;
+    font-size: .8em;
+    font-style: italic;
+    margin-top: 1em;
+    line-height: 150%;
+}
+
+
+

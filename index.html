@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    
+    <header class="title">
+        <ul>
+            <li>
+                <h1 class="main-text">Weather Report for  
+                </h1> </li>
+                <li> <h4 id="locationDisplay">
+                    Unceded Coast Salish Land</h4> </li>
+                
+                    <li> <h2 id= "sassy-subtitle"> *Whether or not this report matches the weather you are experiencing is completely coincidental* </h2> </li>
+            </ul>
+            </div>
+        </figure>
+    </header>
+
+    <section class="weather-display">
+        <div class="left-column">
+
+        <div class="weather-item" id=temperature>
+            <h3 id="temperatureCount">Temperature 65℉</h3>
+            <button class="button"  id="addTemperatureButton">+<br>🔥</button>
+            <button class="button"  id="subtractTemperatureButton">-<br>🧊</button>
+        </div>
+
+        <div class="weather-item" id="skyBox">
+            <!-- <h3>Sky</h3> -->
+            <label for="sky">Sky Options</label>
+            <br> <br>
+            <select class="button" id="sky">
+                <option  value="0" selected>
+                    Select a sky option:</option>
+                <option  value="sunny">
+                    Sunny</option>
+                <option value="cloudy">
+                    Cloudy</option>
+                <option value="rainy">
+                    Rainy</option>
+                <option value="snowy">
+                    Snowy</option>
+            </select>
+        </div>
+
+        <div class="weather-item" id="location">
+            <h3>Enter the weather location below:</h3>
+            <form>
+                <input type="text" id="locationInput" name="location" value="Unceded Coast Salish Land">
+                <br> <br>
+                <input class="button" type="reset" id="locationReset" value="Reset">
+            </form>
+        </div>
+    </div>
+
+    <div class="right-column" id="landscape">  
+        <div>
+            <h3 id=landscape-text>Choose a Sky option or change the temperature for a custom weather report!</h3>
+            <section id="skyImageContainer"> 
+                <img src="https://media.giphy.com/media/snr51Qmnalxok/giphy.gif" alt="A gif from Miss Congeniality of a contestant saying: I'd have to say April 25th. Becasue it's not too hot, not too cold. All you need is a light jacket!">
+            </section>
+        </div>
+    </div>  
+    </section>
+
+
+    <footer>
+            <p>
+            Black Lives Matter | Created on unceded Coast Salish land |
+            All work, copy, and code on this site are created and owned 
+            by Marisa Morales unless otherwise stated.
+            </p>
+    </footer>
+    <script src="scripts/index.js"  ></script>
+</body>
+</html>
