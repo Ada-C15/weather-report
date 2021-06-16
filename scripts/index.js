@@ -1,6 +1,7 @@
 const state = {
     currentTemp: 70,
-    sky: 'Sunny'
+    sky: 'Sunny',
+    defaultCity: 'Seattle'
 };
 
 const setTemperatureColor = (temp) => {
@@ -82,7 +83,14 @@ const setCity = () => {
     cityHeading.textContent = cityInput;
 }
 
+const resetCity = () => {
+    const cityInputField = document.getElementById("cityInput");
+    cityInputField.value = state.defaultCity;
+    setCity();
+}
+
 ////////// register event handlers ///////////
+
 
 const increaseTempButton = document.getElementById("increaseTemp");
 const decreaseTempButton = document.getElementById("decreaseTemp");
@@ -94,14 +102,32 @@ const skySelection = document.getElementById("skySelect");
 skySelection.addEventListener("change", setSky);
 
 const citySelection = document.getElementById("cityInput");
-citySelection.addEventListener("input", setCity)
+citySelection.addEventListener("input", setCity);
 
+const cityResetButton = document.getElementById("resetCityButton");
+cityResetButton.addEventListener("click", resetCity);
+
+
+/**
+ * For some reason, my javascript doesn't run when i try to register event handlers once DOM content is loaded.
+ * Below is my original, non-working code. Once I took the content of "registerEventHandlers" out of a function
+ * and just pasted it (above), it works. I'd love any insight. 
+ */
 // const registerEventHandlers = () => {
 //     const increaseTempButton = document.getElementById("increaseTemp");
 //     const decreaseTempButton = document.getElementById("decreaseTemp");
     
 //     increaseTempButton.addEventListener("click", increaseTemperature);
 //     decreaseTempButton.addEventListener("click", decreaseTemperature);
+    
+//     const skySelection = document.getElementById("skySelect");
+//     skySelection.addEventListener("change", setSky);
+    
+//     const citySelection = document.getElementById("cityInput");
+//     citySelection.addEventListener("input", setCity);
+    
+//     const cityResetButton = document.getElementById("resetCityButton");
+//     cityResetButton.addEventListener("click", resetCity);
 // };
 
 // document.addEventListener("DOMContentLoaded", registerEventHandlers);
