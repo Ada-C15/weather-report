@@ -1,0 +1,133 @@
+header {
+   display: flex;
+   flex-direction: column; 
+   justify-content: center;
+   align-items: center;
+}
+
+h1 {
+    margin-bottom: 0px;
+    font-family: 'Architects Daughter', regular;
+    font-size: 50px;
+}
+
+h2 {
+    font-family: 'Architects Daughter', regular;
+    margin-bottom: 5px;
+    font-size: 30px;
+}
+.sections {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+.header-city-name {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+}
+
+.city-name {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+#cityNameInput {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+#skySelect {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+#cityNameReset {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+.temp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.temperature-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#tempValue {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    margin-left: 15px;
+}
+.garden-content {
+    max-width: fit-content;
+    margin: auto;
+    padding: 2rem;
+
+    font-size: 5em;
+}
+#sky {
+    margin-bottom: 100px;
+}
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: gold;
+} 
+
+.green{
+    color: green;
+} 
+
+.blue {
+    color: blue;
+} 
+
+.indigo {
+    color: #580099;
+} 
+
+.violet {
+    color: #4c0466;
+} 
+
+.sunny {
+    background-color: #ddffff;
+}
+
+.cloudy {
+    background-color: lightgrey;
+}
+
+.rainy {
+    background-color: lightblue;
+}
+
+.snowy {
+    background-color: lightsteelblue;
+}
+
+.stormy {
+    background-color: #747880;
+}
+
+.windy {
+    background-color: #b9c4d6;
+} 
+.end {
+    background-color: #a13c23;
+} 
