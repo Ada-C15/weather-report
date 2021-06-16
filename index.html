@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drews Weather Report Site</title>
+        <link rel="stylesheet" href="styles/index.css" type="text/css">
+    </head>
+    <body>
+        <header class="bigHeader">
+            <h1>Weather Report Customizer</h1>
+            <span>This is the city you're currently viewing:
+                <span id="headerCityName" class="header__city__name"></span>
+            </span>
+        </header>
+        <section class="day__or__night">
+            <button id="night">Day Or Night Background</button>
+        </section>
+        <section class="temperature__section">
+            <h2>Temperature Controller</h2>
+            <div class="temperature__content">
+                <div class="temperature__controls">
+                    <span id="increaseTempControl">🔼</span>
+                    <span id="decreaseTempControl">🔽</span>
+                </div>
+                <span id="tempValue"></span>
+            </div>
+        </section>
+        <section class="sky__section">
+            <h2>Daytime Weather Options</h2>
+            <select id="skyOptions">
+                <option>Sunny</option>
+                <option>Cloudy</option>
+                <option>Rainy</option>
+                <option>Snowy</option>
+                <option>Fog</option>
+                <option>Windy</option>
+            </select>
+        </section>
+        <section class="city__name__section">
+            <h2>City Name</h2>
+            <input type="text" id="newCityInput" value="Seattle">
+            <button id="newCityReset" class="reset__button">Reset</button>
+        </section>
+        <section class="ground__section">
+            <h2>A Preview of the Weather Outside (And Some Good Food to Eat)</h2>
+            <div id="groundContent" class="ground__content">
+                <div id="sky"></div>
+                <div id="ground"></div>
+            </div>
+        </section>
+        <script src="scripts/index.js"></script>
+    </body>
+</html>
