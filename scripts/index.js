@@ -46,7 +46,7 @@ let tempValue = 80;
 
 const updateTempStyles = currentTemp => {
     const tempValueContainer = document.getElementById("tempValue");
-    let color = "";
+    let color = "violet";
     if (currentTemp >= 90) {
         color = "red";
     } else if (currentTemp >= 80) {
@@ -59,7 +59,7 @@ const updateTempStyles = currentTemp => {
         color = "blue";
     } else if (currentTemp >= 40) {
         color = "indigo";
-    } else if (currentTemp >= 30) {
+    } else if (currentTemp = 30) {
         color = "violet";
     }
     tempValueContainer.classList = color;
@@ -67,7 +67,7 @@ const updateTempStyles = currentTemp => {
 
 const updateGarden = (currentTemp) => {
     const landscapeContainer = document.getElementById("landscape");
-    let landscape = "";
+    let landscape = "🌲 ☃️ 🎄 🎅 🎁 ⛄️ 🌲 🦌";
     if ( currentTemp >= 90) {
         landscape = "🔥 🌵 🦂 🌵 🔥 🐍 🏜 🌵";
     } else if (currentTemp >= 80) {
