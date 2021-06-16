@@ -1,7 +1,7 @@
 // TEMP: INCREMENT, DECREMENT
 
 const state = {
-    tempCount: 0
+    tempCount: 0,
   };
 
 const increaseTemp = (event) => {
@@ -11,13 +11,13 @@ const increaseTemp = (event) => {
     const count = document.querySelector("#num");
     count.textContent = state.tempCount;
 
-    if (state.tempCount <= 10) {
+    if (state.tempCount <= 49) {
         colorBlue();
         freezingDay();
-    } else if ((11 <= state.tempCount) && (state.tempCount <=15)) {
+    } else if ((50 <= state.tempCount) && (state.tempCount <= 59)) {
         colorGreen();
         coldDay();
-    } else if ((16 <= state.tempCount) && (state.tempCount <= 69))  {
+    } else if ((60 <= state.tempCount) && (state.tempCount <= 69))  {
         colorYellow();
         coolDay();
     } else if ((70 <= state.tempCount) && (state.tempCount <= 79)) {
@@ -27,7 +27,6 @@ const increaseTemp = (event) => {
         colorRed();
         hotDay();
     }
-
   };
   
 const decreaseTemp = (event) => {
@@ -35,13 +34,13 @@ const decreaseTemp = (event) => {
     const count = document.querySelector("#num");
     count.textContent = state.tempCount;
 
-    if (state.tempCount <= 10) {
+    if (state.tempCount <= 49) {
         colorBlue();
         freezingDay();
-    } else if ((11 <= state.tempCount) && (state.tempCount <=15)) {
+    } else if ((50 <= state.tempCount) && (state.tempCount <= 59)) {
         colorGreen();
         coldDay();
-    } else if ((16 <= state.tempCount) && (state.tempCount <= 69))  {
+    } else if ((60 <= state.tempCount) && (state.tempCount <= 69))  {
         colorYellow();
         coolDay();
     } else if ((70 <= state.tempCount) && (state.tempCount <= 79)) {
@@ -51,8 +50,6 @@ const decreaseTemp = (event) => {
         colorRed();
         hotDay();
     }
-
-
   };
 
 // TEMP COLORS
@@ -64,7 +61,7 @@ const colorBlue = (event) => {
 
 const colorGreen = (event) => {
     const currentTemp = document.querySelector("#num"); 
-    // currentTemp.className = `${currentTemp.className} green`; // don't carry classes over
+    // currentTemp.className = `${currentTemp.className} green`; // don't carry classes and their data over
     currentTemp.className = `green`;
   };  
 
@@ -88,56 +85,79 @@ const colorRed = (event) => {
 const freezingDay = (event) => {
     const gardenContainer = document.querySelector("#gardenContainer");
     gardenContainer.textContent = "🧊🌨️🥶🧊";
-}
+};
 
 const coldDay = (event) => {
     const gardenContainer = document.querySelector("#gardenContainer");
     gardenContainer.textContent = "🌲⛄️🍂⛸";
-}
+};
 
 const coolDay = (event) => {
     const gardenContainer = document.querySelector("#gardenContainer");
     gardenContainer.textContent = "⛅🌸🌱🪁";
-}
+};
 
 const warmDay = (event) => {
     const gardenContainer = document.querySelector("#gardenContainer");
     gardenContainer.textContent = "🌤🌻🌷🌼🌳🧺";
-}
+};
 
-const HotDay = (event) => {
+const hotDay = (event) => {
     const gardenContainer = document.querySelector("#gardenContainer");
     gardenContainer.textContent = "🌞🌴🌊🏖️🩴";
-}
+};
 
 // SKY DROPDOWN
 
-const selectElement = document.querySelector('#skies');
+const selectSky = (event) => {
+    const result = document.querySelector('#result');
 
-selectElement.addEventListener('change', (event) => {
-  const result = document.querySelector('#result');
+    if (event.target.value == "snowy") {
+        result.textContent = "🌨❄️☃️🌨❄️☃️";
+    } else if (event.target.value == "rainy") {
+        result.textContent = "⛈💦☔️⛈💦☔️";
+    } else if (event.target.value == "cloudy") {
+        result.textContent = "☁️ 🌫☁️ 🌫";
+    } else if (event.target.value == "sunny") {
+        result.textContent = "☀️ 🔥🌤 ☀️🔥🌤 ";
+    };
+};
 
-  if (event.target.value == "snowy") {
-      result.textContent = "🌨❄️☃️🌨❄️☃️";
-  } else if (event.target.value == "rainy") {
-      result.textContent = "⛈💦☔️⛈💦☔️";
-  } else if (event.target.value == "cloudy") {
-      result.textContent = "☁️ 🌫☁️ 🌫";
-  } else if (event.target.value == "sunny") {
-      result.textContent = "☀️ 🔥🌤 ☀️🔥🌤 ";
-  };
+// Other way to write w/o registering to event handlers on line 172 -
 
-});
+// const selectElement = document.querySelector('#skies');
+
+// selectElement.addEventListener('change', (event) => {
+//   const result = document.querySelector('#result');
+
+//   if (event.target.value == "snowy") {
+//       result.textContent = "🌨❄️☃️🌨❄️☃️";
+//   } else if (event.target.value == "rainy") {
+//       result.textContent = "⛈💦☔️⛈💦☔️";
+//   } else if (event.target.value == "cloudy") {
+//       result.textContent = "☁️ 🌫☁️ 🌫";
+//   } else if (event.target.value == "sunny") {
+//       result.textContent = "☀️ 🔥🌤 ☀️🔥🌤 ";
+//   };
+// });
 
 // OBTAIN CITY NAME
 
-const input = document.querySelector('input');
-const cityName = document.querySelector('#city');
-
-input.addEventListener('input', (event) => {
+const updateCityName = (event) => {
+    const cityName = document.querySelector('#city');
     cityName.textContent = event.target.value;
-})
+};
 
+// Rewrote example from MDN documentation into format I understood better (does not require adding to RegisterEventHandlers) -
+
+// const input = document.querySelector('input');
+// const cityName = document.querySelector('#city');
+
+// input.addEventListener('input', (event) => {
+//     cityName.textContent = event.target.value;
+// })
+
+// Original MDN:
 // input.addEventListener('input', updateValue);
 // function updateValue(e) {
 //   log.textContent = e.target.value;
@@ -162,6 +182,12 @@ const registerEventHandlers= (event) => {
 
     const resetButton = document.querySelector("#resetButton");
     resetButton.addEventListener("click", resetCity);
+    
+    const textInput = document.querySelector("#name");
+    textInput.addEventListener("input", updateCityName);
+
+    const skySelection= document.querySelector("#skies");
+    skySelection.addEventListener("change", selectSky);
 
   };
 
