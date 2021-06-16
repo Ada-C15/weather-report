@@ -46,6 +46,37 @@ const getLandscapes= (temp) => {
 }
 
 /////////////////////////////////////
+// Picture Change  Condition //
+////////////////////////////////////
+const getImage= (temp) => {
+  if (temp <= 30) {
+    return './assets/html/IMG_9384.jpeg';
+  }
+
+  if (temp <= 40) {
+    return './assets/html/IMG_9869.jpeg';
+  }
+  if (temp <= 45) {
+    return './assets/html/IMG_9137.jpeg';
+  }
+  if (temp <= 50) {
+    return './assets/html/IMG_0523.jpeg';
+  }
+
+  if (temp <= 60) {
+    return './assets/html/IMG_8549.jpeg';
+  }
+
+  if (temp <= 70) {
+    return './assets/html/IMG_8587.jpeg';
+  }
+  if (temp <= 80) {
+    return './assets/html/IMG_8182.jpeg';
+  }
+  return './assets/html/IMG_9211.jpeg';
+}
+
+/////////////////////////////////////
 // Sky Theme Condition //
 ////////////////////////////////////
 const getSky= (value) => {
@@ -73,15 +104,18 @@ const getSky= (value) => {
 //////////////////////////
 const increaseTemp = () => {
   const tempText = document.getElementById("temperature-text");
-  // 1. Adds 1 to temperature
+  // 1. Adds 1 to temperature, changes color to font
   state.tempClickCount+=1;
   tempText.textContent = state.tempClickCount;
+  tempText.textContent = `${state.tempClickCount} °F`;
+
   // 2. Change color background
   const colorClass = getColorClass(state.tempClickCount);
   tempText.className = colorClass;
   // 3. Get landscape
   const landscapes = getLandscapes(state.tempClickCount)
   addLandscape(landscapes)
+  changeImage()
 }
 
 ////////////////////////
@@ -91,13 +125,14 @@ const decreaseTemp = () => {
   const tempText = document.getElementById("temperature-text");
   // 1. Decreases 1 from temperature
   state.tempClickCount-=1;
-  tempText.textContent = state.tempClickCount;
+  tempText.textContent = `${state.tempClickCount} °F`;
   // 2. Change color background
   const colorClass = getColorClass(state.tempClickCount);
   tempText.className = colorClass;
   // 3. Get landscape 
   const landscapes = getLandscapes(state.tempClickCount)
   addLandscape(landscapes)
+  changeImage()
 }
 
 //////////////////////
@@ -106,53 +141,24 @@ const decreaseTemp = () => {
 const changeTheme = () => {
   const theme = document.getElementById("mySelect").value;
   const skyTheme = document.getElementById("weather-description");
-  skyTheme.textContent = theme.toUpperCase()+ ':'
+  skyTheme.textContent = theme.toUpperCase()+ ' SKY'
   const sky = getSky(theme);
    //  Change color background
   skyTheme.className = sky;
   console.log(sky);
 }
 
-////////////////////////
-// Changing Appearance//
-////////////////////////
-const importantFact = document.getElementById("facts__fact--important");
-importantFact.className = `${importantFact.className} sunlight`;
+////////////////////////////////////
+//    Change Picture          /////
+///////////////////////////////////
 
-///////////////////////////
-// Creating a New Element//
-///////////////////////////
+const changeImage = () => {
+  const imageLandscape = getImage(state.tempClickCount)
+  document.getElementById("image-landscape").src = imageLandscape;
 
-const newAppearanceFact1 = document.createElement("li");
-
-newAppearanceFact1.textContent = "covered in sand (when on a sandy beach) 🦗"
-
-const appearanceList1 = document.getElementById("facts__list");
-
-appearanceList1.appendChild(newAppearanceFact1);
-
-//---------------------------------------
-
-const newAppearanceFact2 = document.createElement("li");
-
-newAppearanceFact2.textContent = "Funny Looking 🐛"
-
-const appearanceList2 = document.getElementById("facts__list");
-
-appearanceList2.appendChild(newAppearanceFact2);
+}
 
 
-//////////////////////////
-// Delete   Element     //
-//////////////////////////
-const listNum5 = document.getElementById('5');
-listNum5.remove();
-
-////////////////////////////////////////
-// Select all children of an element //  DOES NOT WORK
-///////////////////////////////////////
-
-let firstChild = document.getElementById('facts__list');
 
 
 //////////////////////////
@@ -161,10 +167,10 @@ let firstChild = document.getElementById('facts__list');
 
 const bugs = ['🪲','🐝','🪱','🐞']
 
-const suns = ['☀️','🌞','🌤','⛅️','🌥','🔥']
-const rains =['🌧','⛈','🌩','🌨','💧','🌈']
-const wind = ['🌬','💨', '🌫️','🌪️','☁']
-const cools = ['❄️', '☃️','☁️']
+const suns = ['☀️','🌞','🌤','⛅️','☀️','🌞','🌤','🌵','🦋','🔥', '🐢', '🪵', '🪴', '🌴', '🌻', '🌦','🥀', '🦦', '🍀', '🐝', '🐜', '🪲','⛰', '🏕', '🏜','🐛']
+const rains =['🌧','⛈','🌩','🌨','💧','🌈', '🪱', '🌥','🌲', '🌸','🌱','🦫','🍄','🍄','🌳','🐳','🪱','⛅️', '🏕', '💦', '☔️', '🌤']
+const wind = ['🌬','💨', '🌫️','🌪️','☁', '🌾', '🍃', '🎋','🏕', '🪶', '🦅','🦆', '🍂', '🌊', '🏄‍♀️', '🌊', '⛵️']
+const cools = ['❄️', '☃️','☁️', '🏕','🗻', '🧊','🗻','🏔', '🌁', '🚞', '☁️', '🌥', '🌦', '🌨', '🌨','🌧']
 
 const moons = ['🌕','🌖','🌗','🌘','🌑','🌒','🌓','🌔']
 const random = ['🌦','🌈']
@@ -232,6 +238,7 @@ const resetCity = () => {
   appearanceHeading.textContent = "Weather:"; 
   // document.getElementById("demo").innerHTML = cityName;
 }
+
 
 ///////////////////////////////////////////////
 //      REGISTER EVENT HANDLERS           /////

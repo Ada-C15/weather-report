@@ -15,11 +15,11 @@ html {
 }
 
 body {
-    color: rgb(228, 70, 30);
+    /* color: rgb(228, 70, 30); */
+    color: #555;
     height: 100vh;
     background: linear-gradient(to bottom, rgb(255, 237, 189), rgb(240, 234, 190), rgb(224, 231, 192), rgb(209, 228, 193), rgb(194, 225, 194), rgb(178, 222, 196), rgb(163, 219, 197), rgb(147, 216, 199), rgb(132, 213, 200), rgb(117, 210, 201), rgb(101, 207, 203), rgb(86, 204, 204));
 }
-
 
 /* SKY THEMES */
 .sunny-sky {
@@ -27,15 +27,15 @@ body {
 }
 
 .dark-sky {
-    background: linear-gradient(to bottom, rgb(5, 5, 8), rgb(9, 6, 34), rgb(16, 33, 54), rgb(48, 62, 83), rgb(77, 125, 147), rgb(130, 157, 186), rgb(116, 151, 137), rgb(56, 61, 60), rgb(103, 129, 125), rgb(67, 87, 84), rgb(86, 148, 146), rgb(51, 124, 124));
+    background: linear-gradient(to bottom, rgb(18, 44, 75),   rgb(39, 56, 81),  rgb(38, 80, 99), rgb(69, 88, 108),  rgb(81, 108, 104));
 }
-
+/* rgb(5, 5, 8), rgb(9, 6, 34),  rgb(86, 148, 146), rgb(67, 87, 84), rgb(17, 63, 45),  rgb(29, 77, 68),   rgb(76, 103, 99), , rgb(67, 86, 86), rgb(72, 90, 114), rgb(93, 93, 106)*/
 .cool-sky {
-    background: linear-gradient(to bottom, rgb(93, 93, 106), rgb(113, 125, 128), rgb(72, 90, 114), rgb(55, 68, 87), rgb(77, 125, 147), rgb(130, 157, 186), rgb(116, 151, 137), rgb(56, 61, 60), rgb(103, 129, 125), rgb(67, 87, 84), rgb(86, 148, 146), rgb(51, 124, 124));
+    background: linear-gradient(to bottom,  rgb(113, 125, 128), rgb(77, 125, 147), rgb(130, 157, 186),  rgb(51, 124, 124), rgb(86, 148, 146) , rgb(116, 151, 137), rgb(103, 129, 125));
 }
 
 .hot-sky {
-    background: linear-gradient(to bottom, rgba(206, 4, 4, 0.938), rgb(207, 129, 11), rgb(247, 179, 8), rgb(226, 215, 133), rgb(142, 122, 177), rgb(130, 157, 186), rgb(123, 15, 15), rgb(116, 151, 137), rgb(54, 110, 145));
+    background: linear-gradient(to bottom, rgb(123, 15, 15), rgba(206, 4, 4, 0.938), rgb(207, 129, 11), rgb(247, 179, 8), rgb(226, 215, 133));
 }
 
 .center, 
@@ -72,25 +72,34 @@ body {
     text-transform: uppercase;
 }
 
+#landscape {
+    width: 100%;
+}
+
 .hot {
     background-color: rgb(241, 70, 70);
+    color: #999;
 }
 
 .warm {
-    background-color: rgb(208, 110, 58);
+    background-color: rgb(255, 157, 83);
+    color: #888;
 }
 
 .sunlight {
-    background-color: palegoldenrod;
+    background-color: rgb(255, 212, 84);
     font-weight: bolder;
+    color: #444
 }
 
 .cool {
     background-color: rgb(50, 94, 190);
+    color: #999;
 }
 
 .freezing {
     background-color: rgb(178, 181, 187);
+    color: #555;
 }
 
 
@@ -116,7 +125,7 @@ justify-content: space-around;
 }
 
 #weather-basics>* {
-    border: 2px solid black;
+    border: 2px solid #777;
     padding: 0.5em;
 }
 
