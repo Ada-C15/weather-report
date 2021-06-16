@@ -16,3 +16,10 @@ body {
 .right-container {
     margin: auto;
 }
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
