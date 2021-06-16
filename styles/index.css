@@ -24,3 +24,16 @@ h1 {
     background-color: rgb(228, 184, 163);
 }
 
+.coldTemp {
+    color: rgb(72, 38, 110);
+    background: none;
+    background-color: rgb(34, 29, 37); 
+}
+
+.hotTemp {
+    color: rgb(72, 38, 110);
+    background: none;
+    background-color: rgb(34, 29, 37); 
+}
+
+
