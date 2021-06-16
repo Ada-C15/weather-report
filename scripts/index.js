@@ -1,12 +1,13 @@
 const state = {
-    tempValue: 70,
-    landscape: "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷",
-    sky: "☀️☀️☀️☀️☀️☀️☀️☀️",
+    // tempValue: 70
+    tempValue: parseFloat(document.querySelector("#tempValue").textContent),
+    landscape: parseFloat(document.querySelector("#landscape").textContent),
+    sky: parseFloat(document.querySelector("#sky").textContent),
     message:"",
   };
 
 const increaseTemp = () =>{
-    const tempValueContainer = document.getElementById("tempValue");
+    const tempValueContainer = document.querySelector("#tempValue");
     state.tempValue += 1;
     tempValueContainer.textContent = state.tempValue;
     changeTempColor(state.tempValue);
@@ -14,7 +15,7 @@ const increaseTemp = () =>{
 }
 
 const decreaseTemp = () =>{
-    const tempValueContainer = document.getElementById("tempValue");
+    const tempValueContainer = document.querySelector("#tempValue");
     state.tempValue -= 1;
     tempValueContainer.textContent = state.tempValue;
     changeTempColor(state.tempValue);
@@ -22,7 +23,7 @@ const decreaseTemp = () =>{
 }
 
 const changeTempColor = () =>{
-    const tempValueContainer = document.getElementById("tempValue");
+    const tempValueContainer = document.querySelector("#tempValue");
     if (state.tempValue >= 80){
         tempValueContainer.style.color = "red";
     } else if (state.tempValue >= 70) {
@@ -79,13 +80,13 @@ const changeSky = () =>{
 }
 
 const updateCityName = () => {
-    const inputCity = document.getElementById("cityNameInput").value;
-    const headerCityName = document.getElementById("headerCityName");;
+    const inputCity = document.querySelector("#cityNameInput").value;
+    const headerCityName = document.querySelector("#headerCityName");;
     headerCityName.textContent = inputCity;
 };
 
 const resetCityName = () => {
-    const cityNameInput = document.getElementById("cityNameInput");
+    const cityNameInput = document.querySelector("#cityNameInput");
     cityNameInput.value = "Seattle";
 };
 
@@ -96,13 +97,13 @@ const registerEventHandlers = () => {
     const decreaseTempButton = document.querySelector("#decreaseTemp");
     decreaseTempButton.addEventListener("click", decreaseTemp);
 
-    const skySelect = document.getElementById("skySelect");
+    const skySelect = document.querySelector("#skySelect");
     skySelect.addEventListener("change", changeSky);
 
-    const cityNameInput = document.getElementById("cityNameInput");
+    const cityNameInput = document.querySelector("#cityNameInput");
     cityNameInput.addEventListener("input", updateCityName);
 
-    const resetCity = document.getElementById("cityNameReset");
+    const resetCity = document.querySelector("#cityNameReset");
     resetCity.addEventListener("click", resetCityName);
 };
 

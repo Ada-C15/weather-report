@@ -4,6 +4,8 @@ body {
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color:lightskyblue;
+    /* background: linear-gradient(to bottom, rgb(122, 173, 189), rgb(255, 189, 233), rgb(149, 255, 223), rgb(103, 236, 14)); */
+    /* background: linear-gradient(to bottom, rgb(255, 237, 189), rgb(240, 234, 190), rgb(224, 231, 192), rgb(209, 228, 193), rgb(194, 225, 194), rgb(178, 222, 196), rgb(163, 219, 197), rgb(147, 216, 199), rgb(132, 213, 200), rgb(117, 210, 201), rgb(101, 207, 203), rgb(86, 204, 204)); */
 }
 
 main{
@@ -15,6 +17,11 @@ main{
 h1{
     font-size: 40px;
 }
+
+#headerCityName::before, .header_msg::after{
+    content: "✨";
+}
+
 #weather_pic{
     width: 20%;
     height: auto;
