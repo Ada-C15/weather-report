@@ -20,11 +20,34 @@ const decreasetemp = (event) => {
     temprecorder.textContent = `${state.temperture}`;
     changetempcolor()
     changegroundimages()
-
 };
 
-
 decreasetempButton.addEventListener("click", decreasetemp);
+
+
+
+
+
+const changeskyselector = document.querySelector("#sky-select");
+
+const changesky = (event) => {
+    const userchoice = event.target.value;
+    const sky = document.querySelector("#sky");
+    if (userchoice === "1"){
+        sky.textContent = `☁️ ☁️ ☁️ ☀️ ☁️ ☁️`;
+    } if (userchoice === "2"){
+        sky.textContent = `☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️`;
+    } if (userchoice === "3"){
+        sky.textContent = `🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧`;
+    } if (userchoice === "4"){
+        sky.textContent = `🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨`;
+    }
+}
+changeskyselector.addEventListener("change", changesky);
+
+
+
+
 //helper function to change temp color
 const changetempcolor = () => {
     const temprecorder = document.querySelector("#temp");
