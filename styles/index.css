@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    /* border: 2px solid black; */
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+
+    background-image: url(../assets/winter.jpg);
+    background-size: cover;
+    /* background-repeat: no-repeat; */
+    background-attachment: fixed; 
+}
+
+main {
+    /* width: 1200px;
+    height: 100vh; */
+    position: relative;
+    /* margin-left: 200px;
+    margin-right: 200px; */
+    color: white;
+}
+
+.container-display {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 30px;
+
+}
+#image {
+    font-size: 100px;
+}
+
+#display-city {
+    font-size: 80px;
+}
+
+#image, #display-city {
+    width: 200;
+    height: 100px;
+    
+}
+
+.container-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-buttons button {
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+
+}
+
+
+.container-span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.select {
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    padding: 20px 40px;
+    margin: 100px;
+    border-radius: 5px;
+    width: 460px;
+    position: absolute;
+    top: 95%;
+    left: 30%;
+    color: white;
+}
+
+.select  h2,input, select{
+    margin-bottom: 30px;
+}
+h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 200PX;
+}
+
+h2 {
+    font-size: 40px;
+}
+
+span {
+    /* display: inline-block; */
+    font-size: 100px;
+    /* text-align: center; */
+}
+
+input {
+    /* height: 25px; */
+    padding: 10px;
+}
+
+#sky-type {
+    padding: 10px;
+}
+
+#weather {
+    font-size: 50px;
+}
