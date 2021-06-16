@@ -3,19 +3,26 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A Very Froggy Weather Report</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link href="styles/index.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
     <header class="header__header">
         <h1>Weather Report</h1>
+        <span>For the lovely city of  
+            <span id="headerCityName" class="header__city-name"></span>
+        </span>
     </header>
 
     <section class="grid-container">
 
         <section class="garden__section">
+            <h2>Weather Garden</h2>
             <div id="gardenContent" class="garden__content">
                 <div id="sky"></div>
                 <div id="landscape"></div>
@@ -50,6 +57,7 @@
         </section>
 
     </section>
+
     <script src="scripts/index.js"></script>
 </body>
     

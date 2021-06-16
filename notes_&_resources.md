@@ -6,14 +6,14 @@
 
 **Wave 3:**
 - [X] A `<select>` dropdown element to set the sky type
-- [ ] An element that displays a sky
+- [X] An element that displays a sky
 
 **Wave 4:**
-- [ ] An element that displays the city name
-- [ ] An element that contains a `<input type="text">` element, used to rename the city
+- [X] An element that displays the city name
+- [X] An element that contains a `<input type="text">` element, used to rename the city
 
 **Wave 5:**
-- [ ] A clickable element to reset the city name
+- [X] A clickable element to reset the city name
 
 
 HTML Validator: https://validator.w3.org/#validate_by_upload

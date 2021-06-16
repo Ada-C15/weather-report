@@ -1,19 +1,20 @@
 /* Shows the boxes of each html element: */
-/* * {
+* {
     border: rgb(215, 205, 205) 1px solid;
-} */
+}
 
 /* Grid Formatting */
-.sky__section { grid-area: sky; }
+
 .garden__section { grid-area: garden; }
 .city-name__section { grid-area: city; }
+.sky__section { grid-area: skyselect; }
 .temperature__section { grid-area: temp; }
 
 .grid-container {
     display: grid;
     grid-template-areas:
         'garden garden garden'
-        'city sky temp';
+        'city skyselect temp';
     /* grid-gap: 10px;
     background-color: #2196F3;
     padding: 10px; */
@@ -33,6 +34,11 @@ body {
     background-color: #000000;
     /* margin: 2rem; */
 }
+
+/* -------------------------------------------------------------------- */
+
+
+
 
 /* -------------------------------------------------------------------- */
 /* Temperature controls*/
