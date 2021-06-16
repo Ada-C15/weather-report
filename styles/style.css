@@ -3,7 +3,7 @@ body {
     font-family: Helvetica;
 }
 
-#heading {
+#head_section {
     color: black;
     font-size: 1.5em;
     text-align: center;
@@ -13,6 +13,10 @@ body {
 #city_name {
     color: darkblue;
     font-family: fantasy;
+}
+#city_des {
+    font-family: cursive;
+    font-style: italic;
 }
 
 .page_container {
@@ -35,10 +39,23 @@ body {
     color: white
 }
 
-.section, .garden {
-    background-color: rgb(228, 142, 209);
-    border-style: solid;
-    border-color: rgb(160, 145, 160);
+.section {
+    background-color: rgb(204, 90, 198);
     padding: 10px;
-    margin: 10px
+    text-align: center;
+
+}
+
+.garden {
+    background-color: lightskyblue;
+    text-align: center;
+    padding: 10px;
+}
+
+.garden_heading {
+    color: rgb(59, 41, 34);
+}
+#reset_city_name:hover{
+    background-color: brown;
+
 }
