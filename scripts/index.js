@@ -5,6 +5,20 @@ const state = {
   rainy: "🌧🌧🌧🌧🌧🌧🌧🌧🌧🌧",
   sunny: "___☀️☁️_____",
   onFireSky: "☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️",
+  onFireGround: "🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥",
+  garden: "🌻__🌷🌷🌱_",
+}
+
+const emojiSelector = {
+  0: "✨",
+  1: "⚡️",
+  2: "👾",
+  3: "⭐️",
+  4: "🌈",
+}
+
+const randEmoji = () => {
+  return emojiSelector[Math.floor(Math.random() * 5)];
 }
 
 const changeTemp = (delta) => {
@@ -24,8 +38,34 @@ const decreaseTemp = () => {
 const skyDisplayUpdate = () => {
   const updatedWeather = document.getElementById("cloudStatus").value;
   const skyDisplay = document.getElementById("sky");
-  console.log(updatedWeather);
   skyDisplay.textContent = state[updatedWeather];
+  if (updatedWeather === "onFireSky") {
+    document.getElementById("landscape").textContent = state.onFireGround;
+  }
+  else {
+    document.getElementById("landscape").textContent = state.garden;
+  }
+}
+
+const cityReset = () => {
+  const cityDisplayCard = document.getElementById("cityDisplay");
+  const cityTitleDisplay = document.getElementById("currentCity");
+
+  let frameEmoji = randEmoji();
+
+  cityDisplayCard.textContent = "Seattle";
+  cityTitleDisplay.textContent = "Currently in " + frameEmoji + "Seattle" + frameEmoji;
+}
+
+const cityUpdate = () => {
+  const newCity = document.getElementById("cityPicker").value;
+  const cityDisplayCard = document.getElementById("cityDisplay");
+  const cityTitleDisplay = document.getElementById("currentCity");
+
+  let frameEmoji = randEmoji();
+
+  cityDisplayCard.textContent = newCity;
+  cityTitleDisplay.textContent = "Currently in " + frameEmoji + newCity + frameEmoji;
 }
 
 const registerEventHandlers = () => {
@@ -37,6 +77,12 @@ const registerEventHandlers = () => {
 
   const changeWeather = document.getElementById("cloudStatus");
   changeWeather.addEventListener("change", skyDisplayUpdate);
+
+  const updateCity = document.getElementById("cityPicker");
+  updateCity.addEventListener("change", cityUpdate);
+
+  const resetCity = document.getElementById("resetCity");
+  resetCity.addEventListener("click", cityReset);
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
