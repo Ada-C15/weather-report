@@ -1,0 +1,87 @@
+/* header {
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        } */
+
+body {
+    font-family: "Roboto", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: azure;
+    color:black;
+}
+
+/* footer {
+    position: fixed;
+} */
+
+.temp-teal {
+    color: teal;
+}
+
+.temp-green {
+    color: greenyellow;
+}
+
+.temp-yellow {
+    color:yellow;
+}
+
+.temp-orange {
+    color: orange;
+
+}
+
+.temp-red {
+    color: red;
+}
+
+#main-screen {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+}
+
+#weather-garden {
+    min-height: 500px;
+    min-width: 700px;
+    /* max-width: 700px; */
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    font-size: 1em;
+    border-style: dashed;
+    border-color: teal;
+}
+
+#garden-content {
+    min-height: 480px;
+    max-width: 690px;
+    border-style: dashed;
+    border-color: teal;
+    background-color: teal;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 3rem;
+}
+
+#control-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#sky, #landscape {
+    font-weight: 200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#current-temp {
+    font-size: 3rem;
+}

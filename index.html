@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home &mdash; Weather Report</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1 id="page-header">Weather report:</h1>
+        </header>
+
+        <section id=main-screen>
+            <section id="display-section">
+                <section id="weather-garden">
+                    <h2>Weather Garden</h2>
+                    <div id="garden-content">
+                        <div id="sky">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</div>
+                        <div id="landscape"></div>
+                    </div>
+                </section>
+            </section>
+
+            <section id="control-section">
+                <section id="temperature-control">
+                    <h2>Temperature</h2>
+                    <form class="temperature-content">
+                        <span id="increase-temp">🔼</span>
+                        <span id="current-temp"></span>
+                        <span id="decrease-temp">🔽</span>
+                    </form>
+                </section>
+
+                <section id="sky-control">
+                    <h2>Sky</h2>
+                    <form>
+                        <label for="sky"></label>
+                        <select id="sky-options">
+                            <option value="sunny">Sunny</option>
+                            <option value="cloudy">Cloudy</option>
+                            <option value="rainy">Rainy</option>
+                            <option value="snowy">Snowy</option>
+                        </select>
+                        <!--                         
+                        <input type="text" id="current-sky" value="Sunny" /> -->
+                    </form>
+                </section>
+
+                <section id="city-name">
+                    <h2>City Name</h2>
+                    <!-- <form> -->
+                    <!-- <label for="city-name">City Name:</label><br> -->
+                    <input type="text" id="input-city-name" value="">
+                    <span id="reset-city-name">↩️</span>
+                    <!-- </form> -->
+                </section>
+            </section>
+        </section>
+        <footer>
+            <p>&copy; 2021 | Nataliia Getlin | C15 | Ada Developers Academy </p>
+        </footer>
+    </main>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
