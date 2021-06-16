@@ -40,6 +40,7 @@ const updateSky = () => {
     skyContainer.textContent = sky;
     const gardenContent = document.getElementById("gardenContent");
     gardenContent.classList = `garden-content ${skyColor}`;
+    backgroundContent.classList = `background-content ${skyColor}`;
 }
 
 let tempValue = 80;

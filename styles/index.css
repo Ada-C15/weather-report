@@ -3,10 +3,7 @@ header {
    flex-direction: column; 
    justify-content: center;
    align-items: center;
-   /* background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); */
-   /* color: white; */
 }
-
 
 h1 {
     margin-bottom: 0px;
