@@ -26,6 +26,14 @@ const updateCity = () =>  {
     headerCityContainer.textContent = getCityName
 }
 
+// reset to default city name 
+const resetCity = () => {
+    const cityContainer = document.getElementById("cityNameInput")
+    cityContainer.value = 'Atlanta'
+    // reflect that reset on the header
+    updateCity();
+}
+
 const updateTemp = function(tempValue) {
     const tempValueContainer = document.getElementById("tempValue")
     const landscapeContainer = document.getElementById("landscape")
@@ -73,6 +81,9 @@ const registerEventHandlers = function() {
     const inputCity = document.querySelector("#cityNameInput");
     inputCity.addEventListener("input", updateCity)
 
+    resetCity();
+    const resetCityButton = document.querySelector(".city-name__reset-btn")
+    resetCityButton.addEventListener("click", resetCity)
 };
 
 
