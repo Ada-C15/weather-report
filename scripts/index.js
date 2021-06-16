@@ -1,6 +1,5 @@
 const state = {
   tempClickCount: 65,
-  // landscape: '☀️ 🪴 🌾 🌳 🌻'
 };
 
 /////////////////////////////////
@@ -155,10 +154,7 @@ const changeTheme = () => {
 const changeImage = () => {
   const imageLandscape = getImage(state.tempClickCount)
   document.getElementById("image-landscape").src = imageLandscape;
-
 }
-
-
 
 
 //////////////////////////
@@ -202,6 +198,7 @@ const addBug = () => {
   crabContainer.appendChild(newBug);
 //   alert("One more bug");
 };
+
 ///////////////////////////////
 //  / ADDS  ALL  BUGS     /////
 ///////////////////////////////
@@ -225,7 +222,6 @@ const getAndDisplayCity = () => {
   
   appearanceHeading.textContent = "Weather in: " + cityName.toUpperCase(); 
   document.querySelector('#temperature-text').textContent = state.tempClickCount;
-  // document.getElementById("demo").innerHTML = cityName;
 }
 
 //////////////////////////////////
@@ -236,7 +232,6 @@ const resetCity = () => {
   const appearanceHeading = document.getElementById("facts__heading");
   
   appearanceHeading.textContent = "Weather:"; 
-  // document.getElementById("demo").innerHTML = cityName;
 }
 
 
