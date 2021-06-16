@@ -62,10 +62,27 @@ body {
     text-transform: uppercase;
 }
 
-.highlight {
+.hot {
+    background-color: rgb(241, 70, 70);
+}
+
+.warm {
+    background-color: rgb(208, 110, 58);
+}
+
+.sunlight {
     background-color: palegoldenrod;
     font-weight: bolder;
 }
+
+.cool {
+    background-color: rgb(50, 94, 190);
+}
+
+.freezing {
+    background-color: rgb(178, 181, 187);
+}
+
 
 * {border-color: rgb(#777);
     border-radius: 20px;} 
@@ -98,4 +115,8 @@ justify-content: space-around;
     height: auto;
     padding: 0.5em;
     margin: auto;
+}
+
+#temperature-text {
+    font-size: 3em;
 }

@@ -7,13 +7,72 @@
 
 // appearanceHeading.textContent = "WEATHER IN" ;
 
+const state = {
+  tempClickCount: 65,
+  // landscape: '☀️ 🪴 🌾 🌳 🌻'
+};
+
+// const updateTempCount = () => {
+//   const tempText = document.querySelector("#temperature-text");
+//   tempText.textContent = `${state.tempCount}°F`;
+// }
+
+const getColorClass = (temp) => {
+  if (temp <= 49) {
+    return "freezing";
+  }
+
+  if (temp <= 59) {
+    return "cool";
+  }
+
+  if (temp <= 69) {
+    return "sunlight";
+  }
+
+  if (temp <= 79) {
+    return "warm";
+  }
+
+  return "hot";
+}
+
+const getLandscapes= (temp) => {
+  if (temp <= 59) {
+    return cools;
+  }
+
+  if (temp <= 69) {
+    return rains;
+  }
+
+  if (temp <= 79) {
+    return wind;
+  }
+
+  return suns;
+}
+
+const increaseTemp = () => {
+  const tempText = document.getElementById("temperature-text");
+  // 1. Adds 1 to temperature
+  state.tempClickCount+=1;
+  // 2. Change color
+  const colorClass = getColorClass(state.tempClickCount);
+  tempText.className = colorClass;
+  // 3. Get landscape
+  const landscape = document.getElementById("landscape");
+  const landscapes = getLandscapes(state.tempClickCount)
+
+  
+}
+
 ////////////////////////
 // Changing Appearance//
 ////////////////////////
 
 const importantFact = document.getElementById("facts__fact--important");
-
-importantFact.className = `${importantFact.className} highlight`;
+importantFact.className = `${importantFact.className} sunlight`;
 
 ///////////////////////////
 // Creating a New Element//
@@ -38,11 +97,11 @@ const appearanceList2 = document.getElementById("facts__list");
 appearanceList2.appendChild(newAppearanceFact2);
 
 
-///////////////////////////
-// Delete a New Element//
-///////////////////////////
-// const listNum5 = document.getElementById('5');
-// listNum5.remove();
+//////////////////////////
+// Delete   Element     //
+//////////////////////////
+const listNum5 = document.getElementById('5');
+listNum5.remove();
 
 ////////////////////////////////////////
 // Select all children of an element //  DOES NOT WORK
@@ -51,14 +110,30 @@ appearanceList2.appendChild(newAppearanceFact2);
 let firstChild = document.getElementById('facts__list');
 
 
-///////////////////////////////////////////////////////
-//  GET RANDOM BUG FROM OPTIONS                   /////
-///////////////////////////////////////////////////////
+//////////////////////////
+//      EMOJIS        ///
+/////////////////////////
 
 const bugs = ['🪲','🐝','🪱','🐞']
-const suns = ['☀️','🌤','⛅️','🌥','🌦','🌧','⛈','🌩','🌨','❄️','🌬','💨']
-const moons = ['🌕','🌖','🌗','🌘','🌑','🌒','🌓','🌔']
 
+const suns = ['☀️','🌞','🌤','⛅️','🌥']
+const rains =['🌧','⛈','🌩','🌨']
+const wind = ['🌬','💨']
+const cools = ['❄️', '☃️']
+
+const moons = ['🌕','🌖','🌗','🌘','🌑','🌒','🌓','🌔']
+const random = ['🌦']
+
+const addLandscape = (landscapes) => {
+  const newBug = document.createElement("span");
+  const crabContainer = document.querySelector("#landscape");
+  newBug.textContent = landscapes[getRandomInt(landscapes.length)]
+  crabContainer.appendChild(newBug);
+};
+
+//////////////////////////////////
+// GET RANDOM BUG FROM OPTIONS  //
+//////////////////////////////////
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
 }
@@ -66,15 +141,20 @@ function getRandomInt(max) {
 const getRandomSun = (max) => {
   return Math.floor(Math.random() * max);
 }
-
+///////////////////////////////////////////////////////
+//    ADDS A BUG                              /////
+///////////////////////////////////////////////////////
 const addBug = () => {
   const newBug = document.createElement("span");
-  const crabContainer = document.querySelector("#tips-recommendations");
+  const crabContainer = document.querySelector("#landscape");
   newBug.textContent = bugs[getRandomInt(bugs.length)]
   crabContainer.appendChild(newBug);
 //   alert("One more bug");
 };
-// add button that adds all bugs
+///////////////////////////////
+//  / ADDS  ALL  BUGS     /////
+///////////////////////////////
+
 const addAllBugs = () => {
     const containsAllBugs = document.querySelector("#weather-description");
     for(let bug of bugs) {
@@ -85,23 +165,21 @@ const addAllBugs = () => {
 //   alert("One more bug");
 };
 
-//  COMMENT OUT THIS SECTION OR WON'T WORK WHAT'S ALREADY DONE
-// const addBugCOPY = () => {
-//   const newBug = document.createElement("span");
-//   const crabContainer = document.querySelector("#crabContainer");
-//   newBug.textContent = bugs[getRandomInt(bugs.length)]
-//   crabContainer.appendChild(newBug);
-// //   alert("One more bug");
-// };
-
+///////////////////////////////////////////////////////
+//  / GET AND DISPLAY THE CITY                    /////
+///////////////////////////////////////////////////////
 const getAndDisplayCity = () => { 
   const cityName = document.getElementById("city").value; 
   const appearanceHeading = document.getElementById("facts__heading");
   
   appearanceHeading.textContent = "Weather in: " + cityName.toUpperCase(); 
+  document.querySelector('#temperature-text').textContent = state.tempClickCount;
   // document.getElementById("demo").innerHTML = cityName;
 }
 
+/////////////////////////////////////////////
+//     RESET THE  CITY                   /////
+//////////////////////////////////////////////
 const resetCity = () => { 
   const cityName = document.getElementById("city").value; 
   const appearanceHeading = document.getElementById("facts__heading");
@@ -110,19 +188,23 @@ const resetCity = () => {
   // document.getElementById("demo").innerHTML = cityName;
 }
 
-// add a line that adds all bugs on click or something else 
+///////////////////////////////////////////////////////
+//      REGISTER EVENT HANDLERS                   /////
+///////////////////////////////////////////////////////
 const registerEventHandlers = () => {
+  // 
   const crabButton = document.querySelector("#addCrabButton");
     crabButton.addEventListener("click", addBug);
   const allBugsButton = document.querySelector("#addPossibleBugsButton");
     allBugsButton.addEventListener("click", addAllBugs);
-  //newButton.addEventListener('hover', addAllBugs)
-  // // insert here 
   // registering add city with click
   const submitButton = document.querySelector('#submitButton');
     submitButton.addEventListener("click", getAndDisplayCity);
     const resetButton = document.querySelector('#resetButton');
     resetButton.addEventListener("click", resetCity);
+
+  
+  
 
 };
 
