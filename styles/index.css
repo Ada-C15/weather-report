@@ -15,6 +15,19 @@ body {
     margin: 2rem;
 }
 
+h1, h2, h3, h4 {
+  color: #6b705c;
+  text-align: center;
+  font-family: 'Kristi', cursive;
+  font-size: 2em;
+}
+
+header {
+    grid-column: span 2;
+    text-align: center;
+  }
+
+
 .temperature__section, .sky__section, .city-name__section {
     border-radius: 8px;
     padding: 2rem;
@@ -24,17 +37,19 @@ body {
     grid-row: 2;
 }
 
-.garden__content {
-    min-height: 200px;
-    max-width: fit-content;
-    margin: auto;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 8px;
-    font-size: 2em;
-}
+
 .garden__section {
     text-align: center;
+    border-radius: 12%;
+    background: url("https://i.pinimg.com/564x/ba/76/58/ba765836dc5cedf594c22af9a9f7b4f7.jpg");
 }
+
+.sky__section {
+    display: inline-flex;
+    text-align: center;
+    margin: 0.25em;
+    padding: 0.25em;
+    background: #b7b7a4;
+    border-radius: 12%;
+    background: url("https://i.pinimg.com/564x/ba/76/58/ba765836dc5cedf594c22af9a9f7b4f7.jpg");
+  }
