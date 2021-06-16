@@ -12,7 +12,6 @@ const increasetemp = (event) => {
 };
 increasetempButton.addEventListener("click", increasetemp);
 
-
 const decreasetempButton = document.querySelector("#decreaseButton")
 const decreasetemp = (event) => {
     state.temperture -= 1;
@@ -23,9 +22,39 @@ const decreasetemp = (event) => {
 };
 decreasetempButton.addEventListener("click", decreasetemp);
 
+const changeskyselector = document.querySelector("#sky-select");
+const changesky = (event) => {
+    const userchoice = event.target.value;
+    const sky = document.querySelector("#sky");
+    if (userchoice === "1"){
+        sky.textContent = `☁️ ☁️ ☁️ ☀️ ☁️ ☁️`;
+    } if (userchoice === "2"){
+        sky.textContent = `☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️`;
+    } if (userchoice === "3"){
+        sky.textContent = `🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧`;
+    } if (userchoice === "4"){
+        sky.textContent = `🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨`;
+    }
+};
+changeskyselector.addEventListener("change", changesky);
 
+const cityinputbox = document.querySelector("#city-input")
+const changecity = (event) => {
+    const result = event.target.value;
+    const city = document.querySelector("#header-city");
+    city.textContent  = `${result}`;
+};
+cityinputbox.addEventListener("input", changecity);
 
+const resetButton = document.querySelector("#reset_button")
+const resetcity = (event) => {
+    const city = document.querySelector("#header-city");
+    city.textContent  = `Seattle`;
+    const cityinputbox = document.querySelector("#city-input")
+    cityinputbox.value = `Seattle`;
 
+}
+resetButton.addEventListener("click", resetcity)
 
 //helper function to change temp color
 const changetempcolor = () => {
@@ -60,27 +89,3 @@ const changegroundimages = () => {
     }    
 };
 
-const changeskyselector = document.querySelector("#sky-select");
-const changesky = (event) => {
-    const userchoice = event.target.value;
-    const sky = document.querySelector("#sky");
-    if (userchoice === "1"){
-        sky.textContent = `☁️ ☁️ ☁️ ☀️ ☁️ ☁️`;
-    } if (userchoice === "2"){
-        sky.textContent = `☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️`;
-    } if (userchoice === "3"){
-        sky.textContent = `🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧`;
-    } if (userchoice === "4"){
-        sky.textContent = `🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨`;
-    }
-};
-changeskyselector.addEventListener("change", changesky);
-
-const cityinputbox = document.querySelector("#city-input")
-const changecity = (event) => {
-    const result = event.target.value;
-    const city = document.querySelector("#header-city");
-    city.textContent  = `${result}`;
-};
-
-cityinputbox.addEventListener("input", changecity);
