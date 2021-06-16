@@ -14,18 +14,19 @@ const updateTemperature = currentTemp => {
 // converts temp to celsius or fahrenheit
 // Math.floor creates a slight issue where temp continues to decrease when converted
 const convertTemp = () => {
+    const tempConvertBtn = document.getElementById("temp-converter-button");
     if (isCelsius === true) {
         currentTemp = Math.floor((currentTemp * 9/5) + 32);
         isCelsius = false;
+        tempConvertBtn.textContent = "Celsius"
         updateTemperature(currentTemp);
     }
     else if (isCelsius === false) {
-        if (isCelsius === false) {
         currentTemp = Math.floor((currentTemp - 32) * 5/9);
         isCelsius = true;
+        tempConvertBtn.textContent = "Fahrenheit"
         updateTemperature(currentTemp);
     }
-}
 };
 
 // increases temperature by 1
