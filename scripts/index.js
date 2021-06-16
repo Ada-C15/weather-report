@@ -9,74 +9,89 @@ const updateTemperature = currentTemp => {
     tempContainer.textContent = currentTemp;
     changeTempColor(currentTemp);
     changeLandscape(currentTemp);
-}
+};
 
-const convertToCelsius = () => {
-    if (isCelsius === false) {
-        currentTemp = Math.floor((currentTemp - 32) * 5/9);
-        isCelsius = true;
-        updateTemperature(currentTemp);
-    }
-}
-
-const convertToFahrenheit = () => {
+// converts temp to celsius or fahrenheit
+// Math.floor creates a slight issue where temp continues to decrease when converted
+const convertTemp = () => {
     if (isCelsius === true) {
         currentTemp = Math.floor((currentTemp * 9/5) + 32);
         isCelsius = false;
         updateTemperature(currentTemp);
     }
+    else if (isCelsius === false) {
+        if (isCelsius === false) {
+        currentTemp = Math.floor((currentTemp - 32) * 5/9);
+        isCelsius = true;
+        updateTemperature(currentTemp);
+    }
 }
+};
 
 // increases temperature by 1
 const increaseTemperature = () => {
     currentTemp += 1;
     updateTemperature(currentTemp);
-}
+};
 
 // decreases temperature by 1
 const decreaseTemperature = () => {
     currentTemp -= 1;
     updateTemperature(currentTemp);
-}
+};
 
 // changes the font color of the temperature based on how hot or cold it is
+// the logic here could be greatly improved if I made one temp variable that is
+// the "true" temp in the background, and one temp variable that is "visible"
+// to the user based on how they've converted the temp
+// not sure exactly how I would implement this, though!
 const changeTempColor = currentTemp => {
     const tempContent = document.getElementById("temp-content");
     let color = "yellow";
     if (currentTemp > 80) {
         color = "red";
-    } else if (currentTemp >= 70) {
+    } else if ((currentTemp >= 70 && isCelsius === false) ||
+    (currentTemp >= 21 && isCelsius === true)) {
         color = "orange";
-    } else if (currentTemp >= 60) {
+    } else if ((currentTemp >= 60 && isCelsius === false) ||
+    (currentTemp >= 15 && isCelsius === true)) {
         color = "yellow";
-    } else if (currentTemp >= 50) {
+    } else if ((currentTemp >= 50 && isCelsius === false) ||
+    (currentTemp >= 10 && isCelsius === true)) {
         color = "green";
-    } else if (currentTemp < 50) {
+    } else if ((currentTemp < 50 && isCelsius === false) ||
+    (currentTemp < 10 && isCelsius === true)) {
         color = "teal";
     }
     tempContent.classList = color;
-}
+};
 
 // changes landscape emojis based on the current temperature range
-const changeLandscape = (currentTemp) => {
+// logic could also be improved here in a similar way to the previous function
+const changeLandscape = currentTemp => {
     const landscapeContainer = document.getElementById("landscape");
     let landscape = "";
     if (currentTemp === 99) {
         //Kim and her 99 red baloons in 99 degree Highland Park
         landscape = "🎈🎈🎈🎈🎈🎈👩🏻🎈🎈🎈🎈🎈🎈"
-    } else if (currentTemp >= 80) {
-        landscape = "🌵🌋🐍🌋🦂🌵🌵🐍🌵🌋🏜🦂"
-    } else if (currentTemp >= 70) {
-        landscape = "🌸🌿🌼🌷🌸🌻🌿☘️🌱🌻🌷🌸"
-    } else if (currentTemp >= 60) {
-        landscape = "🍃🌾🌾🍃🪨🍃🪨🛤🪨🌾🌾🍃🪨"
-    } else if (currentTemp >= 50) {
-        landscape = "🍂🌲🌲🍁🌲🍂🌲🍁🌲🌲🍂🌲🍁"
-    } else if (currentTemp < 50) {
-        landscape = "❄️☃️🏔⛄️🏔❄️☃️🏔❄️☃️🏔⛄️❄️❄️"
+    } else if ((currentTemp >= 80 && isCelsius === false) ||
+    (currentTemp >= 26 && isCelsius === true)) {
+        landscape = "🌵🌋🐍🌋🦂🌵🐕🌵🐍🌵🌋🏜🦂"
+    } else if ((currentTemp >= 70 && isCelsius === false) ||
+    (currentTemp >= 21 && isCelsius === true)) {
+        landscape = "🌸🌿🌼🌷🌸🌻🐕☘️🌱🌻🌷🌸"
+    } else if ((currentTemp >= 60 && isCelsius === false) ||
+    (currentTemp >= 15 && isCelsius === true)) {
+        landscape = "🍃🌾🌾🍃🪨🍃🪨🐕🪨🌾🌾🍃🪨"
+    } else if ((currentTemp >= 50 && isCelsius === false) ||
+    (currentTemp >= 10 && isCelsius === true)) {
+        landscape = "🍂🌲🌲🍁🌲🍂🐕🍁🌲🌲🍂🌲🍁"
+    } else if ((currentTemp < 50 && isCelsius === false) ||
+    (currentTemp < 10 && isCelsius === true)) {
+        landscape = "❄️☃️🏔⛄️🏔❄️🐕🏔❄️☃️🏔⛄️❄️❄️"
     }
     landscapeContainer.textContent = landscape;
-}
+};
 
 // changes sky emojis to match the changed input in the dropdown menu
 const changeSky = () => {
@@ -122,12 +137,8 @@ const registerEventHandlers = () => {
     const tempDecreaseBtn = document.getElementById("decrease-temp");
     tempDecreaseBtn.addEventListener("click", decreaseTemperature);
 
-    // convertToCelsius();
-    const convertCelsiusBtn = document.getElementById("f-to-c-button");
-    convertCelsiusBtn.addEventListener("click", convertToCelsius);
-
-    const convertFahrenheitBtn = document.getElementById("c-to-f-button");
-    convertFahrenheitBtn.addEventListener("click", convertToFahrenheit);
+    const tempConvertBtn = document.getElementById("temp-converter-button");
+    tempConvertBtn.addEventListener("click", convertTemp);
 
     changeSky();
     const skyDropdown = document.getElementById("sky-dropdown");

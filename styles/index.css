@@ -108,15 +108,24 @@ select {
     align-items: center;
 }
 
+#temp-convert-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
 #temp-integer {
     font-size: 60px;
 }
 
 #up-down-arrows {
     font-size: 20px;
+    padding-bottom: 10px;
 }
 
-#weather-dropdown, #city {
+#sky-dropdown, #city {
     border: none;
     font-size: 20px;
     margin-top: 20px;
