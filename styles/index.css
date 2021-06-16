@@ -24,14 +24,17 @@ h1 {
     margin: 0;
 }
 
-#landscape-container{
-    width: 30em;
+.garden-box{
+    width: 80%;
     height: 20em;
-    border: solid black 2px;
 }
 
 .emojis{
     font-size: 2rem;
+}
+
+.br {
+    padding-bottom: 12rem;
 }
 
 /* display box style */
@@ -40,11 +43,19 @@ h1 {
     border-radius: 20px;
     padding: 1rem;
     margin: 1rem;
+    align-self: center;
+    width: 70%;
 }
 
-.garden-box{
-    width: 40%;
+#top-banner {
+    align-self: center;
 }
+.flex{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
 
 /* input */
 input {
@@ -58,6 +69,7 @@ input {
     background-color: #2a9d8f;
     color: white;
     padding: 16px;
+    margin: 5px;
     font-size: 16px;
     border: none;
     border-radius: 15px;

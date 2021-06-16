@@ -11,7 +11,8 @@ const plusButton = document.getElementById('plus');
 // change bg and lanscape
 function changeBackground(temp) {
     // get landspan to update icons
-    const newLand = document.querySelector("#land-icons");
+        newLand.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+        const newLand = document.querySelector("#land-icons");
 
     if (temp < 29) {
         document.body.style.backgroundColor = '#393D3F';
@@ -65,6 +66,10 @@ plusButton.addEventListener('click', event => {
 const skyContainer = document.getElementById('sky-icon-container');
 const groundContainter = document.getElementById('land-icon-container');
 
+// get icons
+const newSky = document.querySelector("#sky-icons");
+const newLand = document.querySelector("#land-icons");
+
 // get menu options
 const dropdownOptions = document.querySelectorAll('.dropdown .option');
 
@@ -102,6 +107,9 @@ const input = document.querySelector("#input");
 
 input.addEventListener('keyup', event => {
     cityDisplay.textContent = event.target.value;
+    if (cityDisplay.textContent === "hell") {
+        specialDisplay();
+    }
 });
 
 // reset clears input field
@@ -109,4 +117,16 @@ const resetBtn = document.querySelector("#reset");
 resetBtn.addEventListener('click', event => {
     input.value = "";
     cityDisplay.textContent = state.city;
+    newLand.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+    newSky.textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
+    document.body.style.backgroundColor = 'rgb(109, 107, 107)';
+
 })
+
+const specialDisplay = () => {
+    newSky.textContent = "💥🦇💥💥🦇";
+    document.body.style.backgroundColor = 'black';
+    newLand.textContent = "🔥👺🔥👹_👹🔥🔥👺";
+
+
+}
