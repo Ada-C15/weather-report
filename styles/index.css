@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
 body {
     background-image: url(../assets/sunny.jpg);
@@ -33,10 +34,11 @@ body.snowy {
 }
 
 header {
-    border: 2px solid black;
     text-align: center;
-    padding: 10px;
+    padding: 1px;
     background-color:rgb(255, 255, 255, 0.5);
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 1.5em;
 }
 
 main {

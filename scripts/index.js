@@ -66,7 +66,7 @@ const selectSky = (event) => {
 const selectCity = (event) => {
     state.city = event.target.value;
     const city = document.querySelector("#cityDisplay");
-    city.textContent = `For the city of: ${state.city}`;
+    city.textContent = `City: ${state.city}`;
 };
 
 const resetCity = (event) => {
