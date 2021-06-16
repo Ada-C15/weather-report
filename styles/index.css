@@ -1,0 +1,219 @@
+* {
+    margin: 10px;
+    padding: 3px;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+  
+  body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5 rem;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    background-image: url("../images/flower.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-blend-mode: overlay;
+  }
+
+  hr {
+    width: 98%;
+    margin: auto;
+    border: 1px solid;
+  }
+  
+  main {
+    width: 100%;
+    max-width: 700px;
+    max-height: 1300px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    color: rgba(232, 224, 216, 0.902);
+    background-color: rgba(29, 26, 26, 0.782);
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2.5px #fff;
+  }
+
+  select {
+    color: rgba(232, 224, 216, 0.902);
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    width: 108px;
+    height: 65px;
+    box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.63);
+    border-color: #fff;
+    border: 2px solid rgba(232, 224, 216, 0.902);
+    border-radius: 100px;
+    padding: 1rem 1rem 1rem;
+  }
+
+  select:hover{
+    cursor: pointer;
+  }
+
+  .button {
+    
+    color: rgba(247, 247, 247, 0.815);
+    border: 2px solid rgba(247, 247, 247, 0.815);
+    border-radius: 100px;
+    outline: none;
+    font-size: 2.25rem;
+    font-weight: 700;
+    background-color: transparent;
+  }
+  
+  .button:hover {
+    cursor: pointer;
+  }
+  
+  .button:hover,
+  .button:focus {
+    cursor: pointer;
+    box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.603);
+    border-color: #fff;
+  }
+   
+  .headerCity {
+    font-size: 20px;
+  }
+
+  .resetCityBtn {
+    border: none;
+    box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.63);
+  }
+  
+  .resetCityBtn:hover,
+  .resetCityBtn:focus {
+    box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.63);
+    border-color: #fff;
+  }
+  
+  .searchBarText {
+    padding: 1rem 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgba(232, 224, 216, 0.902);
+    border-radius: 100px;
+    color: rgba(232, 224, 216, 0.902);
+    font-size: 20px;
+  }
+  
+  .searchBarText:hover,
+  .searchBarText:focus {
+    box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.637);
+    border-color: #fff;
+  }
+  
+  .temperature {
+    color: rgba(232, 224, 216, 0.902);
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .temperatureBarNumber {
+    padding: 1rem 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgba(232, 224, 216, 0.902);
+    border-radius: 100px;
+  }
+  
+  .temperatureBarNumber:hover,
+  .temperatureBarNumber:focus {
+    box-shadow: 4px 2px 5px #000;
+    border-color: #fff;
+  }
+  
+  .temperatureBarNumber::placeholder {
+    color: rgba(232, 224, 216, 0.902);
+    font-size: 14px;
+  }
+   /* Colors for the garden background and temp digits */
+  .red {
+    color: rgb(245, 6, 6);
+  }
+  
+  .orange {
+    color: rgba(255, 153, 0, 0.988);
+  }
+  
+  .yellow {
+    color: gold;
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  .blue {
+    color: rgb(0, 180, 245);
+  }
+
+  .cloudy {
+    background-color: rgba(136, 123, 123, 0.645);
+  }
+  
+  .sunny {
+    background-color: rgba(235, 222, 37, 0.522);
+  }
+  
+  .rainy {
+    background-color: rgba(26, 167, 218, 0.611);
+  }
+  
+  .snowy {
+    background-color: rgba(18, 106, 221, 0.563);
+  }
+
+  #gardenContent {
+    font-size: 30px;
+  }
+
+  #highTemp{
+      color:red;
+  }
+  
+  #lowTemp{
+      color:rgb(47, 156, 240);
+  }
+
+  #skyContent {
+    font-size: 30px;
+  }
+
+  #skyThemeSelect{
+    padding: 1rem 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgba(232, 224, 216, 0.902);
+    border-radius: 100px;
+    color: rgba(232, 224, 216, 0.902);
+    font-size: 20px;
+    width:auto;
+  }
+
+  #tempValue {
+    font-size: 30px;
+  }
+  
+  /* nav buttons that wont be used */
+  /* .navButtons {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5rem 0.25rem;
+  } */
+  
+  

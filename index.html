@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Weather Report App</title>
+  <!--cdjns.com for font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" /> 
+  <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  <!--google font Montserrat-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+  <main>
+      
+      <h1> Weather Report </h1>
+      <span> for the city of:🌟  <span id="headerCity" class="headerCity"></span></span>
+      <section id="searchBar" class="searchBar"></section>
+              <label for="searchBarText">Enter a City Name</label>
+              <input id="searchBarText" class="searchBarText" type="text"  value="Seattle">
+                <div contenteditable="plaintext-only">
+                </div>
+              <button id="resetCityBtn" class="button" aria-label="Reset the City">
+                <i class="fa fa-redo"></i>
+              </button>
+          </form>
+      <hr>
+      <section id="currentForecast" class="current-forecast">
+          <h2 id="forecastConditions" class="forecastConditions">Select Current Sky Conditions</h2>
+      
+      <select id="skyThemeSelect">
+        <option>Rainy</option>
+        <option>Cloudy</option>
+        <option>Sunny</option>
+        <option>Snowy</option>
+     </select>
+
+     </section>
+          <button id="refresh" onClick="window.location.reload();" class="button">
+              <i class="fas fa-sync-alt"></i>
+          </button>
+      </section>
+      <hr>
+      
+      <section id="temperature" class="temperature">
+        <h2 id="dailyTemperature" class="dailyTemperature">Temperature Counter (F): </h2>
+      
+        <button id="highTemp" class="button" >
+            <i class="fas fa-thermometer-full"></i>
+        </button>
+        <span id="tempValue" class="red">71</span>
+        <button id="lowTemp"  class="button" >
+              <i class="fas fa-temperature-low"></i>
+        </button>
+        
+      </section>
+
+      <hr>
+      <section id="skyContainer" class="skyContainer" role="createSky" aria-labelledby="createSky">
+          <h2 id="createSky" class="createSky">Sky</h2>
+          <div id="skyContent"> ☁️ ☁️ ☁️ ☀️ ☁️ ☁️ ☁️ ☁️☁️ ☁️☁️ ☁️</div>
+      </section>
+
+      <section id="gardenContainer" class="gardenContainer" role="createGarden" aria-labelledby="createGarden">
+          <h2 id="createGarden" class="createGarden">Weather Garden</h2>
+          <div id="gardenContent" >🌵 🐍 🦂 🌵 🌵 🐍 🏜 🌵 🐍 🏜 🦂 🦂</div>
+      </section>
+
+  </main>
+  <script src="scripts/index.js"></script>
+</body>
+</html>
+
+<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<!---<nav id="navButtons" class="navButtons"><nav>
+      <section>
+          <button id="getPrecipitation" class="button">
+            <i class="fas fa-cloud-showers-heavy"></i>
+          </button>
+          <button id="getCloudy"  class="button">
+              <i class="fas fa-cloud"></i>
+          </button>
+          <button id="getSunny"  class="button">
+              <i class="fas fa-sun"></i> 
+          </button>
+          <button id="getSnowy" class="button">
+              <i class="fas fa-snowflake"></i>
+          </button>
+          <button id="getNight"  class="button">
+              <i class="fas fa-moon"></i>
+          </button>-->
