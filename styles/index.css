@@ -1,0 +1,10 @@
+/* Shows the boxes of each html element: */
+* {
+    border: red 1px solid;
+  }
+
+h1 {
+color: orange;
+font-family: helvetica, sans-serif;
+}
+  
