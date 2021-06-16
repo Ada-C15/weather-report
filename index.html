@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>wutever the weather</title>
+    <link href="styles/index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <main>
+        <section class="weather-header">
+            <h1 class="title">Weather Report</h1>
+            <p class="header-p">for the place we call <div class="city-name">✨ Vashon ✨</div> </p>
+        </section>
+        <section class="weather-boxes">
+            <section class="temp weather-box">
+                <h3 class="weather-box-header">temp</h3>
+                <section class="temp-control">
+                  <div class="arrows">
+                  <p class="temp-up">🔼</p>
+                  <p class="temp-down">🔽</p>
+                  </div>
+                  <p class="temp-display">64</p>
+                </section>
+            </section>
+            <section class="sky weather-box">
+                <h3 class="weather-box-header">sky</h3>
+                <select name="sky" id="sky">
+                  <option value="sunny">sunny</option>
+                  <option value="cloudy">cloudy</option>
+                  <option value="rainy">rainy</option>
+                  <option value="snowy">snowy</option>
+                </select> 
+            </section>
+            <section class="city-input weather-box">
+              <h3 class="weather-box-header">city name</h3>
+              <form><input id="city-input" type="text"></form>
+              <div id=button>
+              <button id="reset-button">Reset</button>
+            </div>
+            </section>
+        </section>
+        <section class="weather-garden">
+        <h2>weather garden</h2>
+        <section class="weather-garden-display">
+          <p class="sky-emojis">☁️☁️☁️☀️ 🌞 ☀️☁️☁️☁️</p>
+          <p class="temp-emojis">🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃</p>
+        </section>
+      </section>
+    </main>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
