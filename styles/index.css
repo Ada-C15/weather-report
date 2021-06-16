@@ -1,0 +1,103 @@
+body {
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    background: black;
+  }
+
+#flexContainer {
+    display: flex;
+}
+
+#leftHalf {
+    flex: 1;
+}
+  
+#rightHalf {
+    flex: 1;
+}
+
+h1 {
+    padding-top: 20px;
+    padding-right: 50px;
+    padding-left: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-block-start: 50px;
+}
+
+p {
+    padding-right: 50px;
+    padding-left: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+#tempFeature {
+    background-color: #282828;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    margin-left: 50px;
+    margin-right: 75px;
+    margin-block-start: 50px;
+    margin-block-end: 50px;
+}
+
+#skyFeature {
+    background-color: #282828;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    margin-left: 50px;
+    margin-right: 75px;
+    margin-block-start: 50px;
+    margin-block-end: 50px;
+}
+
+#cityNameFeature {
+    background-color: #282828;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    margin-left: 50px;
+    margin-right: 75px;
+    margin-block-start: 50px;
+    margin-block-end: 50px;
+}
+
+#gardenFeature {
+    background-color: #9ebed9;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    margin-left: 50px;
+    margin-right: 75px;
+    margin-block-start: 300px;
+    margin-block-end: 50px;
+}
+  
+  
+.blue {
+    color: #8caced;
+}
+
+.green {
+    color: #bdf59d;
+}
+
+.yellow {
+    color: #ffed66;
+}
+
+.orange {
+    color: #ffb752;
+}
+
+.red {
+    color :#ff9a8c; 
+}
