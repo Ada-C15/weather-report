@@ -1,19 +1,26 @@
-
-
-/* .cloudy {
-    background-color: lightgrey;
+h2 {
+    color:rgb(60, 115, 160)
 }
+h1 {
+    font-weight: 600;
+    color:rgba(28, 53, 106, 0.92)
+}
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 1rem;
   
-.sunny {
-    background-color: palegoldenrod;
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    background-color: #bce4eb;
+    margin: 2rem;
 }
-
-  
-.rainy {
-    background-color: rgb(176, 224, 238);
+.tempContainer,
+.skyContainer,
+.cityNameContainer {
+ 
+  border-radius: 8px;
+  padding: 2rem;
+  background-color: rgb(242, 205, 103);
 }
-  
-.clear {
-    background-color: rgb(224, 240, 151);
-}
-   */

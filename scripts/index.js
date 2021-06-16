@@ -25,6 +25,7 @@ const updateSky = () => {
     let sky = '';
     // skyColor values need to coordinate with CSS file for color values
     let skyColor = '';
+    // gardenSky.value allows us access what the user has chosen in dropdown menu
     if (gardenSky.value === "sun"){
         sky = '🔥🔥🔥🔥☀🔥🔥🔥☀🔥🔥🔥🔥';
         skyColor = 'sunny';
