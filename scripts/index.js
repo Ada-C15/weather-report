@@ -1,5 +1,6 @@
 const state = {
     temperature: 75,
+    location: " ",
 };
 
 const changeColorandLandscape = () => {
@@ -37,12 +38,27 @@ const decreaseTemperature = () => {
     changeColorandLandscape()
 }
 
-// const updateLocation = () => {
-//     const newLocation = document.querySelector("#location");
-//     newLocation.textContent = 
-//     // const newLocation = document.querySelector("#location");
-//     // newLocation.textContent = `${state.temperature}`;
-//     console.log("HI")
+
+// const updateSky = () => {
+//     const sky = document.querySelector("#display");
+//     if (rain) {
+//         sky.src = "styles/rain.gif";
+//     }else if (sunny) {
+//         sky.src = "styles/sunny.gif";
+//     }else if (overcast) {
+//         sky.src = "styles/overcase.gif";
+//     }else if (nightsky) {
+//         sky.src = "styles/nightsky.gif";
+//     }else if (dawn) {
+//         sky.src = "styles/dawn.gif";
+//     }
+// }
+
+const updateLocation = () => {
+    let userInput = document.getElementById("searchTxt").value;
+    state.location = userInput;
+    const newLocation = document.querySelector("#location");
+    newLocation.innerHTML = `${state.location}`;
 }
 
 const registerEventHandlers = () => {
@@ -50,7 +66,7 @@ const registerEventHandlers = () => {
     upButton.addEventListener("click", increaseTemperature);
     const downButton = document.querySelector("#downButton");
     downButton.addEventListener("click", decreaseTemperature);
-    const updateLocationButton = document.querySelector("#setLocation");
+    const updateLocationButton = document.querySelector("#enter");
     updateLocationButton.addEventListener("click", updateLocation)
 };
 
