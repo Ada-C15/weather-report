@@ -40,11 +40,11 @@ const updateTempIcons = (currentTemp) => {
   const tempValueContainer = document.getElementById("tempValue");
   let color = "blue";
   if (currentTemp >= 80) {
-    color = "maroon";
-  } else if (currentTemp >= 70) {
     color = "red";
-  } else if (currentTemp >= 60) {
+  } else if (currentTemp >= 70) {
     color = "orange";
+  } else if (currentTemp >= 60) {
+    color = "yellow";
   } else if (currentTemp >= 50) {
     color = "blue";
   }

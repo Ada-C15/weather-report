@@ -7,7 +7,7 @@
   
   body {
     width: 100%;
-    min-height: 100vh;
+    min-height: 105vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,8 +26,9 @@
   .headerCity {
     font-size: 20px;
   }
+
   hr {
-    width: 90%;
+    width: 98%;
     margin: auto;
     border: 1px solid;
   }
@@ -35,7 +36,7 @@
   main {
     width: 100%;
     max-width: 700px;
-    max-height: 1050px;
+    max-height: 1060px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -50,6 +51,9 @@
     color: rgba(232, 224, 216, 0.902);
     font-size: 20px;
     display: flex;
+    justify-content: center;
+    width: 108px;
+    height: 65px;
     box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.63);
     border-color: #fff;
     border: 2px solid rgba(232, 224, 216, 0.902);
@@ -137,16 +141,12 @@
     font-size: 14px;
   }
    
-  .maroon {
-    color: rgb(111, 16, 16);
-  }
-  
   .red {
-    color: rgb(252, 2, 2);
+    color: rgb(245, 6, 6);
   }
   
   .orange {
-    color: orange;
+    color: rgba(255, 153, 0, 0.988);
   }
   
   .yellow {
@@ -158,20 +158,45 @@
   }
   
   .blue {
-    color: rgb(35, 64, 226);
+    color: rgb(0, 180, 245);
+  }
+
+  .cloudy {
+    background-color: rgba(136, 123, 123, 0.645);
   }
   
+  .sunny {
+    background-color: rgba(235, 222, 37, 0.522);
+  }
+  
+  .rainy {
+    background-color: rgba(26, 167, 218, 0.611);
+  }
+  
+  .snowy {
+    background-color: rgba(18, 106, 221, 0.563);
+  }
+
   #highTemp{
       color:red;
   }
-
+  /* #gardenContainer{
+    border-radius: 3px;
+    padding: .5rem;
+    background-color: rgba(215, 236, 26, 0.412);
+  } */
   #gardenContent {
     font-size: 30px;
   }
-  
+
   #lowTemp{
       color:rgb(47, 156, 240);
   }
+  /* #skyContainer{
+    border-radius: 3px;
+    padding: .5rem;
+    background-color: rgba(254, 248, 248, 0.344);
+  } */
 
   #skyContent {
     font-size: 30px;
