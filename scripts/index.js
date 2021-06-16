@@ -1,7 +1,7 @@
 const state = {
     currentTemp: 65,
     currentSky: "Sunny",
-    cityNameDefault: "Seattle"
+    cityNameDefault: "🌈 Issaquah 🌈"
 };
 
 const updateTemp = () => {
@@ -40,7 +40,7 @@ const updateTempColor = () => {
     tempValueContainer.classList = color;
 }
 
-// potentially combine this in with updateTempColor
+// potentially combine this in with updateTempColor since ranges of temps are the same
 const updateLandscape = () => {
     const landscapeContainer = document.querySelector("#landscapeContainer");
     let landscape = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃"
@@ -77,10 +77,19 @@ const updateSky = () => {
 };
 
 const updateCityName = () => {
-    const headerCityName = document.querySelector("#cityName");
+    const headerCityName = document.querySelector("#cityNameContainer");
     const inputCityName = document.querySelector("#cityNameInput").value;
     headerCityName.textContent = inputCityName;
-}
+};
+
+// need to modify so that input box clears when reset is clicked 
+const resetCityName = () => {
+    const defaultCityName = state.cityNameDefault;
+    const cityNameContainer = document.querySelector("#cityNameContainer");
+    cityNameContainer.textContent = defaultCityName;
+    const inputCityName = document.querySelector("#cityNameInput");
+    inputCityName.value = defaultCityName;
+};
 
 const registerEventHandlers = () => {
     const increaseTempControl = document.querySelector("#increase_temp");
@@ -94,6 +103,9 @@ const registerEventHandlers = () => {
 
     const changeCityName = document.querySelector("#cityNameInput");
     changeCityName.addEventListener('input', updateCityName);
+
+    const resetDefaultCity = document.querySelector("#cityResetButton");
+    resetDefaultCity.addEventListener('click', resetCityName);
 
 }
 
