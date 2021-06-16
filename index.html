@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
@@ -8,17 +8,16 @@
     </head>
     <body>
         <div id="container">
-            <section id="display">
+            <div id="display">
                 <section id="temperaturePanel">
-                    <span id="temperature">75</span><span> F</span><br>
+                    <span id="temperature" class="">75</span><span> F</span><br>
                     <span id="location">Fort Worth</span>
                 </section>
                 <section id="landscapePanel">
-                    <img src ="styles/flowers.png" id="landscape" alt="landscape">
+                    <img src ="assets/landscapes/grass.png" id="landscape" alt="landscape">
                 </section>
-            </section>
-
-            <section id="userSettingsContainer">
+            </div>
+            <div id="userSettingsContainer">
                 <section id="setLocation">
                     <form>
                         <label for="setLocation">Location:</label><br>
@@ -29,7 +28,6 @@
                         </section>
                     </form>
                 </section>
-
                 <section id="setSky">
                     <label for="skies">Sky:</label><br>
                     <select id="skies" name="skies">
@@ -40,7 +38,7 @@
                         <option value="dawn">Dawn</option>
                         <option value="dusk">Dusk</option>
                         <option value="nightsky">Night Sky</option>
-                        <option value="cyberpunk">Cyber Punk</option>
+                        <option value="cyberpunk">Cyberpunk</option>
                     </select>
                 </section>
                 <section id="setTemperature">
@@ -50,7 +48,7 @@
                         <button id="upButton">UP</button>
                     </section>
                 </section>
-            </section>
+            </div>
         </div>
         <script src="scripts/index.js"></script>
     </body>

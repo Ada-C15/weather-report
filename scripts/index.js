@@ -9,19 +9,19 @@ const changeColorandLandscape = () => {
     const landscape = document.querySelector("#landscape");
 
     if (state.temperature > 80) {
-        thermostat.style.color = "red"
-        landscape.src = "styles/desert.png";
+        thermostat.className = "red"
+        landscape.src = "assets/landscapes/desert.png";
     } else if (state.temperature > 70) {
-        thermostat.style.color = "orange"
-        landscape.src = "styles/grass.png";;
+        thermostat.className =  "orange"
+        landscape.src = "assets/landscapes/grass.png";;
     } else if (state.temperature > 60) {
-        thermostat.style.color = "yellow"
-        landscape.src = "styles/flowers.png";
+        thermostat.className  = "yellow"
+        landscape.src = "assets/landscapes/flowers.png";
     } else if (state.temperature > 50) {
-        thermostat.style.color = "green"
-        landscape.src = "styles/snow.png";;
+        thermostat.className  = "green"
+        landscape.src = "assets/landscapes/snow.png";;
     } else if (state.temperature > 40) {
-        thermostat.style.color = "teal"
+        thermostat.className = "blue"
     }
 }
 
@@ -46,21 +46,21 @@ const updateSkies = () => {
     console.log(state.sky)
     const sky = document.querySelector("#display");
     if (state.sky == "rainy") {
-        sky.style.backgroundImage = "url(styles/rain.gif)";
+        sky.style.backgroundImage = "url(assets/skies/rain.gif)";
     }else if (state.sky == "sunny") {
-        sky.style.backgroundImage = "url(styles/sunny.gif)";
+        sky.style.backgroundImage = "url(assets/skies/sunny.gif)";
     }else if (state.sky == "cloudy") {
-        sky.style.backgroundImage = "url(styles/cloudy.gif)";
+        sky.style.backgroundImage = "url(assets/skies/cloudy.gif)";
     }else if (state.sky == "overcast") {
-        sky.style.backgroundImage = "url(styles/overcast.gif)";
+        sky.style.backgroundImage = "url(assets/skies/overcast.gif)";
     }else if (state.sky == "nightsky") {
-        sky.style.backgroundImage = "url(styles/night.gif)";
+        sky.style.backgroundImage = "url(assets/skies/night.gif)";
     }else if (state.sky == "dawn") {
-        sky.style.backgroundImage = "url(styles/dawn.gif)";
+        sky.style.backgroundImage = "url(assets/skies/dawn.gif)";
     }else if (state.sky == "dusk") {
-        sky.style.backgroundImage = "url(styles/dusk.gif)";
+        sky.style.backgroundImage = "url(assets/skies/dusk.gif)";
     }else if (state.sky == "cyberpunk") {
-        sky.style.backgroundImage = "url(styles/cyberpunk.gif)";
+        sky.style.backgroundImage = "url(assets/skies/cyberpunk.gif)";
     }
 }
 
