@@ -10,10 +10,6 @@ h2 {
     font-family: 'Montserrat', sans-serif;
 }
 
-/* .city-name {
-    font-family: 'Architects Daughter', regular;
-} */
-
   
 .garden-content {
     min-height: 200px;
@@ -26,11 +22,39 @@ h2 {
     justify-content: space-between;
 
     border-radius: 8px;
-    font-size: 2em;
-  }
+    font-size: 8em;
+}
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: gold;
+} 
+
+.green{
+    color: green;
+} 
+
+.blue {
+    color: blue;
+} 
+
+.indigo {
+    color: #580099;
+} 
+
+.violet {
+    color: #4c0466;
+} 
 
 .sunny {
-    background-color: rgb(221, 255, 255);
+    background-color: #ddffff;
 }
 
 .cloudy {
@@ -53,5 +77,5 @@ h2 {
     background-color: #b9c4d6;
 } 
 .end {
-    background-color: #ff806b;
+    background-color: #a13c23;
 } 
