@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Weather Report</title>
+        <link href="styles/index.css" rel="stylesheet" type="text/css" />
+    </head>
+
+    <body>
+        <header>
+            <h1>Weather Report</h1>
+            <h4>for the lovely city of</h4>
+            <h2 id="header-city-name">🏖🏝 a tropical island 🏖🏝</h2>
+        </header>
+
+        <main id="flex-container">
+            <div class="main-section">
+
+                <section id="left-side">
+                    <div class="temperature-block">
+                        <h2 id="temperature-heading">Temperature</h1>
+                        <span id="increase-temp-bttn">⬆️</span>
+                        <span id="decrease-temp-bttn">⬇️</span>
+                        <span id="temperature-value"></span>
+                    </div>
+                    
+                    <div class="sky-block">
+                        <h2 id="sky-heading">Sky</h1>
+                        <select id="sky-options" name="sky-selections">
+                            <option value="sunny">sunny</option>
+                            <option value="cloudy">cloudy</option>
+                            <option value="rainy">rainy</option>
+                            <option value="snowy">snowy</option>
+                        </select>
+
+                    </div>
+                    <div class="city-name-block">
+                        <h2 id="city-heading">City Name</h1>
+                        <section id="search-bar">
+                            <input type="text" id="city-name-bar" value="Seattle">
+                            <button id="reset-button">reset</button>
+                        </section>
+                    </div>
+                </section>
+
+                <section id="right-side">
+                    <h2 id="weather-heading">Weather Garden</h1>
+                    <div id="weather-garden-block" class="garden-goodies">
+                        <p id="sky-art">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</p>
+                        <p id="land-art">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</p>
+                    </div>
+                </section>  
+            </div>
+            <script src="scripts/index.js"></script>
+        </main>
+    </body>
+
+
+
+</html>

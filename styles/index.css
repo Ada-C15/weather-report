@@ -1,0 +1,163 @@
+* {
+    box-sizing: border-box;
+}
+/* 
+#flex-container {
+    display: flex;
+} */
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto auto;
+    background: fuchsia;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#left-side {
+    grid-column: 2;
+}
+
+
+#right-side {
+    grid-row: 3;
+    grid-column: 4;
+} 
+
+header {
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 75px;
+    margin-block-start: 50px;
+    margin-block-end: 50px;
+}
+
+header h2 {
+    text-align: left;
+}
+
+h2 {
+    padding-top: 60px;
+    padding-right: 50px;
+    padding-left: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-block-start: 50px;
+    text-align: center;
+}
+
+h2 {
+    font-style: italic;
+}
+
+/* TEMPERATURE BLOCK */
+
+.temperature-block {
+    background: pink;
+    padding-top: 40px;
+    padding-right: 40px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    margin-left: 40px;
+    margin-right: 65px;
+    margin-block-start: 40px;
+    margin-block-end: 40px;
+    border-radius: 25px;
+    grid-row: 2;
+}
+
+/* SKY BLOCK */
+
+.sky-block {
+    background: pink;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    margin-left: 50px;
+    margin-right: 75px;
+    margin-block-start: 50px;
+    margin-block-end: 50px;
+    border-radius: 25px;
+    grid-row: 3;
+}
+
+#sky {
+    position: relative;
+    display: inline-block;
+    min-width: 160px;
+    background: rgb(18, 21, 175);
+} 
+
+/* CITY NAME BLOCK */
+
+.city-name-block {
+    background: pink;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    margin-left: 50px;
+    margin-right: 75px;
+    margin-block-start: 50px;
+    margin-block-end: 50px;
+    border-radius: 25px;
+    grid-row: 4;
+}
+
+
+/* WEATHER GARDEN BLOCK */
+
+#weather-garden-block {
+    background: pink;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+    padding-left: 50px;
+    margin-left: 50px;
+    margin-right: 75px;
+    margin-block-start: 50px;
+    margin-block-end: 50px;
+    border-radius: 25px;
+}
+
+.garden-gooodies {
+    min-height: 300px;
+    max-width: fit-content;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.sky-art {
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: gold;
+}
+
+.green {
+    color: green;
+}
+
+.teal {
+    color: teal;
+}
+
+
+
+
