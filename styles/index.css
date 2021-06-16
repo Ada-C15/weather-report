@@ -1,0 +1,157 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    font-family: Georgia;
+    background: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+    grid-gap: 2em;
+    margin: 2em;
+}
+
+.night {
+    background: linear-gradient(rgb(35, 52, 237), black);
+}
+
+.day__or__night {
+    grid-row: 2;
+    justify-content: center;
+    margin: auto;
+    display: block;
+}
+
+.bigHeader {
+    color: white;
+    display: flex;
+    align-items: center;
+    grid-column: span 3;
+    font-size: 1.5em;
+    justify-content: space-around;
+}
+
+.header__city__name {
+    font-size: 2rem;
+}
+
+.header__city__name::before {
+    content: "🌆 🏙";
+}
+
+.header__city__name::after {
+    content: "🏙 🌆";
+}
+
+.temperature__section,
+.sky__section,
+.city__name__section {
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: white;
+    min-width: -webkit-fill-available;
+}
+
+.temperature__section {
+    grid-row: 3;
+}
+
+.sky__section {
+    grid-row: 4;
+}
+
+.city__name__section {
+    grid-row: 5;
+}
+
+.temperature__content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: min-content;
+}
+
+#tempValue {
+    font-size: 3rem;
+    margin-left: 1.5rem;
+}
+
+.temperature__controls {
+    margin-left: inherit; /*4rem*/
+}
+
+.ground__section {
+    text-align: center;
+    align-self: center;
+    grid-row-start: 3;
+    grid-row-end: auto;
+    grid-column-start: 2;
+    grid-column-end: auto;
+}
+
+.ground__section > h2 {
+    color: white;
+    grid-row-start: 3;
+    grid-row-end: auto;
+}
+
+.ground__content {
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    font-size: 3rem;
+    min-height: 5em;
+    max-width: max-content;
+    justify-content: space-between;
+}
+
+.reset__button {
+    border: 0;
+    background-color: rgb(28, 105, 247);
+    color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    font-family: Georgia;
+}
+
+.hot {
+    color: red;
+}
+
+.warm {
+    color: orange;
+}
+
+.comfortable {
+    color: gold;
+}
+
+.cool {
+    color: rgb(47, 159, 47);
+}
+
+.cold {
+    color: rgb(14, 230, 230);
+}
+
+.cloudy {
+    background: rgb(154, 151, 151);
+}
+
+.sunny {
+    background: rgba(250, 227, 91, 0.803);
+}
+
+.rainy {
+    background: rgb(132, 222, 252);
+}
+
+.snowy {
+    background: rgb(135, 185, 250);
+}
+
+.fog {
+    background: rgba(237, 237, 237, 0.714);
+}
+
+.windy {
+    background: rgb(187, 244, 225);
+}
