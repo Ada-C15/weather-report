@@ -1,7 +1,7 @@
 let tempValue = 71;
 let sky = ""
 
-const selectSky = function(sky) {
+const selectSky = function() {
     const skyOption = document.getElementById("skySelect")
     const getInput = skyOption.options[skyOption.selectedIndex].value;
     // console.log(getInput)
@@ -20,6 +20,11 @@ const selectSky = function(sky) {
     skyContainer.textContent = sky;
 }
 
+const updateCity = () =>  {
+    const getCityName = document.getElementById("cityNameInput").value
+    const headerCityContainer = document.getElementById("headerCityName")
+    headerCityContainer.textContent = getCityName
+}
 
 const updateTemp = function(tempValue) {
     const tempValueContainer = document.getElementById("tempValue")
@@ -60,9 +65,13 @@ const registerEventHandlers = function() {
         updateTemp(tempValue)
     })
 
-    selectSky(sky);
+    selectSky();
     const skyMenu = document.querySelector("#skySelect");
     skyMenu.addEventListener("change", selectSky)
+
+    updateCity();
+    const inputCity = document.querySelector("#cityNameInput");
+    inputCity.addEventListener("input", updateCity)
 
 };
 

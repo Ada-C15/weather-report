@@ -1,0 +1,19 @@
+/* how to make body go horizontal instead of vertical */
+
+body {
+    font-family: Futura,"Futura", sans-serif;
+    font-size: 18px;
+    background-color: #65bc7e;
+    margin: 2rem;
+}
+
+.control__center {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+/* can i assign more than one class in html tag  */
+/* or should i just list the selectors like */
+/* .temperature__section, .sky__section, .city-name__section */
+/* ^THIS WENT POORLY */
