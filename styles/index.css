@@ -1,0 +1,102 @@
+body{
+    background-color: rgb(75, 75, 242);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    font-size: 2.5em;
+}
+
+main {
+    max-width: 1200px;
+    margin: auto;
+}
+.weather-header{
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.header-p{
+    padding-left: 2em;
+    padding-right: 1em;
+}
+
+.weather-boxes{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 6em;
+    
+}
+
+.weather-box {
+    padding: 2em;
+    background-color: white;
+    border-radius: 20px 80px;
+}
+
+.weather-box-header{
+    margin: 0;
+}
+
+.weather-garden{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.weather-garden-display{
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1em;
+    background-color: rgb(203, 234, 234);
+    border-radius: 10px;
+}
+
+.weather-garden-display p{
+    text-align: center;
+    padding: 1em;
+}
+
+.temp-control{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.arrows{
+    display: flex;
+    flex-direction: column;
+}
+
+.temp-display{
+    padding-left: 1em;
+    font-size: 2em;
+    color: #dec826;
+}
+
+.weather-garden h2{
+    color:white;
+}
+
+.temp-up, .temp-down, #reset-button, #sky{
+    cursor: pointer;
+}
+
+#reset-button {
+    transition-duration: 0.4s;
+    background-color: rgb(75, 75, 242);
+    color: white;
+}
+
+#reset-button:hover {
+    background-color: white;
+    color: rgb(75, 75, 242);                     
+}
+input, #sky{
+    margin: 1em;
+}
+
+.red{
+    color: purple;
+}
