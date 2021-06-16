@@ -1,0 +1,180 @@
+* {
+    margin: 10px;
+    padding: 3px;
+    box-sizing: border-box;
+    background-color: transparent;
+  }
+  
+  body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5 rem;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    background-image: url("../images/purple1.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-blend-mode: overlay;
+  }
+  
+  .headerCity {
+    font-size: 20px;
+  }
+  hr {
+    width: 90%;
+    margin: auto;
+    border: 1px solid;
+  }
+  
+  main {
+    width: 100%;
+    max-width: 700px;
+    max-height: 1050px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    color: rgba(232, 224, 216, 0.902);
+    background-color: rgba(65, 55, 55, 0.1367);
+    border: 1px solid white;
+    border-radius: 10px;
+    box-shadow: 1px 1px 2.5px #fff;
+  }
+  select {
+    color: rgba(232, 224, 216, 0.902);
+    font-size: 20px;
+    display: flex;
+    box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.63);
+    border-color: #fff;
+    border: 2px solid rgba(232, 224, 216, 0.902);
+    border-radius: 100px;
+    padding: 1rem 1rem 1rem;
+  }
+  .button {
+    min-width: 48px;
+    min-height: 48px;
+    color: rgba(247, 247, 247, 0.815);
+    border: 2px solid rgba(247, 247, 247, 0.815);
+    border-radius: 100px;
+    outline: none;
+    font-size: 2.25rem;
+    font-weight: 700;
+    background-color: transparent;
+  }
+  
+  .button:hover {
+    cursor: pointer;
+  }
+  
+  .button:hover,
+  .button:focus {
+    cursor: pointer;
+    box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.603);
+    border-color: #fff;
+  }
+  
+  .resetCityBtn {
+    border: none;
+    box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.63);
+  }
+  
+  .resetCityBtn:hover,
+  .resetCityBtn:focus {
+    box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.63);
+    border-color: #fff;
+  }
+  
+  .searchBarText {
+    padding: 1rem 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgba(232, 224, 216, 0.902);
+    border-radius: 100px;
+    color: rgba(232, 224, 216, 0.902);
+    font-size: 20px;
+  }
+  
+  .searchBarText:hover,
+  .searchBarText:focus {
+    box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.637);
+    border-color: #fff;
+  }
+  
+  .temperature {
+    color: rgba(232, 224, 216, 0.902);
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .temperatureBarNumber {
+    padding: 1rem 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgba(232, 224, 216, 0.902);
+    border-radius: 100px;
+  }
+  
+  .temperatureBarNumber:hover,
+  .temperatureBarNumber:focus {
+    box-shadow: 4px 2px 5px #000;
+    border-color: #fff;
+  }
+  
+  .temperatureBarNumber::placeholder {
+    color: rgba(232, 224, 216, 0.902);
+    font-size: 14px;
+  }
+  
+  #gardenContent {
+    font-size: 30px;
+  }
+  #skyContent {
+    font-size: 30px;
+  }
+  #tempValue {
+    font-size: 30px;
+  }
+  
+  .maroon {
+    color: rgb(93, 8, 8);
+  }
+  
+  .red {
+    color: red;
+  }
+  
+  .orange {
+    color: orange;
+  }
+  
+  .yellow {
+    color: gold;
+  }
+  
+  .yellow-green {
+    color: yellowgreen;
+  }
+  
+  .green {
+    color: green;
+  }
+  
+  .blue {
+    color: rgb(35, 64, 226);
+  }
+  
+  /* .navButtons {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0.5rem 0.25rem;
+  } */
+  
+  
