@@ -5,8 +5,10 @@ const state = {
     // green: 247,
     // blue: 0
     // color: rgb(255, 247, 0)
+    sky: "sunny"
 };
 
+// TEMPERATURE FUNCTIONALITY//
 const tempUp = (event) => {
     state.temp += 1;
     const count = document.querySelector("#tempDisplay");
@@ -23,26 +25,27 @@ const tempDown = (event) => {
 };
 
 const checkTemp = (event) => {
-    if (state.temp >= 105) {
-        colorBlack();
+    if (state.temp === 105) {
+        extremeTemp();
     }
-    if (state.temp >= 90 && state.temp < 105) {
-        colorRed();
+    // use temp = x so program doesnt have to change it each time
+    if (state.temp === 90 || state.temp === 104) {
+        hotTemp();
     }
-    if (state.temp >= 75 && state.temp < 90) {
-        colorOrange();
+    if (state.temp === 75 || state.temp === 89) {
+        warmTemp();
     }
-    if (state.temp >= 60 && state.temp < 75) {
-        colorYellow();
+    if (state.temp === 60 || state.temp === 74) {
+        mildTemp();
     }
-    if (state.temp >= 45 && state.temp < 60) {
-        colorGreen();
+    if (state.temp === 45 || state.temp === 59) {
+        coolTemp();
     }
-    if (state.temp >= 30 && state.temp < 45) {
-        colorBlue();
+    if (state.temp === 30 || state.temp === 44) {
+        coldTemp();
     }
-    if (state.temp < 30) {
-        colorIce();
+    if (state.temp === 29) {
+        freezingTemp();
     }
 }
 
@@ -54,7 +57,7 @@ const backgroundColor = function(selector, color) {
     document.querySelector(selector).style.backgroundColor = color;
 }
 
-const colorBlack = (event) => {
+const extremeTemp = (event) => {
     textColor("#tempDisplay", "black");
     textColor("#landscape h3", "white");
     textColor("#groundDisplay", "white");
@@ -63,7 +66,7 @@ const colorBlack = (event) => {
     count.textContent = "🌵____🌵_______🌵_🌡__🌵__🌵";
 };
 
-const colorRed = (event) => {
+const hotTemp = (event) => {
     textColor("#tempDisplay", "red");
     textColor("#landscape h3", "black");
     textColor("#groundDisplay", "black");
@@ -72,7 +75,7 @@ const colorRed = (event) => {
     count.textContent = "🌵_🐍__🌵_🦂__🦂__🌵_🐍__🌵__🌵";
 };
 
-const colorOrange = (event) => {
+const warmTemp = (event) => {
     textColor("#tempDisplay", "rgb(255, 162, 0)");
     textColor("#landscape h3", "black");
     textColor("#groundDisplay", "black");
@@ -81,7 +84,7 @@ const colorOrange = (event) => {
     count.textContent = "🌴_🌸__🌴_⛱__⛱__🌴_⛱__🌴__🌴";
 };
 
-const colorYellow = (event) => {
+const mildTemp = (event) => {
     textColor("#tempDisplay", "rgb(255, 247, 0)");
     textColor("#landscape h3", "black");
     textColor("#groundDisplay", "black");
@@ -90,7 +93,7 @@ const colorYellow = (event) => {
     count.textContent = "🌳_🌿__🌳_🌿__🌿__🌳_🌿__🌳__🌳";
 };
 
-const colorGreen = (event) => {
+const coolTemp = (event) => {
     textColor("#tempDisplay", "rgb(73, 150, 26)");
     textColor("#landscape h3", "black");
     textColor("#groundDisplay", "black");
@@ -99,7 +102,7 @@ const colorGreen = (event) => {
     count.textContent = "🌳_🌲__🌳_🌲__🌲__🌳_🌲__🌳__🌳";
 };
 
-const colorBlue = (event) => {
+const coldTemp = (event) => {
     textColor("#tempDisplay", "rgb(0, 94, 255)");
     textColor("#landscape h3", "black");
     textColor("#groundDisplay", "black");
@@ -108,7 +111,7 @@ const colorBlue = (event) => {
     count.textContent = "🌲_🏔__🌲_🏔__🏔__🌲_🏔__🌲__🌲";
 };
 
-const colorIce = (event) => {
+const freezingTemp = (event) => {
     textColor("#tempDisplay", "rgb(0, 251, 255)");
     textColor("#landscape h3", "black");
     textColor("#groundDisplay", "white");
@@ -117,12 +120,31 @@ const colorIce = (event) => {
     count.textContent = "🌲_☃️__🌲_🏔__☃️__🌲_🏔__🌲__🌲";
 };
 
+// SKY FUNCTIONALITY //
+const selectSky = (event) => {
+    state.sky = event.target.value;
+    skyDisplays = {
+        "sunny": "☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️",
+        "partlyCloudy": "⛅🌤️⛅⛅🌤️⛅🌤️🌤️⛅⛅🌤️🌤️🌤️⛅⛅🌤️",
+        "cloudy": "☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️",
+        "rainy": "🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️🌧️",
+        "thunder": "🌩️⚡⛈️🌩⚡⛈️🌩️⚡⚡🌩️⛈️⚡⛈️🌩️⚡⛈️",
+        "snowy": "🌨️❄️❄️❄️🌨️🌨️❄️🌨️🌨️❄️🌨️❄️❄️🌨️🌨️🌨️"
+    }
+    const skyDisplay = document.querySelector("#skyDisplay");
+    skyDisplay.textContent = `${skyDisplays[state.sky]}`;
+};
+
+// REGISTER EVENT HANDLERS //
 const registerEventHandlers = (event) => {
     const tempUpButton = document.querySelector("#tempUp");
     tempUpButton.addEventListener("click", tempUp);
 
     const tempDownButton = document.querySelector("#tempDown");
     tempDownButton.addEventListener("click", tempDown);
+
+    const skyDisplay = document.querySelector("#skyChoices");
+    skyDisplay.addEventListener("change", selectSky)
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
