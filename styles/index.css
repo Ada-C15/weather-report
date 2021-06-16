@@ -1,0 +1,194 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    color: rgb(218, 214, 214);
+    background: url(/assets/night.jpg) ;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows: 1fr 60% 2fr;
+    text-align: center;
+    align-self: center;
+}
+
+#city_name {
+    font-family: cursive;
+    font-size: 1.6em;
+    color:khaki;
+}
+
+#city_input {
+    height: 30px;
+    width: 150px;
+    border-radius: 4px;
+}
+
+#city_reset {
+    background-color: skyblue;
+    border-radius: 4px;
+    height: 30px;
+}
+#underline {
+    background: #ebe9e2;
+    width: 400px;
+    height: 4px;
+    margin: 5px auto;
+}
+
+.weather_header {
+    display: flex;
+    flex-direction: column;
+    grid-row: 1;
+    grid-column: 2;
+    justify-content: flex-end;
+}
+
+.garden {
+    font-family:Apple Chancery, cursive;
+    grid-row: 2;
+    grid-column: 2;
+    align-items: center;
+}
+
+.sunny {
+    /* background-color: rgba(240, 109, 86, 0.829); */
+    background-image: linear-gradient(to bottom right, rgba(206, 68, 68, 0.87), yellow);
+    
+}
+
+.rainy {
+    background-image: linear-gradient(to bottom, rgb(86, 104, 86), rgb(135, 141, 135));
+}
+
+.snowy {
+    background-image: linear-gradient(to bottom right, rgb(26, 25, 25), rgb(194, 194, 190));
+}
+
+.cloudy {
+    background-image: linear-gradient(to bottom, rgba(212, 196, 175, 0.918), grey);
+    /* background-color: rgba(212, 196, 175, 0.918); */
+}
+
+#garden_bg {
+    font-size: 30px;
+    min-height: 200px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#temp_set {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+#temp_ctrl {
+    display: flex;
+    flex-direction: column;
+}
+
+#temp_val {
+    align-self: center;
+    font-size: 1.5em;
+    padding-left: 0.5em;
+}
+
+#temp_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#sky_select {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+#city_set {
+    grid-row: 3;
+    grid-column: 3;
+}
+
+#temp_set,
+#sky_select,
+#city_set {
+    background-image: linear-gradient(to bottom, rgba(135, 207, 235, 0.657), rgb(255, 255, 255));
+    border-radius: 4px;
+    color: darkblue;
+    width: 280px;
+    height: 120px;
+    justify-self: center;
+}
+
+.orange {
+    color: orange;
+}
+
+.red {
+    color:red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: rgb(82, 245, 82);
+}
+
+.teal {
+    color: teal;
+}
+
+select.classic {
+    background-image:
+        linear-gradient(45deg, transparent 50%, blue 50%),
+        linear-gradient(135deg, blue 50%, transparent 50%),
+        linear-gradient(to right, skyblue, skyblue);
+    background-position:
+        calc(100% - 20px) calc(1em + 2px),
+        calc(100% - 15px) calc(1em + 2px),
+        100% 0;
+    background-size:
+        5px 5px,
+        5px 5px,
+        2.5em 2.5em;
+    background-repeat: no-repeat;
+}
+
+select.classic:focus {
+    background-image:
+        linear-gradient(45deg, white 50%, transparent 50%),
+        linear-gradient(135deg, transparent 50%, white 50%),
+        linear-gradient(to right, gray, gray);
+    background-position:
+        calc(100% - 15px) 1em,
+        calc(100% - 20px) 1em,
+        100% 0;
+    background-size:
+        5px 5px,
+        5px 5px,
+        2.5em 2.5em;
+    background-repeat: no-repeat;
+    border-color: grey;
+    outline: 0;
+}
+
+select {
+    background-color: white;
+    border: thin solid blue;
+    border-radius: 4px;
+    display: inline-block;
+    line-height: 1.5em;
+    padding: 0.5em 3.5em 0.5em 1em;
+
+    margin: 0;      
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+  
