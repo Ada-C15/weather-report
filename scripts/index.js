@@ -1,4 +1,5 @@
 // ---------------------** TEMPERATURE SECTION **----------------------
+// ---------------------**       WAVE 1        **----------------------
 const state = {
     currentTemp: 70
 };
@@ -23,9 +24,11 @@ const tempValueColor = () => {
 
 const registerEventHandlers = () => {
     const incTempButton = document.querySelector("#increaseTemp");
-    const decTempButton = document.querySelector("#decreaseTemp");
     incTempButton.addEventListener('click', increaseTemperature);
+    const decTempButton = document.querySelector("#decreaseTemp");
     decTempButton.addEventListener('click', decreaseTemperature);
+    const skySelection = document.querySelector("#skySelect");
+    skySelection.addEventListener('change', updateGarden);
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
@@ -50,3 +53,33 @@ const decreaseTemperature = () => {
     tempValueElement.textContent = `${state.currentTemp}`;
     gardenLandscape.textContent = tempColor[1];
 };
+
+
+// ----------------------** SKY SELECTION **------------------------
+// ----------------------**     WAVE 2    **------------------------
+
+const updateGarden = () => {
+    console.log("Testing");
+    const skySelect = document.querySelector("#skySelect");
+    const skyDisplay = document.querySelector("#skyDisplay");
+    switch (skySelect.selectedIndex){
+        case 0:  //Sunny
+            skyDisplay.textContent = "☁️ ☀️ ☁️ ☀️ ☁️ ☀️ ☁️";
+            break;
+        case 1: //Cloudy
+            skyDisplay.textContent = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+            break;
+        case 2: //Rainy
+            skyDisplay.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+            break;
+        case 3: //Snowy
+            skyDisplay.textContent = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
+            break;
+        default:
+            skyDisplay.textContent = "☁️ ☀️ ☁️ ☀️ ☁️ ☀️ ☁️";
+            break;
+    }
+}
+
+
+
