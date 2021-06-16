@@ -1,28 +1,43 @@
 // default variable for temperature--used as parameter in several functions
 let currentTemp = 67;
+let isCelsius = false;
 
 // helper function to be used when increasing/decreasing temperature
+// currentTemp "shadows" currentTemp global variable
 const updateTemperature = currentTemp => {
-    // is this because we need to grab the "temp-integer" from my HTML in order
-    // to set it to currentTemp?
     const tempContainer = document.getElementById("temp-integer");
     tempContainer.textContent = currentTemp;
     changeTempColor(currentTemp);
     changeLandscape(currentTemp);
 }
 
-// why do these need to be separate funcitons from updateTemperature()?
+const convertToCelsius = () => {
+    if (isCelsius === false) {
+        currentTemp = Math.floor((currentTemp - 32) * 5/9);
+        isCelsius = true;
+        updateTemperature(currentTemp);
+    }
+}
+
+const convertToFahrenheit = () => {
+    if (isCelsius === true) {
+        currentTemp = Math.floor((currentTemp * 9/5) + 32);
+        isCelsius = false;
+        updateTemperature(currentTemp);
+    }
+}
+
 // increases temperature by 1
 const increaseTemperature = () => {
     currentTemp += 1;
     updateTemperature(currentTemp);
-};
+}
 
 // decreases temperature by 1
 const decreaseTemperature = () => {
     currentTemp -= 1;
     updateTemperature(currentTemp);
-};
+}
 
 // changes the font color of the temperature based on how hot or cold it is
 const changeTempColor = currentTemp => {
@@ -43,7 +58,7 @@ const changeTempColor = currentTemp => {
 }
 
 // changes landscape emojis based on the current temperature range
-const changeLandscape = currentTemp => {
+const changeLandscape = (currentTemp) => {
     const landscapeContainer = document.getElementById("landscape");
     let landscape = "";
     if (currentTemp === 99) {
@@ -67,7 +82,6 @@ const changeLandscape = currentTemp => {
 const changeSky = () => {
     const skyDropdown = document.getElementById("sky-dropdown").value;
     const skyForecast = document.getElementById("sky");
-    // could we forego this variable and just use skyForecast.textContent?
     let sky = "";
     if (skyDropdown === "Sunny") {
         sky = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️"
@@ -107,6 +121,13 @@ const registerEventHandlers = () => {
     decreaseTemperature();
     const tempDecreaseBtn = document.getElementById("decrease-temp");
     tempDecreaseBtn.addEventListener("click", decreaseTemperature);
+
+    // convertToCelsius();
+    const convertCelsiusBtn = document.getElementById("f-to-c-button");
+    convertCelsiusBtn.addEventListener("click", convertToCelsius);
+
+    const convertFahrenheitBtn = document.getElementById("c-to-f-button");
+    convertFahrenheitBtn.addEventListener("click", convertToFahrenheit);
 
     changeSky();
     const skyDropdown = document.getElementById("sky-dropdown");
