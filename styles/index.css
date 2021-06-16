@@ -1,5 +1,7 @@
 body {
-    /* background-color: lightblue; */
+    /* font-family: "Lucida Console", "Courier New", monospace; */
+    font-family: "Comic Sans MS", "Comic Sans", "cursive";
+
     /* background-image: linear-gradient(to top, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); */
     background-image: linear-gradient(to bottom, #64b3f4 0%, #c2e59c 100%);
     margin: 2rem;
@@ -9,19 +11,9 @@ body {
     grid-gap: 1rem;
 }
 
-/* #garden-inside {
-    border-radius: 3px;
-    padding: 3rem;
-    background-color: white;
-    /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
-    
-    /* background-image: linear-gradient(to top, #c1dfc4 0%, #deecdd 100%);
-    border: 2px solid #FFF; 
-} */
-
 .sky-section{
     grid-row: 2;
-    grid-column: 1/span 3;
+    grid-column: 2;
     text-align: center;
 }
 
@@ -37,12 +29,11 @@ body {
 .city-box {
     border-radius: 8px;
     padding: 2rem;
-    /* background-color: white; */
     /* background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%); */
     /* background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%); */
     background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
     border: 2px solid rgb(104, 100, 100);
-    /* text-align: center; */
+    text-align: center;
 }
 
 .city-box {
@@ -62,14 +53,27 @@ body {
 
 #ground {
     font-size: 2em;
-    /* margin-top: 5rem;
-    margin-bottom: 2rem; */
 }
 
 #sky {
     font-size: 3em;
-    /* margin-top: 2rem;
-    margin-bottom: 5rem; */
+}
+
+#cityInput {
+    padding:10px;
+    border-radius:10px;
+}
+
+.city-enter {
+    appearance:none;
+    -webkit-appearance:none;
+    padding:10px;
+    border:none;
+    background-color:#6e7ac0;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+    width:30%;   
 }
 
 .header {
@@ -86,11 +90,11 @@ body {
 
 .header-name::before,
 .header-name::after {
-    content: "💫";
+    content: "✨";
 }
 
 .arrow {
-    border: solid #6c8ba8;
+    border: solid #5b7892;
     border-width: 0 4px 4px 0;
     display: inline-block;
     padding: 10px;
@@ -99,28 +103,114 @@ body {
 .arrow-border {
     display: flex;
     flex-direction: column;
-    /* align-items: right; */
+    /* align-items: center; */
 }
 
 .arrow-temp {
     display: flex;
-    direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.spring {
+    background: none;
+    background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+}
+
+.summer {
+    background: none;
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+.fall {
+    background: none;
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+
+.winter {
+    background: none;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.cloudy {
+    background: none;
+    background-image: url("../assets/blue-sky-sun-and-white-clouds.jpg");
+    border-radius: 50%;
+    /* max-width: 80%; */
+    background-size: cover;
+}
+
+.raining {
+    background: none;
+    /* background-image: url("raining-cloud.jpg"); */
+    background-image: url('../assets/raining-clouds.gif');
+    border-radius: 50%;
+    max-width: 80%;
+    background-size: cover;
+}
+
+.snowing {
+    background: none;
+    background-image: url("../assets/snowing.gif");
+    align-items: center;
+    border-radius: 10%;
+    grid-column: span 3;
+}
+
+.sunshine {
+    background: none;
+    /* background-image: url("blue-sky-sun-and-white-clouds.jpg"); */
+    background-image: url("../assets/bouncing-sun.gif");
+    align-items: center;
+    border-radius: 50%;
+    max-width: 80%;
+    background-size: cover;
+}
+
+.autumn {
+    background: none;
+    /* background-image: url('autumn-scene.jpg'); */
+    background-image: url('../assets/autumn-trees.jpg');
+
+    /* height: 100%; */
+    /* align-items: center; */
+    /* border-radius: 50%;
+    max-width: 80%; */
+    /* background-size: cover; */
+}
+
+.desert {
+    background: none;
+    background-image: url('../assets/desert-cactus.jpg');
+    align-items: center;
+    background-size: cover;
+}
+
+.garden-summer {
+    background: none;
+    background-image: url("../assets/spring-grass-with-flowers.png");
+    align-items: center;
+    background-size: cover;
+}
+
+.snowfield {
+    background: none;
+    background-image: url("../assets/winter-snow.jpg");
     align-items: center;
 }
 
-#temp-degree {
+#tempDegree {
     font-size: 3rem;
     margin-left: 3rem;
     color: #e09718;
 }
 
-#up {
+#upArrow {
     transform: rotate(-135deg);
     -webkit-transform: rotate(-135deg);
     /* border: 2px solid rgb(104, 100, 100); */
 }
 
-#down {
+#downArrow {
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
 }
