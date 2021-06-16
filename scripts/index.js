@@ -1,21 +1,7 @@
-
-//////////////////////////////
-// Changing the Text Content//
-/////////////////////////////
-
-// const appearanceHeading = document.getElementById("facts__heading");
-
-// appearanceHeading.textContent = "WEATHER IN" ;
-
 const state = {
   tempClickCount: 65,
   // landscape: '☀️ 🪴 🌾 🌳 🌻'
 };
-
-// const updateTempCount = () => {
-//   const tempText = document.querySelector("#temperature-text");
-//   tempText.textContent = `${state.tempCount}°F`;
-// }
 
 /////////////////////////////////
 //  Temperature Color Condition//
@@ -63,26 +49,28 @@ const getLandscapes= (temp) => {
 // Sky Theme Condition //
 ////////////////////////////////////
 const getSky= (value) => {
+  console.log(value)
   if (value === 'Sunny') {
-    return 'sunny-sky';
+    return `sunny-sky`;
   }
 
   if (value === 'Dark') {
-    return wind;
+    return `dark-sky`;
   }
 
   if (value === 'Cool') {
-    return rains;
+    return `cool-sky`;
   }
 
   if (value === 'Hot') {
-    return rains;
+    return `hot-sky`;
   }
-  return ;
+  return ``;
 }
-////////////////////////
-// Increase Temperature//
-////////////////////////
+
+///////////////////////////
+// Increase Temperature  //
+//////////////////////////
 const increaseTemp = () => {
   const tempText = document.getElementById("temperature-text");
   // 1. Adds 1 to temperature
@@ -117,12 +105,12 @@ const decreaseTemp = () => {
 //////////////////////
 const changeTheme = () => {
   const theme = document.getElementById("mySelect").value;
-  // theme.className = `${importantFact.className} sunlight`;
   const skyTheme = document.getElementById("weather-description");
-  skyTheme.textContent = theme.toUpperCase()+ ' Sky:'
+  skyTheme.textContent = theme.toUpperCase()+ ':'
   const sky = getSky(theme);
    //  Change color background
   skyTheme.className = sky;
+  console.log(sky);
 }
 
 ////////////////////////
