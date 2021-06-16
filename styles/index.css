@@ -1,0 +1,122 @@
+/* Shows the boxes of each html element: */
+/* * {
+    border: rgb(215, 205, 205) 1px solid;
+} */
+
+/* Grid Formatting */
+
+.garden__section { grid-area: garden; }
+.city-name__section { grid-area: city; }
+.sky__section { grid-area: skyselect; }
+.temperature__section { grid-area: temp; }
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        'garden garden garden'
+        'city skyselect temp';
+    /* grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px; */
+}
+
+.grid-container > section {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+}
+
+/* -------------------------------------------------------------------- */
+/* Stylez */
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    color: white;
+    background-color: #000000;
+    /* margin: 2rem; */
+}
+
+.header__header {
+    text-align: center;
+    margin: 2rem auto 3rem 0;
+}
+
+.header__header > h1 {
+    margin-right: 2rem;
+    font-size: 5em;
+}
+
+.header__city-name {
+    font-size: 2rem;
+}
+
+.garden__content {
+    min-height: 200px;
+    max-width: fit-content;
+    margin: auto;
+    padding: 2rem;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    border-radius: 8px;
+    font-size: 2em;
+}
+
+.city-name__reset-btn {
+    border: 0;
+    background-color: #6900e1;
+    color: white;
+    border-radius: 5px;
+    padding: 1rem;
+    font-family: "Rubik", sans-serif;
+  }
+
+/* -------------------------------------------------------------------- */
+/* Temperature controls*/
+
+.red {
+color: red;
+}
+
+.orange {
+color: orange;
+}
+
+.yellow {
+color: gold;
+}
+
+.yellow-green {
+color: yellowgreen;
+}
+
+.green {
+color: green;
+}
+
+.teal {
+color: teal;
+}
+
+/* -------------------------------------------------------------------- */
+/* Sky controls */
+
+.cloudy {
+    background-color: lightgrey;
+}
+
+.sunny {
+    background-color: rgb(221, 255, 255);
+}
+
+.rainy {
+    background-color: lightblue;
+}
+
+.snowy {
+    background-color: lightsteelblue;
+}
