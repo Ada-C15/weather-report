@@ -121,10 +121,10 @@ hr {
   text-align: center;
   height: 100%;
   font-size: 2em;
-  position:absolute;
+  position:relative;
 }
 
 #landscape {
-  position: relative;
+  position: absolute;
   bottom: 0px;
 }
