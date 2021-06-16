@@ -1,0 +1,91 @@
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+
+
+body {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(21, 21, 78);
+
+}
+
+
+section {
+    top: 40px;
+    color: whitesmoke;
+    background-color: rgb(216, 92, 92);
+    text-align: left;
+    float: right;
+    padding-left: 1rem;
+
+}
+
+header h1 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: whitesmoke;
+    margin-right: 0px;
+
+
+
+}
+
+.panel section {
+
+    float:right;
+
+}
+#sky {
+    width: 200px;
+    height: 200px;
+    background-color: #ffde00;
+    border-radius: 50%;
+    box-shadow: 0 0 0 20px #ffde0080,
+    0 0 0 40px #ffde0040, 
+    0 0 0 60px #ffde0020,
+    0 0 0 80px #ffde0010,
+    0 0 0 100px #ffde0000,
+    0 0 40px 100px #ffde0010;
+    margin-left: 54px;
+    
+    
+
+}
+
+#sky h1{
+    color: black;
+    padding-top: 45px;
+    padding-left: 35px;
+    font-size: 600%;
+}
+
+#warm {
+    margin-left: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-weight: 600;
+    
+}
+
+#cool {
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding-left: 2px;
+    padding-right: 2px;
+    font-weight: 600;
+    
+}
+
+button {
+    text-align: center;
+}
+
