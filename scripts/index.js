@@ -23,7 +23,6 @@ const decreaseTemp = () =>{
 
 const changeTempColor = () =>{
     const tempValueContainer = document.getElementById("tempValue");
-    tempValueContainer.textContent = state.tempValue;
     if (state.tempValue >= 80){
         tempValueContainer.style.color = "red";
     } else if (state.tempValue >= 70) {
@@ -35,13 +34,12 @@ const changeTempColor = () =>{
     } else {
         tempValueContainer.style.color = "teal";
     }
+    tempValueContainer.textContent = state.tempValue;
 }
 
 const changeLandscape = () =>{
     const tempValueContainer = document.getElementById("tempValue");
-    tempValueContainer.textContent = state.tempValue;
     const tempLandscapeContainer = document.getElementById("landscape");
-    tempLandscapeContainer.textContent = state.landscape;
     if (state.tempValue >= 80){
         state.landscape = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
     } else if (state.tempValue >= 70) {
@@ -51,6 +49,8 @@ const changeLandscape = () =>{
     } else {
         state.landscape = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
     }
+    tempValueContainer.textContent = state.tempValue;
+    tempLandscapeContainer.textContent = state.landscape;
 }
 
 const changeSky = () =>{
