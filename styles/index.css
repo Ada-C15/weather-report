@@ -15,7 +15,8 @@ main{
 }
 
 h1{
-    font-size: 40px;
+    font-size: 50px;
+    /* grid-column: span 2; */
 }
 
 #headerCityName::before, .header_msg::after{
@@ -55,6 +56,7 @@ h1{
     background-color: lightyellow;
     text-align: center;
     font-size: 20px;
+    max-width: 500px
 }
 
 .temperature_content{
@@ -81,3 +83,15 @@ footer {
 /* section * {
     border: solid 1px black;
 } */
+
+.sunny_color{
+    background: linear-gradient(to top, #f7797d, #FBD786, #C6FFDD); 
+}
+.cloudy_color{
+    background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); 
+}
+
+.rainy_color{
+background: linear-gradient(to bottom, #2c3e50, #bdc3c7);
+
+}

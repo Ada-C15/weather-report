@@ -61,18 +61,20 @@ const changeSky = () =>{
     if (sky === "Sunny") {
         state.sky = "☀️☀️☀️☀️☀️☀️☀️☀️";
         state.message = "Enjoy the sunshine🏖️";
-        document.body.style.backgroundColor = "#f7cd79";
+        changeBackground_sunny();
     } else if (sky === "Cloudy") {
         state.sky = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
         state.message = "Go to the gym🧘‍♀️";
-        document.body.style.backgroundColor = "lightsteelblue";
+        changeBackground_cloudy();
+        // document.body.style.backgroundColor = "lightsteelblue";
     } else if (sky === "Rainy") {
         state.sky = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
         state.message = "Stay home and watch TV📺";
-        document.body.style.backgroundColor = "grey";
+        changeBackground_rainy();
     } else if (sky === "Snowy") {
         state.sky = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
         state.message = "Build a snowman☃️";
+        document.body.className = "";
         document.body.style.backgroundColor = "whitesmoke";
     }
     tempSkyContainer.textContent = state.sky;
@@ -90,6 +92,19 @@ const resetCityName = () => {
     cityNameInput.value = "Seattle";
 };
 
+const changeBackground_cloudy = () => {
+    document.body.className ="cloudy_color";
+}
+
+const changeBackground_sunny = () => {
+    document.body.className ="sunny_color";
+}
+
+const changeBackground_rainy = () => {
+    document.body.className ="rainy_color";
+}
+
+
 const registerEventHandlers = () => {
     const increaseTempButton = document.querySelector("#increaseTemp");
     increaseTempButton.addEventListener("click", increaseTemp);
@@ -99,6 +114,7 @@ const registerEventHandlers = () => {
 
     const skySelect = document.querySelector("#skySelect");
     skySelect.addEventListener("change", changeSky);
+    // skySelect.addEventListener("change", changeBackground);
 
     const cityNameInput = document.querySelector("#cityNameInput");
     cityNameInput.addEventListener("input", updateCityName);
