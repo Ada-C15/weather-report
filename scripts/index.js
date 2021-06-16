@@ -3,34 +3,39 @@ const state =  {
     temperature : 70
 };
 
+const gardenWeatherEmojis = () => {
+    const gardenLandscape = document.querySelector("#landscape");
+    
+    if (state.temperature >= 80) {
+        gardenLandscape.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+    }   else if (state.temperature < 80 && state.temperature >=70) {
+            gardenLandscape.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
+    }   else if (state.temperature < 70 && state.temperature >= 60) {
+            gardenLandscape.textContent= "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
+    }   else if (state.temperature < 60) {
+        gardenLandscape.textContent= "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
+    }
+};
+// not working
+// function to update id=temperature in tempContainer
 const increaseTemp = () => {
     console.log("increaseTemp called")
     const temperature = document.querySelector("#temperature")
     state.temperature += 1;
     temperature.textContent = `${state.temperature}`
+    gardenWeatherEmojis()
 };
-
+// not working
+// function to update id=temperature in tempContainer
 const decreaseTemp = () => {
     console.log("decreaseTemp called")
     const temperature = document.querySelector("#temperature")
     state.temperature -= 1;
     temperature.textContent = `${state.temperature}`
 };
+// not working
+// function to update emojis in weatherGardenContainer by id=landscape  
 
-const gardenWeatherEmojis = () => {
-    const gardenLandscape = document.querySelector("#landscape");
-    const temperature = document.querySelector("#temperature")
-    
-    if (temperature >= 80) {
-        gardenLandscape.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
-    }   else if (temperature < 80 && state.temperature >=70) {
-            gardenLandscape.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
-    }   else if (temperature < 70 && state.temperature >= 60) {
-            gardenLandscape.textContent= "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
-    }   else if (temperature < 60){
-        gardenLandscape.textContent= "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
-    }
-};
 // const updateSky = () => {
 //     console.log("updateSkyCalled")
 //     const inputSky = document.querySelector("#skySelect").value;
@@ -55,13 +60,14 @@ const gardenWeatherEmojis = () => {
 // };
 
 
+//function that registers all event handlers when called
 const registerEventHandlers = () => {
     console.log("registerEventHandlers called")
-    const increaseTemp = document.querySelector("#increaseTemp");
-    increaseTemp.addEventListener("click",increaseTemp);
+    const increaseTempButton = document.querySelector("#increaseTemp");
+    increaseTempButton.addEventListener("click",increaseTemp);
     
-    const decreaseTemp = document.querySelector("#decreaseTemp");
-    decreaseTemp.addEventListener("click", decreaseTemp);
+    const decreaseTempButton = document.querySelector("#decreaseTemp");
+    decreaseTempButton.addEventListener("click", decreaseTemp);
 
 
     
