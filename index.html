@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+</head>
+
+<body>
+    <div>
+        <h1 class=intro-header>
+            Weather Report
+        </h1>
+        <h3 id="city-header">Any Texas City</h3>
+    </div>
+    <!-- 3 containers below, all part of dials class -->
+
+    <div class="container">
+        <div class="left-container">
+            <div class="dial-container1">
+                <div>
+                    <h2>
+                        Temperature
+                    </h2>
+                    <section>
+                        <button id="addTempButton"> increase</button>
+                        <button id="decreaseTempButton">decrease</button>
+                    </section>
+
+                    <section id="tempContainer">
+                        <h4 id="tempCount">70</h4>
+                    </section>
+
+
+                </div>
+            </div>
+
+
+            <div class="dial-container2">
+                <h2>
+                    Sky
+                </h2>
+                <select name="sky" id="sky-select">
+                    <option value="">--Please choose an option--</option>
+                    <option value="hot">Hot</option>
+                    <option value="hotter">Hotter</option>
+                    <option value="hottest">Hottest</option>
+                    <option value="heck">Heck</option>
+                </select>
+            </div>
+
+            <div class="dial-container3">
+                <h2>
+                    City Name
+                </h2>
+                <form id="city-input">
+                    <label for="city-name">City Name:</label>
+                    <input type="text" id="input-text" name="id" value="" />
+                    <input type="reset" id="reset-button" value="Reset">
+                </form>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <div id="weather-garden">
+                <h2>
+                    Weather Garden
+                </h2>
+                <span id="weather-content"> </span>
+                <img id='weather-image' alt='' -->
+
+
+            </div>
+        </div>
+
+    </div>
+    <script src="scripts/index.js"></script>
+</body>
+
+
+</html>

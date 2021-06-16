@@ -1,0 +1,55 @@
+.dial-container {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+body {
+    background-color: rgba(219, 201, 184, 1);
+}
+
+.container {
+    display: flex;
+    align-items: center
+}
+
+.right-container {
+    margin: auto;
+}
+
+form {
+    width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+#weather-image {
+    height: 200px;
+}
+
+.blue {
+    color: blue
+}
+
+.red {
+    color: red
+}
+
+.dial-container1 {
+    border-radius: 400px;
+    padding: 2rem;
+    background-color: antiquewhite;
+}
+
+.dial-container2 {
+    border-radius: 10px;
+    padding: 2rem;
+    background-color: antiquewhite;
+}
+
+.dial-container3 {
+    border-radius: 300px;
+    padding: 2rem;
+    background-color: antiquewhite;
+}
