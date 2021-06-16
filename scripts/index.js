@@ -4,15 +4,17 @@ const state = {
     city: "nowhere"
 };
 
-// get temp buttons
-const minusButton = document.getElementById('minus');
-const plusButton = document.getElementById('plus');
+// get sky container
+const skyContainer = document.getElementById('sky-icon-container');
+const groundContainter = document.getElementById('land-icon-container');
 
-// change bg and lanscape
+// get icons
+const newSky = document.querySelector("#sky-icons");
+const newLand = document.querySelector("#land-icons");
+
 function changeBackground(temp) {
-    // get landspan to update icons
-        newLand.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
-        const newLand = document.querySelector("#land-icons");
+    const newLand = document.querySelector("#land-icons");
+    newLand.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
 
     if (temp < 29) {
         document.body.style.backgroundColor = '#393D3F';
@@ -41,53 +43,9 @@ function changeBackground(temp) {
     else if (temp > 80) {
         document.body.style.backgroundColor = 'red';
         newLand.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
-        
     } 
 }
 
-// minus actions
-minusButton.addEventListener('click', event => {
-    const tempContainer = document.querySelector("#tempDisplay");
-    state.temp -= 1;
-    tempContainer.textContent = `${state.temp}`;
-    // change background color depending on temp 
-    changeBackground(state.temp);
-});
-
-// plus actions
-plusButton.addEventListener('click', event => {
-    const tempContainer = document.querySelector("#tempDisplay");
-    state.temp += 1;
-    tempContainer.textContent = `${state.temp}`;
-    changeBackground(state.temp);
-});
-
-// get sky container
-const skyContainer = document.getElementById('sky-icon-container');
-const groundContainter = document.getElementById('land-icon-container');
-
-// get icons
-const newSky = document.querySelector("#sky-icons");
-const newLand = document.querySelector("#land-icons");
-
-// get menu options
-const dropdownOptions = document.querySelectorAll('.dropdown .option');
-
-// each sky option has an event listener.
-dropdownOptions.forEach(option => option.addEventListener('click',handleOptionSelected));
-
-// when options is selected, pass option content to select sky emojis
-function handleOptionSelected(event){
-    // get id from option selected
-	const typeSky = event.target.id;
-
-    // update state
-    state.sky = typeSky;
-
-    // update emoji
-    updateSky(typeSky);
-
-}
 function updateSky(skyType) {
     const newSky = document.querySelector("#sky-icons");
     if (skyType === "sunny") {
@@ -101,32 +59,74 @@ function updateSky(skyType) {
     }
 }
 
-// update displayed city
-const cityDisplay = document.querySelector("#cityDisplay");
-const input = document.querySelector("#input");
-
-input.addEventListener('keyup', event => {
-    cityDisplay.textContent = event.target.value;
-    if (cityDisplay.textContent === "hell") {
-        specialDisplay();
-    }
-});
-
 // reset clears input field
-const resetBtn = document.querySelector("#reset");
-resetBtn.addEventListener('click', event => {
+const resetDisplay = () => {
     input.value = "";
     cityDisplay.textContent = state.city;
     newLand.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
     newSky.textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
     document.body.style.backgroundColor = 'rgb(109, 107, 107)';
-
-})
+}
 
 const specialDisplay = () => {
     newSky.textContent = "💥🦇💥💥🦇";
     document.body.style.backgroundColor = 'black';
     newLand.textContent = "🔥👺🔥👹_👹🔥🔥👺";
-
-
 }
+
+const updateInput = (event) => {
+    const cityDisplay = document.querySelector("#cityDisplay");
+    cityDisplay.textContent = event.target.value;
+    if (cityDisplay.textContent === "hell") {
+        specialDisplay();
+    }
+}
+
+const decrTemp = () => {
+    const tempContainer = document.querySelector("#tempDisplay");
+    state.temp -= 1;
+    tempContainer.textContent = `${state.temp}`;
+    changeBackground(state.temp);
+}
+
+const incrTemp = () => {
+    const tempContainer = document.querySelector("#tempDisplay");
+    state.temp += 1;
+    tempContainer.textContent = `${state.temp}`;
+    changeBackground(state.temp);
+    
+}
+
+// when options is selected, pass option content to select sky emojis
+function handleOptionSelected(event){
+    // get id from option selected
+	const typeSky = event.target.id;
+
+    // update state
+    state.sky = typeSky;
+
+    // update emoji
+    updateSky(typeSky);
+}
+
+const registerEventHandlers = (event) => {
+    const minusButton = document.getElementById('minus');
+    minusButton.addEventListener('click', decrTemp);
+
+    const plusButton = document.getElementById('plus');
+    plusButton.addEventListener('click', incrTemp);
+
+    const resetBtn = document.querySelector("#reset");
+    resetBtn.addEventListener('click', resetDisplay);
+    
+    const input = document.querySelector("#input");
+    input.addEventListener('keyup', updateInput);
+
+    // get menu options
+    const dropdownOptions = document.querySelectorAll('.dropdown .option');
+
+    // each sky option has an event listener.
+    dropdownOptions.forEach(option => option.addEventListener('click',handleOptionSelected));
+};
+
+document.addEventListener("DOMContentLoaded", registerEventHandlers);
