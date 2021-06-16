@@ -1,5 +1,5 @@
 
 
-addWeatherDownButton
+highTemp
 
-addWeatherUpButton
+lowTemp
