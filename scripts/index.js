@@ -74,6 +74,12 @@ const skySelect = () => {
     }
     skyDisplay()
 }
+
+const cityNaming = (event) => {
+    const cityHeader = document.querySelector("#headerCityName")
+    cityHeader.textContent = event.target.value
+}
+
 const registerTempHandler = () => {
     const increaseButton = document.querySelector("#increaseTempControl");
     increaseButton.addEventListener("click", tempIncrease);
@@ -83,6 +89,9 @@ const registerTempHandler = () => {
     
     const selectSky = document.querySelector("#skySelect");
     selectSky.addEventListener("change", skySelect);
+
+    const nameCity = document.querySelector("#cityNameInput");
+    nameCity.addEventListener("change", cityNaming);
 }
 
 document.addEventListener("DOMContentLoaded", registerTempHandler);
