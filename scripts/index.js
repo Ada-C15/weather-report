@@ -1,10 +1,10 @@
 
 
 
-/// city changing logic 
+/// city changing logic for button and enter key 
 
 const changeCityButton = document.querySelector('#changeCityButton');
-
+const inputBox = document.querySelector('#cityNameInput')
 
 const updateCityName = () => {
     const cityNameInput = document.getElementById("cityNameInput").value;
@@ -13,7 +13,14 @@ const updateCityName = () => {
 };
 
 
-changeCityButton.addEventListener("click", updateCityName)
+changeCityButton.addEventListener("click", updateCityName);
+
+inputBox.addEventListener("keyup", function (event) {
+    if (event.keyCode == 13) {
+        changeCityButton.click();
+    }
+});
+
 
 /// temp changing logic 
 

@@ -12,6 +12,8 @@ html, body {
     font-size: 95px;
     color:slategray;
     opacity: .8;
+    margin-top: 0px;
+
 }
 
 
@@ -34,6 +36,8 @@ html, body {
 #headCityName.stormy {
     color: #c9cab8; 
 }
+
+
 
 button {
     
