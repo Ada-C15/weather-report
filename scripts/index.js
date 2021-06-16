@@ -7,7 +7,7 @@ const addTemperature = () => {
     const tempValue = document.querySelector("#temp-value");
     tempValue.textContent = `${state.temperature}`;
     changeTempColor(state.temperature);
-    changeSkyView(state.temperature);
+    changeGroundView(state.temperature);
 };
 
 const reduceTemperature = () => {
@@ -15,7 +15,7 @@ const reduceTemperature = () => {
     const tempValue = document.querySelector("#temp-value");
     tempValue.textContent = `${state.temperature}`;
     changeTempColor(state.temperature);
-    changeSkyView(state.temperature);
+    changeGroundView(state.temperature);
 };
 
 const changeTempColor = (currentTemp) => {
@@ -33,7 +33,7 @@ const changeTempColor = (currentTemp) => {
     };
 };
 
-const changeSkyView = (currentTemp) => {
+const changeGroundView = (currentTemp) => {
     const groundView = document.querySelector("#ground-view");
     if (currentTemp >= 80) {
         groundView.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"
@@ -100,7 +100,7 @@ const updateHeader = (cityNameInput) => {
 
 const init = () => {
     changeTempColor(state.temperature);
-    changeSkyView(state.temperature);
+    changeGroundView(state.temperature);
     changeWeatherChoice();
     registerEventHandlers();
     changeGradenBackground();
