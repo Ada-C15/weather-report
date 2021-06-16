@@ -34,12 +34,12 @@ body {
 
 .header__city-name::before,
 .header__city-name::after {
-    content: "✨";
+    content: "🦋";
 }
 
 .temperature__section,
 .sky__section,
-.city-name__section {
+.city-name__section{
     border-radius: 8px;
     padding: 2rem;
     background-color: white;
@@ -67,15 +67,11 @@ body {
 .temperature__content {
     display: flex;
     flex-direction: row;
-    /* justify-content: space-around;
-    justify-content: center; */
 }
 
 #tempValue {
     font-size: 3rem;
     margin-left: 1.5rem;
-    /* padding-right: 1rem; */
-    /* margin-right: 1.5rem; */
 }
 
 .temperature__controls {
@@ -85,7 +81,8 @@ body {
 }
 
 .garden__section > h2 {
-    color: white;
+    color: rgb(255, 255, 255);
+    font-size: 2rem;
 }
 
 .garden__content {
@@ -133,20 +130,4 @@ body {
 
 .teal {
     color: teal;
-}
-
-.cloudy {
-    background-color: lightgrey;
-}
-
-.sunny {
-    background-color: rgb(221, 255, 255);
-}
-
-.rainy {
-    background-color: lightblue;
-}
-
-.snowy {
-    background-color: lightsteelblue;
 }

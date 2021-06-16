@@ -1,6 +1,6 @@
 // temperature changes number, color and landscape behavior
 const state = {
-    temperature : 71,
+    temperature : 73,
     color : "orange",
     landscape : "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷",
     sky : "☁️ ☁️ ☁️ ☀️ ☁️ ☁️"
@@ -21,7 +21,7 @@ const skyDisplay = () => {
     skyDisplay.textContent = state.sky
 }
 
-const tempRangeColor = () => {
+const tempRange = () => {
     if (state.temperature >= 80){
         state.color = "red"
         state.landscape = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"
@@ -48,7 +48,7 @@ const tempIncrease = () => {
     const tempValue = document.querySelector("#tempValue")
     tempValue.textContent = `${state.temperature}`;
 
-    tempRangeColor()
+    tempRange()
 };
 
 const tempDecrease = () => {
@@ -57,7 +57,7 @@ const tempDecrease = () => {
     const tempValue = document.querySelector("#tempValue")
     tempValue.textContent = `${state.temperature}`;
     
-    tempRangeColor()
+    tempRange()
 };
 
 const skySelect = () => {
