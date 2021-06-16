@@ -1,0 +1,201 @@
+
+
+
+html, body {
+    height: 100%;
+    min-height: 100%;
+}
+
+
+#headCityName {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 95px;
+    color:slategray;
+    opacity: .8;
+    margin-top: 0px;
+
+}
+
+
+#headCityName.sunny {
+    color: rgb(201, 232, 201);
+}
+
+#headCityName.cloudy {
+    color: #b79478;
+}
+
+#headCityName.rainy {
+    color: lightgrey; 
+}
+
+#headCityName.snowy {
+    color: #bf7751 ; 
+}
+
+#headCityName.stormy {
+    color: #c9cab8; 
+}
+
+
+
+button {
+    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bolder;
+    background-color: lightgrey;
+    border-width: 2px;
+    border-style: inset;
+}
+
+
+button:hover {
+    background-color: slategray;
+}
+
+input {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bolder;
+    background-color: lightgrey;
+}
+
+#landscape.sunny{
+    background-image: url("../photos/sunny-leaves.jpeg");
+}
+
+#landscape.cloudy {
+    background-image: url("../photos/cloudy-leaves.jpeg");
+}
+
+#landscape.rainy {
+    background-image: url("../photos/rainy-leaves.jpeg");
+}
+
+#landscape.snowy {
+    background-image: url("../photos/snowy-leaves.jpeg");
+}
+
+#landscape.stormy {
+    background-image: url("../photos/stormy-leaves.jpeg");
+}
+
+#landscape {
+    min-height: 100%;
+    background-color: skyblue;
+    flex-direction: column;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+footer div {
+    height: 300px;
+    width: 100%;
+}
+
+section#tempSection {
+    position: relative;
+    height: 300px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+section.hot {
+    background-color: rgba(124, 4, 18, .6);
+}
+
+section.warm {
+    background-color: rgba(186, 106, 87, .6);
+}
+
+section.perfect {
+    background-color: rgba(114, 138, 124, .6) ;
+}
+
+section.cool {
+    background-color: rgba(147, 208, 219, .6) ;
+}
+
+section.cold {
+    background-color: rgba(188, 151, 191, .6);
+}
+
+
+#tempDisplay {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bolder;
+    font-size: 75px;
+    color: black;
+    text-align: center;
+}
+
+section#skySection {
+    height: 300px;
+    width: 300px;
+    opacity: .8;
+    font-family: 'Courier New', Courier, monospace;
+    color: black;
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: grey;
+    margin-bottom: 20px;
+}
+
+#skySelect {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+    font-weight: bolder;
+    border-color: black;
+    border-width: 3px;
+    background-color: grey;
+    opacity: .8;
+}
+
+#tempInc i {
+    font-size: xx-large;
+    margin-right: 8px;
+    margin-left: 2px;
+
+}
+
+#tempInc::selection {
+    background: None;
+}
+
+#tempDec::selection {
+    background: None;
+}
+
+#tempDec i {
+    font-size: xx-large;
+}
+
+section.sunny {
+    background-image: url("../photos/sunnysky.jpeg");
+}
+section.cloudy {
+    background-image: url("../photos/cloudysky.jpeg");
+}
+
+section.rainy {
+    background-image: url("../photos/rainysky.jpeg");
+}
+
+section.snowy {
+    background-image: url("../photos/snowysky.jpeg");
+}
+
+section.stormy {
+    background-position: center;
+    background-image: url("../photos/stormysky.jpeg");
+}

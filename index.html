@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset="UTF-8">
+        <title>WEATHER REPORT</title>
+        <link href="./styles/index.css" rel='stylesheet'>
+        <script src="https://kit.fontawesome.com/73e38c15ac.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <div id="landscape" class="sunny">
+            <section id="cityName">
+                <span >
+                    <h2 id="headCityName" class='stormy'>SEATTLE </h2>
+                </span>
+                <button id="changeCityButton">change city</button>
+                <input type="text" id="cityNameInput" placeholder="Seattle"> 
+            </section>
+            <section id='tempSection' class="warm">
+                <div class="tempContent">
+                    <div class="tempControls">
+                        <span id='tempInc'>
+                            <i class="far fa-arrow-alt-circle-up"></i>
+                        </span>
+                        <span id="tempDec">
+                            <i class="far fa-arrow-alt-circle-down"></i>
+                        </span>
+                    </div>
+                    <span id="tempDisplay" class ="color">85</span>
+                </div>
+            </section>
+            <section id="skySection" class="sunny">
+                <h2 id="skyHead">conditions</h2>
+                <select id="skySelect" >
+                    <option value='sunny'>sunny</option>
+                    <option value='cloudy'>cloudy</option>
+                    <option value='rainy'>rainy</option>
+                    <option value='snowy'>snowy</option>
+                    <option value='stormy'>stormy</option>
+                </select>
+            </section>
+        </div>
+        <script src="scripts/index.js"></script>
+    </body>
+</html>
