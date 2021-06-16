@@ -62,17 +62,27 @@ const changeSky = () =>{
     if (sky === "Sunny") {
         state.sky = "☀️☀️☀️☀️☀️☀️☀️☀️";
         state.message = "Enjoy the sunshine🏖️";
+        document.body.style.backgroundColor = "lightyellow";
     } else if (sky === "Cloudy") {
         state.sky = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
         state.message = "Go to the gym🧘‍♀️";
+        document.body.style.backgroundColor = "lightsteelblue";
     } else if (sky === "Rainy") {
         state.sky = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
         state.message = "Stay home and watch TV📺";
+        document.body.style.backgroundColor = "grey";
     } else if (sky === "Snowy") {
         state.sky = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
         state.message = "Build a snowman☃️";
+        document.body.style.backgroundColor = "whitesmoke";
     }
 }
+
+const updateCityName = () => {
+    const inputCity = document.getElementById("cityNameInput").value;
+    const headerCityName = document.getElementById("headerCityName");;
+    headerCityName.textContent = inputCity;
+};
 
 
 const registerEventHandlers = () => {
@@ -84,6 +94,9 @@ const registerEventHandlers = () => {
 
     const skySelect = document.getElementById("skySelect");
     skySelect.addEventListener("change", changeSky);
+
+    const cityNameInput = document.getElementById("cityNameInput");
+    cityNameInput.addEventListener("input", updateCityName);
 };
 
 
