@@ -28,34 +28,40 @@
 
         <div class="weather-item" id=temperature>
             <h3 id="temperatureCount">Temperature 65℉</h3>
-            <button class="tempButton" id="addTemperatureButton">+🔥</button>
-            <button class="tempButton" id="subtractTemperatureButton">-🧊</button>
+            <button class="button"  id="addTemperatureButton">+<br>🔥</button>
+            <button class="button"  id="subtractTemperatureButton">-<br>🧊</button>
         </div>
 
         <div class="weather-item" id="skyBox">
             <!-- <h3>Sky</h3> -->
-            <label for="sky">Sky</label>
-            <select class="sky" id="sky">
-                <option value="sunny" selected>Sunny</option>
-                <option value="cloudy">Cloudy</option>
-                <option value="rainy">Rainy</option>
-                <option value="snowy">Snowy</option>
+            <label for="sky">Sky Options</label>
+            <br> <br>
+            <select class="button" id="sky">
+                <option  value="0" selected>
+                    Select a sky option:</option>
+                <option  value="sunny">
+                    Sunny</option>
+                <option value="cloudy">
+                    Cloudy</option>
+                <option value="rainy">
+                    Rainy</option>
+                <option value="snowy">
+                    Snowy</option>
             </select>
         </div>
 
         <div class="weather-item" id="location">
             <h3>Enter the weather location below:</h3>
             <form>
-                <label for="location">Location</label><br>
                 <input type="text" id="locationInput" name="location" value="Unceded Coast Salish Land">
                 <br> <br>
-                <input type="reset" id="locationReset" value="Reset">
+                <input class="button" type="reset" id="locationReset" value="Reset">
             </form>
         </div>
     </div>
 
     <div class="right-column" id="landscape">  
-        <div class="weather-item">
+        <div>
             <h3 id=landscape-text>Choose a Sky option or change the temperature for a custom weather report!</h3>
             <section id="skyImageContainer"> 
                 <img src="https://media.giphy.com/media/snr51Qmnalxok/giphy.gif" alt="A gif from Miss Congeniality of a contestant saying: I'd have to say April 25th. Becasue it's not too hot, not too cold. All you need is a light jacket!">

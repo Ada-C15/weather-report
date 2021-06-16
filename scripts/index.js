@@ -22,7 +22,7 @@ const subtractTemp = () => {
 // Font changes for temp
 const changeTempColor = (currentTemp) => {
     const temperatureCountContainer = document.getElementById("temperatureCount");
-    let color = 'blue'
+    let color = ''
     if (currentTemp >= 80) {
         color = 'red';
     } else if (currentTemp >= 70) {
@@ -31,9 +31,12 @@ const changeTempColor = (currentTemp) => {
         color = 'yellow';
     } else if (currentTemp >= 50) {
         color = 'green';
-    }
-    temperatureCountContainer.style.color = 'color';
+    } else if (currentTemp <= 49) {
+        color = 'blue'
+    };
+    document.getElementById("temperatureCount").style.color = color;
 }; 
+
 // function to run whenever the Temp button is hit. Takes in the current temp and runs the helper functions above as well as updating the landscape to match the temp
 const updateTemp = currentTemp => {
     const temperatureCountContainer = document.querySelector("#temperatureCount")

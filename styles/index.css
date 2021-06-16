@@ -1,4 +1,36 @@
 
+/* General styling */
+body {
+    font-family: Verdana, Geneva, 
+    Tahoma, sans-serif;
+    background: linear-gradient(to bottom, #ff66ff 0%, #ccffff 100%);
+}
+h3 {
+    text-align: left;
+    font-size: 1.3em;
+    font-weight: normal;
+}
+/* label */
+label {
+    text-align: left;
+    font-size: 1.3em;
+}
+.button {
+    background-color: #ffe6e6;
+    color: navy;
+    padding: .3em 1em;
+    text-align: center;
+    display: inline-block;
+    font-size: 1em;
+}
+#locationInput {
+    width: 20vw;
+    height: 2em;
+    background-color: #ffe6e6;
+    color: navy;
+    font-size: 1em;
+}
+
 /* Header flex-box*/
 header {
     display: flex;
@@ -10,6 +42,7 @@ header {
     min-height: 350px;
     margin-top: 3em;
 }
+/* Flex organizing */
 ul {
     list-style-type: none;
     flex: 1 1 auto;
@@ -39,10 +72,13 @@ h1 {
     float: inline-start;
     position: relative;
     text-align: left;
-    align-items: flex-start;
     width: 40%;
-    padding: 2em;
-    margin: 1em;
+    padding-left: 1em;
+    margin-top: 0;
+    margin-left: 2em;
+}
+.weather-item {
+    padding-bottom: 1.5em;
 }
 .right-column {
     display: flex;
@@ -51,8 +87,8 @@ h1 {
     justify-content: center;
     align-content: center;
     float: right;
-    width: 50%;
-    border-radius: 5px;
+    width: 45%;
+    padding: .5em;
 }
 .weather-display:after {
     content: "";
@@ -74,9 +110,12 @@ h1 {
     position: relative;
     object-fit: scale-down; 
     padding: .2em; 
-    overflow: hidden;
+    overflow: scroll;
 }
-
+/* Temperature count colors */
+#temperatureCount {
+    color: black;
+}
 /* Footer */
 footer {
     text-align: center;
@@ -86,18 +125,5 @@ footer {
     line-height: 150%;
 }
 
-/* General styling */
-body {
-    font-family: Verdana, Geneva, 
-    Tahoma, sans-serif;
-    background: linear-gradient(to bottom, #ff66ff 0%, #ccffff 100%);
-}
 
-
-/* label */
-label {
-    text-align: left;
-    font-size: 1.5em;
-    font-weight: lighter;
-}
 
