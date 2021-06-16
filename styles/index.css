@@ -1,0 +1,11 @@
+body {
+    color: rgb(249, 249, 249);
+    font-family: 'Courier New';
+    background-image: url("https://image.shutterstock.com/image-photo/photos-sky-during-different-weather-260nw-1899360634.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    border-color: black;
+}
+  
