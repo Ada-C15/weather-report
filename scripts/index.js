@@ -1,7 +1,7 @@
 const state = {
     currentTemp: 65,
     currentSky: "Sunny",
-    cityNameDefault: "🌈 Issaquah 🌈"
+    cityNameDefault: "Issaquah"
 };
 
 const updateTemp = () => {
@@ -43,17 +43,17 @@ const updateTempColor = () => {
 // potentially combine this in with updateTempColor since ranges of temps are the same
 const updateLandscape = () => {
     const landscapeContainer = document.querySelector("#landscapeContainer");
-    let landscape = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃"
+    let landscape = "🍃🌾🦋🌱🐝🪴🌼🪴🐝🌱🦋🌾🍃"
     if (state.currentTemp >= 80) {
-        landscape = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+        landscape = "🔥🌵🦂🐍🏜🌵🥵🌵🏜🐍🦂🌵🔥";
     } else if (state.currentTemp >= 70) {
-        landscape = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
+        landscape = "🌸🌿🌼🌱🌷☘️🌻☘️🌷🌱🌼🌿🌸";
     } else if (state.currentTemp >= 60) {
-        landscape = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
+        landscape = "🍃🌾🦋🌱🐝🪴🌼🪴🐝🌱🦋🌾🍃";
     } else if (state.currentTemp >= 50) {
-        landscape = "💚🐸💚🐸💚🐸💚🐸💚🐸💚🐸";
+        landscape = "☕️🧣🌿🍂🌲🍁🐸🍁🌲🍂 🌿🧣☕️";
     } else {
-        landscape = "❄️💙❄️💙❄️💙❄️💙❄️💙❄️💙❄️💙";
+        landscape = "🏔🏂🧤🎿☃️❄️🥶❄️☃️🎿🧤🏂🏔";
     };
     landscapeContainer.textContent = landscape;  
 };
@@ -62,15 +62,15 @@ const updateSky = () => {
     const skyContainer = document.querySelector("#skyContainer");
     const skySelection = document.querySelector("#skySelection").value;
     state.currentSky = skySelection;
-    let sky = "☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️";
+    let sky = "☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️";
     if (state.currentSky === 'sunny') {
-        sky = "☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️";
+        sky = "☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️";
     } else if (state.currentSky === 'cloudy') {
         sky = "☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️☁️";
     } else if (state.currentSky === 'rainy') {
-        sky = "🌧💧🌧💧🌧💧🌧💧🌧💧🌧💧";
+        sky = "🌧💧🌧💧🌧💧🌧💧🌧💧🌧💧🌧";
     } else {
-        sky = "❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️";
+        sky = "❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️";
     };
     skyContainer.textContent = sky;
 };
@@ -81,13 +81,11 @@ const updateCityName = () => {
     headerCityName.textContent = inputCityName;
 };
 
-// need to modify so that input box clears when reset is clicked 
-const resetCityName = () => {
+ const resetCityName = () => {
     const defaultCityName = state.cityNameDefault;
     const cityNameContainer = document.querySelector("#cityNameContainer");
     cityNameContainer.textContent = defaultCityName;
     const inputCityName = document.querySelector("#cityNameInput");
-    // inputCityName.value = defaultCityName;
     inputCityName.value = "";
 };
 
