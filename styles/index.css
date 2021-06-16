@@ -62,7 +62,7 @@ input {
 }
 
 #landscape.sunny{
-    background-image: url("./photos/sunny-leaves.jpeg");
+    background-image: url("photos/sunny-leaves.jpeg");
 }
 
 #landscape.cloudy {
