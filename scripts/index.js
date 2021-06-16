@@ -46,32 +46,75 @@ const checkTemp = (event) => {
     }
 }
 
+const textColor = function(selector, color) {
+    document.querySelector(selector).style.color = color;
+}
+
+const backgroundColor = function(selector, color) {
+    document.querySelector(selector).style.backgroundColor = color;
+}
+
 const colorBlack = (event) => {
-    const color = document.querySelector("#tempDisplay").style.color = "black" ;
+    textColor("#tempDisplay", "black");
+    textColor("#landscape h3", "white");
+    textColor("#groundDisplay", "white");
+    backgroundColor("#landscape", "black");
+    const count = document.querySelector("#groundDisplay")
+    count.textContent = "🌵____🌵_______🌵_🌡__🌵__🌵";
 };
 
 const colorRed = (event) => {
-    const color = document.querySelector("#tempDisplay").style.color = "red" ;
+    textColor("#tempDisplay", "red");
+    textColor("#landscape h3", "black");
+    textColor("#groundDisplay", "black");
+    backgroundColor("#landscape", "rgb(255, 0, 0, 0.5)");
+    const count = document.querySelector("#groundDisplay");
+    count.textContent = "🌵_🐍__🌵_🦂__🦂__🌵_🐍__🌵__🌵";
 };
 
 const colorOrange = (event) => {
-    const color = document.querySelector("#tempDisplay").style.color = "rgb(255, 140, 0)" ;
+    textColor("#tempDisplay", "rgb(255, 162, 0)");
+    textColor("#landscape h3", "black");
+    textColor("#groundDisplay", "black");
+    backgroundColor("#landscape", "rgb(255, 162, 0, 0.5)");
+    const count = document.querySelector("#groundDisplay");
+    count.textContent = "🌴_🌸__🌴_⛱__⛱__🌴_⛱__🌴__🌴";
 };
 
 const colorYellow = (event) => {
-    const color = document.querySelector("#tempDisplay").style.color = "rgb(255, 247, 0)" ;
+    textColor("#tempDisplay", "rgb(255, 247, 0)");
+    textColor("#landscape h3", "black");
+    textColor("#groundDisplay", "black");
+    backgroundColor("#landscape", "rgb(255, 247, 0, 0.5)");
+    const count = document.querySelector("#groundDisplay");
+    count.textContent = "🌳_🌿__🌳_🌿__🌿__🌳_🌿__🌳__🌳";
 };
 
 const colorGreen = (event) => {
-    const color = document.querySelector("#tempDisplay").style.color = "rgb(73, 150, 26)" ;
+    textColor("#tempDisplay", "rgb(73, 150, 26)");
+    textColor("#landscape h3", "black");
+    textColor("#groundDisplay", "black");
+    backgroundColor("#landscape", "rgb(73, 150, 26, 0.5)");
+    const count = document.querySelector("#groundDisplay");
+    count.textContent = "🌳_🌲__🌳_🌲__🌲__🌳_🌲__🌳__🌳";
 };
 
 const colorBlue = (event) => {
-    const color = document.querySelector("#tempDisplay").style.color = "rgb(0, 94, 255)" ;
+    textColor("#tempDisplay", "rgb(0, 94, 255)");
+    textColor("#landscape h3", "black");
+    textColor("#groundDisplay", "black");
+    backgroundColor("#landscape", "rgb(0, 94, 255, 0.5)");
+    const count = document.querySelector("#groundDisplay");
+    count.textContent = "🌲_🏔__🌲_🏔__🏔__🌲_🏔__🌲__🌲";
 };
 
 const colorIce = (event) => {
-    const color = document.querySelector("#tempDisplay").style.color = "rgb(0, 251, 255)" ;
+    textColor("#tempDisplay", "rgb(0, 251, 255)");
+    textColor("#landscape h3", "black");
+    textColor("#groundDisplay", "white");
+    backgroundColor("#landscape", "rgb(0, 251, 255, 0.5)");
+    const count = document.querySelector("#groundDisplay");
+    count.textContent = "🌲_☃️__🌲_🏔__☃️__🌲_🏔__🌲__🌲";
 };
 
 const registerEventHandlers = (event) => {

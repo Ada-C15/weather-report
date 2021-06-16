@@ -1,3 +1,29 @@
+header {
+    border: 2px solid black;
+}
+
+main {
+    border: 2px solid black;
+}
+
+#temp {
+    border: 2px solid black;
+    background-color: gray;
+}
+
 #tempDisplay {
     color: rgb(255, 247, 0);
+}
+
+#sky {
+    border: 2px solid black;
+}
+
+#city {
+    border: 2px solid black;
+}
+
+#landscape {
+    background-color:rgb(255, 247, 0, 0.5);
+    border: 2px solid black;
 }
