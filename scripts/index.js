@@ -54,13 +54,13 @@ const updateTempIcons = (currentTemp) => {
 
 const updateGarden = (currentTemp) => {
   const gardenContentContainer = document.getElementById("gardenContent");
-  let gardenContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
+  let gardenContent = "🌲 🌲 ⛄️ 🌲 ⛄️ 🍂 🌲 🍁 🌲 🌲 ⛄️ 🦅 🍂 🌲 ⛄️ 🦅 ";
   if (currentTemp >= 80) {
-    gardenContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+    gardenContent = "🌵 🐍 🌴 🦂 🌵 🦅 🌵 🐍 🏜 🦂 🦎 🌵 🐍 🏜 🐞 🦂 ";
   } else if (currentTemp >= 70) {
-    gardenContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
+    gardenContent = "🌸 🌿 🌼 🐸 🌷 🌻 🐝 🦋 🌿 🐸 🌻 🌺 🐛 🐝 🌷 🌼";
   } else if (currentTemp >= 60) {
-    gardenContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
+    gardenContent = "🍁 🍃 🌳 🍁 🏕 🦊 🌿 🥀 🪨 🍂 🛤 🍃 🌳 🐻 🍃";
   }
   gardenContentContainer.textContent = gardenContent;
 };
