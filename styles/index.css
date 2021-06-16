@@ -1,0 +1,54 @@
+body {
+    font-family:  "Rubik", sans-serif;
+    color: white;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+
+    /*display: grid;*/
+    background-color: #91d370;
+    background-image: linear-gradient(319deg, #91d370 0%, #bca0ff 37%, #f2cd54 100%);
+}
+
+h1 {
+    font-size: 4em;
+    text-align: center;
+}
+
+.smbox {
+    color:white;
+    font-size: 2.5em;
+    text-align: left;
+    display: right;
+    margin-left: 1em;
+    margin-right: 10.1em;
+    display:inline-block;
+    justify-content: space-between;
+}
+
+footer {
+    background: #eab9b9ff;
+    padding: 0.3em 10em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 2em;
+    font-style: italic;
+}
+
+#adduparrow,
+#adddownarrow{
+    border-radius: 8px;
+    padding: 0.5rem;
+    background-color: white;
+    border-color:#f2cd54;
+}
+
+#addRestButton {
+    border: 0;
+    background-color: #91d370;
+    color: white;
+    border-radius: 3px;
+    padding: 0.5rem;
+    font-family: "Rubik", sans-serif;
+}

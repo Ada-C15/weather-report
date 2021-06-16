@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8" />
+        <link href = "styles/index.css" rel= "stylesheet"/>
+        <title> Weather Report </title>
+    </head>
+    <body>
+        <header>
+        <h1>Weather Report for 
+        </h1>
+        <span>the amazing city of 
+            <span id ="cityName" ></span></span>
+        </header>
+        <main>
+            <section id="intro">
+                <h2>Weather Garden</h2>
+                <div id="gardenContent" class="garden_content">
+                    <div id="sky">☁️     ☁️   ☁️  ☁️  ☁️</div>
+                    <div id="landscape">🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲</div>
+                </div>
+                </section>  
+            <section class="smbox">
+                <h3>Temperature</h3>
+                <button id="adduparrow">🔼</button>
+                <button id="adddownarrow">⬇️</button>
+                <span id ="tempValue">70℉</span>
+                </section>
+            <section class="smbox">
+                <h3>Sky</h3>
+                <select id="skySelect">
+                    <option>Sunny</option>
+                    <option>Cloudy</option>
+                    <option>Rainy</option>
+                    <option>Snowy</option>
+                </select>
+        
+                </section> 
+            <section class="smbox">
+                <h3>City</h3>
+                <input type="text" id="cityNameInput" value="Sunny Seattle">
+                <button id="addResetButton">Reset</button>
+                </section>  
+            <script src="./scripts/index.js"></script>
+            <footer>
+                <p>&copy; mariela cruz </p> 
+            </footer>
+        </main>
+    </body>
+</html>
