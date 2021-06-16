@@ -10,7 +10,9 @@ const updateCityName = () => {
 
 const resetCityName = () => {
     const headerCity = document.getElementById("city_name");
+    const inputText = document.getElementById("city_input");
     headerCity.textContent = "Seattle";
+    inputText.value = "Seattle"
 }
 
 const selectSky = () => {

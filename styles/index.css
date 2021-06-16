@@ -70,7 +70,6 @@ body {
     /* background-color: rgba(212, 196, 175, 0.918); */
 }
 
-
 #garden_bg {
     font-size: 30px;
     min-height: 200px;
@@ -178,7 +177,6 @@ select.classic:focus {
 }
 
 select {
-
     background-color: white;
     border: thin solid blue;
     border-radius: 4px;
