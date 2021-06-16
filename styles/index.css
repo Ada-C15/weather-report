@@ -6,6 +6,8 @@ body {
 div button {
     min-width: 30px;
     min-height: 30px;
+    border-radius: 10px;
+    background-color: rgb(249, 239, 223);
 }
 
 div section {
@@ -56,8 +58,20 @@ main .snapshot {
     grid-column-end: 3;
 }
 
+#reset {
+    background-color: rgb(249, 239, 223);
+    border-radius: 10px;
+    padding: .5em;
+}
+
 #sky {
     font-size: 2em;
+}
+
+#sky_options {
+    background-color: rgb(249, 239, 223);
+    border-radius: 10px;
+    padding: .25em;
 }
 
 .snapshot {
@@ -68,6 +82,10 @@ main .snapshot {
     min-width: 500px;
     min-height: 150px;
 }
+
+
+
+
 
 .snapshot div {
     display: flex;
@@ -107,4 +125,53 @@ main .snapshot {
 
 .teal {
     color: teal;
+}
+
+.day_sunny {
+    background-color: wheat;
+    text-align: center;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 500px;
+    min-height: 150px;
+}
+.day_sunny div{
+    display: flex;
+    flex-direction: column;
+}
+.day_cloudy {
+    background-color: lightgray;
+    text-align: center;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 500px;
+    min-height: 150px;
+}
+.day_cloudy div {
+    display: flex;
+    flex-direction: column;
+}
+.day_rainy {
+    background-color: gray;
+    text-align: center;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 500px;
+    min-height: 150px;
+}
+.day_rainy div {
+    display: flex;
+    flex-direction: column;
+}
+.day_snowy {
+    background-color: teal;
+    text-align: center;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 500px;
+    min-height: 150px;
+}
+.day_snowy div {
+    display: flex;
+    flex-direction: column;
 }

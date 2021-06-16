@@ -4,15 +4,22 @@ const state = {
     current_city: "Seattle",
 };
 
-
+const tempUpButton = document.querySelector("#up");
+const tempDownButton = document.querySelector("#down");
 const temperature = document.querySelector("#temp_number");
 const landscape = document.querySelector("#ground");
 const airspace = document.querySelector("#sky");
+const skyElement = document.querySelector("#sky_options");
+let current_city = document.querySelector("#display");
+const input = document.querySelector("#city");
+const resetCityButton = document.querySelector("#reset");
+
 
 const temperatureUp = () => {
     state.temp_number += 1;
     temperature.textContent = `${state.temp_number}`;
 };
+
 
 const temperatureDown = () => {
     state.temp_number -= 1;
@@ -57,47 +64,46 @@ const tempChangeGround = () => {
     }
 };
 
-
-const skyElement = document.querySelector("#sky_options");
-
+const snapBack = document.querySelector(".snapshot")
 const tempChangeSky = (skyElement) => {
     state.airspace = skyElement.target.value;
     if (state.airspace === "sunny") {
         airspace.textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️"; 
+        snapBack.className = "day_sunny";
     }
     else if (state.airspace === "cloudy") {
         airspace.textContent = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️"; 
+        snapBack.className = "day_cloudy";
     }
     else if (state.airspace === "rainy") {
-        airspace.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧"; 
+        airspace.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+        snapBack.className = "day_rainy";
     }
     else if (state.airspace === "snowy") {
-        airspace.textContent = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨"; 
+        airspace.textContent = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
+        snapBack.className = "day_snowy";
     }
 };
 
-let current_city = document.querySelector("#display");
-const input = document.querySelector("#city");
 
 const changeCity = (input) => {
     state.current_city = input.target.value;
     current_city.textContent = `🏙 ${state.current_city} 🏙`;
 };
 
-const resetCityButton = document.querySelector("#reset");
+
 const resetButton = () => {
     state.current_city = "Seattle";
     current_city.textContent = `🏙 ${state.current_city} 🏙`;
     input.value = "";
 };
 
+
 const registerEventHandlers = () => {
-    const tempUpButton = document.querySelector("#up");
     tempUpButton.addEventListener("click", temperatureUp);
     tempUpButton.addEventListener("click", tempChangeColor);
     tempUpButton.addEventListener("click", tempChangeGround);
 
-    const tempDownButton = document.querySelector("#down");
     tempDownButton.addEventListener("click", temperatureDown);
     tempDownButton.addEventListener("click", tempChangeColor);
     tempDownButton.addEventListener("click", tempChangeGround);
