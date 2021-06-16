@@ -8,29 +8,58 @@
     <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
-    <header class="header_header">
-        <h1>Weather Report</h1>
-        
-    </header>
     
-    <section class="temperature__section">
-        <h2>Temperature</h2>
-        <div id = "container">            
-            <h1 id="temp">71</h1>
-            <button id="plustemp">＋</button>
-            <button id="subtemp">−</button>
-        </div>
-    </section>
-    <section class="landscape&sky__section">
-        <h2>Garden&Sky</h2>
-        <div id = "container">            
-            <!-- <h1 id="temp">71</h1> -->
-            <div id="landscape">🌵🌻</div>
-            <div id="sky">☀️🌧</div>
-        </div>
-    </section>
-        
+    <main>
+        <button id="dark-mode">Dark mode 🌌</button>
+        <header class="header_header">
+            <h1>Weather Report</h1>
+            
+            <span>
+                For the lovely city of 
+                <span id="headerCityName" class="header_city-name">
+                    ::before 
+                    "San Francisco"
+                </span>
+            </span>
+        </header>
 
-    <script src="scripts/index.js" type="text/javascript"></script>
+        <section class="city__section">
+            <h2>City Name</h2>
+            <input type="text" id="cityNameInput" value="San Francisco">
+            <button id="cityNameReset" class="city-name-reset-btn">Reset</button>
+        </section>
+
+        <section class="temperature__section">
+            <h2>Temperature</h2>
+            <div id = "container">            
+                <h1 id="temp" class="orange">71</h1>
+                
+                    <button id="plustemp">＋</button>
+                    <button id="subtemp">−</button>
+            </div>
+        </section>
+
+        <section class="sky__section">
+            <h2>Sky</h2>
+            <select id = "selectSky">            
+                <option>Sunny</option>
+                <option>Windy</option>
+                <option>Hazzy</option>
+                <option>Rainy</option>
+            </select>
+        </section>
+
+        <section class="landscape-sky__section">
+            <h2>Garden & Sky</h2>
+            <div id = "container" class="garden_content rainy">            
+                <!-- <h1 id="temp">71</h1> -->
+                <div id="landscape">🌵🌻</div>
+                <div id="sky">☀️🌧</div>
+            </div>
+        </section>
+        
+        <script src="scripts/index.js" type="text/javascript"></script>
+        <p>&copy; 2021 Ada Developers Academy</p>
+    </main>
 </body>
 </html>

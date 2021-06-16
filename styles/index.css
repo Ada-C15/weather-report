@@ -22,3 +22,86 @@
 .orange{
     color:orange
 }
+
+h2 {
+    margin: 0 auto 4rem auto center;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 1rem;
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    background-color: pink;
+    margin: 3rem;
+}
+
+.header_header {
+    color:rgb(112, 74, 117);
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    margin: 2rem auto 3rem 0;
+}
+
+.header_header > h1 {
+    margin-right: 5rem;
+    font-size: 3em;
+}
+
+.header_city-name {
+    font-style: inherit;
+    font-size: 2rem;
+}
+
+.header_city-name::before {
+    content: "📍";
+}
+
+.landscape-sky__section,
+.temperature__section,
+.sky__section,
+.city__section {
+    border-radius: 4px;
+    padding: 1rem;
+    background-color: rgb(130, 153, 197);
+    margin-top: 8px;
+    text-align: center;
+    align-self: center;
+    grid-row: 4;
+    grid-row: 2 / span 3;
+    grid-column: 2;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    padding: 3rem;
+    
+}
+
+#plustemp,#subtemp
+{
+    border: 0;
+    background-color:rgb(173, 100, 173);
+    color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    font-family: "Rubik", sans-serif;
+}
+
+.city-name-reset-btn {
+    border: 0;
+    background-color: #16c6cc;
+    color: white;
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-family: "Rubik", sans-serif;
+}
+
+.night {
+    background-color:rgb(38, 54, 119);
+    color:rgb(219, 161, 206)
+}  
