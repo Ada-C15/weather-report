@@ -1,18 +1,16 @@
 //To dos:
 //Change temp text color 
 //reset city name input box (currently - index.html button onclick)
-// change garden
-
 
 // Temperature
 const state = {
-    current_temp:75
+    current_temp:78
 }
 
 const changeTempColor = (event) => {
     const currentTemp = document.querySelector("#current_temp");
     let color = "orange";
-        if (state.current_temp > 80) {
+        if (state.current_temp >= 80) {
             color = "red";
         } else if (state.current_temp >= 70) {
             color = "orange";
@@ -23,25 +21,24 @@ const changeTempColor = (event) => {
         } else if (state.current_temp < 50) {
             color = "blue";
         }
-    currentTemp.classList = color;
+    currentTemp.className = color;
 }   
 
 const changeGarden = (event) => {
     const gardenContainer = document.querySelector("#garden");
-    let gardenContainer.textContent = "";
-        if (state.current_temp > 80) {
-            gardenContainer.textContent = "🌻 🍻 🏖 🏊🏻‍♀️ 🌞";
-        } else if (state.current_temp >= 70) {
-            gardenContainer.textContent = "🌸 🐕 🏕 🥂 ⚽️";
-        } else if (state.current_temp >= 60) {
-            gardenContainer.textContent = "🌿 🦌 🗽 🧘🏻‍♀️ 🎡 ";
-        } else if (state.current_temp >= 50) {
-            gardenContainer.textContent = "🍁 🍂 🏮 ⛩ 🐿";
-        } else if (state.current_temp < 50) {
-            gardenContainer.textContent = "⛄️ 🐧 🌬 ☕️ ⛷";
-        }
+    if (state.current_temp > 80) {
+        garden_emojis = "🌻 🍻 🏖 🏊🏻‍♀️ 🌞";
+    } else if (state.current_temp >= 70) {
+        garden_emojis = "🌸 🐕 🏕 🥂 ⚽️";
+    } else if (state.current_temp >= 60) {
+        garden_emojis = "🌿 🦌 🗽 🧘🏻‍♀️ 🎡 ";
+    } else if (state.current_temp >= 50) {
+        garden_emojis = "🍁 🍂 🏮 ⛩ 🐿";
+    } else if (state.current_temp < 50) {
+        garden_emojis = "⛄️ 🐧 🌬 ☕️ ⛷";
+    }
+    gardenContainer.textContent = garden_emojis;
 }  
-
 
 
 const increaseTemp = (event) => {
@@ -64,7 +61,9 @@ const decreaseTemp = (event) => {
 //Sky
 const selectSky = (event) => {
     const SelectedSky = document.querySelector('#sky_result');
-    if (event.target.value == "sunny") {
+    if (event.target.value == "select") {
+        SelectedSky.textContent = "☀️ 🌤 ☁️☃️ ❄️";
+    } else if (event.target.value == "sunny") {
         SelectedSky.textContent = "☀️ 🌤 ☀️ 🌤 ☀️";
     } else if (event.target.value == "cloudy") {
         SelectedSky.textContent = "⛅️ ☁️ ⛅️ ☁️ ⛅️";

@@ -9,20 +9,27 @@
         </style>
 </head>
 
+<!-- header: 'Weather Report'  -->
+<header class = "header">
+    <h1> 🌸🌟Stella's Weather Report🌟🌸</h1>
+    <h3><span> ✨For the lovely city of <span id = "headercity"></span>💫</span></h3>
+</header>
+
 <body>
     <main>
-    <!-- header: 'Weather Report'  -->
-    <header class = "header">
-        <h1> 🌸🌟Stella's Weather Report🌟🌸</h1>
-        <span> ✨For the lovely city of <span id = "headercity"></span>💫</span>
-    </header>
+    <!-- section: Weather Gardern  -->
+    <section class ="gardenContainer">
+        <h2>Weather Garden</h2>
+        <section id= "sky_result">🌤 ☁️ ? SKY ?☃️ ❄️ </section>
+        <section id= "garden">🌸 🐕 🏕 🥂 ⚽️</section>
+    </section>
 
     <!-- section:temperature  -->
     <section class ="tempContainer">
         <h2>Temperature</h2>
             <button id = "increase_temp">⬆️</button> 
             <button id = "decrease_temp">⬇️</button>
-            <span id = "current_temp">75</span>   
+            <span id = "current_temp">78</span>   
 
     </section>
         
@@ -30,7 +37,7 @@
     <section class ="skyContainer">
         <h2>Sky</h2>
         <select id="SkyOptions">
-            <option value="">💫Select Your Sky</option>
+            <option value="select">💫Select Your Sky</option>
             <option value="sunny">☀️Sunny</option>
             <option value="cloudy">🌥Cloudy</option>
             <option value="rainy">☔️Rainy</option>
@@ -46,12 +53,7 @@
             <button id="resetButton" onclick="document.querySelector('cityname').value = ''">Reset</button>
     </section>
 
-    <!-- section: Weather Gardern  -->
-    <section class ="gardenContainer">
-        <h2>Weather Garden</h2>
-        <section id= "sky_result"> </section>
-        <section id= "garden"> </section>
-    </section>
+
 
     </main>
     <script src="scripts/index.js"></script>
