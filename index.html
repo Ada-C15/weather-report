@@ -7,30 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather Report</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/index.css" />
 </head>
 
 <body>
-    <header class="header__header">
+    <header class="header_section">
         <h1>Weather Report</h1>
-        <span>For the lovely city of 
-            <span id="headerCityName" class="header__city-name"></span></span>
+        <span class="subheader">
+            <span id="headerCityName" class="header_city"></span>
+        </span>
     </header>
-    <div class="control__center">
-        <section class="temperature__section">
-            <h2>Temperature</h2>
-            <div class="temperature__content">
-                <div class="temperature__controls">
+    <div class="control_center">
+        <section class="temperature_section">
+            <h2 id = "temperatureTitle" >Temperature</h2>
+            <div class="temperature_content">
+                <div class="temperature_dials">
                     <span id="increaseTempControl">⬆️</span>
                     <span id="decreaseTempControl">⬇️</span>
                 </div>
                 <span id="tempValue"></span>
             </div>
         </section>
-        <section class="sky__section">
-            <h2>Sky</h2>
+        <section class="sky_section">
+            <h2 id= "skyTitle" >Sky</h2>
             <select id="skySelect">
                 <option>Sunny</option>
                 <option>Cloudy</option>
@@ -39,15 +38,15 @@
             </select>
         </section>
 
-        <section class="city-name__section">
-            <h2>City Name</h2>
-            <input type="text" id="cityNameInput" value="Atlanta" />
-            <button id="cityNameReset" class="city-name__reset-btn">Reset</button>
+        <section class="city_section">
+            <h2 id="cityTitle">City Name</h2>
+            <input type="text" id="cityNameInput" value="ATLANTA 🍑" />
+            <button id="cityNameReset" class="resetButton">Reset</button>
         </section>
     </div>
-    <section class="garden__section">
-        <h2>Weather Garden</h2>
-        <div id="gardenContent" class="garden__content">
+    <section class="garden_section">
+        <h2 id="gardenTitle">Weather Garden</h2>
+        <div id="gardenContent" class="garden_content">
             <div id="sky"></div>
             <div id="landscape"></div>
         </div>

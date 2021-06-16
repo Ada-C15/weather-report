@@ -4,12 +4,10 @@ let sky = ""
 const selectSky = function() {
     const skyOption = document.getElementById("skySelect")
     const getInput = skyOption.options[skyOption.selectedIndex].value;
-    // console.log(getInput)
     const skyContainer = document.getElementById("sky");
-    // console.log(skyContainer)
     
     if (getInput === "Sunny") {
-        sky = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️'
+        sky = '☁️☁️☁️ ☁️ ☁️ ☀️ ☁️ ☁️☁️☁️'
     } else if (getInput === "Cloudy") {
         sky = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️'
     } else if (getInput === "Rainy") {
@@ -29,7 +27,7 @@ const updateCity = () =>  {
 // reset to default city name 
 const resetCity = () => {
     const cityContainer = document.getElementById("cityNameInput")
-    cityContainer.value = 'Atlanta'
+    cityContainer.value = 'ATLANTA 🍑'
     // reflect that reset on the header
     updateCity();
 }
@@ -46,7 +44,7 @@ const updateTemp = function(tempValue) {
         tempValueContainer.style.color = 'orange'
         landscapeContainer.textContent = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷'
     } else if (tempValue >= 60) {
-        tempValueContainer.style.color = 'yellow'
+        tempValueContainer.style.color = 'gold'
         landscapeContainer.textContent = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃'
     } else if (tempValue >= 50) {
         tempValueContainer.style.color = 'green'
@@ -82,7 +80,7 @@ const registerEventHandlers = function() {
     inputCity.addEventListener("input", updateCity)
 
     resetCity();
-    const resetCityButton = document.querySelector(".city-name__reset-btn")
+    const resetCityButton = document.querySelector(".resetButton")
     resetCityButton.addEventListener("click", resetCity)
 };
 

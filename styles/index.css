@@ -1,19 +1,106 @@
-/* how to make body go horizontal instead of vertical */
-
 body {
     font-family: Futura,"Futura", sans-serif;
     font-size: 18px;
-    background-color: #65bc7e;
+    background-color: #c8e6d1;
     margin: 2rem;
 }
 
-.control__center {
+h1 {
+    color: rgb(242, 141, 78);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.subheader {
+    display: flex;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.control_center {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-  }
+    justify-content: space-evenly;
+}
 
-/* can i assign more than one class in html tag  */
-/* or should i just list the selectors like */
-/* .temperature__section, .sky__section, .city-name__section */
-/* ^THIS WENT POORLY */
+.temperature_section {
+    background-color: rgb(254, 250, 239);
+    padding: 0px 20px 0px 20px;
+    border-radius: 5px;
+}
+
+.temperature_content {
+    display:flex;
+    flex-direction: row-reverse;
+    padding: 0px 10px 5px 10px;
+}
+
+#tempValue {
+    font-size: 33px;
+    margin-right: 1rem;
+}
+.temperature_dials {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin-right:3rem;
+    font-size: 14px;
+}
+
+.sky_section {
+    background-color: rgb(254, 250, 239);
+    padding: 0px 60px 0px 60px;
+    border-radius: 5px;
+}
+
+#skySelect {
+    align-content: center;
+}
+
+.city_section {
+    background-color: rgb(254, 250, 239);
+    padding: 0px 20px 0px 20px;
+    border-radius: 5px;
+}
+
+#temperatureTitle, #skyTitle, #cityTitle {
+    margin: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.garden_section {
+    background-color: rgb(254, 250, 239);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+    padding: 0px 20px 0px 20px;
+    margin-top: 40px;
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+    border-radius: 5px;
+
+}
+
+#gardenTitle {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.garden_content {
+    min-height: 200px;
+    display: flex;
+    flex-direction:column;
+    padding-bottom:20px;
+    justify-content: space-between;
+}
+
+#sky, #landscape {
+    font-size: 30px;
+}
