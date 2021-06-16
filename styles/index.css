@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
+/* element selectors */
+
 body h2 {
     text-align: center;
 }
@@ -19,10 +21,13 @@ button {
     cursor: pointer;
 }
 
-#weather-dropdown, #city {
-    border: none;
-    font-size: 20px;
-    margin-top: 20px;
+footer {
+    display: flex;
+    padding: 10px;
+    justify-content: flex-end;
+    width: 100%;
+    background-color: #A4BBC3;
+    margin-bottom: -20px;
 }
 
 header {
@@ -52,68 +57,7 @@ select {
     font-size: 20px;
 }
 
-#sky p, #landscape p {
-    padding: 10px;
-    margin: 10px;
-    cursor: default;
-}
-
-#grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 20px;
-    margin: 20px;
-}
-
-#temp-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-#temp-integer {
-    font-size: 60px;
-}
-
-#up-down-arrows {
-    font-size: 20px;
-}
-
-#sky-section, #city-section, #temperature-section {
-    text-align: center;
-    background-color: #F4A66B;
-    border-radius: 10px;
-}
-
-#weather-section {
-    display: flex;
-    flex-direction: column;
-    background-color: #E17966;
-    margin: 20px;
-    border-radius: 10px;
-}
-
-#weather-section div {
-    text-align: center;
-    font-size: 30px;
-    margin: 0px;
-    padding:10px;
-}
-
-/* * {
-    border: black 2px solid;
-} */
-
-footer {
-    display: flex;
-    padding: 10px;
-    justify-content: flex-end;
-    width: 100%;
-    background-color: #A4BBC3;
-    margin-bottom: -20px;
-}
+/*class selectors*/
 
 .red {
     color: red;
@@ -133,4 +77,62 @@ footer {
 
 .yellow {
     color: gold;
+}
+
+/* id selectors */
+
+#sky p, #landscape p {
+    padding: 10px;
+    margin: 10px;
+    cursor: default;
+}
+
+#grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    margin: 20px;
+}
+
+#sky-section, #city-section, #temperature-section {
+    text-align: center;
+    background-color: #F4A66B;
+    border-radius: 10px;
+}
+
+#temp-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#temp-integer {
+    font-size: 60px;
+}
+
+#up-down-arrows {
+    font-size: 20px;
+}
+
+#weather-dropdown, #city {
+    border: none;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#weather-section {
+    display: flex;
+    flex-direction: column;
+    background-color: #E17966;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#weather-section div {
+    text-align: center;
+    font-size: 30px;
+    margin: 0px;
+    padding:10px;
 }

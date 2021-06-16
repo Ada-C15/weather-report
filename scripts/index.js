@@ -1,20 +1,24 @@
+// default variable for temperature--used as parameter in several functions
 let currentTemp = 67;
 
-// helper function to be used when increasing/decreasing temp
+// helper function to be used when increasing/decreasing temperature
 const updateTemperature = currentTemp => {
-    const tempValue = document.getElementById("temp-integer");
-    tempValue.textContent = currentTemp;
+    // is this because we need to grab the "temp-integer" from my HTML in order
+    // to set it to currentTemp?
+    const tempContainer = document.getElementById("temp-integer");
+    tempContainer.textContent = currentTemp;
     changeTempColor(currentTemp);
     changeLandscape(currentTemp);
 }
 
+// why do these need to be separate funcitons from updateTemperature()?
 // increases temperature by 1
 const increaseTemperature = () => {
     currentTemp += 1;
     updateTemperature(currentTemp);
 };
 
-// decreases the temp by 1
+// decreases temperature by 1
 const decreaseTemperature = () => {
     currentTemp -= 1;
     updateTemperature(currentTemp);
@@ -38,44 +42,43 @@ const changeTempColor = currentTemp => {
     tempContent.classList = color;
 }
 
+// changes landscape emojis based on the current temperature range
 const changeLandscape = currentTemp => {
     const landscapeContainer = document.getElementById("landscape");
     let landscape = "";
-    if (currentTemp >= 80) {
-        landscape = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"
+    if (currentTemp === 99) {
+        //Kim and her 99 red baloons in 99 degree Highland Park
+        landscape = "🎈🎈🎈🎈🎈🎈👩🏻🎈🎈🎈🎈🎈🎈"
+    } else if (currentTemp >= 80) {
+        landscape = "🌵🌋🐍🌋🦂🌵🌵🐍🌵🌋🏜🦂"
     } else if (currentTemp >= 70) {
-        landscape = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷"
+        landscape = "🌸🌿🌼🌷🌸🌻🌿☘️🌱🌻🌷🌸"
     } else if (currentTemp >= 60) {
-        landscape = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃"
-    } else if (currentTemp < 60) {
-        landscape = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲"
+        landscape = "🍃🌾🌾🍃🪨🍃🪨🛤🪨🌾🌾🍃🪨"
+    } else if (currentTemp >= 50) {
+        landscape = "🍂🌲🌲🍁🌲🍂🌲🍁🌲🌲🍂🌲🍁"
+    } else if (currentTemp < 50) {
+        landscape = "❄️☃️🏔⛄️🏔❄️☃️🏔❄️☃️🏔⛄️❄️❄️"
     }
     landscapeContainer.textContent = landscape;
 }
 
+// changes sky emojis to match the changed input in the dropdown menu
 const changeSky = () => {
     const skyDropdown = document.getElementById("sky-dropdown").value;
     const skyForecast = document.getElementById("sky");
-    // why do we make this variable rather than just use skyForecast and manipulate that directly?
+    // could we forego this variable and just use skyForecast.textContent?
     let sky = "";
-    let skyColor = "";
     if (skyDropdown === "Sunny") {
         sky = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️"
-        // why do these need to be added as classes in CSS?
-        // skyColor = "sunny";
-    }
-    else if (skyDropdown === "Cloudy") {
+    } else if (skyDropdown === "Cloudy") {
         sky = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️"
-    }
-    else if (skyDropdown === "Rainy") {
+    } else if (skyDropdown === "Rainy") {
         sky = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧"
-    }
-    else if (skyDropdown === "Snowy") {
+    } else if (skyDropdown === "Snowy") {
         sky = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨"
     }
     skyForecast.textContent = sky;
-    // const weatherContent = document.getElementById("weather-content");
-    // weatherContent.classList = `weather__content ${skyColor}`;
 };
 
 // updates header with city name input
@@ -92,6 +95,10 @@ const resetCityName = () => {
     updateCityName();
 };
 
+// event handler registration
+// these are only for things that "happen" on the page
+// we are telling JS to listen for a certain event to happen to a certain item,
+// and then what to do with that item
 const registerEventHandlers = () => {
     increaseTemperature();
     const tempIncreaseBtn = document.getElementById("increase-temp");
