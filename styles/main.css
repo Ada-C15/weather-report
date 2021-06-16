@@ -6,7 +6,7 @@
 
 body {
     font-family:monospace;
-    background-image: url('https://github.com/scantea/weather-report/blob/main/images/pusheen.png?raw=true');
+    background-image: url('../images/pusheen.png');
     background-size:cover;
     background-position: top center;
 
@@ -116,7 +116,7 @@ main{
   }
 
 .gray {
-    color:gray;
+    color:gray
 }
 
 .red {
