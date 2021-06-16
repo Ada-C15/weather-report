@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device=width">
+        <title>Weather Report</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">    
+        <link href="styles/index.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <main>
+            <h1>Weather Report</h1>
+            <section class="temperature_section">
+                <h2>Temperature:</h2>
+            <div class="temperature_content">
+                <div class="temperature_controls">
+                    <span id="increaseTempControl">⬆️</span>
+                    <span id="decreaseTempControl">⬇️</span>
+                </div>
+                <span id="tempValue" class="teal">0</span>
+                </div>
+            </section>
+            <section class="sky__section">
+                <h2>Sky</h2>
+                <select id="skySelect"">
+                    <option>Sunny</option>
+                    <option>Cloudy</option>
+                    <option>Rainy</option>
+                    <option>Snowy</option>
+                </select>
+            </section>
+            <section class="city-name__section">
+                <h2>City Name</h2>
+                <input type="text" id="cityNameInput" value="Seattle">
+                <button id="cityNameReset" class="city-name__reset-btn">Reset</button>
+            </section> 
+            <section class="garden_section">
+                <h2>Weather Garden</h2>
+                <div id="gardenContent" class="garden__content snowy">
+                    <div id="sky">🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨</div>
+                    <div id="landscape">🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲</div>
+                </div>
+            </section>
+            <script src="scripts/index.js"></script>
+        </main>
+    </body>
