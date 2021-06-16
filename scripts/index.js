@@ -1,19 +1,16 @@
-
 const state = {
     temp: 65,
     sky: "sunny",
+    city: "nowhere"
 };
 
 // get temp buttons
 const minusButton = document.getElementById('minus');
 const plusButton = document.getElementById('plus');
 
-// 0+	"🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"
-// 70-79	"🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷"
-// 60-69	"🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃"
-// 59 or below	"🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲"
-// change bg
+// change bg and lanscape
 function changeBackground(temp) {
+    // get landspan to update icons
     const newLand = document.querySelector("#land-icons");
 
     if (temp < 29) {
@@ -46,6 +43,7 @@ function changeBackground(temp) {
         
     } 
 }
+
 // minus actions
 minusButton.addEventListener('click', event => {
     const tempContainer = document.querySelector("#tempDisplay");
@@ -54,6 +52,7 @@ minusButton.addEventListener('click', event => {
     // change background color depending on temp 
     changeBackground(state.temp);
 });
+
 // plus actions
 plusButton.addEventListener('click', event => {
     const tempContainer = document.querySelector("#tempDisplay");
@@ -62,7 +61,6 @@ plusButton.addEventListener('click', event => {
     changeBackground(state.temp);
 });
 
-// emojis
 // get sky container
 const skyContainer = document.getElementById('sky-icon-container');
 const groundContainter = document.getElementById('land-icon-container');
@@ -98,3 +96,11 @@ function updateSky(skyType) {
     }
 }
 
+// update displayed city
+const cityDisplay = document.querySelector("#cityDisplay");
+const input = document.querySelector("#input");
+
+input.addEventListener('keyup', event => {
+    cityDisplay.textContent = event.target.value;
+});
+// store value from input
