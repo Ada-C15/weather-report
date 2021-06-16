@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Should I bring a jacket?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="styles/index.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Should I bring a jacket 🧥?</h1>
+      <span>
+        displaying for the city of
+        <span id="cityNameHeader"></span>
+      </span>
+    </header>
+    <main>
+      <section class="control-section">
+        <div class="control-box">
+          <h2>Temperature</h2>
+          <div class="display-flex">
+            <div class="temperature-control">
+              <span id="increaseTempButton">⬆️</span>
+              <span id="decreaseTempButton">⬇️</span>
+            </div>
+            <span id="tempValue"></span>
+          </div>
+        </div>
+
+        <div class="control-box">
+          <h2>Sky</h2>
+          <select id="skySelection">
+            <option>Sunny</option>
+            <option>Cloudy</option>
+            <option>Rainy</option>
+            <option>Snowy</option>
+          </select>
+        </div>
+        <div class="control-box">
+          <h2>City Name</h2>
+          <input type="text" id="cityName" value="Seattle" />
+          <button id="cityResetButton" class="reset-button">Reset</button>
+        </div>
+      </section>
+      <section class="garden-section">
+        <h2>Weather Garden</h2>
+        <div class="gardenBox">
+        <div id="garden">
+            <div id="sky"></div>
+            <div id="landscape"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <hr />
+      <p>
+        Consider taking a jacket either way - sponsored by the WIYCAC???
+        association - (WHAT IF YOU CATCH A COLD???) - 2021
+      </p>
+    </footer>
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
