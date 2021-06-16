@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/index.css">
+    <title>Amazing Weather Report</title>
+</head>
+<body>
+    <header class="weather_header">
+        <h1>Weather Report</h1>
+        <span>For the amazing city of 
+            <span>🌍 💫</span>
+                <span id="city_name">Seattle</span>
+            <span>💫🌍 </span>
+        </span>
+        <span id="underline"></span>
+    </header>
+    <section class="garden">
+        <h2>Weather Garden</h2>
+        <div id="garden_bg" class="sunny">
+            <div id="skyemoji">☁️ ☀️ ☁️ ☀️ ☁️ ☀️☁️</div>
+            <div id="landscape">🌿🌱🌻🌻🌻🌻🌱🌷🌷🌷🌷🌱🌿</div>
+        </div>
+    </section>
+    <section id="temp_set">
+        <h2>Temperature</h2>
+        <div id="temp_container">
+            <div id="temp_ctrl">
+                <span id="increase">⬆️</span>
+                <span id="decrease">⬇️</span>
+            </div>
+            <span id="temp_val" class="orange">75</span>
+        </div>
+    </section>
+    <section id="sky_select">
+        <h2>Sky</h2>
+        <select class="classic" id="sky_choice">
+            <option selected>Sunny</option>
+            <option>Cloudy</option>
+            <option>Snowy</option>
+            <option>Rainy</option>
+        </select>
+    </section>
+    <section id="city_set">
+        <h2>City Name</h2>
+        <input type="text" id="city_input" value="Seattle">
+        <button id="city_reset">Reset</button>
+    </section>
+    <script src="scripts/index.js" type="text/javascript"></script>
+</body>
+</html>
