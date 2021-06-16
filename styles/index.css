@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    color: #e4f9fa;
+    font-size: 1.75rem;
+    top: 50%; left: 50%;
+    font-weight: 200;
+    text-transform: uppercase;
+    line-height: 4.4;
+    }
+
+
+body {
+    color: #e4f9fa;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(210, 227, 165), rgb(125, 148, 110), rgb(78, 99, 84), rgb(63, 89, 81), rgb(52, 69, 57), rgb(45, 50, 43));
+    transition: all 1.4s ease;
+    cursor: crosshair;
+}
+
+
+#city-name:focus {
+        outline: 0;
+        outline-offset: 0;
+}
+
+.superHot {
+    color: orangered;
+    background-color: rgba(0, 0, 0, 0.166);
+    font-weight: bolder;
+    transition: all 0.9s ease;
+    font-size: 1.85rem;
+
+}
+
+.notSoHot {
+    color: orange;
+    background-color: rgba(0, 0, 0, 0.166);
+    font-weight: bolder;
+    transition: all 0.9s ease;
+    font-size: 1.55rem;
+}
+
+.nice {
+    color: yellow ;
+    background-color: rgba(0, 0, 0, 0.166);
+    font-weight: bolder;
+    transition: all 0.9s ease;
+    font-size: 1.40rem;
+}
+
+.cool {
+    color: deepskyblue ;
+    background-color: rgba(0, 0, 0, 0.166);
+    font-weight: bolder;
+    transition: all 0.9s ease;
+    font-size: 1.55rem;
+}
+
+.superCool {
+    color:rgb(0, 254, 254) ;
+    background-color: rgba(0, 0, 0, 0.166);
+    font-weight: bolder;
+    transition: all 0.9s ease;
+    font-size: 1.85rem;
+}
+
+div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    padding: 2em;
+    }
+
+.div-section {
+    display: flex;
+    align-items: center center;
+    justify-content: center;
+    flex-direction: column;
+    }

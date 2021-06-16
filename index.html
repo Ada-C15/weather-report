@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>≋ W e A t H e R ≋ R e P o R t≋</title>
+	<link href="styles/index.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+	<main>
+        <div>
+            <h1 id="defaultCity">Forecast to the Capital Wasteland</h1>
+            <h2>Today's weather: excessively violent, with a chance of dismemberment.</h2>
+                <section class="div-section">
+                    <div class="input">
+                        <input type="text" id="city-name" placeholder="Your City here " required/>
+                        <button id="addLocation">Change!</button>
+                        <button id="resetLocation">Reset</button>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <label>Choose a Sky:</label>
+                    <select name="skies" id="skyOptions">
+                        <option value="sunny">Sunny</option>
+                        <option value="cloudy">Cloudy</option>
+                        <option value="rainy">Rainy</option>
+                        <option value="snowy">Snowy</option>
+                        <option value="rainbowy">Rainbowy</option>
+                    </select>
+            </div>
+            <div>
+                <section class="div-section">
+                    <h2>Change the weather!</h2>
+                    <button id="addTempButton">Increase Temp</button>
+                    <button id="lessTempButton">Decrease Temp</button>
+                </section>
+            </div>
+            <div>
+                <section id="tempContainer">
+                <h2 id="tempCount">Current temperature: 66 °F</h2>
+                </section>
+            </div>
+        </main>
+	<script src="scripts/index.js"></script>
+</body>
+</html>
+
+
+
