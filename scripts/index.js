@@ -53,7 +53,7 @@ const setNewCityName = () => {
     const userInputCityName = document.querySelector("#input-city-name").value;
     state.cityName = userInputCityName;
     const cityContainer = document.querySelector("#page-header");
-    cityContainer.textContent = `Weather report: ${state.cityName}`;
+    cityContainer.textContent = `Weather report for City: ${state.cityName}`;
 };
 
 const resetCityName = () => {
