@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+
+    <h1>Weather App</h1>
+    <div class="container">
+        <section id="weatherWindow">
+            <div id="tempDisplay">20<span id="celcius">c</span></div>
+            <div id="snow">❄️</div>
+            <div id="stormy">⛈</div>
+            <div id="cloudy">⛅️</div>
+            <div id="warm">🌤</div>
+            <div id="sunny">☀️</div>
+        </section>
+        <section>
+            <button id="increaseTemp">⬆️</button>
+        </section>
+        <section>
+            <button id="decreaseTemp">⬇️</button>
+        </section>
+
+        <section class="menu">
+            <label for="sky-select">Choose a sky:</label>
+
+            <select name="skies" id="sky-select">
+            <option value="">--Choose a sky option--</option>
+            <option value="sunny">Sunny</option>
+            <option value="cloudy">Cloudy</option>
+            <option value="rainy">Hamster</option>
+            <option value="stormy">Stormy</option>
+            <option value="snowy">Snowy</option>
+        </select>
+        </section>
+    </div>
+
+    <span id="test">Hi!</span>
+
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
