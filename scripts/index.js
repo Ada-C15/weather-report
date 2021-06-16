@@ -1,15 +1,16 @@
-var tempTrack = 0
+let tempTrack = 0
+const resetDefaultCityName = "Seattle"
 const incrementTemp = () => {
-    const newTemp = document.createElement("span");
+    // const newTemp = document.createElement("span");
     const tempContainor = document.querySelector("#add-temp");
     const tempCountContainer = document.querySelector("#tempCount");
     const gardenContainer = document.querySelector("#garden-box");
     tempTrack += 1;
     if (tempTrack<= 40){
-        gardenContainer.textContent = "❄️☃️🏔🌌🧴🥶🎄🌲";
+        gardenContainer.textContent = "❄️☃️🏔🌌🥶🎄🌲";
     } else if (tempTrack <= 60){
         gardenContainer.textContent = "🐰🐣🦋🍀💐🌼🌞";
-    }else if (tempTrack > 60) {
+    }else if (tempTrack > 65) {
         gardenContainer.textContent = "🌴🏞🍦🌊🌅🏝🌳🌹☀️🥭🍍🍸";
     }
     tempCountContainer.textContent = `${tempTrack}`;
@@ -22,16 +23,16 @@ document.addEventListener("DOMContentLoaded", registerEventHandlers);
 
 
 const decreasedTemp = () => {
-    const newTemp = document.createElement("span");
+    // const newTemp = document.createElement("span");
     const tempContainor = document.querySelector("#dec-temp");
     const tempCountCont= document.querySelector("#tempCount");
     const gardenContainer= document.querySelector("#garden-box");
     tempTrack -= 1;
-    if (tempTrack<= 40){
+    if (tempTrack<= 50){
         gardenContainer.textContent = "❄️☃️⛷--🏔🌌🌧☕️--🥶🎄🌲";
-    } else if (tempTrack <= 60){
+    } else if (tempTrack <= 65){
         gardenContainer.textContent = "🌤🐰--🌈🐣🦋--🍀💐--🌼🌞";
-    }else if (tempTrack > 60) {
+    }else if (tempTrack > 65) {
         gardenContainer.textContent = "🌴🏞--🍦🌊--🌅🏝--🌳🌹--☀️🥭🍍🍸";
     }
     tempCountCont.textContent = `${tempTrack}`;
@@ -70,5 +71,39 @@ const skyEventHandlers = () => {
 
 document.addEventListener("DOMContentLoaded", skyEventHandlers);
 
+
+const upDatesCity = (cityName) => {
+    const outPutBox = document.querySelector("#city_name_display");
+    outPutBox.textContent = "For the city of: " + cityName
+
+};
+
+const displayCityName = () => {
+    const newTemp = document.createElement("span");
+    const inputBox = document.querySelector("#city_input_name");
+    // const cityCount= document.querySelector("#reset_button");
+    upDatesCity(inputBox.value)
+};
+
+const nameEventHandlers = () => {
+    const selectCity = document.querySelector("#city_input_name");
+    selectCity.addEventListener("input", displayCityName );
+};
+
+document.addEventListener("DOMContentLoaded", nameEventHandlers);
+
+
+const resetCityName = () => {
+    upDatesCity(resetDefaultCityName)
+    const inputBox = document.querySelector("#city_input_name");
+    inputBox.value = resetDefaultCityName
+}
+
+const resetEventHandlers = () => {
+    const selectCity = document.querySelector("#reset_button");
+    selectCity.addEventListener("click", resetCityName );
+};
+
+document.addEventListener("DOMContentLoaded", resetEventHandlers);
 
 
