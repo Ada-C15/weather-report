@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <header>
+            <h1>Weather Report</h1>
+            <h2 id="city">Seattle</h2>
+            <h3 id="weather-summary">The sun's out and it's a mild 63 degrees. Spend some time outside!</h3>
+        </header>
+        <main>
+            <section id="citySection">
+                <input id="cityInput" type="text" value="Seattle" />
+                <button id="resetCityButton">RESET</button>
+            </section>
+            <section id="temperatureSection">
+                <div id="temperatureContent">
+                    <img src="./images/thermometer.png" />
+                    <div class="temperatureControls">
+                        <span id="increaseTemp">⬆</span>
+                        <span id="decreaseTemp">⬇</span>
+                    </div>
+                    <span id="temperatureText" class="orange">75</span>
+                </div>
+            </section>
+            <section id="skySection">
+                <select id="skySelect">
+                    <option>Sunny</option>
+                    <option>Cloudy</option>
+                    <option>Rain</option>
+                    <option>Snow</option>
+                    <option>Storm</option>
+                </select>
+            </section>
+            <section class="landscape">
+                <img id="skyImage" src="./images/sunny-sky.jpg" />
+            </section>
+        </main>
+        <footer></footer>
+        <script src="index.js" async defer></script>
+    </body>
+</html>
