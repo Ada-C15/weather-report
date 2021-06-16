@@ -1,4 +1,4 @@
-let defaultTempValue = 68;
+let defaultTempValue = 73;
 
 const createSky = () => {
   const inputSky = document.getElementById("skyThemeSelect").value;
