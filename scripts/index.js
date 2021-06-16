@@ -1,5 +1,6 @@
 const state = {
     temp_number: 67,
+    airspace: "sunny"
 };
 
 
@@ -35,11 +36,8 @@ const tempChangeColor = () => {
         temperature.className = "teal";
     }
 };
-// const tempUpButton = document.querySelector("#up");
-// tempUpButton.addEventListener("click", tempChangeColor);
 
-// const tempDownButton = document.querySelector("#down");
-// tempDownButton.addEventListener("click", tempChangeColor);
+
 const tempChangeGround = () => {
     if (state.temp_number > 79) {
         landscape.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"; 
@@ -58,25 +56,26 @@ const tempChangeGround = () => {
     }
 };
 
-// document.querySelector("sky_options").onchange = () => {
-//     const sky = document.querySelector("sky_options").value;
-//     sky.value = sky.value.tempChangeSky()
-// };
 
-// const tempChangeSky = () => {
-//     if (sky.value === "sunny") {
-//         airspace.textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️"; 
-//     }
-//     else if (state.temp_number > 59) {
-//         airspace.textContent = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️"; 
-//     }
-//     else if (state.temp_number > 49) {
-//         airspace.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧"; 
-//     }
-//     else if (state.temp_number > 48) {
-//         airspace.textContent = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨"; 
-//     }
-// };
+const skyElement = document.querySelector("#sky_options");
+const tempChangeSky = (event) => {
+    state.airspace = event.target.value;
+
+    if (state.airspace === "sunny") {
+        airspace.textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️"; 
+    }
+    else if (state.airspace === "cloudy") {
+        airspace.textContent = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️"; 
+    }
+    else if (state.airspace === "rainy") {
+        airspace.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧"; 
+    }
+    else if (state.airspace === "snowy") {
+        airspace.textContent = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨"; 
+    }
+};
+
+const 
 
 const registerEventHandlers = () => {
     const tempUpButton = document.querySelector("#up");
@@ -88,6 +87,8 @@ const registerEventHandlers = () => {
     tempDownButton.addEventListener("click", temperatureDown);
     tempDownButton.addEventListener("click", tempChangeColor);
     tempDownButton.addEventListener("click", tempChangeGround);
+
+    skyElement.addEventListener("change", tempChangeSky);
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
