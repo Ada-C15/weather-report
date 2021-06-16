@@ -18,10 +18,13 @@
             </span>
         </header>
 
+        <div class="sections">
         <section class="city-name">
             <h2> City Name </h2>
-            <input type="text" id="cityNameInput" size="30">
-            <button id="cityNameReset">Reset</button>
+            <div>
+                <input type="text" id="cityNameInput" size="20">
+                <button id="cityNameReset">Reset</button>
+            </div>
         </section>
 
         <section>
@@ -39,17 +42,17 @@
 
         <section>
             <h2> Temperature </h2>
-            <div>
-                <div class="temperature_controls">
+            <div class="temp">
+                <div class="temperature-controls">
                     <span id="increaseTemp">⬆️ </span>
                     <span id="decreaseTemp">⬇️ </span>
                 </div>
                 <span id="tempValue" class="orange">80</span>
             </div>
         </section>
+        </div>
 
         <section class="garden-section">
-            <h2> Weather Garden </h2>
             <div id="gardenContent" class="garden-content sunny"> 
                 <div id="sky">☁️🌈 ☁️ ☀️ ☁️ ☁️ 🦋 ☁️</div>
                 <div id="landscape">🌲 ☃️ 🎄 🎅 🎁 ⛄️ 🌲 🦌</div>

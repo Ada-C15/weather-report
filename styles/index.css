@@ -1,16 +1,75 @@
+header {
+   display: flex;
+   flex-direction: column; 
+   justify-content: center;
+   align-items: center;
+   /* background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet); */
+   /* color: white; */
+}
+
+
 h1 {
+    margin-bottom: 0px;
     font-family: 'Architects Daughter', regular;
+    font-size: 50px;
 }
 
 h2 {
     font-family: 'Architects Daughter', regular;
+    margin-bottom: 5px;
+    font-size: 30px;
 }
-
+.sections {
+    display: flex;
+    flex-direction: row; 
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 10px;
+}
 .header-city-name {
     font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
 }
 
-  
+.city-name {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+
+#cityNameInput {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+#skySelect {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+#cityNameReset {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+.temp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.temperature-controls {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#tempValue {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    margin-left: 15px;
+}
 .garden-content {
     min-height: 200px;
     max-width: fit-content;
@@ -22,9 +81,11 @@ h2 {
     justify-content: space-between;
 
     border-radius: 8px;
-    font-size: 8em;
+    font-size: 6em;
 }
-
+#sky {
+    margin-bottom: 80px;
+}
 .red {
     color: red;
 }
