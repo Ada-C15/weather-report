@@ -1,5 +1,5 @@
+// Variable assignment
 let currentTemp = 65;
-    
 
 const skyImages = {
     sunny: ["https://media.giphy.com/media/lyVNcb1n5Ob0Q/giphy.gif", "The sun shines directly into the camera lens through tall evergreens. The camera angle moves slightly."],
@@ -8,14 +8,18 @@ const skyImages = {
     snowy: ["https://media.giphy.com/media/Fh3ezinVpi4yk/giphy.gif", "A hyper realiztic animation of heavy snow falling through evergreens against distant mountains."]
 };
 
-// CHANGE TO FIT
-const updateTemp = currentTemp => {
-    const temperatureCountContainer = document.querySelector("#temperatureCount")
-    temperatureCountContainer.textContent = `Temperature ${currentTemp}℉`;
-    changeTempColor(currentTemp);
-    // updateGarden(currentTemp);
-}
-// Figuring out text / temp changes
+// temperature functions
+// increase temp helper function
+const addTemp = () => {
+    currentTemp += 1;
+    updateTemp(currentTemp);
+};
+// decrease temp helper function
+const subtractTemp = () => {
+    currentTemp -= 1;
+    updateTemp(currentTemp);
+};
+// Font changes for temp
 const changeTempColor = (currentTemp) => {
     const temperatureCountContainer = document.getElementById("temperatureCount");
     let color = 'blue'
@@ -28,41 +32,62 @@ const changeTempColor = (currentTemp) => {
     } else if (currentTemp >= 50) {
         color = 'green';
     }
-    temperatureCountContainer.classList = color;
+    temperatureCountContainer.style.color = 'color';
 }; 
+// function to run whenever the Temp button is hit. Takes in the current temp and runs the helper functions above as well as updating the landscape to match the temp
+const updateTemp = currentTemp => {
+    const temperatureCountContainer = document.querySelector("#temperatureCount")
+    temperatureCountContainer.textContent = `Temperature ${currentTemp}℉`;
+    changeTempColor(currentTemp);
+    updateLandscape(currentTemp);
+}
 
-const addTemp = (event) => {
-    currentTemp += 1;
-    updateTemp(currentTemp);
-};
-const subtractTemp = (event) => {
-    currentTemp -= 1;
-    updateTemp(currentTemp);
-};
-const changeSky = (event) => {
+// Function that updates the sky image
+const changeSky = () => {
     let option = document.querySelector('#sky');
     let optionValue = option.value;
     var skyImage = document.createElement("IMG");
     skyImage.setAttribute("src", skyImages[optionValue][0]);
     skyImage.setAttribute("alt", skyImages[optionValue][1]);
-    skyImageContainer.replaceChild(skyImage, skyImageContainer.childNodes[0]);
+    skyImageContainer.replaceChild(skyImage, skyImageContainer.childNodes[1]);
 };
-// NEED HTML
-// const updateCityName = () => {
-//     const inputName = document.getElementById("cityNameInput").value;
-//     const headerCityName = document.getElementById("headerCityName");
-//     headerCityName.textContent = inputName;
-// };
+// Function that updates the location to match user input
+const updateLocation = () => {
+    const inputLocation = document.getElementById("locationInput").value;
+    const locationDisplay = document.getElementById("locationDisplay");
+    locationDisplay.textContent = inputLocation;
+};
+// Function to reset the location on button click
+const resetLocation = () => {
+    const locationInput = document.getElementById("locationInput");
+    locationInput.value = "Unceded Coast Salish Land";
+    updateLocation();
+};
+// Function to update the background color and landscape text to match the current temp
+const updateLandscape = (currentTemp) => {
+    const landscapeContainer = document.getElementById('landscape-text');
+    let landscape = '';
+    if (currentTemp >= 80) {
+        landscape = 'Too hot too function';
+        document.body.style.background = 'linear-gradient(to bottom, #ffff99 0%, #cc0000 100%)'; 
+    } else if (currentTemp >= 70) {
+        landscape= 'Good day to sit by the pool';
+        document.body.style.background = 'linear-gradient(to bottom, #ffffcc 0%, #ff6600 100%)';
+    } else if (currentTemp >= 60) {
+        landscape = 'The perfect temperature... it must be near April 25... ';
+        document.body.style.background = 'linear-gradient(to bottom, #ffffff 0%, #ff9999 100%)';
+    } else if (currentTemp >= 50) {
+        landscape = 'Bundle up!';
+        document.body.style.background = 'linear-gradient(to bottom, #99ffcc 0%, #009900 100%)';
+    } else if (currentTemp < 49) {
+        landscape = '❅❆❄ Even my icicles have icicles! ❅❆❄';
+        document.body.style.background = 'linear-gradient(to bottom, #ffffff 0%, #33ccff 100%)';
+    }
+    landscapeContainer.textContent = landscape;
+};
 
-// NEED HTML
-// const resetCityName = () => {
-//     const cityNameInput = document.getElementById("cityNameInput");
-//     cityNameInput.value = "Seattle";
-//     updateCityName();
-// };
 
-
-const registerEventHandlers = (event) => {
+const registerEventHandlers = () => {
     const addTemperatureButton = document.querySelector("#addTemperatureButton");
     addTemperatureButton.addEventListener("click", addTemp);
 
@@ -72,21 +97,12 @@ const registerEventHandlers = (event) => {
     const skyOptions = document.querySelector("#sky");
     skyOptions.addEventListener("change", changeSky);
 
-    // CHANGE TO FIT
-    updateCityName();
-    // const cityNameInput = document.getElementById("cityNameInput");
-    // cityNameInput.addEventListener("input", updateCityName);
+    updateLocation();
+    const locationInput = document.getElementById("locationInput");
+    locationInput.addEventListener("input", updateLocation);
 
-    // CHANGE TO FIT
-    // const cityNameResetBtn = document.getElementById("cityNameReset");
-    // cityNameResetBtn.addEventListener("click", resetCityName);
-
-
-    // Figuring out text / temp changes
-    // const changeTextColor = document.getElementsByClassName("tempButton");
-    // changeTextColor.addEventListener("change", changeTempColor);
-
-
+    const locationResetBtn = document.getElementById("locationReset");
+    locationResetBtn.addEventListener("click", resetLocation);
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);

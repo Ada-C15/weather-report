@@ -10,15 +10,21 @@
 <body>
     
     <header class="title">
-                <h1 class="main-text">Weather Report for: 
-                    <h4 id="locationDisplay">Unceded Coast Salish Land</h4> 
-                </h1>
-                <h2> *Whether or not this report matches the weather you are experiencing is completely coincidental* </h2>
+        <ul>
+            <li>
+                <h1 class="main-text">Weather Report for  
+                </h1> </li>
+                <li> <h4 id="locationDisplay">
+                    Unceded Coast Salish Land</h4> </li>
+                
+                    <li> <h2 id= "sassy-subtitle"> *Whether or not this report matches the weather you are experiencing is completely coincidental* </h2> </li>
+            </ul>
             </div>
         </figure>
     </header>
 
     <section class="weather-display">
+        <div class="left-column">
 
         <div class="weather-item" id=temperature>
             <h3 id="temperatureCount">Temperature 65℉</h3>
@@ -30,34 +36,33 @@
             <!-- <h3>Sky</h3> -->
             <label for="sky">Sky</label>
             <select class="sky" id="sky">
-                <option value="">None Selected</option>
                 <option value="sunny" selected>Sunny</option>
                 <option value="cloudy">Cloudy</option>
                 <option value="rainy">Rainy</option>
                 <option value="snowy">Snowy</option>
             </select>
-            
-            <section id="skyImageContainer">
-            </section>
         </div>
 
         <div class="weather-item" id="location">
             <h3>Enter the weather location below:</h3>
             <form>
                 <label for="location">Location</label><br>
-                <input type="text" id="locationBox" name="location" value="Unceded Coast Salish Land">
+                <input type="text" id="locationInput" name="location" value="Unceded Coast Salish Land">
                 <br> <br>
-                <input type="submit" id="locationSubmit" value="Submit">
                 <input type="reset" id="locationReset" value="Reset">
             </form>
-
         </div>
-        <div class="weather-item" id="landscape">
-            <h3>Display Space</h3>
+    </div>
 
+    <div class="right-column" id="landscape">  
+        <div class="weather-item">
+            <h3 id=landscape-text>Choose a Sky option or change the temperature for a custom weather report!</h3>
+            <section id="skyImageContainer"> 
+                <img src="https://media.giphy.com/media/snr51Qmnalxok/giphy.gif" alt="A gif from Miss Congeniality of a contestant saying: I'd have to say April 25th. Becasue it's not too hot, not too cold. All you need is a light jacket!">
+            </section>
         </div>
+    </div>  
     </section>
-
 
 
     <footer>
