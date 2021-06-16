@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Weather Report</title>
+    <meta name="description" content="Weather Report">
+    <meta name="author" content="SitePoint">
+
+    <link rel="stylesheet" href="styles/index.css?v=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Benne&display=swap" rel="stylesheet"> 
+
+</head>
+
+<body>
+    <h1>Weather Report</h1>
+    <section id= "weather">
+        <h1>Weather Garden:</h1> 
+        <h2 id="newCity">City</h2>
+    </section>
+    <section id="visual">
+        <span id="skyline">🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨</span>
+        <span id="tempCounter"> 49°F </span>
+        <span id="landscape">🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲</span>
+    </section>
+
+    <section id="jsbuttons">
+        <section id="tempsec">
+            <label for="templabel">Temperature:</label>
+            <button id="increaseTempButton">+</button>
+            <button id="decreaseTempButton">-</button>
+        </section>
+        <section id="skysec">
+            <label for="sky">Sky:</label>
+            <select id="sky" name="sky">
+                <option value="snowy">Snowy</option>
+                <option value="rainy">Rainy</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="sunny">Sunny</option>
+            </select>
+        </section>
+        <section id="citysec">
+            <label for="cityName">City name:</label>
+            <input type="text" id="city" name="city">
+            <button id="cityResetButton">Reset</button>
+        </section>
+
+    </section>
+
+    <script src="scripts/index.js" type="text/javascript"></script>
+</body>
+</html>
