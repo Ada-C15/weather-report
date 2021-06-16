@@ -1,7 +1,7 @@
 const state = {
-    currentTemp: 60,
+    currentTemp: 70,
+    sky: 'Sunny'
 };
-
 
 const setTemperatureColor = (temp) => {
     const temperatureText = document.getElementById("temperatureText");
@@ -25,22 +25,22 @@ const setTemperatureColor = (temp) => {
 const setLandscapeImage = (temp) => {
     const landscapeImage = document.getElementById("landscapeImage");
     if (temp >= 100) {
-        landscapeImage.src='scorched-landscape.jpg';
+        landscapeImage.src='./images/scorched-landscape.jpg';
     } else if (temp < 100 && temp >= 80) {
-        landscapeImage.src='desert-landscape.jpg';
+        landscapeImage.src='./images/desert-landscape.jpg';
     } else if (temp < 80 && temp >= 70) {
-        landscapeImage.src='grassy-landscape.jpg';
+        landscapeImage.src='./images/grassy-landscape.jpg';
     } else if (temp < 70 && temp >= 55) {
-        landscapeImage.src='flower-landscape.jpg';
+        landscapeImage.src='./images/flower-landscape.jpg';
     } else if (temp < 55 && temp >= 40) {
-        landscapeImage.src='fall-landscape.jpg';
+        landscapeImage.src='./images/fall-landscape.jpg';
     } else {
-        landscapeImage.src='snow-landscape.jpg';
+        landscapeImage.src='./images/snow-landscape.jpg';
     }
 };
 
 const increaseTemperature = () => {
-    state.currentTemp++;
+    state.currentTemp += 1;
     const temperatureText = document.getElementById("temperatureText");
     temperatureText.textContent = `${state.currentTemp}`;
     setTemperatureColor(state.currentTemp);
@@ -48,17 +48,52 @@ const increaseTemperature = () => {
 };
 
 const decreaseTemperature = () => {
-    state.currentTemp--;
+    state.currentTemp -= 1;
+    const temperatureText = document.getElementById("temperatureText");
+    temperatureText.textContent = `${state.currentTemp}`;
     setTemperatureColor(state.currentTemp);
     setLandscapeImage(state.currentTemp);
 };
 
-const registerEventHandlers = () => {
-    const increaseTempButton = document.querySelector("#increaseTemp");
-    const decreaseTempButton = document.querySelector("#decreaseTemp");
-    
-    increaseTempButton.addEventListener("click", increaseTemperature);
-    decreaseTempButton.addEventListener("click", decreaseTemperature);
-};
+const setSkyImage = (sky) => {
+    const skyImage = document.getElementById("skyImage");
+    if (sky == "Sunny") {
+        skyImage.src='./images/sunny-sky.jpg';
+    } else if (sky == "Cloudy") {
+        skyImage.src='./images/cloudy-sky.jpg';
+    } else if (sky == 'Rain') {
+        skyImage.src='./images/rainy-sky.jpg';
+    } else if (sky == 'Snow') {
+        skyImage.src='./images/snowy-sky.jpg';
+    } else if (sky == 'Storm') {
+        skyImage.src='./images/storm-sky.jpg';
+    }
+}
 
-document.addEventListener("DOMContentLoaded", registerEventHandlers);
+const setSky = () => {
+    const skyInput = document.getElementById("skySelect").value;
+    setSkyImage(skyInput);
+    state.sky = skyInput;
+}
+
+
+////////// register event handlers ///////////
+
+const increaseTempButton = document.getElementById("increaseTemp");
+const decreaseTempButton = document.getElementById("decreaseTemp");
+
+increaseTempButton.addEventListener("click", increaseTemperature);
+decreaseTempButton.addEventListener("click", decreaseTemperature);
+
+const skySelection = document.getElementById("skySelect");
+skySelection.addEventListener("change", setSky);
+
+// const registerEventHandlers = () => {
+//     const increaseTempButton = document.getElementById("increaseTemp");
+//     const decreaseTempButton = document.getElementById("decreaseTemp");
+    
+//     increaseTempButton.addEventListener("click", increaseTemperature);
+//     decreaseTempButton.addEventListener("click", decreaseTemperature);
+// };
+
+// document.addEventListener("DOMContentLoaded", registerEventHandlers);
