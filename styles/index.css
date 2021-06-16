@@ -22,6 +22,7 @@ main {
 }
 #input-containers {
     width: 35%;
+    padding: 10px;
 }
 
 #garden-container {
@@ -31,14 +32,18 @@ main {
     flex-direction: column;
     align-items: center;
 }
+#garden-container h2 {
+    margin-left: 0px;
+}
 #garden-image {
     display: flex;
     flex-direction: column;
     margin-top: 40px;
-    width: 65%;
+    width: 50%;
     align-items: center;
     justify-content: space-between;
     height: 150px;
+    padding: 15px;
 }
 #change-temp-container {
     display: inline-flex;
@@ -49,4 +54,7 @@ main {
 }
 #temp-buttons {
     margin-right:10px;
+}
+h2 {
+    margin-left: 10px;
 }
