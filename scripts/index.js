@@ -5,29 +5,31 @@ const state = {
     tempClasses: "box coldWeather"
 }
 
-const updateTemperature = () => {
-    state.temperature += 1
-    changeTempBackground()
-    const temperatureElement = document.querySelector("#currentTemp")
-    temperatureElement.textContent = `${state.temperature}`;
-}
-
 const changeTempBackground = () => {
     const temperatureBox = document.querySelector("#temperature")
     if (state.temperature >=80) {
         state.tempClasses = `box tooHot`;
-    } else if (79 >= state.temperature >= 70) {
+    } else if (state.temperature >= 70 && state.temperature <= 79) {
         state.tempClasses = `box notTooHot`;
-    } else if (69 >= state.temperature >= 60){
+    } else if (state.temperature >= 60 && state.temperature <= 69){
         state.tempClasses = `box quiteCool`;
-    } else if (59 >= state.temperature >= 50){
+    } else if (state.temperature >= 50 && state.temperature <= 59){
         state.tempClasses = `box jacketWeather`;
     }
-    return state.tempClasses
+    temperatureBox.className = `${state.tempClasses}`
+}
+
+const updateTemperature = () => {
+    state.temperature += 1;
+    changeTempBackground();
+    const temperatureElement = document.querySelector("#currentTemp")
+    temperatureElement.textContent = `${state.temperature}`;
+
 }
 
 const downTemperature = () => {
     state.temperature -= 1;
+    changeTempBackground();
     const temperatureElement = document.querySelector("#currentTemp")
     temperatureElement.textContent = `${state.temperature}`
 }
