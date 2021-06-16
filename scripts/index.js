@@ -2,21 +2,42 @@ const state = {
     temperature: 45,
     city: "Seattle",
     cityButton: "Submit",
-    tempClasses: "box coldWeather"
+    tempClasses: "box coldWeather",
+    landscape: "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲",
+    sky: "☁️ ☁️ ☁️ ☀️ ☁️ ☁️"
 }
 
 const changeTempBackground = () => {
     const temperatureBox = document.querySelector("#temperature")
+    const landscape = document.querySelector("#landscape")
     if (state.temperature >=80) {
         state.tempClasses = `box tooHot`;
+        state.landscape = `🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂`;
     } else if (state.temperature >= 70 && state.temperature <= 79) {
         state.tempClasses = `box notTooHot`;
+        state.landscape = `🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷`
     } else if (state.temperature >= 60 && state.temperature <= 69){
         state.tempClasses = `box quiteCool`;
+        state.landscape = `🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃`
     } else if (state.temperature >= 50 && state.temperature <= 59){
         state.tempClasses = `box jacketWeather`;
     }
     temperatureBox.className = `${state.tempClasses}`
+    landscape.textContent = `${state.landscape}`
+}
+
+const updateSky = () => {
+    const sky = document.querySelector("#skySelection").value;
+    const skyDisplay = document.querySelector("#skyDisplay");
+    if (sky === "rainy") {
+        state.sky = `🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧`;
+    } else if (sky === "cloudy") {
+        state.sky = `☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️`;
+    } else if (sky === "snowy") {
+        state.sky = `🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨`;
+    }
+    skyDisplay.textContent=`${state.sky}`
+
 }
 
 const updateTemperature = () => {
@@ -56,6 +77,8 @@ const registerEventHandlers = () => {
     downTemperatureButton.addEventListener('click', downTemperature)
     const submitCityButton = document.querySelector("#submitCity");
     submitCityButton.addEventListener('click', updateCity)
+    const skySelector = document.querySelector("#skySelection");
+    skySelector.addEventListener(`change`, updateSky)
     
 }
 
