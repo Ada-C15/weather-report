@@ -15,7 +15,6 @@ body {
     grid-area: 1 / 1 / 2 / 5;
     font-family: Monaco;
     font-size: x-large;
-    font-weight: 900;
 }
 
 #temperature {
@@ -31,13 +30,16 @@ body {
     /* border-style: solid;
     border-radius: 25px; */
     text-align: center;
+    font-family: Monaco;
     grid-area: 3 / 1 / 4 / 3;
 }
 
 #cityName {
-    border-style: solid;
+    background: rgb(215,232,232);
+    background: linear-gradient(0deg, rgba(215,232,232,0.8702702702702703) 0%, rgba(196,235,222,0.7567567567567568) 93%);
     border-radius: 25px;
     text-align: center;
+    font-family: Monaco;
     grid-area: 4 / 1 / 5 / 3;
 }
 
@@ -63,43 +65,11 @@ button {
     color: yellow;
 }
 
-.dropbtn {
-    background-color: #04AA6D;
-    color: white;
-    padding: 16px;
-    margin-top: 50px;
-    font-size: 16px;
-    border: none;
-    width: 200px;
-    align-items: center;
-}
-
 .dropdown {
-    position: relative;
+    align-items: center;
     display: inline-block;
+    margin-top: 20px;
 }
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
 
 label {
     display: block;
@@ -110,9 +80,13 @@ input,
 label {
     margin: .4rem 0;
 }
-#skyWeatherGarden {
+#skyContainer {
     font-size: xx-large;
 }
 #landscapeContainer {
     font-size: xx-large;
+}
+
+label {
+    font-family: Monaco;
 }

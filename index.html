@@ -3,14 +3,18 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
-        <title>Weather Report</title>
+        <title>🌧Weather Report</title>
         <link href="styles/index.css" rel="stylesheet" type="text/css" />
     </head>
     <body>
         <main class="container">
             <section id="title">
                 <h1>Weather Report</h1>
-                <h3>For the city of Seattle</h3>
+                    <span>
+                    For the city of
+                    <span id="cityOf">Birmingham</span>
+                    </span>
+
             </section>
             <section id="temperature">
                 <h2>Temperature 🌡️
@@ -20,23 +24,25 @@
                 <button id="temperatureDecrease">⬇️ </button>
             </section>
             <section id="sky">
+                <h2>Sky</h2>
                 <section class="dropdown">
-                    <button class="dropbtn">Sky</button>
-                    <section class="dropdown-content">
-                        <a href="#">Sunny</a>
-                        <a href="#">Cloudy</a>
-                        <a href="#">Rainy</a>
-                        <a href="#">Snowy</a>
-                    </section>
+                    <select id="sky-select">
+                        <option value="">Please select a sky</option>
+                        <option value="sunny" >Sunny</option>
+                        <option value="cloudy">Cloudy</option>
+                        <option value="rainy">Rainy</option>
+                        <option value="snowy">Snowy</option>
+                    </select>
                 </section>
             </section>
             <section id="cityName">
                 <label for="city">City Name</label>
-                <input type="text" id="city" name="city" required size="10">
+                <input type="text" id="city" required size="10" value="Birmingham">
+                <button id="cityReset">Reset</button>
             </section>
             <section id="weatherGarden">
                 <h2>Weather Garden</h2>
-                <div id="skyWeatherGarden">☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️</div>
+                <section id="skyContainer">☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️</section>
                 <p>&nbsp;</p>
                 <section id="landscapeContainer">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</section>
             </section>

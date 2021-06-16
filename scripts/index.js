@@ -1,45 +1,95 @@
 const state = {
-    tempCount: 70,
+    clickCount: 70,
 };
 
-// let temp = document.getElementById("tempCount");
 
-// const tempColor = () => {
-//     if (state.temp >= 80) {
-//         temp.style.color = "red";
-//     }
-// };
+const changeColor = (event) => {
+    let temp = document.getElementById("tempCount");
+    if (state.clickCount >= 80) {
+        temp.style.color = "red";
+    } else if (state.clickCount >= 70 && state.clickCount <= 79) {
+        temp.style.color = "orange";
+    } else if (state.clickCount >= 60 && state.clickCount <= 69) {
+        temp.style.color = "yellow";
+    } else if (state.clickCount >= 50 && state.clickCount <= 59) {
+        temp.style.color = "green";
+    } else if (state.clickCount < 50) {
+        temp.style.color = "teal";
+    }
+};
+
+const changeLandscape = (event) => {
+    const landscapeContainer = document.querySelector("#landscapeContainer");
+        if (state.clickCount >= 80) {
+            landscapeContainer.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+        } else if (state.clickCount >= 70 && state.clickCount <= 79) {
+            landscapeContainer.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
+        } else if (state.clickCount >= 60 && state.clickCount <= 69) {
+            landscapeContainer.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
+        } else if (state.clickCount < 59) {
+            landscapeContainer.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
+        }
+}
+
+const changeSky = () => {
+    const selectSky = document.getElementById("sky-select").value;
+    const skyWeatherGarden = document.getElementById("skyContainer");
+    if (selectSky === "cloudy") {
+        skyWeatherGarden.textContent = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+    } else if (selectSky === "sunny") {
+        skyWeatherGarden.textContent = "☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️";
+    } else if (selectSky === "rainy") {
+        skyWeatherGarden.textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+    } else if (selectSky === "snowy") {
+        skyWeatherGarden.textContent = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
+    }
+}
+
+const changeCity = () => {
+    const name = document.getElementById("city").value;
+    const cityOf = document.getElementById("cityOf");
+    cityOf.textContent = name;
+}
+
+const resetCity = () => {
+    const cityOf = document.getElementById("city");
+    cityOf.value = "Birmingham";
+    changeCity();
+}
 
 const tempIncrease = () => {
     const tempCountContainer = document.getElementById("tempCount");
-    state.tempCount +=1;
-    // tempColor();
-    tempCountContainer.textContent = state.tempCount;
+    state.clickCount +=1;
+    changeColor();
+    tempCountContainer.textContent = state.clickCount;
+    changeLandscape();
 };
 
 const tempDecrease = () => {
     const tempDecreaseCountContainer = document.getElementById("tempCount");
-    state.tempCount -=1;
-    // tempColor();
-    tempDecreaseCountContainer.textContent = state.tempCount;
+    state.clickCount -=1;
+    changeColor();
+    tempDecreaseCountContainer.textContent = state.clickCount;
+    changeLandscape();
 };
-
-const changeLandscape = () => {
-    const landscapeContainer = document.querySelector("#landscapeContainer");
-        if (state.tempCount >= 80) {
-            landscapeContainer.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
-        }
-}
 
 const registerEventHandlers = () => {
     const increaseButton = document.querySelector("#temperatureIncrease");
     increaseButton.addEventListener("click", tempIncrease);
+
     const decreaseButton = document.querySelector("#temperatureDecrease");
     decreaseButton.addEventListener("click", tempDecrease);
-    const landscape = document.querySelector("#landscapeContainer");
-    landscape.addEventListener(changeLandscape)
-    // const changeColor= document.querySelector("tempCount");
-    // changeColor.addEventListener(,tempColor)
+
+    changeSky();
+    const skySelect = document.getElementById("sky-select");
+    skySelect.addEventListener("change", changeSky);
+
+    changeCity();
+    const city = document.getElementById("city")
+    city.addEventListener("input", changeCity);
+
+    const cityReset = document.getElementById("cityReset");
+    cityReset.addEventListener("click", resetCity);
 }; 
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
