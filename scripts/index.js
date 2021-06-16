@@ -28,7 +28,7 @@ const changeSky = (choice) => {
         document.body.style.backgroundSize = "100%";
 
     } else if (choice=="rainy") {
-        currentSky = document.body.style.background = "url('assets/rain.jpg') no-repeat";
+        currentSky = document.body.style.background = "url('assets/rainn.jpg') no-repeat";
         document.body.style.backgroundSize = "100%";
 
     } else if (choice=="snowy") {
