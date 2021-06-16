@@ -24,3 +24,17 @@ body {
   padding: 2rem;
   background-color: rgb(242, 205, 103);
 }
+.mainHeader {
+    color: rgb(216, 76, 76);
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    margin: 2rem auto 3rem 0;
+  
+}
+  
+.mainHeader > h1 {
+    margin-right: 2rem;
+    font-size: 3em;
+}
+  
