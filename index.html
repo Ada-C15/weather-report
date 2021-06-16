@@ -13,18 +13,55 @@
 <body>
     <header>
         <h1>Weather Forecast</h1>
-        <h3>Mountain Weather For
-            <span id= "headerMountainName"></span>
+        <h3>Mountain Weather For:
+            <span id= "headerMountainName">Mt. Baker</span>
         </h3>
     </header>
 
+    <section class="temperature">
+        <h3>Temperature up top: </h3>
+        <div>
+            <span id="tempValue">30</span>
+        </div>
+        <div>
+            <span id="increaseTemp">⬆️</span>
+            <span id="decreaseTemp">⬇️</span>
+        </div>    
+    </section>
 
-</body>
+    <section class= "skyTheme">
+        <h3>Sky:</h3>
+        <select id="skySelection">
+            <option>Blue Bird</option>
+            <option>Stormy</option>
+            <option>Concrete POW</option>
+            <option>POW POW</option>
+        </select>
+    </section>
+
+    <section class="mountainName">
+        <h3> Mountain Name:</h3>
+        <input type= "text" id="mountainNameInput" value="Mt. Baker" />
+        <button id="resetButton">Reset</button>
+    </section>
+
+    <section class="Weather Garden">
+        <h3> Weather Window</h3>
+        <div id="skyDisplay">🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨❄️🌨❄️❄️❄️🌨🌨 </div>
+        <div id="landscape">⛷❄️❄️⛷❄️❄️⛷❄️❄️⛷❄️❄️⛷❄️❄️⛷❄️❄️⛷❄️</div>
+    </section>
+    <section class="image">
+        <img src="images/Mount-Baker-Backcountry-Skiing-Overview.jpg" alt="Skiing on Baker">
+    </section>
+
+
+
 <footer>
-<h2>Thank you for stopping by. Have a safe trip to the mountains!</h2>
+<h3>Thank you for stopping by. Have a safe trip to the mountains!</h3>
 <p>&copy; 2021 Juliana DeCarvalho Sutherland</p>
 </footer>
-<script src="scripts/index.js" type="text/javascript"></script>
 
+<script src="scripts/index.js" type="text/javascript"></script>
+</body>
 </html>
 
