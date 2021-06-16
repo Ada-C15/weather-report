@@ -80,6 +80,14 @@ const cityNaming = (event) => {
     cityHeader.textContent = event.target.value
 }
 
+const resetCity = () => {
+    const cityHeader = document.querySelector("#headerCityName")
+    cityHeader.textContent = "San Francisco"
+
+    const nameCity = document.querySelector("#cityNameInput")
+    nameCity.value = "San Francisco"
+}
+
 const registerTempHandler = () => {
     const increaseButton = document.querySelector("#increaseTempControl");
     increaseButton.addEventListener("click", tempIncrease);
@@ -92,6 +100,9 @@ const registerTempHandler = () => {
 
     const nameCity = document.querySelector("#cityNameInput");
     nameCity.addEventListener("change", cityNaming);
+
+    const reset = document.querySelector("#cityNameReset");
+    reset.addEventListener("click", resetCity)
 }
 
 document.addEventListener("DOMContentLoaded", registerTempHandler);
