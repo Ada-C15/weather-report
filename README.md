@@ -75,7 +75,7 @@ Wave 2:
 1. A clickable element to decrease temperature
 1. An element that displays a landscape
 
-Wave 3:
+Wave 3: // THeme display
 
 1. A `<select>` dropdown element to set the sky type
 1. An element that displays a sky
@@ -85,7 +85,7 @@ Wave 4:
 1. An element that displays the city name
 1. An element that contains a `<input type="text">` element, used to rename the city
 
-Wave 5:
+Wave 5: // resetting 
 
 1. A clickable element to reset the city name
 

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--  H E A D -  YOU       W O N ' T  SEE IT ON WEBPAGE
+ONLY in webpage TAB, -- LINKS STYLES and you could link java script
+in this section as well  -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Ari's &mdash; Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet" type="text/css" />
+    <!-- <link href="styles/index.css" rel="stylesheet"/> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<!-- WEBSITE BAR - ALL PAGES-->
+<!-- <section class="header">
+    <h2 class="center">Weather</h2>
+</section> -->
+
+<!-- <section class="section-title">
+    <h2>ABOUT</h2>
+</section> -->
+
+
+<!--  ⇊⇊⇊⇊⇊ WHAT YOU SEE IN WEBSITE STARTS HERE ⇊⇊⇊⇊⇊⇊⇊⇊ -->
+<body>
+    <main>
+        <header >
+            <h1 class="center">☀️ Welcome to Ari's 
+                🌎 Weather Channel 🌕</h1>
+            <nav id="top">
+                <!--  MENU -->
+                <div class="grid-container">
+                    <a href="./index.html"><div class="grid-item"><i class="letter-wide fa fa-home"></i> Home</div></a>
+                    <!-- <a href="./about.html"><div class="grid-item"><i class="fa fa-user"></i>About</div></a>   -->
+                    <!-- <a href="./weather-report.html"><div class="grid-item"><i class="fa fa-th"></i>Website</div></a> -->
+                </div>
+            </nav>  
+        </header>
+        <!--  ENTER CITY TO DISPLAY SECTION -->
+        <section class="center">
+            <h3>Enter the city or zip code.</h3>
+            <!-- Getting the input with <input> text box -->
+            <input type="text" id="city" value="">
+            <!-- one way to submit with function in html doc
+            <button onclick="myFunction()">Send</button> -->
+            <!-- another way with event handlers with js script -->
+            <button id="submitButton"><i class="fa fa-mouse-pointer"></i> Submit</button>
+            <button id="resetButton"><i class="fa"></i> Reset</button>
+            <br><br>
+            <!-- MOVE THE SCRIPT TO BOTTOM AND CODE INSIDE TO JS 
+            idex.js -->
+            <!-- <script>
+                function myFunction() {
+                    const x = document.getElementById("city").value;
+                    document.getElementById("demo").innerHTML = x;
+                }
+                </script> -->
+        </section>
+
+        <!-- ACTUAL WEATHER SECTION -->
+        <section class='weather-outside-grid'>
+            <h2 id="facts__heading" class='letter-wide'>Weather:</h2>
+            <!-- <h2 id="facts__heading2">WEATHER IN:</h2> -->
+            
+            <!-- <p id="demo"></p> -->
+            <section id="weather-section-container">
+                <section id='weather-basics'>
+                    <p id='time-display'>Display of time</p>
+                    <span id='temperature'>
+                        <p id='temperature-text' class="center">60</p>
+                        <span id='temperature-controls'>
+                        <button>⬆️</button>
+                        <button>⬇️</button>
+                        </span></span>
+                    <p id='weather-description'> Pleasant </p>
+                    <p id='tips-recommendations'> Picnic time!</p>
+                </section>
+                <div id='image-area'>
+                    <img src='./assets/html/IMG_8549.jpeg' alt="temporary image"
+                    width="500" height="333">
+                </div>
+            </section>
+            <section>
+                <ol id="facts__list" class="facts-list-container">
+                    <li id='1'>sometimes red</li>
+                    <li id="facts__fact--important" class='blue'>Can be rly small or rly big</li>
+                    <li id='3'>Scary looking 🕷🦂</li>
+                    <li id='4'>Cute looking 🐌🦋</li>
+                    <li id='5'>krabby was based off this one</li>
+                </ol>
+            </section>
+        </section>
+        <section>
+            <button id="addCrabButton">Add Crab</button>
+            <button id="addPossibleBugsButton">Add All BUGS!</button>
+        </section>
+
+        <section id="crabContainer">
+        </section>
+        <section id="bigBugContainer">
+        </section>
+        <p id="bugCounter"></p>
+
+    </main>
+    <script defer src="scripts/index.js"></script>
+</body>
+<p>
+</p>
+
+</html>
