@@ -2,8 +2,11 @@
 <html> 
 
     <head>
+    <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="./styles/index.css" media="screen"/>
     <script src="./scripts/script.js"></script>
+    <script src="./scripts/index.js"></script>
+    <title>Weather World</title>
     </head>
 
     <body>
@@ -34,11 +37,16 @@
 
 <!-- WAVE 2: -->   <!--TEMPERATURE DISPLAY --> <!-- CLICK UP/DOWN TEMP -->
             <h2 class="heading">Temperature</h2>
-            <button type="up">UP</button>
-            <button type="down">DOWN</button>
-            </div>
-        </section>
+            <h2 id="givenTemp">70</h2>
 
+            <article>
+                <button id="addUpButton">UP</button>  
+                <button id="addDownButton">DOWN</button>
+            </article>
+
+        </div>
+        </section>
+<!-- changed the button from type to id to use the getElementById() -->
 
 <!-- SECTION 2 --> <!-- CITY SUMMARY DISPLAYS -->
 <!-- WAVE 4 --> <!-- Element(s) that displays the city name(s) -->
