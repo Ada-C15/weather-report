@@ -28,23 +28,24 @@ const state = {
 const tempValueColor = () => {
     if ((state.degrees === "F" && state.currentTemp < 50) ||
     (state.degrees === "C" && state.currentTemp < 10)){
-        return ["#20567e", "🌲🌲⛄️🌲⛄️❄️🥶❄️🥶⛄️🥶❄️🌲"]; //Blue
+        return ["#20567e", "🌲🌲⛄️🌲⛄️❄️🥶❄️🥶⛄️🥶❄️🌲", "#d6cfcb"]; //Blue
     }
     else if ((state.degrees === "F" && state.currentTemp >= 50 && state.currentTemp < 60) ||
     (state.degrees === "C" && state.currentTemp >= 10 && state.currentTemp < 15)){
-        return ["#1c7c54", "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲"]; //Green
+        return ["#1c7c54", "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲", "#bde4a7"]; //Green
     }
     else if ((state.degrees === "F" && state.currentTemp >= 60 && state.currentTemp < 70) ||
     (state.degrees === "C" && state.currentTemp >= 15 && state.currentTemp < 21)){
-        return ["#f09d51", "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃"]; //Yellow
+        return ["#f09d51", "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃", "#ffe66d"]; //Yellow
     }
     else if ((state.degrees === "F" && state.currentTemp >=70 && state.currentTemp < 80) ||
     (state.degrees === "C" && state.currentTemp >= 21 && state.currentTemp < 30)){
-        return ["#d8572a", "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷"]; //Orange
+        
+        return ["#d8572a", "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷", "#ffc857"]; //Orange
     }
     else if ((state.degrees === "F" && state.currentTemp >= 80) ||
     (state.degrees === "C" && state.currentTemp >= 30)) {
-        return ["#c71f37", "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"]; //Red
+        return ["#c71f37", "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂", "#f4a259"]; //Red
     }
 }
 
@@ -52,20 +53,24 @@ const increaseTemperature = () => {
     state.currentTemp += 1;
     const tempValueElement = document.querySelector("#tempValue");
     const gardenLandscape = document.querySelector("#landscape");
+    const gardenBackground = document.querySelector(".garden");
     let tempColor = tempValueColor();
     tempValueElement.style.color = tempColor[0];
     tempValueElement.textContent = `${state.currentTemp} °${state.degrees}`;
     gardenLandscape.textContent = tempColor[1];
+    gardenBackground.style.background = tempColor[2];
 };
 
 const decreaseTemperature = () => {
     state.currentTemp -= 1;
     const tempValueElement = document.querySelector("#tempValue");
     const gardenLandscape = document.querySelector("#landscape");
+    const gardenBackground = document.querySelector(".garden");
     let tempColor = tempValueColor();
     tempValueElement.style.color = tempColor[0];
     tempValueElement.textContent = `${state.currentTemp} °${state.degrees}`;
     gardenLandscape.textContent = tempColor[1];
+    gardenBackground.style.background = tempColor[2];
 };
 
 const toCelsiusTemp = () => {
