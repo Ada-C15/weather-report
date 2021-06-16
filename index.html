@@ -19,15 +19,21 @@
         </section>
         <section id="tempDisplay">73</section> 
       </section>
-      <section id="cloudStatus" class="adjuster">Cloudy</section>
+      <section id="cloudDisplay" class="adjuster">
+        <select name="howCloudy" id="cloudStatus">
+          <option value="cloudy">Cloudy</option>
+          <option value="partlyCloudy">Partly Cloudy</option>
+          <option value="rainy">Rainy</option>
+          <option value="sunny">Sunny</option>
+          <option value="onFireSky">This is fine.</option>
+        </select>
+      </section>
       <section id="citySetter" class="adjuster">Seattle</section>
       <div class="break"></div>
       <section id="gardenDisplay">
         Weather Garden
-        ☁️     ☁️   
-            ☁️     
-
-        🌻__🌷🌷🌱_
+        <section id="sky">☁️__☀️☁️_☁️</section>
+        <section id="landscape">🌻__🌷🌷🌱_</section>
       </section>
     </main>
 
