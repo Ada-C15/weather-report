@@ -125,13 +125,6 @@ const changeTheme = () => {
   skyTheme.className = sky;
 }
 
-const getAndDisplayCity = () => { 
-  const cityName = document.getElementById("city").value; 
-  const appearanceHeading = document.getElementById("facts__heading");
-  
-  appearanceHeading.textContent = "Weather in: " + cityName.toUpperCase(); 
-  document.querySelector('#temperature-text').textContent = state.tempClickCount;
-
 ////////////////////////
 // Changing Appearance//
 ////////////////////////
@@ -278,4 +271,3 @@ const registerEventHandlers = () => {
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
-
