@@ -13,7 +13,7 @@
     </head>
     <body>
         <h1>Weather Report</h1>
-        <h2>How is the weather today in Seattle?</h2>
+        <h2 id="defaultCity">How is the weather today in Seattle?</h2>
         <section id="container">
             <section class="box" id="temperature">
                 <h3>Temperature</h3>
@@ -32,8 +32,8 @@
             </section>        
             <section class="box" id="cityName">
                 <h3>City Name</h3>
-                <input type="text">
-                <button>Reset City</button>
+                <input id="userCity" type="text">
+                <button id="submitCity">Submit</button>
             </section>    
             <section id="weatherGarden">
                 <h3>Weather Garden</h3>
