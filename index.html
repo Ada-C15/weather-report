@@ -2,7 +2,7 @@
 
     <head>
         <meta charset="utf-8">
-        <link href="./styles/index.css" rel="stylesheet"/>
+        <script src="./styles/index.css" rel="stylesheet"></script>
         <script src="./scripts/index.js"></script>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&display=swap');
@@ -18,7 +18,7 @@
         <section id="skyContainer"></section>
             <h2 class="title">SKY</h2>  
             <p>Hey, what type of sky is happening out there?</p> 
-            <select class="controls" name="sky" id="sky-select">
+            <select class="controls" name="sky" id="skySelect">
                 <option value="sun">Brilliant Sun</option>
                 <option value="clouds">Dashes of Clouds</option>
                 <option value="clear">Clear</option>
@@ -27,22 +27,28 @@
         </section>  
         <section id="cityNameContainer">
             <h2 class="title">CITY NAME</h2>
-            <button onclick="document.querySelector('#cityInput').value =''" >Reset City</button>
+            <button>Reset City</button>
             <input type="text" value="Seattle" id="cityInput">
         </section>
         </header>   
         <section class="weatherGardenContainer">
             <h2 class="title">WEATHER GARDEN</h2>   
-            <p>lists of emojos go here that depend on the temperature</p>
-            </section>
-        <div></div>
+            <div id="gardenContent" class="garden_content">
+                <div id="sky"></div>
+                <div id="landscape"></div>
+            </div>
+        </section>
+        
+        
+            <div></div>
         <section id="tempContainer">
             <h2 class="title">TEMPERATURE</h2>  
-            <button onclick="increaseTemp()"class="button" >⬆️</button>
+            <button id="increaseTemp"class="button" >⬆️</button>
             <span id="temperature">70</span>
-            <button class="button" onclick="decreaseTemp()" id ="decreaseTemp">⬇️</button>
-
+            <button class="button" id ="decreaseTemp">⬇️</button>
+            
         </section>
+        <section id='changeSkyColor'></section>
         
         
     </body>
