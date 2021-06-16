@@ -1,0 +1,161 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:monospace;
+    background-image: url('/Users/ada/Developer/projects/weather-report/images/pusheen.png');
+    background-size:cover;
+    background-position: top center;
+
+    
+}
+
+.app-wrap{
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    padding:50px 15px 15px;
+}
+
+header span{
+    display:flex;
+    margin-inline-start: auto;
+    margin-right: 20px;
+    font-size: 18px;
+}
+
+.city-name__section input{
+    width: 100%;
+    max-width: 280px;
+    padding: 10px 15px;
+    border-color: hotpink;
+    background-color:thistle;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.city-name__section button{
+    padding:10px 15px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: .5px solid #fff;
+    border-radius: 10px 10px 10px 10px;
+    border-color: hotpink;
+    background-color:thistle;
+}
+
+main{
+    flex: 1 1 100%;
+    padding: 25px 25px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.temperature__section #tempValue{
+    font-size: 102px;
+    font-weight: 900;
+}
+
+.Chicago__seasons h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+}
+
+.Chicago__seasons #seasonSelect{
+    border-radius: 10px 10px 10px 10px;
+    padding:10px 15px;
+    background-color:rgb(238, 227, 238);
+    border: .5px solid rgb(238, 128, 238);
+}
+.garden__section h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+.garden__section {
+    
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 1rem;
+    
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    background-color: #e197d2;
+    margin: 2rem;
+    
+    grid-row: 2 / span 3;
+    grid-column: 2;
+    text-align: center;
+    align-self: center;
+  }
+
+.garden__content {
+    min-height: 200px;
+    max-width: fit-content;
+    margin: auto;
+    padding: 2rem;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    border-radius: 8px;
+    font-size: 2em;
+  }
+
+.gray {
+    color:gray;
+}
+
+.red {
+    color: red;
+  }
+  
+.orange {
+    color: orange;
+  }
+  
+.yellow {
+    color: gold;
+  }
+  
+.yellow-green {
+    color: yellowgreen;
+  }
+  
+.green {
+    color: green;
+  }
+  
+.teal {
+    color: teal;
+  }
+  
+.cloudy {
+    background-color: lightgrey;
+  }
+  
+.sunny {
+    background-color: rgb(221, 255, 255);
+  }
+  
+.rainy {
+    background-color: lightblue;
+  }
+  
+.snowy {
+    background-color: lightsteelblue;
+  }
+  

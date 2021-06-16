@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+       <meta charset="UTF-8">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge">
+       <meta name="viewport" content="width=device-width,initial-scale=1.0">
+       <title>Saharai's Weather App</title> 
+       <link rel="preconnect" href="https://fonts.gstatic.com"> 
+       <link href="https://fonts.googleapis.com/css2?family=Rubik&amp;display=swap" rel="stylesheet">
+       <link rel="stylesheet" href="styles/main.css">
+    </head>
+    <body>
+        <div class="app-wrap">
+            <header class="header__header">
+                <h1>Saharai's Lovely Windy City Report 🐨</h1>
+                <span>For the lovely city of: 
+                    <span id="headerCityName" class="header__city-name"> Chicago</span></span>
+                <!-- <input type = "text" autocomplete="off" class="search-box"
+                placeholder="Search for your lovely City 🐨"></input> -->
+            </header>
+            <main>
+                <section class="city-name__section">
+                    <h2>City Name</h2>
+                    <input type="text" id="cityNameInput" class="search-box" value="Chicago" 
+                    placeholder="Search for your lovely city...">
+                    <button id="cityNameReset" class="city-name__reset-btn">Reset</button>
+                </section>
+                <section class="temperature__section">
+                    <h2>Temperature</h2>
+                    <div class="temperature__content">
+                        <div class="temperature__controls">
+                            <span id="increaseTempControl">⬆️</span>
+                            <span id="decreaseTempControl">⬇️</span>
+                        </div>
+                        <span id="tempValue" class="gray">-10</span><span> ºF</span>
+                    </div>
+                </section>
+                <section class="Chicago__seasons">
+                    <h2>Seasons</h2>
+                    <select id="seasonSelect">
+                        <option>Satan's Tundra Hole</option>
+                        <option>Humid and Cloudy Oh My!</option>
+                        <option>ThunderStorms</option>
+                        <option>Cicadas and Sunny(?)</option>
+                    </select>
+                </section>
+                <section class="garden__section">
+                    <h2>Weather Garden</h2>
+                    <div id="gardenContent" class="garden__content Satan's Tundra Hole">
+                        <div id="sky">🌨  🌨    🌨   🌚  🌨  ⛅️  🌨 </div>
+                        <div id="landscape">☃️⛄️❄️__☃️_☃️☃️_☃️❄️☃️</div>
+                    </div>
+                </section>
+            </main>
+        </div>
+        <script src="scripts/main.js"></script>
+    </body>
+</html>
