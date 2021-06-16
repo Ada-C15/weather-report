@@ -1,0 +1,44 @@
+body {
+    background-color: #e4ebf1;
+    font-family: Helvetica;
+}
+
+#heading {
+    color: black;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#city_name {
+    color: darkblue;
+    font-family: fantasy;
+}
+
+.page_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.section p {
+    font-size: 2em;
+    font-family: Impact, sans-serif;
+}
+
+.section_container {
+    display: flex;
+    flex-direction: column;
+    
+}
+.section_heading {
+    color: white
+}
+
+.section, .garden {
+    background-color: rgb(228, 142, 209);
+    border-style: solid;
+    border-color: rgb(160, 145, 160);
+    padding: 10px;
+    margin: 10px
+}
