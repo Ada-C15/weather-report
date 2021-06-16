@@ -1,0 +1,216 @@
+body {
+    /* font-family: "Lucida Console", "Courier New", monospace; */
+    font-family: "Comic Sans MS", "Comic Sans", "cursive";
+
+    /* background-image: linear-gradient(to top, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); */
+    background-image: linear-gradient(to bottom, #64b3f4 0%, #c2e59c 100%);
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.sky-section{
+    grid-row: 2;
+    grid-column: 2;
+    text-align: center;
+}
+
+.garden-box {
+    grid-row : 4;
+    grid-column: 1/span 3;
+    text-align: center;
+    
+}  
+
+.temperature-box,
+.sky-box,
+.city-box {
+    border-radius: 8px;
+    padding: 2rem;
+    /* background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%); */
+    /* background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%); */
+    background-image: linear-gradient(to top, #dfe9f3 0%, white 100%);
+    border: 2px solid rgb(104, 100, 100);
+    text-align: center;
+}
+
+.city-box {
+    grid-row: 3;
+    grid-column: 3;
+}
+
+.temperature-box {
+    grid-row: 3;
+    grid-column: 1;
+}
+
+.sky-box {
+    grid-row: 3;
+    grid-column: 2; 
+}
+
+#ground {
+    font-size: 2em;
+}
+
+#sky {
+    font-size: 3em;
+}
+
+#cityInput {
+    padding:10px;
+    border-radius:10px;
+}
+
+.city-enter {
+    appearance:none;
+    -webkit-appearance:none;
+    padding:10px;
+    border:none;
+    background-color:#6e7ac0;
+    color:#fff;
+    font-weight:600;
+    border-radius:5px;
+    width:30%;   
+}
+
+.header {
+    color: darkblue;
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    margin: 2rem auto 3rem 0;
+}
+
+.header > h1 {
+    margin-right: 2rem;
+}
+
+.header-name::before,
+.header-name::after {
+    content: "✨";
+}
+
+.arrow {
+    border: solid #5b7892;
+    border-width: 0 4px 4px 0;
+    display: inline-block;
+    padding: 10px;
+}
+
+.arrow-border {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+
+.arrow-temp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spring {
+    background: none;
+    background-image: linear-gradient(to top, #bdc2e8 0%, #bdc2e8 1%, #e6dee9 100%);
+}
+
+.summer {
+    background: none;
+    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+}
+.fall {
+    background: none;
+    background-image: linear-gradient(to right, #ffecd2 0%, #fcb69f 100%);
+}
+
+.winter {
+    background: none;
+    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+}
+
+.cloudy {
+    background: none;
+    background-image: url("../assets/blue-sky-sun-and-white-clouds.jpg");
+    border-radius: 50%;
+    /* max-width: 80%; */
+    background-size: cover;
+}
+
+.raining {
+    background: none;
+    /* background-image: url("raining-cloud.jpg"); */
+    background-image: url('../assets/raining-clouds.gif');
+    border-radius: 50%;
+    max-width: 80%;
+    background-size: cover;
+}
+
+.snowing {
+    background: none;
+    background-image: url("../assets/snowing.gif");
+    align-items: center;
+    border-radius: 10%;
+    grid-column: span 3;
+}
+
+.sunshine {
+    background: none;
+    /* background-image: url("blue-sky-sun-and-white-clouds.jpg"); */
+    background-image: url("../assets/bouncing-sun.gif");
+    align-items: center;
+    border-radius: 50%;
+    max-width: 80%;
+    background-size: cover;
+}
+
+.autumn {
+    background: none;
+    /* background-image: url('autumn-scene.jpg'); */
+    background-image: url('../assets/autumn-trees.jpg');
+
+    /* height: 100%; */
+    /* align-items: center; */
+    /* border-radius: 50%;
+    max-width: 80%; */
+    /* background-size: cover; */
+}
+
+.desert {
+    background: none;
+    background-image: url('../assets/desert-cactus.jpg');
+    align-items: center;
+    background-size: cover;
+}
+
+.garden-summer {
+    background: none;
+    background-image: url("../assets/spring-grass-with-flowers.png");
+    align-items: center;
+    background-size: cover;
+}
+
+.snowfield {
+    background: none;
+    background-image: url("../assets/winter-snow.jpg");
+    align-items: center;
+}
+
+#tempDegree {
+    font-size: 3rem;
+    margin-left: 3rem;
+    color: #e09718;
+}
+
+#upArrow {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+    /* border: 2px solid rgb(104, 100, 100); */
+}
+
+#downArrow {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Weather Report</title>
+        <link href="styles/index.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <header class="header">
+            <h1>Weather Report</h1>
+            <h3>
+                For the city of </h3>
+                <span id="headerCityName" class="header-name">
+                    ::before
+                    Seattle
+                    ::after
+                </span>
+            <!-- </h3> -->
+        </header>
+
+        <section id='skyContent' class="sky-section">
+            <div id="sky-inside">
+                <p id="sky">☁️☁️☁️☀️☁️☁️☁️</p>
+            </div>
+        </section>
+
+        <section id="tempContent" class="temperature-box">
+            <h2>Temperature</h2>
+            <div class="arrow-temp">
+                <div class="arrow-border">
+                    <span><i id="upArrow" class="arrow"></i></span>
+                    <span><i id="downArrow" class="arrow"></i></span>
+                </div>
+                <span id="tempDegree">70</span>
+            </div>
+        </section>
+
+        <section class="sky-box">
+            <h2>Sky</h2>
+            <select id="sky-options">
+                <option>🌈Sunny☀️</option>
+                <option>⛅️Cloudy☁️</option>
+                <option>⛈Rainy☔️</option>
+                <option>❄️Snowy☃️</option>
+            </select>
+        </section>
+
+        <section class="city-box">
+            <h2>City Name</h2>
+            <input id="cityInput" type="text" value="Seattle">
+            <button id="resetButton" class="city-enter">Reset</button>
+        </section>
+
+        <section id="gardenContent" class="garden-box">
+            <div id="garden-inside">
+                <p id="ground">🌸🌿🌼 🐜🐜 🌷🌻🌿 🐜 ☘️🌱 🐜 🌻🌷</p>
+            </div>
+        </section>
+
+        <script src="scripts/index.js"></script>
+    </body>
+</html>
