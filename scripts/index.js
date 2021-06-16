@@ -1,7 +1,6 @@
 let tempTrack = 0
 const resetDefaultCityName = "Seattle"
 const incrementTemp = () => {
-    const tempContainor = document.querySelector("#add-temp");
     const tempCountContainer = document.querySelector("#tempCount");
     const gardenContainer = document.querySelector("#garden-box");
     tempTrack += 1;
@@ -23,7 +22,7 @@ document.addEventListener("DOMContentLoaded", registerEventHandlers);
 
 
 const decreasedTemp = () => {
-    const tempContainor = document.querySelector("#dec-temp");
+    // const tempContainor = document.querySelector("#dec-temp");
     const tempCountCont= document.querySelector("#tempCount");
     const gardenContainer= document.querySelector("#garden-box");
     tempTrack -= 1;
@@ -35,6 +34,7 @@ const decreasedTemp = () => {
         gardenContainer.textContent = "🌴🏞--🍦🌊--🌅🏝--🌳🌹--☀️🥭🍍🍸";
     }
     tempCountCont.textContent = `${tempTrack}`;
+    tempNumbersChangeColor()
 };
 const decreasedEventHandlers = () => {
     const downArrow = document.querySelector("#dec-temp");
@@ -69,14 +69,13 @@ document.addEventListener("DOMContentLoaded", changeColorNumberEventHandlers);
 
 
 const skyChanger = () => {
-    const newTemp = document.createElement("span");
     const skyContainer= document.querySelector("#weather-select");
     const gardenBox= document.querySelector("#garden");
 
     const sky = skyContainer.value
     console.log(sky)
     if (sky === "sunny") {
-        gardenBox.textContent = "☀️☀️☀️☀️☀️";
+        gardenBox.textContent = "☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️";
     } else if (sky === "cloudy") {
         gardenBox.textContent = "☁️☁️ ⛅️☁️ ⛅️☁️☁️ ⛅️☁️☁️ ⛅️☁️☁️ ⛅️☁️☁️";
     } else if (sky === "rainy" ) {
@@ -101,7 +100,6 @@ const upDatesCity = (cityName) => {
 };
 
 const displayCityName = () => {
-    const newTemp = document.createElement("span");
     const inputBox = document.querySelector("#city_input_name");
     upDatesCity(inputBox.value)
 };
