@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles/index.css" />
+        <script src="scripts/index.js" type="text/javascript"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header class="main-header"></header>
+            <h1>WEATHER REPORT</h1>
+            <span>Weather for
+                <span id="cityHeaderName"></span></span>
+        </header>
+        
+        <section class="skyContainer"></section>
+            <h2 class="title">SKY</h2>  
+            <p>Hey, what type of sky is happening out there?</p> 
+            <select class="controls" name="sky" id="skySelect">
+                <option value="sun">Brilliant Sun</option>
+                <option value="clouds">Dashes of Clouds</option>
+                <option value="clear">Clear</option>
+                <option value="rain">Rain Drops</option>
+            </select>
+            <div id="emojiSky"></div>
+        </section>  
+        
+        <section class ="cityNameContainer">
+            <h2 class="title">CITY NAME</h2>
+            <button>Reset City</button>
+            <input type="text" value="Seattle" id="cityInput">
+        </section>
+        
+        
+        <section class="weatherGardenContainer">
+            <h2 class="title">WEATHER GARDEN</h2>   
+            <div id="gardenContent" class="garden_content">
+                <div id="sky"></div>
+                <div id="landscape"></div>
+            </div>
+        </section>
+        
+        <section class="tempContainer">
+            <h2 class="title">TEMPERATURE</h2>  
+            <button id="increaseTemp"class="button" >⬆️</button>
+            <span id="temperature">70</span>
+            <button class="button" id ="decreaseTemp">⬇️</button>
+            </section>
+        <section id='changeSkyColor'></section>
+        
+        
+    </body>
+
+    </html>
