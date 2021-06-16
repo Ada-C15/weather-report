@@ -2,7 +2,8 @@
     font-family: "Raleway", sans-serif;
 }
 
-.letter-wide {
+.letter-wide,
+select {
     letter-spacing: 10px;
 }
 
@@ -15,18 +16,27 @@ html {
 
 body {
     color: rgb(228, 70, 30);
-    /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
     height: 100vh;
     background: linear-gradient(to bottom, rgb(255, 237, 189), rgb(240, 234, 190), rgb(224, 231, 192), rgb(209, 228, 193), rgb(194, 225, 194), rgb(178, 222, 196), rgb(163, 219, 197), rgb(147, 216, 199), rgb(132, 213, 200), rgb(117, 210, 201), rgb(101, 207, 203), rgb(86, 204, 204));
 }
 
-/* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
-/* DARK THEME */
-/* body {
-    color: rgb(248, 246, 246);
-    height: 100vh;
+
+/* SKY THEMES */
+.sunny-sky {
+    background: linear-gradient(to bottom, rgba(206, 104, 14, 0.938), rgb(207, 129, 11), rgb(247, 179, 8), rgb(226, 215, 133), rgb(103, 155, 170), rgb(130, 157, 186), rgb(116, 151, 137), rgb(26, 105, 90), rgb(103, 129, 125));
+}
+
+.dark-sky {
+    background: linear-gradient(to bottom, rgb(5, 5, 8), rgb(9, 6, 34), rgb(16, 33, 54), rgb(48, 62, 83), rgb(77, 125, 147), rgb(130, 157, 186), rgb(116, 151, 137), rgb(56, 61, 60), rgb(103, 129, 125), rgb(67, 87, 84), rgb(86, 148, 146), rgb(51, 124, 124));
+}
+
+.cool-sky {
     background: linear-gradient(to bottom, rgb(93, 93, 106), rgb(113, 125, 128), rgb(72, 90, 114), rgb(55, 68, 87), rgb(77, 125, 147), rgb(130, 157, 186), rgb(116, 151, 137), rgb(56, 61, 60), rgb(103, 129, 125), rgb(67, 87, 84), rgb(86, 148, 146), rgb(51, 124, 124));
-} */
+}
+
+.hot-sky {
+    background: linear-gradient(to bottom, rgba(206, 4, 4, 0.938), rgb(207, 129, 11), rgb(247, 179, 8), rgb(226, 215, 133), rgb(142, 122, 177), rgb(130, 157, 186), rgb(123, 15, 15), rgb(116, 151, 137), rgb(54, 110, 145));
+}
 
 .center, 
 #header {

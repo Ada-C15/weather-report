@@ -60,21 +60,30 @@ in this section as well  -->
                 }
                 </script> -->
         </section>
-
         <!-- ACTUAL WEATHER SECTION -->
         <section class='weather-outside-grid'>
             <h2 id="facts__heading" class='letter-wide'>Weather:</h2>
             <!-- <h2 id="facts__heading2">WEATHER IN:</h2> -->
-            
             <!-- <p id="demo"></p> -->
+            <section id="drop-down">
+                <p>Select a Sky Theme.</p>
+                <!-- <select id="mySelect" onchange="changeTheme()"> -->
+                <select id="mySelect">
+                <option value=""></option>
+                <option value="Sunny Sky">Sunny</option>
+                <option value="Dark Sky">Dark</option>
+                <option value="Cool Sky">Cool</option>
+                <option value="Hot Sky">Hot</option>
+                </select>
+            </section>
             <section id="weather-section-container">
                 <section id='weather-basics'>
                     <p id='time-display'>Display of time</p>
                     <span id='temperature'>
                         <p id='temperature-text' class="center">--</p>
                         <span id='temperature-controls'>
-                        <button>⬆️</button>
-                        <button>⬇️</button>
+                        <button id="up-button">⬆️</button>
+                        <button id="down-button">⬇️</button>
                         </span></span>
                     <p id='weather-description'> Pleasant </p>
                     <p id='landscape'>Landscape: </p>

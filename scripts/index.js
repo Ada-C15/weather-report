@@ -17,6 +17,9 @@ const state = {
 //   tempText.textContent = `${state.tempCount}°F`;
 // }
 
+/////////////////////////////////
+//  Temperature Color Condition//
+/////////////////////////////////
 const getColorClass = (temp) => {
   if (temp <= 49) {
     return "freezing";
@@ -37,40 +40,101 @@ const getColorClass = (temp) => {
   return "hot";
 }
 
+/////////////////////////////////////
+// Landscape Temperature Condition //
+////////////////////////////////////
 const getLandscapes= (temp) => {
   if (temp <= 59) {
     return cools;
   }
 
   if (temp <= 69) {
-    return rains;
+    return wind;
   }
 
   if (temp <= 79) {
-    return wind;
+    return rains;
   }
 
   return suns;
 }
 
+/////////////////////////////////////
+// Sky Theme Condition //
+////////////////////////////////////
+const getSky= (value) => {
+  if (value === 'Sunny') {
+    return 'sunny-sky';
+  }
+
+  if (value === 'Dark') {
+    return wind;
+  }
+
+  if (value === 'Cool') {
+    return rains;
+  }
+
+  if (value === 'Hot') {
+    return rains;
+  }
+  return ;
+}
+////////////////////////
+// Increase Temperature//
+////////////////////////
 const increaseTemp = () => {
   const tempText = document.getElementById("temperature-text");
   // 1. Adds 1 to temperature
   state.tempClickCount+=1;
-  // 2. Change color
+  tempText.textContent = state.tempClickCount;
+  // 2. Change color background
   const colorClass = getColorClass(state.tempClickCount);
   tempText.className = colorClass;
   // 3. Get landscape
-  const landscape = document.getElementById("landscape");
   const landscapes = getLandscapes(state.tempClickCount)
-
-  
+  addLandscape(landscapes)
 }
+
+////////////////////////
+// Decrease Temperature//
+////////////////////////
+const decreaseTemp = () => {
+  const tempText = document.getElementById("temperature-text");
+  // 1. Decreases 1 from temperature
+  state.tempClickCount-=1;
+  tempText.textContent = state.tempClickCount;
+  // 2. Change color background
+  const colorClass = getColorClass(state.tempClickCount);
+  tempText.className = colorClass;
+  // 3. Get landscape 
+  const landscapes = getLandscapes(state.tempClickCount)
+  addLandscape(landscapes)
+}
+
+//////////////////////
+// Changing Theme   //
+//////////////////////
+const changeTheme = () => {
+  const theme = document.getElementById("mySelect").value;
+  // theme.className = `${importantFact.className} sunlight`;
+  const skyTheme = document.getElementById("weather-description");
+  skyTheme.textContent = theme.toUpperCase()+ ' Sky:'
+  const sky = getSky(theme);
+   //  Change color background
+  skyTheme.className = sky;
+}
+
+const getAndDisplayCity = () => { 
+  const cityName = document.getElementById("city").value; 
+  const appearanceHeading = document.getElementById("facts__heading");
+  
+  appearanceHeading.textContent = "Weather in: " + cityName.toUpperCase(); 
+  document.querySelector('#temperature-text').textContent = state.tempClickCount;
 
 ////////////////////////
 // Changing Appearance//
 ////////////////////////
-
 const importantFact = document.getElementById("facts__fact--important");
 importantFact.className = `${importantFact.className} sunlight`;
 
@@ -116,13 +180,13 @@ let firstChild = document.getElementById('facts__list');
 
 const bugs = ['🪲','🐝','🪱','🐞']
 
-const suns = ['☀️','🌞','🌤','⛅️','🌥']
-const rains =['🌧','⛈','🌩','🌨']
-const wind = ['🌬','💨']
-const cools = ['❄️', '☃️']
+const suns = ['☀️','🌞','🌤','⛅️','🌥','🔥']
+const rains =['🌧','⛈','🌩','🌨','💧','🌈']
+const wind = ['🌬','💨', '🌫️','🌪️','☁']
+const cools = ['❄️', '☃️','☁️']
 
 const moons = ['🌕','🌖','🌗','🌘','🌑','🌒','🌓','🌔']
-const random = ['🌦']
+const random = ['🌦','🌈']
 
 const addLandscape = (landscapes) => {
   const newBug = document.createElement("span");
@@ -141,9 +205,9 @@ function getRandomInt(max) {
 const getRandomSun = (max) => {
   return Math.floor(Math.random() * max);
 }
-///////////////////////////////////////////////////////
-//    ADDS A BUG                              /////
-///////////////////////////////////////////////////////
+/////////////////////////////////////////
+//    ADDS A BUG                   /////
+////////////////////////////////////////
 const addBug = () => {
   const newBug = document.createElement("span");
   const crabContainer = document.querySelector("#landscape");
@@ -165,9 +229,9 @@ const addAllBugs = () => {
 //   alert("One more bug");
 };
 
-///////////////////////////////////////////////////////
-//  / GET AND DISPLAY THE CITY                    /////
-///////////////////////////////////////////////////////
+////////////////////////////////////////////
+//  / GET AND DISPLAY THE CITY         /////
+////////////////////////////////////////////
 const getAndDisplayCity = () => { 
   const cityName = document.getElementById("city").value; 
   const appearanceHeading = document.getElementById("facts__heading");
@@ -177,9 +241,9 @@ const getAndDisplayCity = () => {
   // document.getElementById("demo").innerHTML = cityName;
 }
 
-/////////////////////////////////////////////
-//     RESET THE  CITY                   /////
-//////////////////////////////////////////////
+//////////////////////////////////
+//     RESET THE  CITY       /////
+/////////////////////////////////
 const resetCity = () => { 
   const cityName = document.getElementById("city").value; 
   const appearanceHeading = document.getElementById("facts__heading");
@@ -188,9 +252,9 @@ const resetCity = () => {
   // document.getElementById("demo").innerHTML = cityName;
 }
 
-///////////////////////////////////////////////////////
-//      REGISTER EVENT HANDLERS                   /////
-///////////////////////////////////////////////////////
+///////////////////////////////////////////////
+//      REGISTER EVENT HANDLERS           /////
+///////////////////////////////////////////////
 const registerEventHandlers = () => {
   // 
   const crabButton = document.querySelector("#addCrabButton");
@@ -202,10 +266,15 @@ const registerEventHandlers = () => {
     submitButton.addEventListener("click", getAndDisplayCity);
     const resetButton = document.querySelector('#resetButton');
     resetButton.addEventListener("click", resetCity);
-
-  
-  
-
+  // registering increase temp with click
+    const upButton = document.querySelector('#up-button');
+    upButton.addEventListener("click", increaseTemp);
+  // registering decrease temp with click
+    const downButton = document.querySelector('#down-button');
+    downButton.addEventListener("click", decreaseTemp);
+  // add theme 
+  const selectTheme = document.querySelector('#mySelect');
+  selectTheme.addEventListener("change", changeTheme);
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
