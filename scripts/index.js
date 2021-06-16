@@ -10,14 +10,14 @@ const updateTemperature = (currentTemp) => {
     tempValue.textContent = currentTemp;
     const weatherLandscape= document.querySelector("#landscape_picture");
     if (currentTemp >= 80) {
-        weatherLandscape.src = "https://img.icons8.com/emoji/452/beach-with-umbrella.png";
+        weatherLandscape.src = "https://freepngimg.com/thumb/lizard/27295-6-lizard-transparent-background-thumb.png";
     } else if (currentTemp >= 70) {
         weatherLandscape.src = "https://freepngimg.com/thumb/chicken/17-chicken-png-image-thumb.png";
     } else if (currentTemp >= 60) {
         weatherLandscape.src = "https://freepngimg.com/thumb/deer/93967-springbok-antelope-africa-vecteur-free-download-png-hq-thumb.png";
     } else if (currentTemp >= 50) {
         // weatherLandscape.src = ;
-        weatherLandscape.src = "https://freepngimg.com/thumb/snowman/22144-2-cartoon-snowman.png";
+        weatherLandscape.src = "https://freepngimg.com/thumb/polar_bear/29346-2-polar-bear-image-thumb.png";
     }
 }
 

@@ -15,7 +15,11 @@ main {
   background-repeat: no-repeat;
   background-size: cover;
   color: rgb(7, 10, 1);
+}
 
+.light-mode #city_word,
+.light-mode footer {
+  color: rgb(250, 250, 250);
 }
 
 body {
