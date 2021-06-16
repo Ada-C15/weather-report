@@ -57,7 +57,6 @@ const resetCityName = () => {
     const cityName = document.querySelector("#city");
     cityName.value = "✨Stallion Springs✨";
     updateCityName();
-
 }
 
 function toggleTheme() {
@@ -68,7 +67,6 @@ function toggleTheme() {
 // We need to ask our document to wait and register the event handlers after the DOM has been completely loaded
 
 const registerEventHandlers = () => {
-
   const tempIncrease = document.querySelector("#increase_temp");
   tempIncrease.addEventListener("click", increaseTemp);
 
