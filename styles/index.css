@@ -123,6 +123,25 @@ body {
     justify-self: center;
 }
 
+.orange {
+    color: orange;
+}
+
+.red {
+    color:red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: rgb(82, 245, 82);
+}
+
+.teal {
+    color: teal;
+}
 
 select.classic {
     background-image:

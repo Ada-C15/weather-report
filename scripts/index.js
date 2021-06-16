@@ -21,13 +21,13 @@ const selectSky = () => {
     let sky = "";
     if (skyChoice === "Rainy") {
         color = "rainy";
-        sky = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+        sky = "🌧🌈⛈🌧💧⛈🌦🌧💧🌧🌈🌧";
     } else if (skyChoice === "Sunny") {
         color = "sunny";
-        sky = "☁️ ☀️ ☁️ ☀️ ☁️ ☀️☁️";
+        sky = "☁️ ☀️ ☁️ ☀️ ☁️ ☀️ ☁️ ☀️ ☁️";
     } else if (skyChoice === "Snowy") {
         color = "snowy";
-        sky = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
+        sky = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨";
     } else if (skyChoice === "Cloudy") {
         color = "cloudy";
         sky = "☁️☁️ 🌤☁️ ☁️☁️ ☁️ 🌤 ☁️☁️";
@@ -40,37 +40,40 @@ const increaseTemp = () => {
     state.currentTemp += 1;
     const temp = document.getElementById("temp_val");
     temp.textContent = state.currentTemp;
-    updateGarden(state.currentTemp)
+    updateGardenTemp(state.currentTemp)
 }
-
-
-const updateGarden = (currentTemp) => {
-    const gardenLandscape = document.getElementById("landscape");
-    let newLandscape = "🌿🌱🌻🌻🌻🌻🌱🌷🌷🌷🌷🌱🌿";
-    if (currentTemp >= 80) {
-        newLandscape = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
-    } else if (currentTemp >= 60 && currentTemp < 70) {
-        newLandscape = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
-    } else if (currentTemp <= 59) {
-        newLandscape = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
-    }
-    gardenLandscape.textContent = newLandscape;
-}
-
 
 const decreaseTemp = () => {
     state.currentTemp -= 1;
     const temp = document.getElementById("temp_val");
     temp.textContent = state.currentTemp;
-    updateGarden(state.currentTemp);
+    updateGardenTemp(state.currentTemp);
 }
 
-// const update = (state.currentTemp) => {
-//     if (state.currentTemp > 90) {
-//         console.log("it works");
-//     }
-// }
-
+const updateGardenTemp = (currentTemp) => {
+    const gardenLandscape = document.getElementById("landscape");
+    const tempVal = document.getElementById("temp_val");
+    let newLandscape = "🌱🌻🌻🌻🌻🌱🌷🌷🌷🌷🌱";
+    let fontColor = ""
+    if (currentTemp >= 80) {
+        newLandscape = "🌵🏜🦂🌵 🐍 🦂 🐍 🌵🏜🦂🌵";
+        fontColor = "red";
+    } else if (currentTemp >= 70) {
+        fontColor = "orange";
+    }
+    else if (currentTemp >= 60 && currentTemp < 70) {
+        newLandscape = "🌾🍃🍃🍃🪨 🛤 🪨🍃🍃🍃🌾";
+        fontColor = "yellow";
+    } else if (currentTemp >= 50 && currentTemp <= 59) {
+        newLandscape = "🌲🌲🍂🌲🍂🍁🌲🍁🌲🍁🌲🍂🌲";
+        fontColor = "green";
+    } else if (currentTemp <= 49) {
+        newLandscape = "⛄️⛄️⛄️⛄️⛄️⛄️⛄️⛄️⛄️⛄️⛄️⛄️";
+        fontColor = "teal";
+    }
+    gardenLandscape.textContent = newLandscape;
+    tempVal.classList = `${fontColor}`
+}
 
 const registerEventHandlers = () => {
     updateCityName();
@@ -84,7 +87,7 @@ const registerEventHandlers = () => {
     changeSky.addEventListener("change", selectSky);
 
     const increaseBtn = document.getElementById("increase");
-    increaseBtn.addEventListener("click", increaseTemp, updateGarden);
+    increaseBtn.addEventListener("click", increaseTemp);
 
     const decreaseBtn = document.getElementById("decrease");
     decreaseBtn.addEventListener("click", decreaseTemp);
