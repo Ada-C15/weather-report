@@ -6,30 +6,32 @@
         <title></title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./styles/index.css">
     </head>
     <body>
         <header>
-            <h1>Weather Report</h1>
-            <h2 id="city">Seattle</h2>
-            <h3 id="weather-summary">The sun's out and it's a mild 63 degrees. Spend some time outside!</h3>
+            <div class="pageHeading">
+                <h1 id="mainHeading">Weather Report</h1>
+                <h2 id="cityHeading">Seattle</h2>
+            </div>
+            <h3 id="weatherSummary">The sun's out and it's a mild 75 degrees. Spend some time outside!</h3>
         </header>
         <main>
-            <section id="citySection">
+            <section class="citySection controls">
                 <input id="cityInput" type="text" value="Seattle" />
                 <button id="resetCityButton">RESET</button>
             </section>
-            <section id="temperatureSection">
+            <section class="temperatureSection controls">
                 <div id="temperatureContent">
-                    <img src="./images/thermometer.png" />
-                    <div class="temperatureControls">
-                        <span id="increaseTemp">⬆</span>
-                        <span id="decreaseTemp">⬇</span>
-                    </div>
+                    <img id= "tempIcon" src="./images/thermometer.png" />
                     <span id="temperatureText" class="orange">75</span>
+                    <div class="temperatureControls">
+                        <span class="control" id="increaseTemp">⬆</span>
+                        <span class="control" id="decreaseTemp">⬇</span>
+                    </div>
                 </div>
             </section>
-            <section id="skySection">
+            <section class="skySection controls">
                 <select id="skySelect">
                     <option>Sunny</option>
                     <option>Cloudy</option>
@@ -38,11 +40,15 @@
                     <option>Storm</option>
                 </select>
             </section>
-            <section class="landscape">
-                <img id="skyImage" src="./images/sunny-sky.jpg" />
-            </section>
+            <div class="imageContainer">
+                <div class="sky">
+                    <img id="skyImage" src="./images/sunny-sky.jpg" />
+                </div>
+                <div class="landscape">
+                    <img id="landscapeImage" src="./images/flower-landscape.jpg" />
+                </div>
+            </div>
         </main>
-        <footer></footer>
         <script src="index.js" async defer></script>
     </body>
 </html>
