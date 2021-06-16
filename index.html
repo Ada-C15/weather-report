@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Weather Forecast</title>
+	<link href="styles/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <header id="header">
+        <h1> 🦆 Duck Weather Forecast 🦆</h1>
+        <h6>for the city of.. <span id="city_name">✨✨Stallion Springs✨✨</span></h6>
+    </header>
+
+	<main>
+		
+		<section>
+			<ul id="interactive_categories">
+				<li><h3>Temperature</h3></li>
+                <div id="increase_decrease_arrows">
+                    <button id="increase_temp">⬆️</button>
+                    <button id="decrease_temp">⬇️</button>
+                </div>
+
+                <section>
+                    <h3 id="temp_value">71</h3>
+                </section>
+              
+				<li><h3>Weather</h3></li>
+                <div>
+                    <select id="weather_menu">
+                        <option value="Sunny">Sunny</option>
+                        <option value="Cloudy">Cloudy</option>
+                        <option value="Rainy">Rainy</option>
+                        <option value="Snowy">Snowy</option>
+                    </select>
+                </div>
+				<li><h3>City</h3></li>
+                <div>
+                    <input id="city" type="text"></input>
+                    <button id="reset_button">Reset</button>
+                </div>
+                <button onclick="toggleTheme()">Toggle Theme</button>
+			</ul>
+		</section>
+
+        <section class="right_side">
+            <h3>Weather Garden</h3>
+            <div>
+                <img id="landscape_picture" src="" alt="landscape" width="300"/>
+            </div>
+            <div>
+                <img id="weather_picture" src="" alt="weather" width="300"/>
+            </div>
+        </section> 
+
+        <section>
+            <img id="duck_image" src="https://images.getbento.com/accounts/b9ff23678471de25bd71feba082a6b62/media/images/duck.png?w=1000&fit=max&auto=compress,format&h=1000" alt="white indian runner duck" width="300"/>
+        </section>
+
+	</main>
+    <footer>
+        <p>Copyright © 2021 </p>
+    </footer>
+
+	<script src="scripts/index.js">
+	</script>
+</body>
