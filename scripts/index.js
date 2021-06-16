@@ -2,8 +2,8 @@
 const registerEventHandlers = () => {
     const upTempButton = document.querySelector("#increaseTemp")
     upTempButton.addEventListener('click', increaseTemperature);
-    const decTempButton = document.querySelector("#decreaseTemp")
-    decTempButton.addEventListener('click', decreaseTemperature);
+    const downTempButton = document.querySelector("#decreaseTemp")
+    downTempButton.addEventListener('click', decreaseTemperature);
 
 
     const skyTheme = document.querySelector("#skySelection");

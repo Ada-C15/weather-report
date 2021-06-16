@@ -1,1 +1,32 @@
 /* font-family: 'Source Serif Pro', serif; */
+body {
+    background-image: url("https://d2kq0urxkarztv.cloudfront.net/56cb72ddf554b2fc60cb4586/2807385/upload-6c4ee6cb-7839-4f1f-9faf-0202feb0f32c.jpg?e=webp&cX=2.973887814313457&cY=0&cW=2244.052224371373&cH=1497");
+    font-family: 'Source Serif Pro', serif;
+    color:black;
+
+}
+
+button, select, input{
+    font-size: 15px;
+    border-radius: 20px;
+    border-width: 0px;
+    text-align: center;
+    padding-left: 10px;
+    color: rgb(2, 1, 4)
+}
+
+header, footer{
+    grid-column: span 5;
+    text-align: center;
+}
+
+#headerMountainName {
+    color: rgb(8, 68, 142);
+    font-size: 25px;
+    text-decoration: underline dotted;
+}
+.image{
+    grid-column: 2;
+    grid-row: span 2;
+    padding: auto; 
+}
