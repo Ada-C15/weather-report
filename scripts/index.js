@@ -21,29 +21,8 @@ const decreasetemp = (event) => {
     changetempcolor()
     changegroundimages()
 };
-
 decreasetempButton.addEventListener("click", decreasetemp);
 
-
-
-
-
-const changeskyselector = document.querySelector("#sky-select");
-
-const changesky = (event) => {
-    const userchoice = event.target.value;
-    const sky = document.querySelector("#sky");
-    if (userchoice === "1"){
-        sky.textContent = `☁️ ☁️ ☁️ ☀️ ☁️ ☁️`;
-    } if (userchoice === "2"){
-        sky.textContent = `☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️`;
-    } if (userchoice === "3"){
-        sky.textContent = `🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧`;
-    } if (userchoice === "4"){
-        sky.textContent = `🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨`;
-    }
-}
-changeskyselector.addEventListener("change", changesky);
 
 
 
@@ -80,3 +59,28 @@ const changegroundimages = () => {
         groundrecorder.textContent = `❄️🌲⛄️❄️⛄️🍂🌲❄️🌲❄️⛄️🍂❄️`;
     }    
 };
+
+const changeskyselector = document.querySelector("#sky-select");
+const changesky = (event) => {
+    const userchoice = event.target.value;
+    const sky = document.querySelector("#sky");
+    if (userchoice === "1"){
+        sky.textContent = `☁️ ☁️ ☁️ ☀️ ☁️ ☁️`;
+    } if (userchoice === "2"){
+        sky.textContent = `☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️`;
+    } if (userchoice === "3"){
+        sky.textContent = `🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧`;
+    } if (userchoice === "4"){
+        sky.textContent = `🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨`;
+    }
+};
+changeskyselector.addEventListener("change", changesky);
+
+const cityinputbox = document.querySelector("#city-input")
+const changecity = (event) => {
+    const result = event.target.value;
+    const city = document.querySelector("#header-city");
+    city.textContent  = `${result}`;
+};
+
+cityinputbox.addEventListener("input", changecity);
