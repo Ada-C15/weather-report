@@ -35,6 +35,10 @@ section {
   width: auto; */
 }
 
-#tempPicker {
+#tempDisplay {
   font-size: 50px;
+}
+
+button:hover {
+  border: 2px solid yellow;
 }
