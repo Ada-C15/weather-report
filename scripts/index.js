@@ -1,28 +1,54 @@
 const state = {
-    tempUp: 80,
-    tempDown: 80,
-    citySearch: " "
+    temp: 80,
+
 }
+
 
 const hotter = () => {
     const weatherUp = document.querySelector("#weather");
 
-    state.tempUp += 1;
+    state.temp += 1;
 
-    document.querySelector("#weather").textContent = `${state.tempUp}`
+    document.querySelector("#weather").textContent = `${state.temp}`
+
+    changeTemp()
+
+
 
 };
 
 const cooler = () => {
     const weatherDown = document.querySelector("#weather");
 
-    state.tempDown = state.tempUp;
+    state.temp = state.temp;
 
-    state.tempDown -= 1;
+    state.temp -= 1;
 
-    document.querySelector("#weather").textContent = `${state.tempDown}`
+    document.querySelector("#weather").textContent = `${state.temp}`
+
+    changeTemp()
 
 };
+
+const changeTemp = () => {
+    if (state.temp > 80) {
+        document.body.style.backgroundColor = "rgb(170, 1, 20)";
+        
+
+    } else if (state.temp < 80) {
+        document.body.style.backgroundColor = "rgb(255, 94, 19)";
+
+    } else if (state.temp < 70) {
+        document.body.style.backgroundColor = "rgb(254, 226, 62)";
+
+    } else if (state.temp < 60) {
+        document.body.style.backgroundColor = "rgb(91, 194, 54)";
+
+    } else if (state.temp < 50) {
+        document.body.style.backgroundColor = "rgb(0, 124, 128)";
+    }
+}
+
 
 const changeCity = () => {
 
