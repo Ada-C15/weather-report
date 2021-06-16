@@ -14,9 +14,9 @@
             <h1>Weather Application</h1>
         </section>
 
-        <section id="temp-container">
+        <section class="display-box" id="temp-container">
             <h2>Temperature</h2>
-            <h2 id="tempDisplay">0</h2>
+            <h2 id="tempDisplay">65</h2>
 
             <div class="button-container">
                 <button class="btn" id="plus"> turn up the heat </button>
@@ -24,22 +24,22 @@
             </div>
         </section>
 
-        <section>
+        <section class="display-box">
             <div id="sky-container">
                 <h2>Sky</h2>
                 <div class="dropdown">
                     <button class="btn">Pick a sky</button>
                     <div class="dropdown-content">
-                        <a id="weatherRainy">Rainy</a>
-                        <a id="weatherCloudy">Cloudy</a>
-                        <a id="weatherClear">Clear</a>
-                        <a id="weatherSnowy">Snowy</a>
+                        <a class="option" id="rainy">Rainy</a>
+                        <a class="option" id="cloudy">Cloudy</a>
+                        <a class="option" id="sunny">Sunny</a>
+                        <a class="option" id="snowy">Snowy</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section>
+        <section class="display-box">
             <div id="city-container">
                 <h2>City</h2>
                 <input type="text" placeholder="Search City..">
@@ -47,15 +47,15 @@
         </section>
 
 
-        <section id="landscape-display">
+        <section class="display-box" id="landscape-display">
             <h2>enjoy the garden</h2>
             <div id="landscape-container">
                 <!-- contains all emojis -->
                 <div id="sky-icon-container">
-                    xxx
+                    <span id="sky-icons"></span>
                 </div>
                 <div id="land-icon-container">
-                    xxx
+                    
                 </div>
             </div>
         </section>

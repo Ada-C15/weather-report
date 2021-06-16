@@ -17,6 +17,14 @@ body {
     border: solid black 2px;
 }
 
+/* display box style */
+.display-box {
+    background-color: blanchedalmond;
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem;
+}
+
 /* input */
 input {
     font-size: 1.5rem;
