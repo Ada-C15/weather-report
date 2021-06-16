@@ -98,22 +98,32 @@ span {
 
 #snow {
     display: none;
+    text-align: center;
+    font-size: 100px;
 }
 
 #stormy {
     display: none;
+    text-align: center;
+    font-size: 100px;
 }
 
 #cloudy {
     display: none;
+    text-align: center;
+    font-size: 100px;
 }
 
 #warm {
     display: none;
+    text-align: center;
+    font-size: 100px;
 }
 
 #sunny {
     display: none;
+    text-align: center;
+    font-size: 100px;
 }
 
 
