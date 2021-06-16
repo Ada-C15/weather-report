@@ -1,9 +1,9 @@
 let tempValue = -10;
 
 const updateSky = () =>{
-    //why use getelementby ID vs. qeurySelector
+    //retreives specific data type
    const inputSeason = document.getElementById("seasonSelect").value;
-   const seasonContainer = document.getElementById("sky");
+   const seasonContainer = document.getElementById("sky"); //returns the full object that will be modified
    let sky = '';
    let skyColor = '';
    if (inputSeason === "Satan's Tundra Hole"){
@@ -22,7 +22,7 @@ const updateSky = () =>{
     sky = "🌞🌞  ☁️🌞  ☁️  🪰☁️    🌞  🌞  ";
     skyColor = "sunny";
     }
-    seasonContainer.textContent = sky; //what is this line doing?
+    seasonContainer.textContent = sky; //setting sky to text content string
     const gardenContent = document.getElementById("gardenContent");
     gardenContent.classList = `garden__content ${skyColor}`;
 };
