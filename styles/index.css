@@ -29,6 +29,34 @@ body {
   font-size: 30px;
 }
 
+#header > h6 {
+  margin: 0;
+}
+
+#city_name {
+  font-size: 30px;
+}
+
+.button_container {
+  display: flex;
+  flex-direction: column;
+}
+
+#temp_value {
+  display: block;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.button_container,
+#temp_value {
+  flex: 0 0 auto;
+}
+
+.temp_buttons {
+  display: flex;
+}
+
 #interactive_categories {
   list-style: none;
   padding-left: 50px;
@@ -36,7 +64,7 @@ body {
 }
 
 .right_side {
-  padding-left: 175px;
+  padding-left: 150px;
   font-size: 30px;
   justify-content: center;
   align-items: center;
@@ -48,11 +76,8 @@ body {
 
 footer {
   font-size: 10px;
+  margin-top: 25px;
 } 
-
-#city_name {
-  font-size: 30px;
-}
 
 #toggle_button  {
   margin-top: 50px;

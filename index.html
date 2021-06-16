@@ -18,25 +18,26 @@
 		
 		<section>
 			<ul id="interactive_categories">
-				<li><h3>Temperature</h3></li>
-                <div id="increase_decrease_arrows">
-                    <button id="increase_temp">⬆️</button>
-                    <button id="decrease_temp">⬇️</button>
-                </div>
-
-                <section>
-                    <h3 id="temp_value">71</h3>
-                </section>
-              
-				<li><h3>Weather</h3></li>
+                <li><h3>Weather</h3></li>
                 <div>
                     <select id="weather_menu">
+                        <option value="Empty"></option>
                         <option value="Sunny">Sunny</option>
                         <option value="Cloudy">Cloudy</option>
                         <option value="Rainy">Rainy</option>
                         <option value="Snowy">Snowy</option>
                     </select>
                 </div>
+
+				<li><h3>Temperature</h3></li>
+                <div class="temp_buttons">
+                    <div class="button_container">
+                        <button id="increase_temp">⬆️</button>
+                        <button id="decrease_temp">⬇️</button>
+                    </div>
+                    <h3 id="temp_value">71</h3>
+                </div>
+              
 				<li><h3>City</h3></li>
                 <div>
                     <input id="city" type="text"></input>
@@ -51,11 +52,12 @@
         <section class="right_side">
             <h3>Weather Garden</h3>
             <div>
-                <img id="landscape_picture" src="" alt="landscape" width="300"/>
+                <img id="weather_picture" src="" alt="weather" width="250"/>
             </div>
             <div>
-                <img id="weather_picture" src="" alt="weather" width="300"/>
+                <img id="landscape_picture" src="" alt="landscape" width="250"/>
             </div>
+            
         </section> 
 
         <section>
