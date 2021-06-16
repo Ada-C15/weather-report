@@ -1,0 +1,61 @@
+body {
+    background-color: #e4ebf1;
+    font-family: Helvetica;
+}
+
+#head_section {
+    color: black;
+    font-size: 1.5em;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#city_name {
+    color: darkblue;
+    font-family: fantasy;
+}
+#city_des {
+    font-family: cursive;
+    font-style: italic;
+}
+
+.page_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.section p {
+    font-size: 2em;
+    font-family: Impact, sans-serif;
+}
+
+.section_container {
+    display: flex;
+    flex-direction: column;
+    
+}
+.section_heading {
+    color: white
+}
+
+.section {
+    background-color: rgb(204, 90, 198);
+    padding: 10px;
+    text-align: center;
+
+}
+
+.garden {
+    background-color: lightskyblue;
+    text-align: center;
+    padding: 10px;
+}
+
+.garden_heading {
+    color: rgb(59, 41, 34);
+}
+#reset_city_name:hover{
+    background-color: brown;
+
+}

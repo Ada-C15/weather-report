@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>weather report.</title>
+        <link href="./styles/style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div id="head_section">
+            <h1>Weather Report</h1>
+            <h4 id="city_des">For the lovely city of Roses</h4>
+            <h2 id="city_name">🌷🌷Portland🌷🌷</h2>
+        </div>
+
+        <div class="page_container">
+            <div class="section_container">
+                <div class="garden">
+                    <h2 class="garden_heading">Weather Garden</h2>
+                    <section id="weather_garden_container">
+                        <p id="weather_garden">🌸🌼🌷🌻🌻🌷🌻🌼🌸</p>
+                        <p id="garden_sky">☀️☀️☀️☀️☀️☀️</p>
+                    </section>
+                </div>
+
+                <div class="section">
+                    <h2 class="section_heading">Temperature</h2>
+                    <button id="upButton">⇑</button>
+                    <button id="downButton">⇓</button>
+                    <p id="temperature" class="brown">72°F</p>
+                </div>
+
+                <div class="section">
+                    <h2 class="section_heading">Sky</h2>
+                    <label>Sky look like:</label>
+                    <select name="sky-features" id="sky_selection">
+                        <option value="hot">🔥🔥🔥🔥🔥🔥</option>
+                        <option value="sunny">☀️☀️☀️☀️☀️☀️</option>
+                        <option value="partly_cloudy">🌤 🌤 🌤 🌤 🌤 </option>
+                        <option value="cloudy">☁️☁️☁️☁️☁️☁️</option>
+                        <option value="rainy">🌧️🌧️🌧️🌧️🌧️🌧️</option>
+                        <option value="snow">⛄⛄⛄⛄⛄⛄</option>
+                    </select>
+                </div>
+
+                <div class="section">
+                    <h2 class="section_heading">City</h2>
+                    <label>City: </label>
+                    <input type="text" id="name_input_box" value="Portland">
+                    <button id="reset_city_name">Reset City Name</button>
+                </div>
+            </div>
+<!--
+            <div class="garden">
+                <h2 class="weather_garden section_heading">Weather Garden</h2>
+                <section id="weather_garden_container">
+                    <p id="garden_landscape">🌸🌼🌷🌻🌻🌷🌻🌼🌸</p>
+                    <p id="garden_sky">☀️☀️🥶🥶🔥🔥</p>
+                </section>
+            </div>-->
+        </div>
+        <script src="./scripts/index.js"></script>
+    </body>
+
+</html>
