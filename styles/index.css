@@ -20,14 +20,12 @@ h1, h2, h3, h4 {
   font-size: 2em;
 }
 
-header {
-    grid-column: span 2;
-    text-align: center;
-  }
-
 
 .garden__section {
+    display: inline-flex;
     text-align: center;
+    margin: 0.25em;
+    padding: 0.25em;
     border-radius: 12%;
     background: url("https://i.pinimg.com/564x/ba/76/58/ba765836dc5cedf594c22af9a9f7b4f7.jpg");
 }
