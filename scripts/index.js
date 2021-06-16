@@ -38,10 +38,23 @@ const registerEventHandlers = () => {
     addTempButton.addEventListener("click", addTemp);
     const decreaseTempButton = document.querySelector("#decreaseTempButton");
     decreaseTempButton.addEventListener("click", decreaseTemp);
-    const skySelecter = document.querySelector('#sky-select');
-    skySelecter.addEventListener("change", skySelectChange);
+    // const skySelecter = document.querySelector('#sky-select');
+    // skySelecter.addEventListener("change", skySelectChange);
 
 
 }
+
+const handleCityInput = (e) => {
+        e.preventDefault()
+        const cityHeader = document.querySelector("#city-header")
+        const inputValue = document.querySelector("#input-text").value
+        cityHeader.innerHTML = inputValue
+
+    }
+    // grab entire form element with id=city-input 
+const cityInputForm = document.querySelector("#city-input")
+cityInputForm.addEventListener("submit", handleCityInput)
+
+
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
