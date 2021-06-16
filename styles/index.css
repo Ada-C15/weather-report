@@ -1,0 +1,177 @@
+body {
+    background-color: #82E0E0;
+    font-family: fantasy;
+}
+
+div button {
+    min-width: 30px;
+    min-height: 30px;
+    border-radius: 10px;
+    background-color: rgb(249, 239, 223);
+}
+
+div section {
+    background-color: azure;
+    border-radius: 10px;
+    margin: 2em;
+    padding: 1em;
+    min-width: 140px;
+}
+
+#ground {
+    font-size: 1.5em;
+}
+
+h1 {
+    color: rgb(47, 60, 60);
+    font-size: 4em;
+}
+
+h3 {
+    text-transform: uppercase;
+}
+
+header {
+    text-align: center;
+    margin: 5em;
+}
+header span {
+    font-size: 2em;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+main div {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-around;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+main .snapshot {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+#reset {
+    background-color: rgb(249, 239, 223);
+    border-radius: 10px;
+    padding: .5em;
+}
+
+#sky {
+    font-size: 2em;
+}
+
+#sky_options {
+    background-color: rgb(249, 239, 223);
+    border-radius: 10px;
+    padding: .25em;
+}
+
+.snapshot {
+    background-color: azure;
+    text-align: center;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 500px;
+    min-height: 150px;
+}
+
+
+
+
+
+.snapshot div {
+    display: flex;
+    flex-direction: column;
+}
+
+.temperature {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.temperature > span {
+    padding: .5em;
+}
+
+#temp_number {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5em;
+}
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: gold;
+}
+
+.green {
+    color: green;
+}
+
+.teal {
+    color: teal;
+}
+
+.day_sunny {
+    background-color: wheat;
+    text-align: center;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 500px;
+    min-height: 150px;
+}
+.day_sunny div{
+    display: flex;
+    flex-direction: column;
+}
+.day_cloudy {
+    background-color: lightgray;
+    text-align: center;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 500px;
+    min-height: 150px;
+}
+.day_cloudy div {
+    display: flex;
+    flex-direction: column;
+}
+.day_rainy {
+    background-color: gray;
+    text-align: center;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 500px;
+    min-height: 150px;
+}
+.day_rainy div {
+    display: flex;
+    flex-direction: column;
+}
+.day_snowy {
+    background-color: teal;
+    text-align: center;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 500px;
+    min-height: 150px;
+}
+.day_snowy div {
+    display: flex;
+    flex-direction: column;
+}
