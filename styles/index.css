@@ -1,0 +1,141 @@
+* {
+    font-family: "Raleway", sans-serif;
+}
+
+.letter-wide,
+select {
+    letter-spacing: 10px;
+}
+
+body, 
+html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+body {
+    /* color: rgb(228, 70, 30); */
+    color: #555;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(255, 237, 189), rgb(240, 234, 190), rgb(224, 231, 192), rgb(209, 228, 193), rgb(194, 225, 194), rgb(178, 222, 196), rgb(163, 219, 197), rgb(147, 216, 199), rgb(132, 213, 200), rgb(117, 210, 201), rgb(101, 207, 203), rgb(86, 204, 204));
+}
+
+/* SKY THEMES */
+.sunny-sky {
+    background: linear-gradient(to bottom, rgba(206, 104, 14, 0.938), rgb(207, 129, 11), rgb(247, 179, 8), rgb(226, 215, 133), rgb(103, 155, 170), rgb(130, 157, 186), rgb(116, 151, 137), rgb(26, 105, 90), rgb(103, 129, 125));
+}
+
+.dark-sky {
+    background: linear-gradient(to bottom, rgb(18, 44, 75),   rgb(39, 56, 81),  rgb(38, 80, 99), rgb(69, 88, 108),  rgb(81, 108, 104));
+}
+/* rgb(5, 5, 8), rgb(9, 6, 34),  rgb(86, 148, 146), rgb(67, 87, 84), rgb(17, 63, 45),  rgb(29, 77, 68),   rgb(76, 103, 99), , rgb(67, 86, 86), rgb(72, 90, 114), rgb(93, 93, 106)*/
+.cool-sky {
+    background: linear-gradient(to bottom,  rgb(113, 125, 128), rgb(77, 125, 147), rgb(130, 157, 186),  rgb(51, 124, 124), rgb(86, 148, 146) , rgb(116, 151, 137), rgb(103, 129, 125));
+}
+
+.hot-sky {
+    background: linear-gradient(to bottom, rgb(123, 15, 15), rgba(206, 4, 4, 0.938), rgb(207, 129, 11), rgb(247, 179, 8), rgb(226, 215, 133));
+}
+
+.center, 
+#header {
+    text-align:center
+}
+
+/*  top menu container layout */
+.grid-container {
+    display:-webkit-inline-flex; 
+    column-gap: unset;
+    padding: 2px;
+}
+
+.grid-container a:hover div {
+    background-color: #999;
+    color: white;
+}
+
+.grid-container a {
+    /* color : #444; */
+    color: rgb(228, 70, 30);
+    /* text-decoration-line: none; */
+    border: none;
+}
+
+.grid-container a:visited {
+    color : #777;
+}
+
+.grid-container div {
+    padding: 8px 22px;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+#landscape {
+    width: 100%;
+}
+
+.hot {
+    background-color: rgb(241, 70, 70);
+    color: #999;
+}
+
+.warm {
+    background-color: rgb(255, 157, 83);
+    color: #888;
+}
+
+.sunlight {
+    background-color: rgb(255, 212, 84);
+    font-weight: bolder;
+    color: #444
+}
+
+.cool {
+    background-color: rgb(50, 94, 190);
+    color: #999;
+}
+
+.freezing {
+    background-color: rgb(178, 181, 187);
+    color: #555;
+}
+
+
+* {border-color: rgb(#777);
+    border-radius: 20px;} 
+    
+.weather-outside-grid {
+margin:auto;
+width: 800px;
+display: flex;
+flex-direction: column;
+/* flex-basis: auto; */
+border: 2px solid #777;
+padding: 1em;
+flex-grow: auto;
+}    
+
+#weather-basics {
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: space-around;
+}
+
+#weather-basics>* {
+    border: 2px solid #777;
+    padding: 0.5em;
+}
+
+#image-area {
+    width: 500px;
+    height: auto;
+    padding: 0.5em;
+    margin: auto;
+}
+
+#temperature-text {
+    font-size: 3em;
+}
