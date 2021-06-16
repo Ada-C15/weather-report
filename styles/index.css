@@ -1,0 +1,98 @@
+body{
+    font-family: 'Benne', serif;
+}
+#visual{
+    display: flex;
+    justify-content: center;
+    background-image: linear-gradient(to bottom, #d360d3, #9f54b9, #6f469c, #43367b, #1d2559);
+    border-radius: 40px;
+    display: grid;
+    /* grid-template-columns: 33% 100px auto; */
+    grid-template-rows: 33% 100px auto;
+}
+
+#tempCounter {
+    display: flex;
+    justify-content: center;
+}
+#weather{
+    display: flex;
+    justify-content: center;
+}
+h1{
+    /* color: blue; */
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+}
+#weather h1, #weather h2{
+    margin-right: 10px;
+    margin-top: 1px;
+    font-size: 30px;
+    font-style: oblique;
+    font-weight: 100;
+    color: purple;
+}
+#weather h2{
+    color: rgb(39, 4, 39);
+    margin-top: 7px;
+    font-size: 20px;
+}
+#tempCounter, #skyline, #landscape{
+    font-size: 100px;
+    display:flex;
+    justify-content: center;
+}
+
+section{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section section{
+    display:grid;
+    display: flex;
+    width: 20em;
+    height: 30px;
+    margin-top: 10px;
+}
+
+
+section button, section p{
+    height: 30px;
+    padding-right: 10px;
+}
+
+#tempCounter{
+    color: #008080;
+}
+
+#tempsec, #skysec, #citysec{
+    display:flex;
+    justify-content: center;
+    background-color: grey;
+    /* margin-right: 10px;
+    margin-left: 10px; */
+    border: 5px groove #090979;
+    border-radius: 40px;
+    width: 25em;
+    margin-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}
+
+#jsbuttons{
+    display:flex;
+    justify-content: center;
+
+}
+
+#weather section h2 #newcity{
+    margin-right: 10px;
+}
+
+label{
+    margin-top:10px;
+    margin-right: 5px;
+}
