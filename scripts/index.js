@@ -2,35 +2,48 @@
 const state = {
     temp: 65,
     sky: "sunny",
-    land: "None"
 };
 
 // get temp buttons
 const minusButton = document.getElementById('minus');
 const plusButton = document.getElementById('plus');
 
+// 0+	"🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂"
+// 70-79	"🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷"
+// 60-69	"🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃"
+// 59 or below	"🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲"
 // change bg
 function changeBackground(temp) {
+    const newLand = document.querySelector("#land-icons");
+
     if (temp < 29) {
         document.body.style.backgroundColor = 'grey';
+        newLand.textContent = "🧊🧊🧊🧊🧊🧊🧊🧊";
     }
     else if (temp < 39) {
         document.body.style.backgroundColor = 'blue';
+        newLand.textContent = "🧊___🧊❄️__🧊🧊❄️_🧊❄️🧊";
     }
     else if (temp < 49) {
         document.body.style.backgroundColor = 'teal';
+        newLand.textContent = "☃️❄️🌲__☃️☃️_❄️🌲☃️❄️__🌲";
     }
     else if (temp < 59) {
         document.body.style.backgroundColor = 'green';
+        newLand.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
     }
     else if (temp < 69) {
         document.body.style.backgroundColor = 'yellow';
+        newLand.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
     }
     else if (temp < 79) {
         document.body.style.backgroundColor = 'orange';
+        newLand.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
     }
     else if (temp > 80) {
         document.body.style.backgroundColor = 'red';
+        newLand.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+        
     } 
 }
 // minus actions
@@ -72,15 +85,8 @@ function handleOptionSelected(event){
     updateSky(typeSky);
 
 }
-
 function updateSky(skyType) {
     const newSky = document.querySelector("#sky-icons");
-
-// Option	Sky
-// Sunny	"☁️ ☁️ ☁️ ☀️ ☁️ ☁️"
-// Cloudy	"☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️"
-// Rainy	"🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧"
-// Snowy	"🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨"
     if (skyType === "sunny") {
         newSky.textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
     } else if (skyType === "cloudy") {
