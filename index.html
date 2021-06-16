@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/css/all.min.css">
+    <title>Weather report</title>
+</head>
+<body>
+    <main>
+        <section>
+            <div class="container-display">
+                <div id="image"></div>
+                <div id="weather">Weather Report</div>
+            </div>
+        </section>
+        <section>
+            <h1 id="display-city">New York</h1>
+            <div class="container-span">
+                <span id="temperature">30</span>
+                <span id="symbol">&deg;F</span> 
+            </div>
+            <div class="container-buttons">
+                <button id="increase">+</button>
+                <button id="decrease">-</button>
+            </div>
+        </section>
+        <section class="select">
+                <h2>Sky</h2>
+                <select name="sky" id="sky-type">
+                    <option value="">Please choose an option</option>
+                    <option value="sunny">Sunny</option>
+                    <option value="cloudy">Cloudy</option>
+                    <option value="raining">Raining</option>
+                    <option value="snowy">Snowy</option>
+                </select>
+            
+                <h2>City Name</h2>
+                <input type="text" id="city-name" name="city-name" required placeholder="Type a city" minlength="4" maxlength="8" size="30">
+                <input type="reset" id="reset" value="Reset">
+        </section>
+    </main>
+    <script src="scripts/index.js"></script>
+</body>
+</html>
