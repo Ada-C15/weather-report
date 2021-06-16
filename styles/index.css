@@ -101,7 +101,38 @@ body {
     font-family: "Rubik", sans-serif;
 }
 
+.garden__content {
+    min-height: 200px;
+    max-width: fit-content;
+    margin: auto;
+    padding: 2rem;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  
+    border-radius: 8px;
+    font-size: 2em;
+  }
+
 .night {
     background-color:rgb(38, 54, 119);
     color:rgb(219, 161, 206)
 }  
+
+
+.windy {
+    background-color: lightgrey;
+  }
+  
+  .sunny {
+    background-color: rgb(221, 255, 255);
+  }
+  
+  .hazzy {
+    background-color: darkgray;
+  }
+  
+  .rainy {
+    background-color: lightsteelblue;
+  }

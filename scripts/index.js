@@ -2,6 +2,7 @@ const state={
     color:"teal",
     temp:71,
     garden:"☘️🌻🌵💐",
+    
 };
 
 const increatTemp = ()=>{
@@ -78,21 +79,21 @@ const updateSky=()=>{
     const skyContainer=document.getElementById('sky');
     let sky = "";
     let skyFace="";
-    if(inputValue=="Sunny"){
+    if(inputValue==="Sunny"){
         sky="☀️";
         skyFace="sunny";
-    }else if(inputValue=="Windy"){
+    }else if(inputValue==="Windy"){
         sky="💨";
         skyFace="windy";
-    }else if(inputValue=="Hazzy"){
+    }else if(inputValue==="Hazzy"){
         sky="🌥";
         skyFace="hazzy";
-    }else if(inputValue=="Rainy"){
+    }else if(inputValue==="Rainy"){
         sky="🌧";
         skyFace="rainy";
     }
     skyContainer.textContent = sky;
-    const gardenContent = document.getElementById('container');
+    const gardenContent = document.getElementById('garden_content');
     gardenContent.classList=`garden_content ${skyFace}`;
 };
 
