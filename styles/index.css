@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
+body {
+    background-image: url(../assets/sunny.jpg);
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+body.sunny {
+    background-image: url(../assets/sunny.jpg);
+}
+
+body.partlyCloudy {
+    background-image: url(../assets/partlyCloudy.jpg);
+}
+
+body.cloudy {
+    background-image: url(../assets/cloudy.jpg);
+}
+
+body.rainy {
+    background-image: url(../assets/rainy.jpg);
+}
+
+body.thunder {
+    background-image: url(../assets/thunder.jpg);
+}
+body.snowy {
+    background-image: url(../assets/snow.jpg);
+}
+
+header {
+    text-align: center;
+    padding: 1px;
+    background-color:rgb(255, 255, 255, 0.5);
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 1.5em;
+}
+
+main {
+    margin-top: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+#temp {
+    border-radius: 25px;
+    background-color:rgb(255, 255, 255, 0.5);
+    margin: 5px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+#tempDisplay {
+    color: rgb(255, 247, 0);
+    font-size: 2em;
+}
+
+#sky {
+    border-radius: 25px;
+    background-color:rgb(255, 255, 255, 0.5);
+    margin: 5px;
+    grid-column: 1 / 2;
+    grid-row: 3 / 5;
+}
+
+#city {
+    border-radius: 25px;
+    background-color:rgb(255, 255, 255, 0.5);
+    margin: 5px;
+    grid-column: 1 / 2;
+    grid-row: 5 / 7;
+}
+
+#landscape {
+    background-color:rgb(255, 255, 255, 0.5);
+    background-size: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 25px;
+    margin: 5px;
+    grid-column: 2 / 4;
+    grid-row: 2 / 6;
+}
+
+#landscape h3 {
+    background-color:rgb(255, 255, 255, 0.5);
+    border-radius: 25px;
+}
+
+#landscape.extreme {
+    background-image: url(../assets/extreme.jpg);
+}
+
+#landscape.hot {
+    background-image: url(../assets/hot.jpg);
+}
+
+#landscape.warm {
+    background-image: url(../assets/warm.jpg);
+}
+
+#landscape.mild {
+    background-image: url(../assets/mild.jpg);
+}
+
+#landscape.cool {
+    background-image: url(../assets/cool.jpg);
+}
+
+#landscape.cold{
+    background-image: url(../assets/cold.jpg);
+}
+
+#landscape.freezing {
+    background-image: url(../assets/freezing.jpg);
+}
