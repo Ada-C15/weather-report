@@ -19,12 +19,29 @@ const updateTemperatureColors = (currentTemperature) => {
     temperatureValueContainer.classList = color;
 };
 
+const updateGarden = (currentTemperature) => {
+    const landArtContainer = document.getElementById("land-art");
+    let landArt = "🌲🌲🌲";
+    if (currentTemperature >= 80) {
+        landArt = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+    } else if (currentTemperature >= 70) {
+        landArt = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
+    } else if (currentTemperature >= 60) {
+        landArt = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
+    } else if (currentTemperature >= 50) {
+        landArt = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲"
+    } else {
+        landArt = "🌲";
+    }
+    landArtContainer.textContent = landArt;
+};
 
 const updateTemperature = temperatureValue => {
     const temperatureValueContainer = document.getElementById("temperature-value");
     temperatureValueContainer.textContent = temperatureValue;
     updateTemperatureColors(temperatureValue);
-}
+    updateGarden(temperatureValue);
+};
 
 const increaseTemperature = () => {
     temperatureValue += 1;
