@@ -1,0 +1,129 @@
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  justify-content: space-between;
+  display: in-line;
+  color: white;
+  padding-left: 50px;
+  padding-top: 20px;
+}
+
+body {
+  background-color: #40b0df;
+  border: 0%;
+  margin: 0px;
+}
+
+main {
+  display: flex;
+}
+
+footer {
+  color: white;
+  padding: 5px;
+  padding-left: 15px;
+  font-size: 0.7em;
+}
+
+hr {
+  border-top: 1px solid white;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.control-box {
+  background-color: white;
+  margin: 50px;
+  padding: 30px;
+  padding-top: 5px;
+  padding-left: 25px;
+  border-radius: 15px;
+  width: 250px;
+}
+
+.gardenBox {
+  padding: 30px;
+  padding-top: 5px;
+  padding-left: 25px;
+  border-radius: 15px;
+  width: 400px;
+  height: 300px;
+}
+
+.garden-section {
+  display: inline-flexbox;
+  text-align: center;
+  align-self: center;
+}
+
+.control-section {
+  flex-direction: column;
+}
+
+.temperature-control {
+  flex-direction: column;
+  display: flex;
+}
+
+.red {
+  color: red;
+}
+
+.teal {
+  color: teal;
+}
+
+.orange {
+  color: orange;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.green {
+  color: green;
+}
+
+.cloudy {
+  background-color: rgba(201, 217, 223, 0.454);
+}
+
+.sunny {
+  background-color: rgb(147, 196, 255);
+}
+
+.rainy {
+  background-color: gray;
+}
+
+.snowy {
+  background-color: rgb(197, 198, 203);
+}
+
+#tempValue {
+  font-size: 3em;
+  font-weight: bold;
+  display: inline;
+  padding-left: 20px;
+}
+
+#cityNameHeader {
+  font-size: 2em;
+  margin-left: 10px;
+}
+
+#garden {
+  text-align: center;
+  height: 100%;
+  font-size: 2em;
+}
+
+#landscape {
+  position: absolute;
+  bottom: -300px;
+}
