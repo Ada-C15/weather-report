@@ -52,3 +52,13 @@ const increaseTemperature = () => {
     tempValueElement.textContent = `${state.currentTemp}`;
     gardenLandscape.textContent = tempColor[1];
 };
+
+const decreaseTemperature = () => {
+    state.currentTemp -=1;
+    const tempValueElement = document.querySelector("#tempValue");
+    const gardenLandscape = document.querySelector("#landscape");
+    let tempColor = tempValue();
+    tempValueElement.style.color = tempColor[0]
+    tempValueElement.textContent = `${state.currentTemp}`;
+    gardenLandscape.textContent = tempColor[1];
+};
