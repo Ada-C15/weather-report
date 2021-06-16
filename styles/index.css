@@ -62,23 +62,23 @@ input {
 }
 
 #landscape.sunny{
-    background-image: url("photos/sunny-leaves.jpeg");
+    background-image: url("../photos/sunny-leaves.jpeg");
 }
 
 #landscape.cloudy {
-    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/cloudy-leaves.jpeg");
+    background-image: url("../photos/cloudy-leaves.jpeg");
 }
 
 #landscape.rainy {
-    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/rainy-leaves.jpeg");
+    background-image: url("../photos/rainy-leaves.jpeg");
 }
 
 #landscape.snowy {
-    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/snowy-leaves.jpeg");
+    background-image: url("../photos/snowy-leaves.jpeg");
 }
 
 #landscape.stormy {
-    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/stormy-leaves.jpeg");
+    background-image: url("../photos/stormy-leaves.jpeg");
 }
 
 #landscape {
@@ -181,21 +181,21 @@ section#skySection {
 }
 
 section.sunny {
-    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/sunnysky.jpeg");
+    background-image: url("../photos/sunnysky.jpeg");
 }
 section.cloudy {
-    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/cloudysky.jpeg");
+    background-image: url("../photos/cloudysky.jpeg");
 }
 
 section.rainy {
-    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/rainysky.jpeg");
+    background-image: url("../photos/rainysky.jpeg");
 }
 
 section.snowy {
-    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/snowysky.jpeg");
+    background-image: url("../photos/snowysky.jpeg");
 }
 
 section.stormy {
     background-position: center;
-    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/stormysky.jpeg");
+    background-image: url("../photos/stormysky.jpeg");
 }
