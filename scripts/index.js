@@ -55,6 +55,7 @@ const updateGarden = (currentTemp) => {
     let landscape = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
     if ( currentTemp >= 80) {
         landscape = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+        
     } else if (currentTemp >= 70) {
         landscape = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
     } else if (currentTemp >= 60) {
