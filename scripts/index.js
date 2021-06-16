@@ -4,9 +4,8 @@ const state = {
     tempCount: 0
   };
 
-  
 const increaseTemp = (event) => {
-    state.tempCount += 1;
+    state.tempCount += 1
     // const count = document.querySelector("#tempCount");
     // count.textContent = `Temperature: ${state.tempCount}`;
     const count = document.querySelector("#num");
@@ -128,9 +127,6 @@ selectElement.addEventListener('change', (event) => {
       result.textContent = "☀️ 🔥🌤 ☀️🔥🌤 ";
   };
 
-
-//   result.textContent = `You like ${event.target.value}`;
-
 });
 
 // OBTAIN CITY NAME
@@ -154,7 +150,6 @@ const resetCity = (event) => {
     cityName.textContent = "Ada";
   };
 
-
 // REGISTER HANDLERS
   
 const registerEventHandlers= (event) => {
@@ -169,7 +164,6 @@ const registerEventHandlers= (event) => {
     resetButton.addEventListener("click", resetCity);
 
   };
-
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
 
