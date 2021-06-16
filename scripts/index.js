@@ -83,7 +83,8 @@ const updateSkySection = () => {
     } else {
         skySection.className = 'stormy';
     }
-    updateLandscape(skySection.className)
+    updateLandscape(skySection.className);
+    updateCityNameColor(skySection.className);
 
 
 }
@@ -98,4 +99,13 @@ const updateLandscape = (skySection) => {
     const landscapeSection = document.querySelector('#landscape');
     landscapeSection.className = skySection;
 
+}
+
+
+///changing city name color logic 
+
+
+const updateCityNameColor = (skySection) => {
+    const cityNameColor = document.querySelector('#headCityName');
+    cityNameColor.className = skySection;
 }

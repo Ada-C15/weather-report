@@ -10,8 +10,29 @@ html, body {
 #headCityName {
     font-family: 'Courier New', Courier, monospace;
     font-size: 95px;
-    color:lightgray;
+    color:slategray;
     opacity: .8;
+}
+
+
+#headCityName.sunny {
+    color: rgb(201, 232, 201);
+}
+
+#headCityName.cloudy {
+    color: #b79478;
+}
+
+#headCityName.rainy {
+    color: lightgrey; 
+}
+
+#headCityName.snowy {
+    color: #bf7751 ; 
+}
+
+#headCityName.stormy {
+    color: #c9cab8; 
 }
 
 button {
@@ -141,6 +162,14 @@ section#skySection {
     margin-right: 8px;
     margin-left: 2px;
 
+}
+
+#tempInc::selection {
+    background: None;
+}
+
+#tempDec::selection {
+    background: None;
 }
 
 #tempDec i {
