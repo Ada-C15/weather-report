@@ -1,6 +1,8 @@
 const state = {
     tempValue: 70,
     landscape: "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷",
+    sky: "☀️☀️☀️☀️☀️☀️☀️☀️",
+    message:"",
   };
 
 const increaseTemp = () =>{
@@ -51,6 +53,26 @@ const changeLandscape = () =>{
     }
 }
 
+const changeSky = () =>{
+    const sky = document.getElementById("skySelect").value;
+    const tempSkyContainer = document.getElementById("sky");
+    const tempMssgContainer = document.getElementById("message");
+    tempSkyContainer.textContent = state.sky;
+    tempMssgContainer.textContent = state.message;
+    if (sky === "Sunny") {
+        state.sky = "☀️☀️☀️☀️☀️☀️☀️☀️";
+        state.message = "Enjoy the sunshine🏖️";
+    } else if (sky === "Cloudy") {
+        state.sky = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+        state.message = "Go to the gym🧘‍♀️";
+    } else if (sky === "Rainy") {
+        state.sky = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+        state.message = "Stay home and watch TV📺";
+    } else if (sky === "Snowy") {
+        state.sky = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
+        state.message = "Build a snowman☃️";
+    }
+}
 
 
 const registerEventHandlers = () => {
@@ -59,6 +81,9 @@ const registerEventHandlers = () => {
 
     const decreaseTempButton = document.querySelector("#decreaseTemp");
     decreaseTempButton.addEventListener("click", decreaseTemp);
+
+    const skySelect = document.getElementById("skySelect");
+    skySelect.addEventListener("change", changeSky);
 };
 
 
