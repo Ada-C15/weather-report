@@ -1,4 +1,26 @@
 
+// HELPER FUNCTION //
+function numsChangeColor() {
+
+    let tempColor = document.querySelector('#givenTemp').style.color;
+    // let newColor = tempColor.style.color;
+    // let newColor = '';
+
+    if ("#givenTemp" >= 70) {
+        tempColor = "red"
+    } else if (("#givenTemp" < 70) && (givenTemp >= 60)) {
+        tempColor = "orange"
+    } else if ((givenTemp < 60) && (givenTemp >= 50)) {
+        tempColor = "yellow"
+    } else if ((givenTemp < 50) && (givenTemp >= 40)) {
+        tempColor = "green"
+    } else if ((givenTemp < 40) && (givenTemp >= 30)) {
+        tempColor = "blue"
+    } else if ((givenTemp < 30) && (givenTemp >= 0)) {
+        tempColor = "purple"
+    }
+};
+
 ////////////////////////////// WAVE 2 //////////////////////////////////
 ////////////////// EVENT HANDLER (UP/DOWN TEMPERATURE)//////////////////
 // SELECT THE EVENT TARGET
@@ -13,12 +35,14 @@ const addTemp = (event) =>  {       // Add temp UP Behavior
     state.givenTemp += 1;
     const tempUp = document.querySelector("#givenTemp");
     tempUp.textContent = state.givenTemp;
+    numsChangeColor(state.givenTemp);
 }
 const subTemp = (event) => {        // Add temp DOWN Behavior
     state.givenTemp -= 1;
     const tempDown = document.querySelector("#givenTemp");
     tempDown.textContent = state.givenTemp;
-}
+    numsChangeColor(state.givenTemp);
+};
 
 // REGISTER ALL EVENTS // use the .registerEventHandler
 const registerEventHandlers = (event) => {              // EACH EVENT needs a .addEventListener - listens fot the event i.e. "click" then performs a function
@@ -42,9 +66,7 @@ const registerEventHandlers = (event) => {              // EACH EVENT needs a .a
 // NOPE document.getElementById('changeCity') || document.querySelector("#changeCity");
 // Needs to be the "citySearch" id BUT specifically the VALUE of the user input that triggers the change/reset of the display
 const switchCity = (event) =>  {
-    // change to different city Behavior
-    // NOPE const rainville = document.getElementById('changeCity')
-    // NOPE rainville.innerHTML = "<h2>Rainville</h2>\n<span>55<sup>°F</sup></span>\n<figure>\n<img class=\"city-icon\" src=\"./assets/rainy.png\" height=\"100\" width=\"100\" alt=\"Rainy\"/>\n<figcaption>Rainy with Temperatures between 40-65°F</figcaption></figure>"
+    // change to different city Behavior // NOPE const rainville = document.getElementById('changeCity') // NOPE rainville.innerHTML = "<h2>Rainville</h2>\n<span>55<sup>°F</sup></span>\n<figure>\n<img class=\"city-icon\" src=\"./assets/rainy.png\" height=\"100\" width=\"100\" alt=\"Rainy\"/>\n<figcaption>Rainy with Temperatures between 40-65°F</figcaption></figure>"
     const city = document.getElementById("citySearch").value; // THE USER INPUT** 
     let cityNameText = "";
     let cityTempText = "";
@@ -94,11 +116,6 @@ const switchCity = (event) =>  {
 const changeDisplay = (event) => {
     const displaySky = document.getElementById("displaySky");
     displaySky.src = document.getElementById("skySelector").value; // USER INPUT ?? does this grab the option value?
-    
-
-    // switch (display){
-
-
 
         event.preventDefault()
 }
