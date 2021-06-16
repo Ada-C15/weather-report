@@ -24,9 +24,6 @@ button {
     border-style: inset;
 }
 
-#tempInc:hover {
-    color: #13331b
-}
 
 button:hover {
     background-color: slategray;
@@ -39,27 +36,27 @@ input {
     background-color: lightgrey;
 }
 
-#sky.sunny{
+#landscape.sunny{
     background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/sunny-leaves.jpeg");
 }
 
-#sky.cloudy {
+#landscape.cloudy {
     background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/cloudy-leaves.jpeg");
 }
 
-#sky, .rainy {
+#landscape.rainy {
     background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/rainy-leaves.jpeg");
 }
 
-#sky, .snowy {
+#landscape.snowy {
     background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/snowy-leaves.jpeg");
 }
 
-#sky, .stormy {
+#landscape.stormy {
     background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/stormy-leaves.jpeg");
 }
 
-#sky {
+#landscape {
     min-height: 100%;
     background-color: skyblue;
     flex-direction: column;
@@ -79,13 +76,32 @@ section#tempSection {
     position: relative;
     height: 300px;
     width: 300px;
-    background-color: darkgray;
-    opacity: .6;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 10px;
 }
+
+section.hot {
+    background-color: rgba(124, 4, 18, .6);
+}
+
+section.warm {
+    background-color: rgba(186, 106, 87, .6);
+}
+
+section.perfect {
+    background-color: rgba(114, 138, 124, .6) ;
+}
+
+section.cool {
+    background-color: rgba(147, 208, 219, .6) ;
+}
+
+section.cold {
+    background-color: rgba(188, 151, 191, .6);
+}
+
 
 #tempDisplay {
     font-family: 'Courier New', Courier, monospace;
@@ -135,17 +151,18 @@ section.sunny {
     background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/sunnysky.jpeg");
 }
 section.cloudy {
-    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/cloudy-leaves.jpeg");
+    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/cloudysky.jpeg");
 }
 
-footer div.rainy {
-    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/rainy-leaves.jpeg");
+section.rainy {
+    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/rainysky.jpeg");
 }
 
-footer div.snowy {
-    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/snowy-leaves.jpeg");
+section.snowy {
+    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/snowysky.jpeg");
 }
 
-footer div.stormy {
-    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/stormy-leaves.jpeg");
+section.stormy {
+    background-position: center;
+    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/stormysky.jpeg");
 }
