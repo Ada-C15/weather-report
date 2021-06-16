@@ -126,3 +126,39 @@ header button {
     padding: 40px 0 40px 0;
     font-size: 30px;
 }
+
+.sunny {
+    background-color: lightskyblue;
+}
+
+.cloudy {
+    background-color: lightgrey;
+}
+
+.rainy {
+    background-color: darkgrey;
+} 
+
+.snowy {
+    background-color: ivory;
+}
+
+.red {
+    color: red;
+} 
+
+.orange {
+    color: orange;
+} 
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+} 
+
+.teal {
+    color: teal;
+}
