@@ -7,6 +7,10 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     margin: 2rem;
+/* playing around with background images */
+    /* background-image: url(../assets/hawaii-landscape.jpeg); */
+    /* background-size: cover; */
+    /* opacity: 0.95; */
 }
 
 header {
@@ -45,8 +49,6 @@ h2 {
 
 .garden_section {
     grid-row: 3;
-
-    /* make it span more than just column 2 */
     grid-column: 2 / 6;
 }
 
@@ -72,7 +74,7 @@ h2 {
 }
 
 .red {
-    color: red;
+    color: rgb(255, 0, 0);
 }
 
 .orange {
@@ -80,13 +82,16 @@ h2 {
 }
 
 .yellow {
-    color: yellow;
+    color: #ffe134;
 }
 
 .green {
-    color: green;
+    color: rgb(73, 175, 73);
 }
 
 .blue {
-    color: blue;
+    color: rgb(0, 110, 255);
 }
+
+
+/* weather garden formatting */

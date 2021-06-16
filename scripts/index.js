@@ -38,7 +38,7 @@ const updateTempColor = () => {
         color = "blue";
     };
     tempValueContainer.classList = color;
-}
+};
 
 // potentially combine this in with updateTempColor since ranges of temps are the same
 const updateLandscape = () => {
@@ -55,9 +55,8 @@ const updateLandscape = () => {
     } else {
         landscape = "❄️💙❄️💙❄️💙❄️💙❄️💙❄️💙❄️💙";
     };
-    landscapeContainer.textContent = landscape;
-    
-}
+    landscapeContainer.textContent = landscape;  
+};
 
 const updateSky = () => {
     const skyContainer = document.querySelector("#skyContainer");
@@ -88,7 +87,8 @@ const resetCityName = () => {
     const cityNameContainer = document.querySelector("#cityNameContainer");
     cityNameContainer.textContent = defaultCityName;
     const inputCityName = document.querySelector("#cityNameInput");
-    inputCityName.value = defaultCityName;
+    // inputCityName.value = defaultCityName;
+    inputCityName.value = "";
 };
 
 const registerEventHandlers = () => {
@@ -106,8 +106,7 @@ const registerEventHandlers = () => {
 
     const resetDefaultCity = document.querySelector("#cityResetButton");
     resetDefaultCity.addEventListener('click', resetCityName);
-
-}
+};
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
 
