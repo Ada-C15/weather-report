@@ -41,3 +41,39 @@ const displaySky = (sky) => {
     newSky.textContent = sky_image
 }
 
+const increaseTemp = () => {
+    const temperature = document.querySelector("#temperature");
+    const temperature_value = parseFloat(temperature.textContent) + 1;
+    color = formatTemp(temperature_value);
+    temperature.className = color;
+    temperature.textContent = String(temperature_value);
+};
+
+const decreaseTemp = () => {
+    const temperature = document.querySelector("#temperature");
+    const temperature_value = parseFloat(temperature.textContent) - 1;
+    color = formatTemp(temperature_value);
+    temperature.className = color;
+    temperature.textContent = String(temperature_value);
+    
+};
+
+const cityNameChange = () => {
+    const name = document.querySelector("#name_input_box")
+    const city_name = document.querySelector("#city_name")
+    city_name.textContent = name.value
+}
+
+const resetCityName = () => {
+    const name = document.querySelector("#name_input_box")
+    const city_name = document.querySelector("#city_name")
+    name.value = "Portland"
+    city_name.textContent = name.value
+}
+
+const selectSky = () => {
+    const sky_selection = document.querySelector("#sky_selection")
+    displaySky(sky_selection.value)
+}
+
+
