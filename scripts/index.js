@@ -76,6 +76,11 @@ const setSky = () => {
     state.sky = skyInput;
 }
 
+const setCity = () => {
+    const cityInput = document.getElementById("cityInput").value;
+    const cityHeading = document.getElementById("cityHeading");
+    cityHeading.textContent = cityInput;
+}
 
 ////////// register event handlers ///////////
 
@@ -87,6 +92,9 @@ decreaseTempButton.addEventListener("click", decreaseTemperature);
 
 const skySelection = document.getElementById("skySelect");
 skySelection.addEventListener("change", setSky);
+
+const citySelection = document.getElementById("cityInput");
+citySelection.addEventListener("input", setCity)
 
 // const registerEventHandlers = () => {
 //     const increaseTempButton = document.getElementById("increaseTemp");
