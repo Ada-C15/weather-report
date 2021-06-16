@@ -1,0 +1,83 @@
+
+html{ 
+    font-family:Verdana, Geneva, Tahoma, sans-serif; 
+    /* margin: 20px;  */
+}
+
+
+body { 
+    display: grid; 
+    grid-template-columns: 1 fr 2fr; 
+    grid-template-rows: auto auto auto auto; 
+    grid-gap: 1rem; 
+
+    /* font-family: "Roboto", sans-serif;  */
+    font-size: 18px; 
+    background-color:pink;
+    margin: 2rem; 
+
+}
+
+.red{ 
+    background-color: red
+
+}
+
+.orange{ 
+    background-color: orange;
+}
+
+.green{
+    background-color: green;
+}
+
+.yellow{ 
+    background-color: yellow;
+}
+
+.teal{ 
+    background-color: teal;
+}
+button { 
+    cursor: pointer;
+}
+
+button, 
+input { 
+    border: none; 
+    outline: none;
+    color: inherit; 
+}
+
+
+
+.header_city-name {
+    font-style: oblique;
+    font-size: 2rem;
+}
+
+.header_city-name: :before,
+.header_city-name: :after {
+    content: "image";
+}
+
+.temperature { 
+    border-radius: 8px;
+    padding: 2rem;
+    background-color:hotpink;
+}
+
+.sky { 
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: powderblue; 
+}
+
+
+.temperature_section { 
+    grid-row: 2; 
+}
+
+img { 
+    text-align: center; 
+}

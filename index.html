@@ -3,14 +3,81 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connecting HTML, CSS, and JS Demo</title>
-    <link href="styles/style.css" rel="stylesheet" type="text/css" />
+    <title>Weather Report </title>
+    <link href="styles/index.css" rel="stylesheet" type="text/css" />
   </head>
+
   <body>
-    <main>
-      <h1></h1>
-      <p></p>
-    </main>
+    <header> 
+
+    <img src=styles/Weather.jpg alt="weather app logo">
+    <h1>Erika's Weather Report 🔍 </h1>
+    <h3> For the wonderful city of 
+        <span id="headerCityName">Albany</span>
+     </h3>
+    </header>
+
+    <section class = "temperature">
+        <div id=grid-container>
+            <section id = temprature-information>
+                <h2>Temperature</h2> 
+            </section>
+            <div>
+                <span id= "landscape"></span>
+            </div>
+
+            <div>
+                <span id= "temp-integer"></span>
+            </div>
+                
+            <span id= "Increase-decrease-temp buttons">
+                <button id="increase-temp-button">⬆️</button>
+                <button id="decrease-temp-button">⬇️</button>
+                <button id="temp-converter-button">Celsius</button>
+            </span>
+        </div>
+    
+
+    </section>
+     
+
+    <section class = "sky">
+        <h2>Sky:</h2>
+        <select id = "sky-menu">
+            <option> Sunny</option>
+            <option>Cloudy</option>
+            <option>Rainy</option>
+            <option>Snowy</option>
+            <option>Tornado</option>
+            <option>Hail</option>
+            <option>Fire & Brimstone</option>
+
+    
+        </select>
+
+        <div>
+            <span id = "sky-weather"></span>
+        </div>
+
+
+    </section>
+
+    <section class = "city-name">
+        <h2>City Name:</h2>
+        <input type = "text" id="cityNameInput" value="Albany" />
+        <button id ="resetCityName">Reset</button>
+
+
+    </section>
+       
+        
+    
+    <footer>
+            <h4>For updated weather news, please come back again. </h4>
+            <p> 2021-2022 Copyright Erika Chikere</p> </footer>
     <script src="scripts/index.js"></script>
   </body>
 </html>
+
+
+
