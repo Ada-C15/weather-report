@@ -6,7 +6,7 @@ body {
     margin: 0;
     padding: 0;
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 3fr 1fr;
     grid-template-rows: auto auto auto auto;
     grid-gap: 1rem;
     font-size: 18px;
@@ -15,6 +15,7 @@ body {
 
 h1, h2, h3, h4 {
   color: #6b705c;
+  display: inline-block;
   text-align: center;
   font-family: 'Kristi', cursive;
   font-size: 2em;
@@ -22,19 +23,19 @@ h1, h2, h3, h4 {
 
 
 .garden__section {
-    display: inline-flex;
+    display: inline;
     text-align: center;
     margin: 0.25em;
     padding: 0.25em;
-    border-radius: 12%;
+    border-radius: 50%;
     background: url("https://i.pinimg.com/564x/ba/76/58/ba765836dc5cedf594c22af9a9f7b4f7.jpg");
 }
 
 .sky__section {
-    display: inline-flex;
+    display: inline;
     text-align: center;
     margin: 0.25em;
     padding: 0.25em;
-    border-radius: 12%;
+    border-radius: 50%;
     background: url("https://i.pinimg.com/564x/ba/76/58/ba765836dc5cedf594c22af9a9f7b4f7.jpg");
   }
