@@ -8,14 +8,16 @@
     </head>
     <body>
         <noscript>Please Enable Javscript to Continue</noscript>
-        <header>
+        <header class="header-container">
             <div class="sky-display"></div>
+        </header>
+        <section class="city-display">
             <h1 class='city-name'>Enter a City Name:</h1>
             <form method="get" id="city-name-form">
                 <input type="text" name="name" placeholder="Your City">
                 <button type="submit">Submit</button>
             </form>
-        </header>
+        </section>
         <section class="temp-display">
             <h2 class="temp">The Temperature:</h2>
             <div class="temp-display">
@@ -26,25 +28,20 @@
             <div class="landscape">🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃</div>
         </section>
         <section class="sky-menu">
-
+            <form method="get" id="sky-menu-form">
+                <label for="sky">Choose a sky:</label>
+                <select name="sky" id="sky-dropdown">
+                    <option value="sunny">sunny</option>
+                    <option value="cloudy">cloudy</option>
+                    <option value="rainy">rainy</option>
+                    <option value="snowy">snowy</option>
+                  </select> 
+                  <br />
+                <button type="submit">choose sky</button>
+            </form>
         </section>
         <footer>
 
         </footer>
         <script type="text/javascript" src="./scripts/index.js"> </script>
     </body>
-
-    <!---
-    Wave 2:
-
-    An element that displays the temperature
-    A clickable element to increase temperature
-    A clickable element to decrease temperature
-    An element that displays a landscape
-
-Wave 3:
-
-    A <select> dropdown element to set the sky type
-    An element that displays a sky
-
--->
