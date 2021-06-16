@@ -1,0 +1,173 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: helvetica neue light italic ;
+    background-color: rgb(239, 255, 255);
+    /* display: flex; */
+}
+
+nav {
+    position: flex;
+    top: 200px;
+    left: 50%;
+    margin-top: 100px;
+    margin-left: 70px;
+    transform: translate(-50%, -50%);
+    background: #D8D8D8;
+    width: 100px;
+    line-height: 15px;
+    padding: 8px 25px;
+}
+
+nav label {
+    color: white;
+    font-size: 15px ;
+    /* display: block; */
+    cursor: pointer;
+
+}
+
+select {
+    margin-top: 50px;
+}
+
+
+.botton span {
+    float: right;
+    line-height: 35px;
+}
+.container {
+    position: relative;
+    width: 100px;
+    height: 300px;
+    margin: 240px, auto;
+
+}
+
+.container .box {
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(250px - 30px);
+    background: rgb(248, 246, 246);
+    /* float: left; */
+    bottom: -100px;
+    margin: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    
+}
+
+.box-container {
+    background: rgba(138, 241, 216, 0.432);
+    position: absolute;
+    top: 100%;
+    left: 500%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 400px;
+    text-align: center;
+    
+}
+
+.container .box .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgb(0, 183, 255); */
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.container .box .icon {
+    top: 20px;
+    left:  calc(50% - 40px );
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+}
+
+
+.container .box .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: aquamarine;
+}
+#garden-box {
+    background:	transparent;
+    width: 600px;
+    height: 45%;
+    text-align: center;
+}
+
+#garden {
+    background: transparent;
+    height: 45%;
+    text-align: center;
+}
+
+#reset_button {
+    margin-top: -21px;
+    margin-left: 150px;
+}
+
+#tempCount {
+    font-size: 40px;
+}
+
+
+
+
+.container .box .content {
+    position: absolute;
+    height: 100;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.container .box .content h3 {
+    margin: 0;
+    padding: 0;
+    color: rgba(223, 252, 252, 0.144);
+    font-size: 24px;
+
+}
+
+.container .box .content h3 {
+    margin: 0;
+    padding: 0;
+    color: black;
+
+}
+
+.container .box:nth-child(1) .icon{
+    background: #319635;
+}
+
+.too-hot {
+    color: red; 
+}
+
+.just-right {
+    color: rgb(255, 226, 131)
+}
+
+.fresh {
+    color: #a0d366cc;
+}
+
+.getting-cold {
+    color:rgb(139, 233, 250)
+}
+
+.too-cold {
+    color:rgba(0, 0, 255, 0.445);
+}
