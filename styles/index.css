@@ -152,9 +152,22 @@ select {
     background: #319635;
 }
 
+.too-hot {
+    color: red; 
+}
 
+.just-right {
+    color: rgb(255, 226, 131)
+}
 
+.fresh {
+    color: #a0d366cc;
+}
 
-/* Things to put letters to the botton
-top: 100px;
-height: calc(100% - 100px); */
+.getting-cold {
+    color:rgb(139, 233, 250)
+}
+
+.too-cold {
+    color: rgba(115, 170, 253, 0.164);
+}
