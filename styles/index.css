@@ -40,11 +40,12 @@
     flex-direction: column;
     flex-grow: 1;
     color: rgba(232, 224, 216, 0.902);
-    background-color: rgba(65, 55, 55, 0.1367);
+    background-color: rgba(29, 26, 26, 0.296);
     border: 1px solid white;
     border-radius: 10px;
     box-shadow: 1px 1px 2.5px #fff;
   }
+
   select {
     color: rgba(232, 224, 216, 0.902);
     font-size: 20px;
@@ -55,6 +56,7 @@
     border-radius: 100px;
     padding: 1rem 1rem 1rem;
   }
+
   .button {
     min-width: 48px;
     min-height: 48px;
@@ -104,6 +106,7 @@
     box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.637);
     border-color: #fff;
   }
+
   
   .temperature {
     color: rgba(232, 224, 216, 0.902);
@@ -129,23 +132,13 @@
     color: rgba(232, 224, 216, 0.902);
     font-size: 14px;
   }
-  
-  #gardenContent {
-    font-size: 30px;
-  }
-  #skyContent {
-    font-size: 30px;
-  }
-  #tempValue {
-    font-size: 30px;
-  }
-  
+   
   .maroon {
-    color: rgb(93, 8, 8);
+    color: rgb(111, 16, 16);
   }
   
   .red {
-    color: red;
+    color: rgb(252, 2, 2);
   }
   
   .orange {
@@ -156,10 +149,6 @@
     color: gold;
   }
   
-  .yellow-green {
-    color: yellowgreen;
-  }
-  
   .green {
     color: green;
   }
@@ -167,6 +156,37 @@
   .blue {
     color: rgb(35, 64, 226);
   }
+  
+  #highTemp{
+      color:red;
+  }
+
+  #gardenContent {
+    font-size: 30px;
+  }
+  #lowTemp{
+      color:rgb(41, 104, 223);
+  }
+
+  #skyContent {
+    font-size: 30px;
+  }
+
+  #skyThemeSelect{
+    padding: 1rem 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    border: 2px solid rgba(232, 224, 216, 0.902);
+    border-radius: 100px;
+    color: rgba(232, 224, 216, 0.902);
+    font-size: 20px;
+    width:auto;
+  }
+
+  #tempValue {
+    font-size: 30px;
+  }
+  
   
   /* .navButtons {
     flex-grow: 1;

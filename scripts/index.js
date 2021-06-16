@@ -1,20 +1,20 @@
-let defaultTempValue = 71;
+let defaultTempValue = 68;
 const createSky = () => {
   const inputSky = document.getElementById("skyThemeSelect").value;
   const skyContainer = document.getElementById("skyContent");
   let sky = "";
   let skyColor = "";
   if (inputSky === "Cloudy") {
-    sky = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+    sky = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️☁️☁️☁️☁️☁️☁️ ☁️☁️☁️☁️";
     skyColor = "cloudy";
   } else if (inputSky === "Sunny") {
-    sky = "☁️     ☁️   ☁️ ☀️ ☁️  ☁️";
+    sky = "☁️  ⛅️  🌞 ☁️🌤  🌞 ☁️ 🌥☁️😶‍🌫️ 🌞 ☁️🌞 ☁️🌞🌞 ";
     skyColor = "sunny";
   } else if (inputSky === "Rainy") {
-    sky = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+    sky = "🌧🌈⛈🌧🌧💧💧💧💧💧⛈🌧🌦🌧💧💧💧💧💧🌧";
     skyColor = "rainy";
   } else if (inputSky === "Snowy") {
-    sky = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
+    sky = "🌨❄️❄️❄️🌨🌨❄️❄️❄️❄️🌨❄️❄️❄️🌨❄️❄️❄️❄️🌨";
     skyColor = "snowy";
   }
   skyContainer.textContent = sky;
@@ -46,7 +46,7 @@ const updateTempIcons = (currentTemp) => {
   } else if (currentTemp >= 60) {
     color = "orange";
   } else if (currentTemp >= 50) {
-    color = "yellow";
+    color = "blue";
   }
 
   tempValueContainer.classList = color;
