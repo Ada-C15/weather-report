@@ -55,6 +55,22 @@ const handleCityInput = (e) => {
 const cityInputForm = document.querySelector("#city-input")
 cityInputForm.addEventListener("submit", handleCityInput)
 
+function getSkyType() {
+    const skySelect = document.getElementById("sky-select");
+    const skyType = skySelect.value;
+    console.log(skyType);
+    const weatherImage = document.getElementById("weather-image"); //html knows this is an img tag => it has 'src' attribute
+    if (skyType === "hot") {
+        weatherImage.src = "assets/hotImg.jpeg";
+    } else if (skyType === "hotter") {
+        weatherImage.src = "assets/hotterImg.jpeg";
+    } else if (skyType === "hottest") {
+        weatherImage.src = "assets/hottestImg.jpeg";
+    } else if (skyType === "heck") {
+        weatherImage.src = "assets/heckImg.jpeg";
+    }
+}
+
 
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
