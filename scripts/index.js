@@ -1,6 +1,7 @@
 const state = {
     temp_number: 67,
-    airspace: "sunny"
+    airspace: "sunny",
+    current_city: "Seattle",
 };
 
 
@@ -12,12 +13,12 @@ const temperatureUp = () => {
     state.temp_number += 1;
     temperature.textContent = `${state.temp_number}`;
 };
-//tempUpButton.addEventListener("click", temperatureUp);
+
 const temperatureDown = () => {
     state.temp_number -= 1;
     temperature.textContent = `${state.temp_number}`;
 };
-//tempDownButton.addEventListener("click", temperatureDown);
+
 
 const tempChangeColor = () => {
     if (state.temp_number > 79) {
@@ -58,9 +59,9 @@ const tempChangeGround = () => {
 
 
 const skyElement = document.querySelector("#sky_options");
-const tempChangeSky = (event) => {
-    state.airspace = event.target.value;
 
+const tempChangeSky = (skyElement) => {
+    state.airspace = skyElement.target.value;
     if (state.airspace === "sunny") {
         airspace.textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️"; 
     }
@@ -75,7 +76,20 @@ const tempChangeSky = (event) => {
     }
 };
 
-const 
+let current_city = document.querySelector("#display");
+const input = document.querySelector("#city");
+
+const changeCity = (input) => {
+    state.current_city = input.target.value;
+    current_city.textContent = `🏙 ${state.current_city} 🏙`;
+};
+
+const resetCityButton = document.querySelector("#reset");
+const resetButton = () => {
+    state.current_city = "Seattle";
+    current_city.textContent = `🏙 ${state.current_city} 🏙`;
+    input.value = "";
+};
 
 const registerEventHandlers = () => {
     const tempUpButton = document.querySelector("#up");
@@ -89,6 +103,10 @@ const registerEventHandlers = () => {
     tempDownButton.addEventListener("click", tempChangeGround);
 
     skyElement.addEventListener("change", tempChangeSky);
+
+    input.addEventListener("input", changeCity);
+
+    resetCityButton.addEventListener("click", resetButton);
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
