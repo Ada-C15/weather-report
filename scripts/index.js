@@ -18,7 +18,6 @@ cityNameForm.addEventListener('submit', (event) => {
 });
 
 cityName.addEventListener('click', (event) => {
-// add cursor style pointer to h1 for ease of use
     cityNameForm.style.display = 'block';  
 
 });
@@ -47,14 +46,12 @@ const emojiDisp = function (temp_num){
 }
 
 plus.addEventListener('click', (event) => {
-    // add cursor style pointer to span for ease of use
     let temperature = parseInt(temp.textContent)
     temp.textContent = temperature + 1
     emojiDisp(temperature + 1)
     });
 
 minus.addEventListener('click', (event) => {
-    // add cursor style pointer to span for ease of use
     let temperature = parseInt(temp.textContent)
     temp.textContent = temperature - 1
     emojiDisp(temperature - 1)
@@ -79,6 +76,5 @@ skyMenuForm.addEventListener('submit', (event) => {
 
         }
     } 
-    cityNameForm.style.display = 'none';  
     event.preventDefault();
 });
