@@ -3,33 +3,24 @@ body {
     font-family: 'Libre Baskerville', serif;
     color: beige;
 }
+
 #container {
     display: grid;
     grid-template: 3 / 2;
 }
+
 .box {
     grid-column: 0/1;
     height: 150px;
     margin: 25px;
     position:relative;
     padding: 1em;
-}
-
-.box::after {
-    content:"";
-    background-color: white;
+    background: rgba(204, 204, 204, 0.25);
     height:150px;
     padding: 1em;
-    opacity:.25;
-    top:0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position:absolute;
-    z-index: -1;
     border-radius: 25px;
-
 }
+
 
 #temperature {
     grid-row: 1/2;
@@ -44,4 +35,24 @@ body {
 
 #weatherGarden {
     grid-column: 2/3;
+}
+
+.tooHot {
+    background: rgba(255, 0, 0, 0.25);
+}
+
+.notTooHot {
+    background: rgba(162, 64, 3, 0.25);
+}
+
+.quiteCool {
+    background-color: yellow;
+}
+
+.jacketWeather {
+    background-color: green;
+}
+
+.coldWeather {
+    background-color: teal;
 }
