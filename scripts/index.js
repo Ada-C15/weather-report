@@ -103,4 +103,10 @@ const input = document.querySelector("#input");
 input.addEventListener('keyup', event => {
     cityDisplay.textContent = event.target.value;
 });
-// store value from input
+
+// reset clears input field
+const resetBtn = document.querySelector("#reset");
+resetBtn.addEventListener('click', event => {
+    input.value = "";
+    cityDisplay.textContent = state.city;
+})

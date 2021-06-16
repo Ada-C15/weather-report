@@ -71,5 +71,5 @@ input {
 .dropdown:hover .dropdown-content {display: block;}
 
   /* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .btn {background-color: #3e8e41;}
-.button-container .btn:hover {background-color: #3e8e41;}
+/* .dropdown:hover .btn {background-color: #3e8e41;} */
+.btn:hover {background-color: #3e8e41;}
