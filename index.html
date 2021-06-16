@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Weather Application</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+
+<body>
+    <div class="flex" id="app-container">
+
+        <section id="top-banner">
+            <h1>🌈Weather Report for the city of</h1>
+            <h1 id="cityDisplay">nowhere</h1>
+        </section>
+
+        <section class="display-box" id="temp-container">
+            <h2>Temperature</h2>
+            <h2 id="tempDisplay">65</h2>
+
+            <div class="button-container">
+                <button class="btn" id="plus"> turn up the heat </button>
+                <button class="btn" id="minus"> cool it down </button>
+            </div>
+        </section>
+
+        <section class="display-box">
+            <div id="sky-container">
+                <h2>Sky</h2>
+                <div class="dropdown">
+                    <button class="btn">Pick a sky</button>
+                    <div class="dropdown-content">
+                        <a class="option" id="rainy">Rainy</a>
+                        <a class="option" id="cloudy">Cloudy</a>
+                        <a class="option" id="sunny">Sunny</a>
+                        <a class="option" id="snowy">Snowy</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="display-box">
+            <div id="city-container">
+                <h2>City</h2>
+                <input type="text" id="input" placeholder="Search City..">
+                <button class="btn" id="reset">Reset</button>
+            </div>
+        </section>
+
+
+        <section class="display-box" id="landscape-display">
+            <h2 id="garden-text">Happenings in the Garden</h2>
+            <div class="garden-box">
+                <div id="landscape-container">
+                    <!-- how to center emojis? -->
+                    <div id="sky-icon-container">
+                        <span id="sky-icons" class="emojis">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</span>
+                    </div>
+                    <div class="br"></div>
+                    <div id="land-icon-container">
+                        <span id="land-icons" class="emojis">🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+    <script src="scripts/index.js"></script>
+</body>
+
+</html>
