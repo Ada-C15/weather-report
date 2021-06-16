@@ -14,27 +14,27 @@ function changeBackground(temp) {
     const newLand = document.querySelector("#land-icons");
 
     if (temp < 29) {
-        document.body.style.backgroundColor = 'grey';
+        document.body.style.backgroundColor = '#393D3F';
         newLand.textContent = "🧊🧊🧊🧊🧊🧊🧊🧊";
     }
     else if (temp < 39) {
-        document.body.style.backgroundColor = 'blue';
+        document.body.style.backgroundColor = '#546A7B';
         newLand.textContent = "🧊___🧊❄️__🧊🧊❄️_🧊❄️🧊";
     }
     else if (temp < 49) {
-        document.body.style.backgroundColor = 'teal';
+        document.body.style.backgroundColor = '#62929E';
         newLand.textContent = "☃️❄️🌲__☃️☃️_❄️🌲☃️❄️__🌲";
     }
     else if (temp < 59) {
-        document.body.style.backgroundColor = 'green';
+        document.body.style.backgroundColor = '#988F2A';
         newLand.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
     }
     else if (temp < 69) {
-        document.body.style.backgroundColor = 'yellow';
+        document.body.style.backgroundColor = '#FED766';
         newLand.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
     }
     else if (temp < 79) {
-        document.body.style.backgroundColor = 'orange';
+        document.body.style.backgroundColor = '#FE5F00';
         newLand.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
     }
     else if (temp > 80) {

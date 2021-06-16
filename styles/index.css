@@ -6,6 +6,19 @@ body {
     justify-content: center;
 }
 
+h1 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+#cityDisplay{
+    font-weight: 600;
+}
+
+#garden-text{
+    color: #023047;
+}
+
 #app-container {
     width: 80%;
     margin: 0;
@@ -17,12 +30,20 @@ body {
     border: solid black 2px;
 }
 
+.emojis{
+    font-size: 2rem;
+}
+
 /* display box style */
 .display-box {
-    background-color: blanchedalmond;
+    background-color: rgb(222, 203, 203);
     border-radius: 20px;
     padding: 1rem;
     margin: 1rem;
+}
+
+.garden-box{
+    width: 40%;
 }
 
 /* input */
@@ -34,7 +55,7 @@ input {
 
 /* Dropdown Button */
 .btn {
-    background-color: #04AA6D;
+    background-color: #2a9d8f;
     color: white;
     padding: 16px;
     font-size: 16px;
@@ -72,4 +93,4 @@ input {
 
   /* Change the background color of the dropdown button when the dropdown content is shown */
 /* .dropdown:hover .btn {background-color: #3e8e41;} */
-.btn:hover {background-color: #3e8e41;}
+.btn:hover {background-color: #264653;}
