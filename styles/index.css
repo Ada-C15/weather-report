@@ -7,7 +7,7 @@
   
   body {
     width: 100%;
-    min-height: 105vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,10 +22,6 @@
     background-size: 100% 100%;
     background-blend-mode: overlay;
   }
-  
-  .headerCity {
-    font-size: 20px;
-  }
 
   hr {
     width: 98%;
@@ -36,7 +32,7 @@
   main {
     width: 100%;
     max-width: 700px;
-    max-height: 1060px;
+    max-height: 1300px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -66,8 +62,7 @@
   }
 
   .button {
-    min-width: 48px;
-    min-height: 64px;
+    
     color: rgba(247, 247, 247, 0.815);
     border: 2px solid rgba(247, 247, 247, 0.815);
     border-radius: 100px;
@@ -87,7 +82,11 @@
     box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.603);
     border-color: #fff;
   }
-  
+   
+  .headerCity {
+    font-size: 20px;
+  }
+
   .resetCityBtn {
     border: none;
     box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.63);
@@ -114,7 +113,6 @@
     box-shadow: 4px 2px 5px rgba(0, 0, 0, 0.637);
     border-color: #fff;
   }
-
   
   .temperature {
     color: rgba(232, 224, 216, 0.902);
@@ -140,7 +138,7 @@
     color: rgba(232, 224, 216, 0.902);
     font-size: 14px;
   }
-   
+   /* Colors for the garden background and temp digits */
   .red {
     color: rgb(245, 6, 6);
   }
@@ -177,26 +175,17 @@
     background-color: rgba(18, 106, 221, 0.563);
   }
 
-  #highTemp{
-      color:red;
-  }
-  /* #gardenContainer{
-    border-radius: 3px;
-    padding: .5rem;
-    background-color: rgba(215, 236, 26, 0.412);
-  } */
   #gardenContent {
     font-size: 30px;
   }
 
+  #highTemp{
+      color:red;
+  }
+  
   #lowTemp{
       color:rgb(47, 156, 240);
   }
-  /* #skyContainer{
-    border-radius: 3px;
-    padding: .5rem;
-    background-color: rgba(254, 248, 248, 0.344);
-  } */
 
   #skyContent {
     font-size: 30px;
@@ -217,7 +206,7 @@
     font-size: 30px;
   }
   
-  
+  /* nav buttons that wont be used */
   /* .navButtons {
     flex-grow: 1;
     display: flex;

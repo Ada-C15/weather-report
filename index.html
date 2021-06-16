@@ -5,9 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Weather Report App</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" /> <!--cdjns.com font awesome-->
+  <!--cdjns.com for font awesome-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" referrerpolicy="no-referrer" /> 
   <link rel="preconnect" href="https://fonts.gstatic.com"> 
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> <!--google font Montserrat-->
+  <!--google font Montserrat-->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="styles/index.css">
 </head>
 
@@ -15,7 +17,7 @@
   <main>
       
       <h1> Weather Report </h1>
-      <span> for the city of:  <span id="headerCity" class="headerCity"></span></span>
+      <span> for the city of:🌟  <span id="headerCity" class="headerCity"></span></span>
       <section id="searchBar" class="searchBar"></section>
               <label for="searchBarText">Enter a City Name</label>
               <input id="searchBarText" class="searchBarText" type="text"  value="Seattle">
@@ -34,62 +36,59 @@
         <option>Cloudy</option>
         <option>Rainy</option>
         <option>Snowy</option>
-    </select>
-  </section>
-      <!----<nav id="navButtons" class="navButtons"><nav>
-      <section>
-          <button id="getPrecipitation" class="button" title="Precipitation" aria-label="Get the rainy weather conditions for your location">
-            <i class="fas fa-cloud-showers-heavy"></i>
-          </button>
+     </select>
 
-          <button id="getCloudy"  class="button" title="Cloudy Conditions" aria-label="Get the cloudy weather conditions for your home location">
-              <i class="fas fa-cloud"></i>
-          </button>
-
-          <button id="getSunny"  class="button" title="Sunny Conditions" aria-label="Get the sunny weather conditions for your home location">
-              <i class="fas fa-sun"></i> 
-          </button>
-
-          <button id="getSnowy" class="button" title="Snowy Conditions" aria-label="Get the snowy weather conditions for your home location">
-              <i class="fas fa-snowflake"></i>
-          </button>
-
-          <button id="getNight"  class="button" title="get night" aria-label="night time">
-              <i class="fas fa-moon"></i>
-          </button>
-        -->
-          <button id="refresh" onClick="window.location.reload();" class="button" title="refresh weather" aria-label="Refresh the current weather conditions">
+     </section>
+          <button id="refresh" onClick="window.location.reload();" class="button">
               <i class="fas fa-sync-alt"></i>
           </button>
-        </section>
+      </section>
       <hr>
       
       <section id="temperature" class="temperature">
         <h2 id="dailyTemperature" class="dailyTemperature">Temperature Counter (F): </h2>
       
-        <button id="highTemp" class="button" title="Increase Temperature" aria-label="Increase Temperature">
+        <button id="highTemp" class="button" >
             <i class="fas fa-thermometer-full"></i>
         </button>
         <span id="tempValue" class="red">71</span>
-        <button id="lowTemp"  class="button" title="Decrease Temperature" aria-label="Decrease Temperature">
+        <button id="lowTemp"  class="button" >
               <i class="fas fa-temperature-low"></i>
         </button>
- 
+        
       </section>
 
       <hr>
       <section id="skyContainer" class="skyContainer" role="createSky" aria-labelledby="createSky">
           <h2 id="createSky" class="createSky">Sky</h2>
-          <div id="skyContent"> ☁️ ☁️ ☁️ ☀️ ☁️ ☁️</div>
+          <div id="skyContent"> ☁️ ☁️ ☁️ ☀️ ☁️ ☁️ ☁️ ☁️☁️ ☁️☁️ ☁️</div>
       </section>
 
-      <hr>
       <section id="gardenContainer" class="gardenContainer" role="createGarden" aria-labelledby="createGarden">
           <h2 id="createGarden" class="createGarden">Weather Garden</h2>
-          <div id="gardenContent" >🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂</div>
+          <div id="gardenContent" >🌵 🐍 🦂 🌵 🌵 🐍 🏜 🌵 🐍 🏜 🦂 🦂</div>
       </section>
 
   </main>
   <script src="scripts/index.js"></script>
 </body>
 </html>
+
+<!--+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-->
+<!---<nav id="navButtons" class="navButtons"><nav>
+      <section>
+          <button id="getPrecipitation" class="button">
+            <i class="fas fa-cloud-showers-heavy"></i>
+          </button>
+          <button id="getCloudy"  class="button">
+              <i class="fas fa-cloud"></i>
+          </button>
+          <button id="getSunny"  class="button">
+              <i class="fas fa-sun"></i> 
+          </button>
+          <button id="getSnowy" class="button">
+              <i class="fas fa-snowflake"></i>
+          </button>
+          <button id="getNight"  class="button">
+              <i class="fas fa-moon"></i>
+          </button>-->

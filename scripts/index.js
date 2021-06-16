@@ -1,4 +1,5 @@
 let defaultTempValue = 68;
+
 const createSky = () => {
   const inputSky = document.getElementById("skyThemeSelect").value;
   const skyContainer = document.getElementById("skyContent");
@@ -111,7 +112,7 @@ const registerEventHandlers = () => {
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
-//--
+//-------------------------------------------------------------------------------------------------------
 
 //   skyContainer.textContent = sky;
 //   const gardenContent = document.getElementById("gardenContent");
