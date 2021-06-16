@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Weather Report</title>
+        <link href="./styles/index.css" rel="stylesheet">
+    </head>
+    <body>
+        <header class="heading">
+            <h1 class="title">🌈 Weather Report 🌈</h1>
+            <p>for the town of</p>
+            <p id="cityNameContainer">Issaquah</p>
+        </header>
+
+        <section class="temperature_section">
+            <h2>Temperature</h2>
+            <div class="temperature_info">
+                <p id="tempValue" class="yellow">65</p>
+                <div class="temp_controls">
+                    <button id="increase_temp">⬆</button>
+                    <button id="decrease_temp">⬇</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="sky_section">
+            <h2>Sky</h2>
+            <select name="sky" id="skySelection">
+                <option value="sunny">Sunny</option>
+                <option value="cloudy">Cloudy</option>
+                <option value="rainy">Rainy</option>
+                <option value="snowy">Snowy</option>
+            </select>
+        </section>
+
+        <section class="city_section">
+            <h2>City</h2>
+            <input type="text" id="cityNameInput" name="cityNameUserInput" value="Issaquah" placeholder="Issaquah">
+            <button id="cityResetButton">Reset</button> 
+        </section>
+
+        <section class="garden_section">
+            <h2>Weather Garden</h2>
+            <p id="skyContainer">☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️</p>
+            <p id="landscapeContainer">🍃🌾🦋🌱🐝🪴🌼🪴🐝🌱🦋🌾🍃</p>
+            <!-- <span id="skyContainer">☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️</span> -->
+            <!-- <p></p> -->
+            <!-- <span id="landscapeContainer">🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃</span> -->
+        </section>
+
+        <script src="./scripts/index.js"></script>
+    </body>
+</html>
