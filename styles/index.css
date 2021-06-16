@@ -23,3 +23,15 @@ form {
     text-align: center;
     padding-top: 50px;
 }
+
+#weather-image {
+    height: 200px;
+}
+
+.blue {
+    color: blue
+}
+
+.red {
+    color: red
+}
