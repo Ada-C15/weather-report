@@ -1,0 +1,40 @@
+html, body {
+  height: 95%;
+  background-color: skyblue;
+}
+
+* {
+  border-color: black;
+  border-width: 2px;
+  border-style: dashed;
+}
+
+main {
+  display: flex;
+  border: 1px solid hotpink;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+section {
+  padding: 20px;
+  border-radius: 4px;
+}
+
+.adjuster {
+  flex: 1 1 33%;
+  text-align: center;
+}
+
+.break {
+  flex-basis: 100%;
+}
+
+#gardenDisplay {
+  /* height: auto;
+  width: auto; */
+}
+
+#tempPicker {
+  font-size: 50px;
+}
