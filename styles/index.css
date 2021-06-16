@@ -62,7 +62,7 @@ input {
 }
 
 #landscape.sunny{
-    background-image: url("/Users/brittneypayne/ada/js_learning/projects/weather-report/photos/sunny-leaves.jpeg");
+    background-image: url("./photos/sunny-leaves.jpeg");
 }
 
 #landscape.cloudy {
