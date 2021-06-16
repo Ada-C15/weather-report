@@ -1,2 +1,227 @@
 .vscode
 .DS_Store
+
+
+/* ]body { 
+    margin: 0;
+    padding: 0;
+    font-family: helvetica neue light italic ;
+    background-color: rgb(239, 255, 255);
+    display: flex;
+}
+
+
+nav {
+    position: flex;
+    top: 200px;
+    left: 50%;
+    margin-top: 100px;
+    margin-left: 70px;
+    transform: translate(-50%, -50%);
+    background: #D8D8D8;
+    width: 100px;
+    line-height: 15px;
+    padding: 8px 25px;
+}
+
+nav label {
+    color: white;
+    font-size: 15px ;
+    display: block; 
+    cursor: pointer;
+
+} 
+
+select {
+    margin-top: 50px;
+}
+
+
+.botton span {
+    float: right;
+    line-height: 35px;
+}
+.container {
+    position: relative;
+    width: 100px;
+    height: 300px;
+    margin: 240px, auto;
+
+}
+
+.container .box {
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(250px - 30px);
+    background: rgb(248, 246, 246);
+    
+    bottom: -100px;
+    margin: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+.box-container {
+    background: gray;
+    position: absolute;
+    top: 20%;
+    left: 500%;
+    
+}
+
+.container .box .icon{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background: rgb(0, 183, 255); 
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.container .box .icon {
+    top: 20px;
+    left:  calc(50% - 40px );
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+}
+
+
+.container .box .icon .fa {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 80px;
+    transition: 0.5s;
+    color: aquamarine;
+}
+#garden-box {
+    background:	transparent;
+    width: 600px;
+    height: 300px;
+}
+
+#garden {
+    background: transparent;
+}
+
+#reset_button {
+    margin-top: -21px;
+    margin-left: 150px;
+}
+
+#tempCount {
+    font-size: 40px;
+}
+
+ #garden-title {
+    margin-left: 800px;
+    margin-top: 200px;
+} 
+
+
+.container .box .content {
+    position: absolute;
+    height: 100;
+    text-align: left;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+.container .box .content h3 {
+    margin: 0;
+    padding: 0;
+    color: rgba(10, 10, 8);
+    font-size: 24px;
+
+}
+
+.container .box .content h3 {
+    margin: 0;
+    padding: 0;
+    color: rgb(10, 10, 8);
+
+}
+
+.container .box:nth-child(1) .icon{
+    background: #319635;
+}
+*/
+
+
+var tempTrack = 0
+const incrementTemp = () => {
+    const newTemp = document.createElement("span");
+    const tempContainor = document.querySelector("#add-temp");
+    const tempCountContainer = document.querySelector("#tempCount");
+    const gardenContainer = document.querySelector("#garden-box");
+    tempTrack += 1;
+    if (tempTrack <= 40) {
+        gardenContainer.textContent = "❄️☃️🏔🌌🧴🥶🎄🌲";
+    } else if (tempTrack <= 60) {
+        gardenContainer.textContent = "🐰🐣🦋🍀💐🌼🌞";
+    } else if (tempTrack > 60) {
+        gardenContainer.textContent = "🌴🏞🍦🌊🌅🏝🌳🌹☀️🥭🍍🍸";
+    }
+    tempCountContainer.textContent = `${tempTrack}`;
+};
+const registerEventHandlers = () => {
+    const upArrow = document.querySelector("#add-temp");
+    upArrow.addEventListener("click", incrementTemp);
+};
+document.addEventListener("DOMContentLoaded", registerEventHandlers);
+
+
+const decreasedTemp = () => {
+    const newTemp = document.createElement("span");
+    const tempContainor = document.querySelector("#dec-temp");
+    const tempCountCont = document.querySelector("#tempCount");
+    const gardenContainer = document.querySelector("#garden-box");
+    tempTrack -= 1;
+    if (tempTrack <= 40) {
+        gardenContainer.textContent = "❄️☃️⛷--🏔🌌🌧☕️--🥶🎄🌲";
+    } else if (tempTrack <= 60) {
+        gardenContainer.textContent = "🌤🐰--🌈🐣🦋--🍀💐--🌼🌞";
+    } else if (tempTrack > 60) {
+        gardenContainer.textContent = "🌴🏞--🍦🌊--🌅🏝--🌳🌹--☀️🥭🍍🍸";
+    }
+    tempCountCont.textContent = `${tempTrack}`;
+    console.log("It Works")
+
+    console.log(tempTrack)
+};
+const decreasedEventHandlers = () => {
+    const downArrow = document.querySelector("#dec-temp");
+    downArrow.addEventListener("click", decreasedTemp);
+};
+document.addEventListener("DOMContentLoaded", decreasedEventHandlers);
+
+const skyChanger = () => {
+    const newTemp = document.createElement("span");
+    const skyContainer = document.querySelector("#weather-select");
+    const gardenBox = document.querySelector("#garden");
+
+    const sky = skyContainer.value
+    console.log(sky)
+    if (sky === "sunny") {
+        gardenBox.textContent = "☀️☀️☀️☀️☀️";
+    } else if (sky === "cloudy") {
+        gardenBox.textContent = "☁️☁️ ⛅️☁️ ⛅️☁️☁️ ⛅️☁️☁️ ⛅️☁️☁️ ⛅️☁️☁️";
+    } else if (sky === "rainy") {
+        gardenBox.textContent = "🌧🌧🌧🌧🌧🌧🌧🌧🌧🌧🌧🌧🌧🌧";
+    } else if (sky === "snowy") {
+        gardenBox.textContent = "🌨❄️🌨❄️🌨❄️🌨❄️🌨❄️🌨❄️🌨❄️🌨❄️🌨";
+    }
+};
+
+const skyEventHandlers = () => {
+    const selectSky = document.querySelector("#weather-select");
+    selectSky.addEventListener("change", skyChanger);
+};
+
+document.addEventListener("DOMContentLoaded", skyEventHandlers);
