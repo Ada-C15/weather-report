@@ -7,10 +7,14 @@
         <title>Weather Report</title>
     </head>
     <body>
-        <div class="enable-js" aria-hidden="true">Please Enable Javscript to Continue</div>
+        <noscript>Please Enable Javscript to Continue</noscript>
         <header>
             <div class="sky-display"></div>
-            <h1>City Name</h1>
+            <h1 class='city-name'>Enter a City Name:</h1>
+            <form method="get" id="city-name-form">
+                <input type="text" name="name" placeholder="Your City">
+                <button type="submit">Submit</button>
+            </form>
         </header>
         <section class="temp-display">
             <h2 class="temp">The Temperature:</h2>
@@ -18,11 +22,12 @@
             <div class="landscape"></div>
         </section>
         <section class="sky-menu">
-            
+
         </section>
         <footer>
 
         </footer>
+        <script type="text/javascript" src="./scripts/index.js"> </script>
     </body>
 
     <!---
