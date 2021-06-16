@@ -33,21 +33,20 @@ const cooler = () => {
 const changeTemp = () => {
     if (state.temp > 80) {
         document.body.style.backgroundColor = "rgb(170, 1, 20)";
-        
 
-    } else if (state.temp < 80) {
+    } if (state.temp < 80) {
         document.body.style.backgroundColor = "rgb(255, 94, 19)";
 
-    } else if (state.temp < 70) {
+    } if (state.temp < 70) {
         document.body.style.backgroundColor = "rgb(254, 226, 62)";
 
-    } else if (state.temp < 60) {
+    } if (state.temp < 60) {
         document.body.style.backgroundColor = "rgb(91, 194, 54)";
 
-    } else if (state.temp < 50) {
+    } if (state.temp < 50) {
         document.body.style.backgroundColor = "rgb(0, 124, 128)";
-    }
-}
+    };
+};
 
 
 const changeCity = () => {
@@ -57,6 +56,13 @@ const changeCity = () => {
     title.textContent = cityChange.value;
     
 }; 
+
+const resetCityName = () => {
+    const name = document.querySelector("#city")
+    const city_name = document.querySelector("#reset-city")
+    name.value = "Seattle"
+    city_name.textContent = name.value
+}
 
 
 
@@ -71,6 +77,9 @@ const registerEventHandlers = () => {
 
     const changeCityName = document.querySelector("#city");
     changeCityName = addEventListener("input", changeCity)
+
+    const resetCity = document.querySelector("#city")
+    resetNameButton.addEventListener("click", resetCityName)
 
     
 }
