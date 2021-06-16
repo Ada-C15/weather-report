@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Repawrt</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/index.css" />
+</head>
+
+<body>
+    <header class="header__header">
+        <h1>JAY PUG Tells the Weather</h1>
+        <span>For the pawsome city of 
+            <span id="headerCityName" class="header__city-name"></span></span>
+    </header>
+
+    <section class="temperature__section">
+        <h2>Temperature ℉</h2>
+        <main class="temperature__content">
+            <main class="temperature__controls">
+                <button id="increaseTempControl">⬆️</button>
+                <button id="decreaseTempControl">⬇️</button>
+            </main>
+            <span id="tempValue"></span>
+        </main>
+    </section>
+    
+    <section class="sky__section">
+        <h2><i>Sky</i></h2>
+        <select id="skySelect">
+            <option>Cloudy</option>
+            <option>Rainy</option>
+            <option>Snowy</option>
+            <option selected>Sunny</option>
+        </select>
+    </section>
+
+    <section class="city-name__section">
+        <h2>City Name</h2>
+        <input type="text" id="cityNameInput" value="New York City" />
+        <button id="cityNameReset" class="city-name__reset-btn">Reset</button>
+    </section>
+
+    <section class="garden__section">
+        <h2>Weather Garden</h2>
+        <figure id="gardenContent" class="garden__content">
+            <figure id="sky"></figure>
+            <figure id="landscape"></figure>
+        </figure>
+    </section>
+    <script src="scripts/index.js" ></script>
+</body>
+
+</html>
