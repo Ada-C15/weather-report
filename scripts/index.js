@@ -4,7 +4,8 @@ const state = {
     cityButton: "Submit",
     tempClasses: "box coldWeather",
     landscape: "",
-    sky: ""
+    sky: "",
+    backgroundClass: "sunnyBackground"
 }
 
 const changeTempBackground = () => {
@@ -33,14 +34,23 @@ const changeTempBackground = () => {
 const updateSky = () => {
     const sky = document.querySelector("#skySelection").value;
     const skyDisplay = document.querySelector("#skyDisplay");
+    const background = document.querySelector("body");
     if (sky === "rainy") {
         state.sky = `🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧`;
+        state.backgroundClass = "rainyBackground"
     } else if (sky === "cloudy") {
         state.sky = `☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️`;
+        state.backgroundClass = "cloudyBackground"
     } else if (sky === "snowy") {
         state.sky = `🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨`;
+        state.backgroundClass = "snowyBackground"
+    } else {
+        state.sky = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️"
+        state.backgroundClass = "sunnyBackground"
     }
     skyDisplay.textContent=`${state.sky}`
+    background.className = state.backgroundClass
+
 
 }
 
