@@ -1,3 +1,4 @@
+/* General Selector styling */
 body {
     background-image: url("https://images.unsplash.com/photo-1563630381190-77c336ea545a?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1536&q=80");
     font-family: 'Libre Baskerville', serif;
@@ -13,6 +14,7 @@ button, select, input{
     color:rgba(240, 103, 18, 0.612)
 }
 
+/* Styling for weather-dependent backgrounds */
 .rainyBackground {
     transition: background-image 1s;
     background-image: url("https://images.unsplash.com/photo-1558894485-25705fa1356d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1934&q=80")
@@ -33,6 +35,8 @@ button, select, input{
     background-image: url("https://images.unsplash.com/photo-1519979158099-0d2c9fcc50ee?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1985&q=80");
 }
 
+/* styling for weather boxes/grid */
+
 #container {
     display: grid;
     grid-template: 3 / 2;
@@ -45,40 +49,12 @@ button, select, input{
     padding: 1em;
     background: rgba(204, 204, 204, 0.25);
     height:150px;
-    /* padding: 1em; */
     border-radius: 25px;
     font-size: 1.5em;
     line-height: 15px;
 }
 
-
-#temperature {
-    grid-row: 1/2;
-
-}
-
-#sky {
-    grid-row: 2/3;
-}
-
-#cityName {
-    grid-row: 3/4;
-}
-
-
-#weatherGarden {
-    grid-column: 2/3;
-    grid-row: 1/4;
-    background: rgba(204, 204, 204, 0.25);
-    border-radius: 25px;
-    text-align: center;
-    font-size: 2em;
-}
-#landscape {
-    padding-top: 200px;
-}
-
-
+/* updates temperature box background */
 .tooHot {
     background: rgba(255, 0, 0, 0.25);
 }
@@ -98,3 +74,32 @@ button, select, input{
 .coldWeather {
     background-color: rgba(19, 177, 191, 0.591);
 }
+
+/* user weather selections */
+#temperature {
+    grid-row: 1/2;
+}
+
+#sky {
+    grid-row: 2/3;
+}
+
+#cityName {
+    grid-row: 3/4;
+}
+
+/* Weather garden settings */
+#weatherGarden {
+    grid-column: 2/3;
+    grid-row: 1/4;
+    background: rgba(204, 204, 204, 0.25);
+    border-radius: 25px;
+    text-align: center;
+    font-size: 2em;
+}
+
+#landscape {
+    padding-top: 200px;
+}
+
+

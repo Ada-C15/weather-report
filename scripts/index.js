@@ -8,9 +8,10 @@ const state = {
     backgroundClass: "sunnyBackground"
 }
 
+// changes temperature background & landscape based on temperature setting //
 const changeTempBackground = () => {
-    const temperatureBox = document.querySelector("#temperature")
-    const landscape = document.querySelector("#landscape")
+    const temperatureBox = document.querySelector("#temperature");
+    const landscape = document.querySelector("#landscape");
     if (state.temperature >=80) {
         state.tempClasses = `box tooHot`;
         state.landscape = `🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂`;
@@ -25,12 +26,13 @@ const changeTempBackground = () => {
         state.landscape = `🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲`;
     } else {
         state.tempClasses = `box coldWeather`;
-        state.landscape = `⛄️🥶❄️⛄️🥶❄️⛄️🥶❄`
+        state.landscape = `⛄️🥶❄️⛄️🥶❄️⛄️🥶❄`;
     }
-    temperatureBox.className = `${state.tempClasses}`
-    landscape.textContent = `${state.landscape}`
+    temperatureBox.className = `${state.tempClasses}`;
+    landscape.textContent = `${state.landscape}`;
 }
 
+//changes sky in weather garden, and updates body background depending on sky selection //
 const updateSky = () => {
     const sky = document.querySelector("#skySelection").value;
     const skyDisplay = document.querySelector("#skyDisplay");
@@ -43,32 +45,36 @@ const updateSky = () => {
         state.backgroundClass = "cloudyBackground"
     } else if (sky === "snowy") {
         state.sky = `🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨`;
-        state.backgroundClass = "snowyBackground"
+        state.backgroundClass = "snowyBackground";
     } else {
-        state.sky = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️"
-        state.backgroundClass = "sunnyBackground"
+        state.sky = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
+        state.backgroundClass = "sunnyBackground";
     }
-    skyDisplay.textContent=`${state.sky}`
-    background.className = state.backgroundClass
+    skyDisplay.textContent=`${state.sky}`;
+    background.className = state.backgroundClass;
 
 
 }
 
+//updates temperature state based on user input
 const updateTemperature = () => {
-    state.temperature += 1;
     changeTempBackground();
-    const temperatureElement = document.querySelector("#currentTemp")
+    const temperatureElement = document.querySelector("#currentTemp");
     temperatureElement.textContent = `${state.temperature}`;
 
 }
 
-const downTemperature = () => {
-    state.temperature -= 1;
-    changeTempBackground();
-    const temperatureElement = document.querySelector("#currentTemp")
-    temperatureElement.textContent = `${state.temperature}`
+const upTemperature = () => {
+    state.temperature += 1;
+    updateTemperature()
 }
 
+const downTemperature = () => {
+    state.temperature -= 1;
+    updateTemperature()
+}
+
+//updates City header dependent on user input
 const updateCity = () => {
     const cityButtonElement = document.querySelector("#submitCity")
     if (state.city === "Seattle") {
@@ -86,7 +92,7 @@ const updateCity = () => {
 
 const registerEventHandlers = () => {
     const upTemperatureButton = document.querySelector("#upTemperature");
-    upTemperatureButton.addEventListener("click", updateTemperature)
+    upTemperatureButton.addEventListener("click", upTemperature)
     const downTemperatureButton = document.querySelector("#downTemperature");
     downTemperatureButton.addEventListener('click', downTemperature)
     const submitCityButton = document.querySelector("#submitCity");
