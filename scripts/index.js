@@ -3,8 +3,8 @@ const state = {
     city: "Seattle",
     cityButton: "Submit",
     tempClasses: "box coldWeather",
-    landscape: "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲",
-    sky: "☁️ ☁️ ☁️ ☀️ ☁️ ☁️"
+    landscape: "",
+    sky: ""
 }
 
 const changeTempBackground = () => {
@@ -15,12 +15,16 @@ const changeTempBackground = () => {
         state.landscape = `🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂`;
     } else if (state.temperature >= 70 && state.temperature <= 79) {
         state.tempClasses = `box notTooHot`;
-        state.landscape = `🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷`
+        state.landscape = `🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷`;
     } else if (state.temperature >= 60 && state.temperature <= 69){
         state.tempClasses = `box quiteCool`;
-        state.landscape = `🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃`
+        state.landscape = `🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃`;
     } else if (state.temperature >= 50 && state.temperature <= 59){
         state.tempClasses = `box jacketWeather`;
+        state.landscape = `🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲`;
+    } else {
+        state.tempClasses = `box coldWeather`;
+        state.landscape = `⛄️🥶❄️⛄️🥶❄️⛄️🥶❄`
     }
     temperatureBox.className = `${state.tempClasses}`
     landscape.textContent = `${state.landscape}`

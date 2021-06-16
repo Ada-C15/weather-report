@@ -4,38 +4,60 @@ body {
     color: beige;
 }
 
+button, select, input{
+    font-size: 18px;
+    border-radius: 25px;
+    border-width: 0px;
+    text-align: center;
+    padding-left: 8px;
+    color:rgba(240, 103, 18, 0.612)
+}
+
 #container {
     display: grid;
     grid-template: 3 / 2;
 }
 
 .box {
-    grid-column: 0/1;
+    grid-column: 1/2;
     height: 150px;
-    margin: 25px;
-    position:relative;
+    margin: 25px; 
     padding: 1em;
     background: rgba(204, 204, 204, 0.25);
     height:150px;
-    padding: 1em;
+    /* padding: 1em; */
     border-radius: 25px;
+    font-size: 1.5em;
+    line-height: 15px;
 }
 
 
 #temperature {
     grid-row: 1/2;
+
+}
+
+#sky {
+    grid-row: 2/3;
 }
 
 #cityName {
-    grid-row: 2/3;
-}
-#sky {
     grid-row: 3/4;
 }
 
+
 #weatherGarden {
     grid-column: 2/3;
+    grid-row: 1/4;
+    background: rgba(204, 204, 204, 0.25);
+    border-radius: 25px;
+    text-align: center;
+    font-size: 2em;
 }
+#landscape {
+    padding-top: 200px;
+}
+
 
 .tooHot {
     background: rgba(255, 0, 0, 0.25);
