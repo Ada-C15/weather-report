@@ -13,9 +13,25 @@ const hotter = () => {
 
 };
 
+const cooler = () => {
+    const weatherDown = document.querySelector("#weather");
+
+    state.tempDown = state.tempUp;
+
+    state.tempDown -= 1;
+
+    document.querySelector("#weather").textContent = `${state.tempDown}`
+
+};
+
 const registerEventHandlers = () => {
     const weatherButton = document.querySelector("#warm");
+
+    const weatherButtonDown = document.querySelector("#cool");
+
     weatherButton.addEventListener("click", hotter);
+
+    weatherButtonDown.addEventListener("click", cooler);
 }
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
