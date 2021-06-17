@@ -1,8 +1,11 @@
 
 // ############### Temperature Sections ###############
 const state = {
-    currentTemp: 30
+    currentTemp: 30,
+    sky: 3
 };
+
+
 
 const tempValueColors= () => {
     console.log("tempValueColors")
@@ -23,6 +26,21 @@ const tempValueColors= () => {
     }
 }
 
+
+const tempSkyValues= () => {
+    if (state.sky === "0"){
+        return "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
+    }
+    else if (state.sky === "1"){
+        return "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️"
+    }
+    else if (state.sky === "2"){
+        return "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧"
+    }
+    else if (state.sky === "3"){
+        return "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨"
+    }
+}
 const upTemp = () => {
     console.log("upTemp")
     state.currentTemp +=1;
@@ -48,11 +66,11 @@ const downTemp = () => {
 // ################## Sky Change in Weather Window #####################
 
 
-// const updateWeatherGarden = () => {
-//     const skySelection = document.querySelector("#skySelection");
-//     const sky
-
-// }
+const updateSky = (event) => {
+    state.sky = event.target.value
+    const skyDisplay = document.querySelector("#skyDisplay");
+    skyDisplay.textContent = tempSkyValues()
+}
 
 // ################# Mountain Name Reset ###############################
 
@@ -63,6 +81,13 @@ const resetMountain = () => {
     updateMountain();
 }
 
+
+const updateMountain = () => {
+    const mountainName = document.querySelector("#mountainNameInput");
+    const headerMountainName = document.querySelector("#headerMountainName");
+    headerMountainName.textContent = mountainName.value;
+}
+
 // ############### Events ##################
 const registerEventHandlers = () => {
     console.log("registerEventHandlers")
@@ -71,12 +96,11 @@ const registerEventHandlers = () => {
     const downTempButton = document.querySelector("#downTemp");
     downTempButton.addEventListener("click", downTemp);
 
-    updateSky();
     const skyTheme = document.querySelector("#skySelection");
-    skyTheme.addEventListener("fullscreenchange", updateWeatherWindow);
+    skyTheme.addEventListener("change", updateSky);
     
     updateMountain();
-    const mountainNameInput = document.querySelector('mountainNameInput');
+    const mountainNameInput = document.querySelector("#mountainNameInput");
     mountainNameInput.addEventListener("input", updateMountain)
     const resetButton = document.getElementById("resetButton");
     resetButton.addEventListener("click", resetMountain)
