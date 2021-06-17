@@ -1,0 +1,160 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    background: #add8e6;
+    grid-gap: 15px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    grid-column: span 3;
+    /* width: 100%; */
+    font-size: 80px;
+    justify-content: space-around;
+}
+
+.header img {
+    height: 100px;
+}
+
+h1, h3 { 
+    color:whitesmoke;
+    font-family: 'Open Sans Condensed', sans-serif; 
+    font-size: 50px; 
+    font-weight: 700; 
+    line-height: 64px; 
+    text-align: center; 
+    text-transform: uppercase;
+}
+
+h2 { 
+    color: rgb(39, 39, 39); 
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 30px; 
+    font-weight:500; 
+    text-align: center; 
+    background-color: rgba(255, 238, 140, 0.041);
+}
+
+h3 {
+    font-size: 25px; 
+    font-weight:lighter; 
+}
+
+.sky-section,
+.city-section {
+    text-align: center;
+}
+
+button {
+	box-shadow:inset 0px 1px 0px 0px #ffffff;
+	background:linear-gradient(to bottom, #ededed 5%, #dfdfdf 100%);
+	background-color:#ededed;
+	border-radius:6px;
+	border:1px solid #dcdcdc;
+	display:inline-block;
+	cursor:pointer;
+	color:#575757;
+	font-family:Arial;
+	font-size:13px;
+	padding:6px 10px;
+}
+
+button:hover {
+	background:linear-gradient(to bottom, #dfdfdf 5%, #ededed 100%);
+	background-color:#dfdfdf;
+}
+
+button:active {
+	position:relative;
+	top:1px;
+}
+
+.temperature-section,
+.sky-section,
+.city-section {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #d6ecf3;
+}
+
+.weather-section {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #eff7fa;
+    text-align: center;
+}
+
+.weather-section h1 {
+    text-transform: uppercase;
+    font-weight: bolder;
+    color: rgb(71, 71, 71);
+    font-size: 40px;
+}
+
+.weather-section h1:before, 
+.weather-section h1:after{
+    position: relative;
+    content: "";
+    width: 30%;
+    left: 35%;
+    display: block;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-bottom: 5px dotted rgb(255, 255, 255);
+}
+
+.temperature-section {
+    grid-row: 2;
+}
+.weather-section {
+    grid-row: 2 / span 3;
+}
+
+.sky-section {
+    grid-row: 3;
+}
+.city-section {
+    grid-row: 4;
+}
+
+#temperature-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#currentTemp {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px; 
+    font-family: 'Baloo Bhai', 'Source Sans Pro', sans-serif;
+    font-weight: 900;
+}
+
+.red {
+    color: red;
+}
+.orange {
+    color: rgba(255, 68, 0, 0.794);
+}
+.yellow {
+    color: rgb(255, 196, 0);
+}
+.green {
+    color: green;
+}
+.teal {
+    color: rgba(70, 148, 194, 0.753);
+}
+
+#sky,
+#ground {
+    font-size: 50px;
+    line-height: 80px;
+}
