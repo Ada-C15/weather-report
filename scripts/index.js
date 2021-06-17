@@ -10,9 +10,12 @@ const updateSky = () => {
         skyColor = "cloudy";
     } else if (inputSky === "Sunny") {
         sky = "☁️     ☁️   ☁️ ☀️ ☁️  ☁️";
-        skyColor = "sunny;"
+        skyColor = "sunny";
     } else if (inputSky ==="Rainy") {
         sky = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+        skyColor = "rainy";
+    } else if (inputSky ==="Snowy") {
+        sky = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
         skyColor = "snowy";
     }
     skyContainer.textContent = sky;
@@ -34,14 +37,14 @@ const resetCityName = () => {
 
 const updateTempStyles = (currentTemp) => {
     const tempValueContainer = document.getElementById("tempValue");
-    tempValueContainer.textContent = tempValue;
+    // tempValueContainer.textContent = tempValue;
     let color = "teal";
-    if ( currentTemp >= 80) {
+    if (currentTemp >= 80) {
         color = "red";
     } else if (currentTemp >=70) {
         color = "orange";
     } else if (currentTemp >= 60) {
-        color = "yellow";
+        color = "black";
     } else if (currentTemp >= 50) {
         color = "green";
     }
@@ -99,4 +102,4 @@ const registerEventHandler = () => {
     skySelect.addEventListener("change", updateSky);
 };
 
-document.addEventListener("DOMContentLoaded", registerEventHandlers);
+document.addEventListener("DOMContentLoaded", registerEventHandler);

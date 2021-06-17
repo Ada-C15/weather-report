@@ -62,10 +62,11 @@ h2 {
 }
 
 .garden__section {
-    grid-row: 2 / span 3;
-    grid-column: 2;
+    grid-row: 2 / span 4;
+    grid-column: 2 / span 2;
     text-align: center;
     align-self: center;
+    font-size: 2em;
 }
 
 .temperature__content{
@@ -86,7 +87,7 @@ h2 {
 
 .garden__section > h2 {
     color: rgb(144, 243, 31);
-    font-size: 3em;
+    font-size: 2em;
 }
 
 .garden__content {
@@ -119,8 +120,8 @@ h2 {
     color: orange;
 }
 
-.yellow {
-    color: yellow;
+.black {
+    color: black;
 }
 
 .green {
