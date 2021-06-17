@@ -7,7 +7,7 @@ const state = {
 
 const updateTemperature = (currentTemp) => {
     const tempValue = document.querySelector("#temp_value");
-    tempValue.textContent = currentTemp;
+    tempValue.textContent = currentTemp + ` °F`;
     const weatherLandscape= document.querySelector("#landscape_picture");
     if (currentTemp >= 80) {
         weatherLandscape.src = "https://freepngimg.com/thumb/lizard/27295-6-lizard-transparent-background-thumb.png";
