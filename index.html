@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="styles/index.css"/>
+  </head>
+  <body>
+    <header >
+      <h1> The Weathahhh</h1>  
+    </header>
+
+    <div id="city">
+        It's a city!
+    </div>
+    <div></div>
+    <div></div>
+    
+    <section id="tempContainer">
+            <span id="temperature">75F</span>
+
+        <span id="btn-group">  <ul>
+            <li><button id="raiseTemp">⬆️</button></li>
+            <li><button id ="lowerTemp">⬇️</button></li>
+            <li><button id="reset"> 🔁</li>
+        </ul></span>
+        <!-- <span></span>
+        <span id="comment">
+            "It's weathah"
+        </span> -->
+    </section>
+
+    <section id="inputs">
+        <input id="cityInput" placeholder="your city name"></input>
+        <button id="submitBtn">Submit</button>
+        <label for="sky" class = "sky" id="sky-label">Select a sky:</label>
+        <select name="sky" class ="sky" id="sky-types"></select>
+        <label class="landscape" for="landscape">Select a landscape:</label>
+        <select class="landscape" name="landscape" id ="land-types"></select>
+
+    </section>
+
+    <script src="scripts/index.js"></script>
+  </body>
+</html>
