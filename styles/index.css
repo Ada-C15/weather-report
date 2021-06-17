@@ -107,3 +107,27 @@ header {
     font-weight: 500;
     text-shadow: 0px 4px rgba(0, 0, 0, 0.4);
 }
+
+.temperature__controls {
+    align-items: center;
+}
+
+#increaseTempControl {
+    border-radius: 70%;
+    border: rgb(255, 0, 0) 3px dashed;
+    box-shadow: 0 8px 16px 0 rgba(250, 2, 2, 0.31), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#increaseTempControl:hover {
+    background-color: yellowgreen;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+#decreaseTempControl {
+    border-radius: 70%;
+    border: blue 3px dashed;
+    box-shadow: 0 8px 16px 0 rgba(39, 3, 240, 0.31), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#decreaseTempControl:hover {
+    background-color: yellowgreen;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
