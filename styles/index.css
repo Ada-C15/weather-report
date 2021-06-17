@@ -97,10 +97,11 @@ body {
 
 /******* Temperature Buttons *********/
 .top-banner article button {            /* There is probably a better way that the "article" element to distinguish these buttons*/
+    
     font-size: 1rem;
     font-weight: bold;
     letter-spacing: 0.1em;
-    padding: 15px 20px;
+    padding: 10px 15px 10px 20px;
     margin-left: 15px;
     border-radius: 5px;
     background: var(--darkred);
@@ -111,7 +112,78 @@ body {
     background: var(--orange);
     }
 
-.top-banner h2 #givenTemp {
-    font-size: 2rem;    
-
+.top-banner #givenTemp {
+    font-size: 5rem;    
+    font-weight: bold;
+    margin-left: 60px;
     }
+
+
+.top-banner nav {      /* changed to a nav element because I couldnt get the CSS to work wiht the class specifier :(*/
+    position: relative;
+    background: var(--text_light);
+    padding:50px;
+    width: 600px;
+    margin: 20px auto 0 auto;
+    box-shadow: 0 2px 4px rgba(100,100,100,.1);
+    border-radius: 20px;
+    color: var(--text_dark)
+}
+
+.top-banner figcaption {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.top-banner sup {
+    font-size: 0.5em;
+}
+
+/* SECTION 2 */
+/* CSS Grid to lay out the list items. Each list item will represent a city. 
+Their width will depend on the screen size. https://grid.malven.co/ */ 
+
+
+.city-section .cities {     /* class="cities" is an unordered list, so this will take the 4 items in that list and spread them out in a grid*/
+    display: grid;
+    grid-gap: 32px 20px;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.city-section .city {      /* class="city" is each item(city) in the ^ list. this will style those HTML <li> elements*/
+    position: relative;
+    padding: 40px 10%;
+    border-radius: 20px;
+    background: var(--text_light);  /* this light background gives each city a white box to be in */
+}
+
+.city-section figcaption {
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.city-section .city sup {
+    font-size: 0.5em;
+}
+
+
+
+/* "Where weather Lives" Banner */
+.live {
+    background: #fffbbc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.live a {
+    text-decoration: underline;
+}
+
+.live a:hover {
+    text-decoration: none;
+}
