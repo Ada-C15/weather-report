@@ -2,6 +2,7 @@
 <html>
     <head>
         <Title>Weather Report</Title>
+       
     </head>
     <body>
         <div>
@@ -14,8 +15,8 @@
                 <div id="temperature-card">
                     <h3 id="temperature-title">Temperature</h3>
                     <br>
-                    <div id="up-arrow">⬆️</div>
-                    <div id="down-arrow">⬇️</div>
+                    <div id="up-arrow" onclick="increaseTemperature()">⬆️</div>
+                    <div id="decreaseTempArrow">⬇️</div>
                     <div>
                         <span id="temp-value">71</span>
                     </div>
@@ -51,7 +52,7 @@
                 </div>
             </div>
         </div>
-        
+    <script src="scripts/index.js" ></script>   
     </body>    
 </html>
 
