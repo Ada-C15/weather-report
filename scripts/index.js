@@ -11,13 +11,19 @@ const updateTemperature = (currentTemp) => {
     const weatherLandscape= document.querySelector("#landscape_picture");
     if (currentTemp >= 80) {
         weatherLandscape.src = "https://freepngimg.com/thumb/lizard/27295-6-lizard-transparent-background-thumb.png";
+        tempValue.className = "red";
     } else if (currentTemp >= 70) {
         weatherLandscape.src = "https://freepngimg.com/thumb/chicken/17-chicken-png-image-thumb.png";
+        tempValue.className = "orange";
     } else if (currentTemp >= 60) {
-        weatherLandscape.src = "https://freepngimg.com/thumb/deer/93967-springbok-antelope-africa-vecteur-free-download-png-hq-thumb.png";
+        weatherLandscape.src = "https://freepngimg.com/thumb/fox/10-2-fox-png-6-thumb.png";
+        tempValue.className = "yellow";
     } else if (currentTemp >= 50) {
-        // weatherLandscape.src = ;
+        weatherLandscape.src = "https://freepngimg.com/thumb/deer/93967-springbok-antelope-africa-vecteur-free-download-png-hq-thumb.png";
+        tempValue.className = "green";
+    } else if (currentTemp >= 40) {
         weatherLandscape.src = "https://freepngimg.com/thumb/polar_bear/29346-2-polar-bear-image-thumb.png";
+        tempValue.className = "teal";
     }
 }
 
