@@ -61,13 +61,15 @@ const selectSky = (event) => {
 
 const updateCity = () => {
     const userInput = document.getElementById('cityUserInput').value;
-    cityContainer = document.getElementById('displayCity');
+    const cityContainer = document.getElementById('displayCity');
     cityContainer.textContent = userInput
 }
 
 const resetCityInput = () => {
-    'cityUserInput' = text box // set this to blank
-    'displayCity' = header text // reset this to default 
+    cityContainer = document.getElementById('displayCity');
+    cityContainer.textContent = 'Ravaged By Climate Change';
+    inputContainer = document.getElementById('cityUserInput')
+    inputContainer.value = '';
 }
 
 
