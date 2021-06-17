@@ -162,3 +162,12 @@ section input:focus {
     margin-left: 1rem;
     padding: 1rem;
 }
+
+/* ----- City Search and Rename ---- */
+.search-city {
+    background-color: rgb(255 255 255 / 30%);
+    border-radius: 8px;
+    margin: 0 auto;
+    width: 80%;
+    padding: 2rem;
+}
