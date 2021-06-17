@@ -1,0 +1,166 @@
+
+
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+    --ff-tertiary: 'Caveat', cursive;
+    
+    --fw-reg: 300;
+    --fw-bold: 1000;
+    
+    --clr-light: rgb(255, 255, 255);
+    --clr-accent: lightgray;
+    --clr-body:mediumturquoise;
+    
+    --fs-h1: 3rem;
+    --fs-h2: 2.5rem;
+    --fs-h3: 2rem;
+    --fs-body: 1rem;
+}
+
+/***** General Styling *******/
+
+h1{
+    font-family: var(--ff-primary);
+    font-size: var(--fs-h1);
+}
+
+h2{
+    font-size: var(--fs-h3);
+}
+
+h3{
+    font-size: var(--fs-body);
+}
+
+em{
+    font-family: var(--ff-tertiary);
+}
+
+body{
+    margin: 0;
+    background-color: var(--clr-body);
+}
+
+main{
+    background-color: var(--clr-body);
+    margin:0;
+    display: flex;
+}
+
+/***** header styles *****/
+.city-header{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+/***** user input styling ******/
+
+.weather-boxes{
+    display: flex;
+    flex-wrap: wrap;
+    /*max-width: min-content;*/
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 20%;
+    padding: 8%;
+    margin: 3%;
+    background-color: white;
+}
+
+.weather-forms{
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    padding:3%;
+    margin-left:7%;
+    justify-content: left;
+    min-width:min-content ;
+    } 
+
+/******* city styles *****/
+
+button{
+    max-width: 75%;
+    margin: 3%;
+    justify-content: center;
+}
+
+input{
+    max-width: 80%;
+}
+
+/******* temperature styles ******/
+
+#temp{
+    display: flex;
+    color:red;
+    font-weight:var(--fw-bold);
+    align-items: center;
+    font-size: 2rem;
+}
+
+#tempbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+p{
+    max-width: inherit;
+}
+/******* weather garden styles ****/
+
+.weather-garden {
+    display: flex;
+    margin-left: 10%;
+    margin-top: 5%;
+    flex-direction: column;
+    align-items:center;
+    justify-content: flex-start;
+
+
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    width: 100%;
+    background-color:var(--clr-accent);
+    justify-content: space-between;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 2em;
+}
+
+footer{
+    text-align: center;
+    color: var(--clr-light);
+}
+
+/*colors*/
+
+.orange {
+    color: darkorange;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+}
+
+.blue{
+    color: teal;
+}
