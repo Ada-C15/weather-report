@@ -8,6 +8,7 @@ const increaseTemperature = (event) => {
     const temperatureDegreesContainer = document.querySelector("#temperatureDegrees");
     temperatureDegreesContainer.textContent = `Temperature Degrees: ${state.temperatureDegrees}`;
     changeTemperatureTextColor()
+    changeLandscapeEmojis()
 };
 
 // decrease temperature function
@@ -16,6 +17,7 @@ const decreaseTemperature = (event) => {
     const temperatureDegreesContainer = document.querySelector("#temperatureDegrees");
     temperatureDegreesContainer.textContent = `Temperature Degrees: ${state.temperatureDegrees}`;
     changeTemperatureTextColor()
+    changeLandscapeEmojis()
 };
 
 // reset temperature function 
@@ -24,11 +26,11 @@ const resetTemperature = (event) => {
     const temperatureDegreesContainer = document.querySelector("#temperatureDegrees");
     temperatureDegreesContainer.textContent = `Temperature Degrees: ${state.temperatureDegrees}`;
     changeTemperatureTextColor()
+    changeLandscapeEmojis()
 };
 
 // change temperature text color
 const changeTemperatureTextColor = (event) => {
-    // console.log(state.tempCount)
     if (state.temperatureDegrees >= 70) {
         document.getElementById("temperatureDegrees").style.color = "red";
     } else if (state.temperatureDegrees <= 69 && state.temperatureDegrees >= 60) {
@@ -42,6 +44,18 @@ const changeTemperatureTextColor = (event) => {
     }
 };
 
+// change landscape 
+const changeLandscapeEmojis = (event) => {
+    if (state.temperatureDegrees >= 70) {
+        document.getElementById("landscapeEmojis").textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+    } else if (state.temperatureDegrees <= 69 && state.temperatureDegrees >= 60) {
+        document.getElementById("landscapeEmojis").textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
+    } else if (state.temperatureDegrees <= 59 && state.temperatureDegrees >= 50) {
+        document.getElementById("landscapeEmojis").textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
+    } else if (state.temperatureDegrees <= 49) {
+        document.getElementById("landscapeEmojis").textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
+    }
+}
 
 // event handlers
 const registerEventHandlers = (event) => {
