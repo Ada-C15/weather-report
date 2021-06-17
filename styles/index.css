@@ -1,0 +1,108 @@
+body {
+    color: rgb(250, 250, 250);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    height: 100vh;
+    background: linear-gradient(to bottom, rgb(250, 237, 189), rgb(240, 234, 190), rgb(224, 231, 192), rgb(209, 228, 193), rgb(194, 225, 194), rgb(178, 222, 196), rgb(163, 219, 197), rgb(147, 216, 199), rgb(132, 213, 200), rgb(117, 210, 201), rgb(101, 207, 203), rgb(118, 185, 174));
+  }
+
+main {
+  display: flex;
+  flex-direction: row;
+}
+  
+.light-mode {
+  background-image: url("https://images3.alphacoders.com/876/876646.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: rgb(7, 10, 1);
+}
+
+.light-mode #city_word,
+.light-mode footer {
+  color: rgb(250, 250, 250);
+}
+
+body {
+  background-image: url("https://images2.alphacoders.com/102/1026366.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#header {
+  padding-left: 50px;
+  font-size: 30px;
+}
+
+#header > h6 {
+  margin: 0;
+}
+
+#city_name {
+  font-size: 30px;
+}
+
+.button_container {
+  display: flex;
+  flex-direction: column;
+}
+
+#temp_value {
+  display: block;
+  padding-left: 10px;
+  margin: 0;
+}
+
+.button_container,
+#temp_value {
+  flex: 0 0 auto;
+}
+
+.temp_buttons {
+  display: flex;
+}
+
+#interactive_categories {
+  list-style: none;
+  padding-left: 50px;
+  font-size: 30px;
+}
+
+.right_side {
+  padding-left: 140px;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+}
+
+#duck_image {
+  padding-left: 120px;
+}
+
+footer {
+  font-size: 10px;
+  margin-top: 30px;
+} 
+
+#toggle_button  {
+  margin-top: 50px;
+}
+
+.red {
+  color: red;
+}
+
+.orange {
+  color: orange;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.green {
+  color: green;
+}
+
+.teal {
+  color: teal;
+}
