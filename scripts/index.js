@@ -88,16 +88,15 @@ const populateSkyTemp = () => {
 const displayCity = () => {
     const cityDisplay = document.createElement("span");
     const cityContainer = document.querySelector("#cityContainer");
-    cityContainer.replaceChildren()
     const enteredLetter = document.querySelector("#city").value;
     cityDisplay.textContent = enteredLetter;
-    cityContainer.appendChild(cityDisplay);
+    cityContainer.replaceChildren(cityDisplay);
 }
 
 const resetCity = (event) => {
     event.preventDefault();
     const cityContainer = document.querySelector("#cityContainer");
-    cityContainer.replaceChildren()
+    cityContainer.replaceChildren("")
 }
 
 
