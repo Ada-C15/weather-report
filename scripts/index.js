@@ -29,7 +29,7 @@ const resetTemperature = (event) => {
     changeLandscapeEmojis()
 };
 
-// change temperature text color
+// change temperature text color function
 const changeTemperatureTextColor = (event) => {
     if (state.temperatureDegrees >= 70) {
         document.getElementById("temperatureDegrees").style.color = "red";
@@ -44,7 +44,7 @@ const changeTemperatureTextColor = (event) => {
     }
 };
 
-// change landscape 
+// change landscape function
 const changeLandscapeEmojis = (event) => {
     if (state.temperatureDegrees >= 70) {
         document.getElementById("landscapeEmojis").textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
