@@ -2,10 +2,10 @@
                         /* CSS :root Selector */ /*target the highest-level “parent” element in the DOM */
 /* Use these (--labels) to change to exact colors in the :root theme accross the entire page */
 :root {
-    --bg_main: #1c335c;
+    --bg_main: #184472;
     --text_light: #fff;
     --text_med: #53627c;
-    --text_dark: #1e2432;
+    --text_dark: #2e225c;
     --red: #ff1e42;
     --darkred: #c3112d;
     --orange: #ff8c00;
@@ -56,14 +56,14 @@ body {
     color: var(--text_light);   /* var() This calls global variable (--text_light) from the :root section*/
     }
 
-.heading {
+.heading {                     
     font-weight: bold;
     font-size: 4rem;            /* rem stands for "root em" - it is only relative to the html (root) font-size */
     letter-spacing: 0.02em;     /* em is relative to the font-size of its direct or nearest parent */
-    padding: 0 0 30px 0;
+    padding: 25px 0 0 0;        /* top right bottom left */
     }
 
-.top-banner form {              /* specifies <form> HTML element within the class .top-banner */
+.top-banner form {              /* specifies <form> HTML element within the class .top-banner*/
     position: relative;         /* positions <form> relative to its current position without changing the layout around it. (VS position: absolute makes it relative to its parent's position and changed the layout around it)*/
     display: flex;              /*A flex container expands items to fill available free space or shrinks them to prevent overflow*/
     align-items: center;
@@ -103,6 +103,7 @@ body {
     letter-spacing: 0.1em;
     padding: 10px 15px 10px 20px;
     margin-left: 15px;
+    margin-bottom: 30px;
     border-radius: 5px;
     background: var(--darkred);
     transition: background 0.3s ease-in-out;
@@ -124,7 +125,8 @@ body {
     background: var(--text_light);
     padding:50px;
     width: 600px;
-    margin: 20px auto 0 auto;
+    margin-left: 15px
+    /* margin: 20px auto 0 auto; */
     box-shadow: 0 2px 4px rgba(100,100,100,.1);
     border-radius: 20px;
     color: var(--text_dark)
@@ -138,6 +140,11 @@ body {
 
 .top-banner sup {
     font-size: 0.5em;
+}
+
+.top-banner h6 {
+    font-size: 1em;
+    margin-bottom: 30px;
 }
 
 /* SECTION 2 */
@@ -154,6 +161,7 @@ Their width will depend on the screen size. https://grid.malven.co/ */
 .city-section .city {      /* class="city" is each item(city) in the ^ list. this will style those HTML <li> elements*/
     position: relative;
     padding: 40px 10%;
+    margin-bottom: 30px;
     border-radius: 20px;
     background: var(--text_light);  /* this light background gives each city a white box to be in */
 }
@@ -169,7 +177,16 @@ Their width will depend on the screen size. https://grid.malven.co/ */
 }
 
 
+/* SECTION 3 */ 
+/* SKY DISPLAY SELECTOR */
 
+.sky label {
+    font-size: 2rem;
+    color: var(--text_light)
+}
+
+
+/* MISCELLENEOUS */
 /* "Where weather Lives" Banner */
 .live {
     background: #fffbbc;
@@ -186,4 +203,17 @@ Their width will depend on the screen size. https://grid.malven.co/ */
 
 .live a:hover {
     text-decoration: none;
+}
+
+
+/* FOOTER */
+.page-footer {
+    text-align: right;
+    font-size: 3rem;
+    color: var(--text_light);
+    margin-top: 40px;
+}
+
+.page-footer span {
+    color: var(--red);
 }

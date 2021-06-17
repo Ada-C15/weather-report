@@ -25,7 +25,7 @@
                 <input type="text" placeholder="Search for a city" autofocus id="citySearch">
                 <button id="submitButton">RESET</button>
             </form>
-            <h6 class="text">Search Cities: Sunnyville, Cloudvile, Rainville, or Snowville</h6>
+            <h6 class="text">Weather World Cities: <br> Sunnyville, Cloudvile, Rainville, or Snowville</h6>
 <!-- FUN HEADER -->                                 <!-- codecademy tutorial switch() -->
                 <header onclick="newStyle();"> 
                     <h1 class="centered" id="colorwords">Weather Changes</h1>
@@ -102,11 +102,12 @@
 
 
 <!-- SECTION 3 -->
-<!-- WAVE 3 -->  <!-- A <select> dropdown element to set the sky type --> <!-- An element that displays a sky -->
+<!-- SKY DISPLAY SELECTOR -->                                   <!-- WAVE 3 -->  <!-- A <select> dropdown element to set the sky type --> <!-- An element that displays a sky -->
     <section class="sky">
         <label for="skies">Choose a sky:</label>
 
         <select name="skies" id="skySelector">
+            <option value="./assets/world.png">World View</option>
             <option value="./assets/sunny_sky.png">Sunny</option>
             <option value="./assets/rainy_sky.png">Cloudy</option>
             <option value="./assets/cloudy_sky.png">Rainy</option>
@@ -115,13 +116,6 @@
 
         
         <img id="displaySky" class="sky_display" src="./assets/world.png" height="320" width="300" alt="Sky View"/>
-
-<!-- 
-        <img class="sky_display" src="./assets/sunny_sky.png" height="300" width="300" alt="Sunny Sky"/>
-        <img class="sky_display" src="./assets/rainy_sky.png" height="300" width="300" alt="Rainy Sky"/>
-        <img class="sky_display" src="./assets/cloudy_sky.png" height="300" width="300" alt="Cloudy Sky"/>
-        <img class="sky_display" src="./assets/snowy_sky.png" height="300" width="300" alt="Snowy Sky"/>
--->
 
     </section>
 
