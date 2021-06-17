@@ -21,7 +21,7 @@ h2 {
 main {
     display: flex;
     padding: 15px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 section {
