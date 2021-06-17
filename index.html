@@ -8,7 +8,10 @@
   </head>
   <body>
     <h1>Weather Report</h1>
-    <h2>Beautiful city weather</h2>
+
+    <div>
+        <h2 id="cityName">Beautiful city weather</h2>
+    </div>
 
     <main>
 
@@ -41,16 +44,16 @@
         <section>
 
             <label>Choose a sky:
-                <select class="skyEmojis" name="skyEmojis">
+                <select id="skyEmojis" name="skyEmojisName">
                     <option value="">--Please choose an option--</option>
-                    <option value="sunny">Sunny</option>
-                    <option value="cloudy">Cloudy</option>
-                    <option value="rainy">Rainy</option>
-                    <option value="snowy">Snowy</option>
+                    <option value="Sunny">Sunny</option>
+                    <option value="Cloudy">Cloudy</option>
+                    <option value="Rainy">Rainy</option>
+                    <option value="Snowy">Snowy</option>
                 </select>
             </label>
 
-            <h2 id="chosenSkyEmojis">Sky Emojis</h2>
+            <h2 id="chosenSkyEmojis">☀️</h2>
             <h2 id="landscapeEmojis">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</h2>
 
         </section>

@@ -2,6 +2,8 @@ const state = {
     temperatureDegrees: 68
 };
 
+
+
 // increase temperature function 
 const increaseTemperature = (event) => {
     state.temperatureDegrees += 1;
@@ -58,10 +60,24 @@ const changeLandscapeEmojis = (event) => {
 }
 
 // change sky emojis function
-// {}
+const changeSkyEmojis = (event) => {
+    const chosenSky = document.getElementById("skyEmojis").value; 
+    const emojisDisplay = document.getElementById("chosenSkyEmojis");
+    if (chosenSky === "Sunny") {
+        document.getElementById("chosenSkyEmojis").textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
+    } else if (chosenSky === "Cloudy") {
+        document.getElementById("chosenSkyEmojis").textContent = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+    } else if (chosenSky === "Rainy") {
+        document.getElementById("chosenSkyEmojis").textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+    } else if (chosenSky === "Snowy") {
+        document.getElementById("chosenSkyEmojis").textContent = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
+    }
+}
 
-// change city function
-// {}
+
+// change city name function
+
+
 
 // event handlers
 const registerEventHandlers = (event) => {
@@ -73,6 +89,9 @@ const registerEventHandlers = (event) => {
 
     const resetButton = document.querySelector("#addResetButton");
     resetButton.addEventListener("click", resetTemperature);
+
+    const skyEmojis = document.getElementById("skyEmojis");
+    skyEmojis.addEventListener("change", changeSkyEmojis)
 
 };
 
