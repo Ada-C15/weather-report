@@ -32,6 +32,28 @@
                 </div>
             </section>
             <section class="right-side">
+                <section class="search-city">
+                    <h2>City Name</h2>
+                    <input type="text" autocomplete="off" id="inputSearchBox" class="search-box" placeholder="Search for a city ..." />
+                    <button id="searchReset" class="search-reset-btn">Reset</button>
+                </section>
+                
+                <section class="sky-section">
+                    <h2>Sky</h2>
+                    <select id="skyDropdown">
+                        <option>Sunny</option>
+                        <option>Cloudy</option>
+                        <option>Rainy</option>
+                        <option>Snowy</option>
+                    </select>
+                </section>
+                <section class="garden-section">
+                    <h2>Weather Garden</h2>
+                    <div id="gardenPlayground" class="garden_playground">
+                        <div id="sky"></div>
+                        <div id="landscape"></div>
+                    </div>
+                </section>
             </section>
         <script src="scripts/index.js"></script>
     </body>
