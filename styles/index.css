@@ -36,7 +36,7 @@ div {
     text-align: center;
  }
 
- #cityname {
+ #cityName {
      padding: 5px;
      font-size: 38px;
      margin-top: 10px;
@@ -107,21 +107,37 @@ div {
     align-items: center;
     padding: 40px;
     font-size: 50px;
-    background-image: url(../images/wicked-nice-sky.jpeg);
     background-size: 100%;
+}
+
+.blue {
+    background-image: url(../images/wicked-nice-sky.jpeg);
     color: white;
 }
 
-#weatherContainer{
+#landscapeContainer{
     border-radius: 20px;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-image: url(../images/green-landscape.jpeg);
     background-size: 100%;
     color: white;
 }
-#weatherContainer h3 {
+
+.green {
+    background-image: url(../images/green-landscape.jpeg);
+}
+
+.hotSky {
+    background-image: url(../images/hot-sky.jpeg);
+    color: black;
+}
+
+.desert {
+    background-image: url(../images/desert.jpeg);
+}
+
+#landscapeContainer h3 {
     margin: 0;
     padding: 10px;
 }

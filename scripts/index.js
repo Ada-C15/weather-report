@@ -15,7 +15,7 @@ const colder = (event) => {
 };
 
 const reset = (event) => {
-    tempState.temp = 75;
+    tempState.temp = 70;
     const temperature = document.querySelector("#temperature")
     temperature.textContent = `${tempState.temp}F`
 };
@@ -27,11 +27,35 @@ const cityState = {
 const cityName = (event) => {
     cityState.city = document.querySelector('#cityInput').value;
     if (cityState.city !== 0) {
-        const cityName = document.querySelector("#city")
+        const cityName = document.querySelector("#cityName")
         cityName.textContent = `✨ ✨ Beautiful ${cityState.city}!! ✨ ✨ `
     };
 };
 
+const skyState = {
+    sky: 0
+};
+
+const selectSky = (event) => {
+    skyState.sky = document.querySelector("#skyChoices").value;
+    if (skyState.sky === "hot") {
+        const selectedSky = document.querySelector("#comment")
+        selectedSky.className = "hotSky";
+        selectedSky.textContent = "It's wicked hot"
+    }
+};
+
+const landState = {
+    land: 0
+};
+
+const selectLand = (event) => {
+    landState.land = document.querySelector("#landChoices").value;
+    if (landState.land === "desert") {
+        const selectedLand = document.querySelector("#landscapeContainer")
+        selectedLand.className = "desert";
+    }
+};
 
 const registerEventHandlers = (event) => {
     const hotterButton = document.querySelector('#raiseTemp');
@@ -46,6 +70,11 @@ const registerEventHandlers = (event) => {
     const cityButton = document.querySelector('#submitBtn');
     cityButton.addEventListener("click", cityName);
 
+    const skyPic = document.querySelector("#skyChoices");
+    skyPic.addEventListener("change", selectSky);
+
+    const landPic = document.querySelector("#landChoices");
+    landPic.addEventListener("change", selectLand);
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
