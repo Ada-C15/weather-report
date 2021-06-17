@@ -23,7 +23,7 @@ const decreaseTemperature = (event) => {
 };
 
 // reset temperature and city function 
-const resetTemperature = (event) => {
+const resetInfo = (event) => {
     state.temperatureDegrees = 68;
     document.getElementById("cityPhrase").textContent = `Beautiful city weather`;
     document.getElementById("chosenSkyEmojis").textContent = `☀️`;
@@ -92,7 +92,7 @@ const registerEventHandlers = (event) => {
     decreaseButton.addEventListener("click", decreaseTemperature);
 
     const resetButton = document.querySelector("#addResetButton");
-    resetButton.addEventListener("click", resetTemperature);
+    resetButton.addEventListener("click", resetInfo);
 
     const skyEmojis = document.getElementById("skyEmojis");
     skyEmojis.addEventListener("change", changeSkyEmojis)
