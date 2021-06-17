@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Weather Report</title>
+        
+
+
+
+    </head>
+    <body>
+        <div id="parent-container"> 
+            <div id="title-container">
+                <h1>
+                    Weather Report
+                </h1>
+                <h4>
+                    For the lovely city of
+                </h4>
+                <h2 id="city-container">
+                    My Hometown
+                </h2>
+            </div>
+            <div id="cards-container">
+                <div id="column-1">
+                    <div id="temperature-card">
+                        <h2>
+                            Temperature
+                        </h2>
+                        <div id="up-arrow">
+                            ⬆️
+                        </div>
+                        <div id="down-arrow">
+                            ⬇️
+                        </div>
+                        <div id="temperature-indicator" style="color: orange">
+                            71
+                        </div>
+                    </div>
+                    <div id="sky-card">
+                        <h2>
+                            Sky
+                        </h2>
+                        <select id="sky-type">
+                            <option value="sunny">
+                                Sunny
+                            </option>
+                            <option value="cloudy">
+                                Cloudy
+                            </option>
+                            <option value="rainy">
+                                Rainy
+                            </option>
+                            <option value="snowy">
+                                snowy
+                            </option>
+                        </select>
+                    </div>
+                    <div id="city-name-card">
+                        <h2>
+                            City Name
+                        </h2>
+                        <input id="city-name-input" type="text" value="My Hometown">
+                        <button id="reset-button">
+                            Reset
+                        </button>
+                    </div>
+
+                </div>
+                <div id="column-2">
+                    <h3>Weather Garden</h3>
+                    <div id="landscape-card">
+                        <p id="sky-landscape">
+                            ☁️ ☁️ ☁️ ☀️ ☁️ ☁️
+                        </p>
+                        <br> 
+                        <br>
+                        <p id="ground-landscape">
+                            🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷
+                        </p>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+        <script src="./scripts/index.js"></script>
+    </body>
+
+</html>
