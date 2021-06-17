@@ -26,6 +26,7 @@ const decreaseTemperature = (event) => {
 const resetTemperature = (event) => {
     state.temperatureDegrees = 68;
     document.getElementById("cityPhrase").textContent = `Beautiful city weather`;
+    document.getElementById("chosenSkyEmojis").textContent = `☀️`;
     const temperatureDegreesContainer = document.querySelector("#temperatureDegrees");
     temperatureDegreesContainer.textContent = `Temperature Degrees: ${state.temperatureDegrees}`;
     changeTemperatureTextColor()
