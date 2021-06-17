@@ -66,3 +66,75 @@ const resetCityName = () => {
     const resetSearchBox = document.getElementById("inputSearchBox");
     resetSearchBox.value = "Search for a city";
 }
+
+const setSky = () => {
+    const getSky = document.getElementById("skyDropdown").value;
+    const displaySky = document.getElementById("sky");
+
+    let sky = "";
+    let skyColor = "";
+    if (getSky === "Cloudy") {
+        sky = "☁️☁️🌤☁️☁️";
+        skyColor = "cloudy";
+    } else if (getSky === "Sunny") {
+        sky = "☁️ ☁️ ☀️ ☁️  ☁️";
+        skyColor = "sunny";
+    } else if (getSky === "Rainy") {
+        sky = "🌧🌈💧🌧🌧";
+        skyColor = "rainy";
+    } else if (getSky === "Snowy") {
+        sky = "🌨❄️🌨🌨";
+        skyColor = "snowy";
+    }
+    displaySky.textContent = sky;
+    const gardenContent = document.getElementById("gardenPlayground");
+    gardenContent.classList = `garden_playground ${skyColor}`;
+};
+
+const tempChangeColor = (currentTemp) => {
+    const tempValueContainer = document.getElementById("temp");
+    let color = "fuchsia";
+    if ( currentTemp >= 80) {
+        color = "turquoise";
+    } else if (currentTemp >= 70) {
+        color = "coral";
+    } else if (currentTemp >= 60) {
+        color = "blueviolet";
+    } else if (currentTemp >= 34) {
+        color = "lime";
+    } else if (currentTemp >= 22) {
+        color = "gainsboro";
+    } else {
+        color = "blue";
+    }
+    tempValueContainer.classList = color;
+}
+const updateGarden = (currentTemp) => {
+    const onLandscape = document.getElementById("landscape");
+    let landscape = "⛄️🌲🍂🌲🍁⛄️🍂🌲";
+    if ( currentTemp >= 70) {
+        landscape = "🐍_🦂_🌵__🐍";
+    } else if (currentTemp >= 60) {
+        landscape = "🌸🌿☘️🌱_🌻🌷";
+    } else if (currentTemp >= 50) {
+        landscape = "🌾🌾_🍃_🪨__🛤_🍃";
+    }
+    onLandscape.textContent = landscape;
+}
+
+const registerEventHandlers = () => {
+
+    updateCityName();
+    const updateCity = document.getElementById("inputSearchBox");
+    updateCity.addEventListener("input", updateCityName);
+
+    const resetCity= document.getElementById("searchReset");
+    resetCity.addEventListener("click", resetCityName);
+
+    setSky();
+    const skySelect = document.getElementById("skyDropdown");
+    skySelect.addEventListener("change", setSky);
+
+}
+
+document.addEventListener("DOMContentLoaded", registerEventHandlers);
