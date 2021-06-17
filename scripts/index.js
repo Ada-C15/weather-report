@@ -22,12 +22,12 @@ const updateSky = () => {
 
 const updateCityName = () => {
     const inputName = document.getElementById("cityNameInput").value;
-    const headerCityName = document.getElmentById("headerCityName");
+    const headerCityName = document.getElementById("headerCityName");
     headerCityName.textContent = inputName;
 };
 
 const resetCityName = () => {
-    const cityNameInput = document.getElmentById("cityNameInput");
+    const cityNameInput = document.getElementById("cityNameInput");
     cityNameInput.value = "Seattle";
     updateCityName();
 };
@@ -47,3 +47,56 @@ const updateTempStyles = (currentTemp) => {
     }
     tempValueContainer.classList = color;
 }
+
+const updateGarden = (currentTemp) => {
+    const landscapeContainer = document.getElementById("landscape");
+    let lsandscape = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
+    if (currentTemp >= 80) {
+        landscape = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+    } else if (currentTemp >= 70) {
+        landscape = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
+    } else if (currentTemp >= 60) {
+        landscape = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
+    }
+    landscapeContainer.textContent = landscape;
+}
+
+const updateTemp = tempValue => {
+    const tempValueContainer = document.getElementById("tempValue");
+    tempValueContainer.textContent = tempValue;
+    updateTempStyles(tempValue);
+    updateGarden(tempValue);
+}
+
+const increaseTemp = () => {
+    tempValue += 1;
+    updateTemp(tempValue);
+};
+
+const decreaseTemp = () => {
+    tempValue -= 1;
+    updateTemp(tempValue);
+};
+
+const registerEventHandler = () => {
+    updateTemp(tempValue);
+
+    const increaseTempControl = document.getElementById("increaseTempControl");
+    increaseTempControl.addEventListener("click", increaseTemp);
+
+    const decreaseTempControl = document.getElementById("decreaseTempControl");
+    decreaseTempControl.addEventListener("click", decreaseTemp);
+
+    updateCityName();
+    const cityNameInput = document.getElementById("cityNameInput");
+    cityNameInput.addEventListener("input", updateCityName);
+
+    const cityNameResetBtn = document.getElementById("cityNameReset");
+    cityNameResetBtn.addEventListener("click", resetCityName);
+
+    updateSky();
+    const skySelect = document.getElementById("skySelect");
+    skySelect.addEventListener("change", updateSky);
+};
+
+document.addEventListener("DOMContentLoaded", registerEventHandlers);
