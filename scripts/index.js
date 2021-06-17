@@ -48,13 +48,16 @@ const selectSky = (event) => {
         gardenContainer.textContent = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️'
     }
     else if (userInput.value === 'cloudy') {
-        gardenContainer.textContent = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁';
+        gardenContainer.textContent = '☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️';
     }
     else if (userInput.value === 'rainy') {
-        gardenContainer.textContent = '🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧';
+        gardenContainer.textContent = '🌧🌈⛈🌧🌧💧⛈🌧💧🌧🌈🌧';
     }
     else if (userInput.value === 'snowy') {
         gardenContainer.textContent = '🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨'
+    }
+    else if (userInput.value === 'apocalypse') {
+        gardenContainer.textContent = '🌪️🔥☄️☀️☄️🔥🌪️'
     }
 
 };
