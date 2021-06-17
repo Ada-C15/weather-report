@@ -1,9 +1,9 @@
 const tempState = {
-    temp: 75 
+    temp: 70
 };
 
 const hotter = (event) => {
-    tempState.temp +=1;
+    tempState.temp +=1
     const temperature = document.querySelector("#temperature")
     temperature.textContent = `${tempState.temp}F`
 };

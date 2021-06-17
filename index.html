@@ -11,33 +11,53 @@
       <h1> The Weathahhh</h1>  
     </header>
 
-    <div id="city">
-        It's a city!
-    </div>
-    <div></div>
-    <div></div>
-    
-    <section id="tempContainer">
-            <span id="temperature">75F</span>
-
-        <span id="btn-group">  <ul>
-            <li><button id="raiseTemp">⬆️</button></li>
-            <li><button id ="lowerTemp">⬇️</button></li>
-            <li><button id="reset"> 🔁</li>
-        </ul></span>
-        <!-- <span></span>
-        <span id="comment">
-            "It's weathah"
-        </span> -->
+    <section id="city">
+        <span id="cityname">It's a city!</span>
+        <span id="cityInputBox">
+          <input id="cityInput" placeholder="your city name"></input>
+          <button id="submitBtn">Submit</button></span>
     </section>
 
+    <div> </div>
+
+    <section id="boxRow">
+
+      <section id="tempContainer">
+          <span id="temperature">70F</span>
+          <span class="horizontalSpace"></span>
+          <span id="btn-group">  <ul>
+              <li><span id="raiseTemp">⬆️</span></li>
+              <li><span id ="lowerTemp">⬇️</span></li>
+              <li><span id="reset"> 🔁 </span></li>
+          </ul></span>
+      </section>
+
+      <span id="weatherContainer">
+          <h3>Landscape</h3>
+      </span>
+
+      <span class="weather" id="comment">
+          It's wicked nice. 
+      </span>
+
+  </section>
+
+  <span> </span>
+
     <section id="inputs">
-        <input id="cityInput" placeholder="your city name"></input>
-        <button id="submitBtn">Submit</button>
-        <label for="sky" class = "sky" id="sky-label">Select a sky:</label>
-        <select name="sky" class ="sky" id="sky-types"></select>
-        <label class="landscape" for="landscape">Select a landscape:</label>
-        <select class="landscape" name="landscape" id ="land-types"></select>
+      <section id="sky" class="dropdown">
+        <select id="skyChoices">
+          <option value ="" disabled selected>Select a sky</option>
+          <option value="hot">Hot and Sunny</option>
+        </select>
+        </section>
+
+        <section id="landscape" class="dropdown">
+        <select id="landChoices">
+          <option value ="" disabled selected>Select a landscape</option>
+          <option value="desert">Desert</option>
+        </select>
+        </section>
 
     </section>
 
