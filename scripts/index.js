@@ -44,7 +44,7 @@ const changeTemperatureTextColor = (event) => {
     }
 };
 
-// change landscape function
+// change landscape emojis function
 const changeLandscapeEmojis = (event) => {
     if (state.temperatureDegrees >= 70) {
         document.getElementById("landscapeEmojis").textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
@@ -57,6 +57,12 @@ const changeLandscapeEmojis = (event) => {
     }
 }
 
+// change sky emojis function
+// {}
+
+// change city function
+// {}
+
 // event handlers
 const registerEventHandlers = (event) => {
     const increaseButton = document.querySelector("#addIncreaseTemperatureButton");
@@ -67,6 +73,7 @@ const registerEventHandlers = (event) => {
 
     const resetButton = document.querySelector("#addResetButton");
     resetButton.addEventListener("click", resetTemperature);
+
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);

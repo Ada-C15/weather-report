@@ -1,17 +1,48 @@
+body {
+    background-color: coral;
+    font-family: 'Helvetica Neue', sans-serif; 
+    text-align: center;
+}
+
+
 h1 { color: #111; 
     font-family: 'Helvetica Neue', sans-serif; 
-    font-size: 200px; 
+    font-size: 128.5px; 
     font-weight: bold; 
     letter-spacing: -1px; 
     line-height: 1; 
     text-align: center; 
 }
 
-body {
-    background-color: coral;
-    text-align: center;
+h2 {
+    padding: 5px;
+}
+
+main {
+    display: flex;
+    padding: 15px;
+    justify-content: space-between;
+}
+
+section {
+    padding: 3px;
+}
+
+#cityTemperatureContainer {
+    background-color: rgb(238, 203, 175);
+    border-radius: 25px;
+    padding: 15px;
+}
+
+#citySkyContainer {
+    background-color: rgb(238, 203, 175);
+    border-radius: 25px;
+    padding: 15px;
 }
 
 #temperatureDegrees {
     color: orange;
 }
+
+
+

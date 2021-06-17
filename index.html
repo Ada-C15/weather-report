@@ -4,32 +4,60 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Weather Report</title>
-    <link href="styles/index.css" rel="stylesheet" type="text/css" />
+    <link href="styles/index.css" rel="stylesheet" type="text/css"/>
   </head>
   <body>
+    <h1>Weather Report</h1>
+    <h2>Beautiful city weather</h2>
+
     <main>
-      <h1>Weather Report</h1>
-      <p>Here is my website where I post about the weather.</p>
 
-      <section>
-        <button id="addIncreaseTemperatureButton">Increase temperature</button>
-      </section>
+      <div id="cityTemperatureContainer">
+        <section>
+            <label for="city">City</label>
+            <input type="text" id="city" name="city">
+        </section>
 
-      <section> 
-        <button id="addDecreaseTemperatureButton">Decrease Temperature</button>
-      </section>
+        <section>
+            <button id="addIncreaseTemperatureButton">Increase temperature</button>
+        </section>
 
-      <section> 
-        <button id="addResetButton">Reset</button>
-      </section>
+        <section> 
+            <button id="addDecreaseTemperatureButton">Decrease Temperature</button>
+        </section>
 
-      <section id="temperatureContainer">
-        <h2 id="temperatureDegrees">Temperature Degrees: 68</h2>
-      </section>
+        <section> 
+            <button id="addResetButton">Reset</button>
+        </section>
 
-      <section id="landscapeContainer">
-        <h2 id="landscapeEmojis">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</h2>
-      </section>
+        <section id="temperatureContainer">
+            <h2 id="temperatureDegrees">Temperature Degrees: 68</h2>
+        </section>
+      </div>
+
+
+      <div id="citySkyContainer">
+
+        <section>
+
+            <label>Choose a sky:
+                <select class="skyEmojis" name="skyEmojis">
+                    <option value="">--Please choose an option--</option>
+                    <option value="sunny">Sunny</option>
+                    <option value="cloudy">Cloudy</option>
+                    <option value="rainy">Rainy</option>
+                    <option value="snowy">Snowy</option>
+                </select>
+            </label>
+
+            <h2 id="chosenSkyEmojis">Sky Emojis</h2>
+            <h2 id="landscapeEmojis">🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷</h2>
+
+        </section>
+
+
+      </div>
+
 
     </main>
     <script src="scripts/index.js"></script>
