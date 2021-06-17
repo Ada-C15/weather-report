@@ -79,17 +79,70 @@ h2 {
 }
 
 .temperature__controls {
-    diaplay: flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .garden__section > h2 {
     color: rgb(144, 243, 31);
+    font-size: 3em;
 }
 
 .garden__content {
     min-height: 200px;
     max-width: fit-content;
-    
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    border-radius: 8px;
+    font-size: em;
+}
+
+.city-name__reset-btn {
+    border: 0;
+    background-color: rgb(223, 140, 240);
+    color: white;
+    border-radius: 8px;
+    padding: 1rem;
+    font-family: "Raleway", sans-serif;
+}
+
+.red {
+    color: red;
+}
+
+.orange {
+    color: orange;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+}
+
+.teal {
+    color: teal;
+}
+
+.cloudy {
+    background-color: lightgrey;
+}
+
+.sunny {
+    background-color: rgb(221, 255, 255);
+}
+
+.rainy {
+    background-color: rgb(136, 182, 197);
+}
+
+.snowy {
+    background-color: rgb(143, 150, 160);
 }
