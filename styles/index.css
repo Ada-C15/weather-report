@@ -1,0 +1,111 @@
+html{
+    font-family: 'Futura',sans-serif;
+    margin: 20px;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+    background-color: #012a4a;
+    color:white;
+    padding: 20px;
+    font-size: 16px;
+}
+
+header, footer{
+    grid-column: span 3;
+    text-align: center;
+}
+
+#headerCityName{
+    color: tomato;
+    font-size: 20px;
+    text-decoration:underline;
+}
+
+.temperature{
+    grid-row: 2;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#tempValue{
+    font-size: 25px;
+    color: #c8553d;
+}
+
+.temperature > div { 
+    padding-top: 10px;
+    padding-left: 100px;
+    text-align:right;
+    display: inline;
+} 
+
+.sky{
+    grid-row: 3;
+}
+
+select{
+    text-align: center;
+    font-size: 18px;
+    width: calc(65% - 1.5rem);
+    align-content: right;
+    background-color:#bee1e6;
+} 
+
+.city-name{
+    grid-row: 4;
+}
+
+input{
+    cursor: text;
+    font-size: 18px;
+    background-color: #bee1e6;
+    letter-spacing: 1px;
+}
+
+#resetCityButton, #celsius, #fahrenheit{
+    font-size: 18px;
+    background-color: #adb5bd;
+}
+
+.garden{
+    grid-column: 2;
+    grid-row: span 3;
+    text-align: center;
+    background-color: #aed9e0;
+    border-radius: 6px;
+    display: block;
+    font-size: 18px;
+}
+
+.temperature, .sky, .city-name{
+    background-color: #d8e2dc;
+    color: #012a4a;
+    border-radius: 4px;
+    padding: 25px;
+    display: inline;
+}
+
+#gardenContent{
+    font-size: 40px;
+}
+
+#landscape{
+    position:absolute;                 
+    bottom: 35vh;
+    padding-left: 2vw;
+}
+
+.image{
+    grid-column: 3;
+    grid-row: span 3;
+    padding-top: 7vh;
+    padding-left: 5vw;
+}
+
+
+
+
