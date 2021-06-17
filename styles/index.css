@@ -78,7 +78,6 @@ button:active {
     border-radius: 10px;
     padding: 10px;
     background-color: #d6ecf3;
-    min-width: -webkit-fill-available;
 }
 
 .weather-section {
@@ -86,7 +85,6 @@ button:active {
     padding: 10px;
     background-color: #eff7fa;
     text-align: center;
-    align-self: center;
 }
 
 .weather-section h1 {
@@ -112,7 +110,7 @@ button:active {
     grid-row: 2;
 }
 .weather-section {
-    grid-row: 2 / span 2;
+    grid-row: 2 / span 3;
 }
 
 .sky-section {
@@ -156,6 +154,6 @@ button:active {
 
 #sky,
 #ground {
-    font-size: 40px;
+    font-size: 50px;
+    line-height: 80px;
 }
-

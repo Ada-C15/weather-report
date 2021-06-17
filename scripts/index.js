@@ -39,16 +39,16 @@ const updateSky = () => {
     const skyContainer = document.getElementById("sky");
     let sky = "";
     if (skyOption === "Sunny") {
-        sky = "☁️☁️☁️☁️☁️☁️☀️☁️☁️☁️☁️☁️☁️";
+        sky = "☁️☁️☁️☁️☁️☀️☁️☁️☁️☁️☁️";
         skyColor = "sunny";
     } else if (skyOption === "Cloudy") {
-        sky = "☁️☁️☁️☁️☁️☁️⛅☁️☁️☁️☁️☁️☁️";
+        sky = "☁️☁️☁️☁️☁️⛅☁️☁️☁️☁️☁️";
         skyColor = "cloudy";
     } else if (skyOption === "Rainy") {
-        sky = "🌧🌧🌧🌧🌧🌧🌦🌧🌧🌧🌧🌧🌧";
+        sky = "🌧🌧🌧🌧🌧🌦🌧🌧🌧🌧🌧";
         skyColor = "rainy";
     } else if (skyOption === "Snowy") {
-        sky = "🌨❄️🌨❄️🌨❄️🌨❄️🌨❄️🌨❄️🌨";
+        sky = "🌨❄️🌨❄️🌨❄️🌨❄️🌨❄️🌨";
         skyColor = "snowy";
     }
     skyContainer.textContent = sky;
@@ -58,15 +58,15 @@ const updateLandscape = (currentTemp) => {
     const groundContainer = document.getElementById("ground");
     let ground = "";
     if (currentTemp >= 80) {
-        ground = "🌵🐍🦂🌵🐍🦂🌵🐍🦂🌵🐍🦂";
+        ground = "🌵🐍🦂🌵🐍🦂🌵🐍🦂🌵🐍";
     } else if (currentTemp >= 70) {
-        ground = "🌸🌿🌼🌿🌸🌿🌼🌿🌸🌿🌼🌿";
+        ground = "🌸🌿🌼🌿🌸🌿🌼🌿🌸🌿🌼";
     } else if (currentTemp >= 60) {
-        ground = "🌾🍃🌾🍃🌾🍃🌾🍃🌾🍃🌾🍃";
+        ground = "🌾🍃🌾🍃🌾🍃🌾🍃🌾🍃🌾";
     } else if (currentTemp >= 50){
-        ground = "🍂🍁🍂🍁🍂🍁🍂🍁🍂🍁🍂🍁"
+        ground = "🍂🍁🍂🍁🍂🍁🍂🍁🍂🍁🍂"
     } else if (currentTemp < 50){
-        ground = "🌲🌲⛄️🌲🌲⛄️🌲🌲⛄️🌲🌲⛄️"
+        ground = "🌲🌲⛄️🌲🌲⛄️🌲🌲⛄️🌲🌲"
     }
     groundContainer.textContent = ground;
 };
