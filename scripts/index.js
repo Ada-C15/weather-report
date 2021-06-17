@@ -22,9 +22,10 @@ const decreaseTemperature = (event) => {
     changeLandscapeEmojis()
 };
 
-// reset temperature function 
+// reset temperature and city function 
 const resetTemperature = (event) => {
     state.temperatureDegrees = 68;
+    document.getElementById("cityPhrase").textContent = `Beautiful city weather`;
     const temperatureDegreesContainer = document.querySelector("#temperatureDegrees");
     temperatureDegreesContainer.textContent = `Temperature Degrees: ${state.temperatureDegrees}`;
     changeTemperatureTextColor()
@@ -62,13 +63,12 @@ const changeLandscapeEmojis = (event) => {
 // change sky emojis function
 const changeSkyEmojis = (event) => {
     const chosenSky = document.getElementById("skyEmojis").value; 
-    const emojisDisplay = document.getElementById("chosenSkyEmojis");
     if (chosenSky === "Sunny") {
-        document.getElementById("chosenSkyEmojis").textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
+        document.getElementById("chosenSkyEmojis").textContent = "☁️ ☁️ ☁️ ☀️ ☀️ ☀️ ☀️ ☁️ ☁️";
     } else if (chosenSky === "Cloudy") {
         document.getElementById("chosenSkyEmojis").textContent = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
     } else if (chosenSky === "Rainy") {
-        document.getElementById("chosenSkyEmojis").textContent = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+        document.getElementById("chosenSkyEmojis").textContent = "🌧🌈⛈🌧💧⛈🌧🌦🌧💧🌧";
     } else if (chosenSky === "Snowy") {
         document.getElementById("chosenSkyEmojis").textContent = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
     }
@@ -76,7 +76,10 @@ const changeSkyEmojis = (event) => {
 
 
 // change city name function
-
+const changeCityName = (event) => {
+    const chosenCityName = document.getElementById("cityName").value;
+    document.getElementById("cityPhrase").textContent = `Beautiful ${chosenCityName} weather`;
+}
 
 
 // event handlers
@@ -92,6 +95,9 @@ const registerEventHandlers = (event) => {
 
     const skyEmojis = document.getElementById("skyEmojis");
     skyEmojis.addEventListener("change", changeSkyEmojis)
+
+    const renameCity = document.getElementById("cityName");
+    renameCity.addEventListener("change", changeCityName)
 
 };
 
