@@ -1,23 +1,22 @@
 
 // HELPER FUNCTION //
 function numsChangeColor() {
-
-    let tempColor = document.querySelector('#givenTemp').style.color;
-    // let newColor = tempColor.style.color;
-    // let newColor = '';
-
-    if ("#givenTemp" >= 70) {
-        tempColor = "red"
-    } else if (("#givenTemp" < 70) && (givenTemp >= 60)) {
-        tempColor = "orange"
-    } else if ((givenTemp < 60) && (givenTemp >= 50)) {
-        tempColor = "yellow"
-    } else if ((givenTemp < 50) && (givenTemp >= 40)) {
-        tempColor = "green"
-    } else if ((givenTemp < 40) && (givenTemp >= 30)) {
-        tempColor = "blue"
-    } else if ((givenTemp < 30) && (givenTemp >= 0)) {
-        tempColor = "purple"
+    let temp = document.querySelector('#givenTemp');
+    
+    if (state.givenTemp >= 100) {
+        temp.style.color = "black"
+    } else if ((state.givenTemp < 100) && (state.givenTemp >= 70)) {
+        temp.style.color = "red"
+    } else if ((state.givenTemp < 70) && (state.givenTemp >= 60)) {
+        temp.style.color = "orange"
+    } else if ((state.givenTemp < 60) && (state.givenTemp >= 50)) {
+        temp.style.color = "yellow"
+    } else if ((state.givenTemp < 50) && (state.givenTemp >= 40)) {
+        temp.style.color = "green"
+    } else if ((state.givenTemp < 40) && (state.givenTemp >= 30)) {
+        temp.style.color = "blue"
+    } else {
+        temp.style.color = "purple"
     }
 };
 
@@ -35,13 +34,13 @@ const addTemp = (event) =>  {       // Add temp UP Behavior
     state.givenTemp += 1;
     const tempUp = document.querySelector("#givenTemp");
     tempUp.textContent = state.givenTemp;
-    numsChangeColor(state.givenTemp);
+    numsChangeColor();
 }
 const subTemp = (event) => {        // Add temp DOWN Behavior
     state.givenTemp -= 1;
     const tempDown = document.querySelector("#givenTemp");
     tempDown.textContent = state.givenTemp;
-    numsChangeColor(state.givenTemp);
+    numsChangeColor();
 };
 
 // REGISTER ALL EVENTS // use the .registerEventHandler
@@ -117,7 +116,7 @@ const changeDisplay = (event) => {
     const displaySky = document.getElementById("displaySky");
     displaySky.src = document.getElementById("skySelector").value; // USER INPUT ?? does this grab the option value?
 
-        event.preventDefault()
+    event.preventDefault()
 }
     
 

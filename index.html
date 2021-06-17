@@ -15,39 +15,32 @@
             <div class="container">🌞 Weather World. Where Weather Lives.🌞<a target="_blank" href="https://weather.com/">OR go to a Site that Works!</a>
             </div>
         </div>
-        <!-- ^ fun top banner from a weather website ^ -->
 
 <!-- SECTION 1 TOP-BANNER, PRIMARY AND INPUT OPTIONS-->
-
         <section class="top-banner">
             <div class="container">
             <h1 class="heading">Weather World</h1>
-            
-
-<!-- WAVE 5:-->   <!--INPUT --> 
-<!-- the id="citySearch" references the input but -- the VALUE (acutal words that go into the form) needs to be in the .getElementById("citySearch).value to get the correct information -->
+<!-- INPUT FORM DISPLAY -->                         <!-- WAVE 5:-->   <!--INPUT --> 
             <form>
                 <input type="text" placeholder="Search for a city" autofocus id="citySearch">
                 <button id="submitButton">RESET</button>
             </form>
-            <h6 class="choices">Search Cities: Sunnyville, Cloudvile, Rainville, or Snowville</h6>
-            
-            <header onclick="newStyle();"> 
-                <h1 class="centered" id="colorwords">Weather Changes</h1>
-            </header>
-            <!-- ^ codecademy tutorial ^ -->
-
-            <h2 class="city-name" id="cityName">Weather World Forecast</h2>
-            <span class="city-temp" id="cityTemp">degrees<sup>°F</sup></span>
-            <figure>
-                <img class="city-icon" id="cityPic" src="./assets/world.png" height="110" width="100" alt="World"/>
-                <figcaption>There's a 100% chance of Weather!</figcaption>
-            </figure>
-
-<!-- WAVE 2: -->   <!--TEMPERATURE DISPLAY --> <!-- CLICK UP/DOWN TEMP -->
+            <h6 class="text">Search Cities: Sunnyville, Cloudvile, Rainville, or Snowville</h6>
+<!-- FUN HEADER -->                                 <!-- codecademy tutorial switch() -->
+                <header onclick="newStyle();"> 
+                    <h1 class="centered" id="colorwords">Weather Changes</h1>
+                </header>                   
+<!-- DEFAULT CITY DISPLAY -->
+                    <h2 class="city-name" id="cityName">Weather World Forecast</h2>
+                        <span class="city-temp" id="cityTemp">degrees<sup>°F</sup></span>
+                            <figure>
+                                <img class="city-icon" id="cityPic" src="./assets/world.png" height="110" width="100" alt="World"/>
+                                <figcaption>There's a 100% chance of Weather!</figcaption>
+                            </figure>
+<!-- TEMPERATURE DISPLAY -->                        <!-- WAVE 2: -->   <!--TEMPERATURE DISPLAY -->
             <h2 class="heading">Temperature</h2>
             <h2 id="givenTemp">70</h2>
-
+<!-- CLICKABLE TEMPERATURE BUTTONS -->              <!-- WAVE 2: -->   <!-- CLICK UP/DOWN TEMP -->
             <article>
                 <button id="addDownButton">DOWN</button>
                 <button id="addUpButton">UP</button>  

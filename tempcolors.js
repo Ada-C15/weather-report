@@ -16,7 +16,7 @@ const numsChangeColor = () => {
         tempColor = "green"
     } else if ((givenTemp < 40) && (givenTemp >= 30)) {
         tempColor = "blue"
-    } else if ((givenTemp < 30) && (givenTemp >= 0)) {
+    } else if (givenTemp < 30) {
         tempColor = "purple"
     }
 };
