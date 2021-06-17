@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<html lang="en">
+
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,17 +10,21 @@
         <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">    
         <link href="styles/index.css" rel="stylesheet" type="text/css"/>
     </head>
+
     <body>
-        <main>
+        <header class= "header__header">
             <h1>Weather Report</h1>
-            <section class="temperature_section">
+            <span> For the city of
+                <span id="headerCityName" class="header__city-name"></span></span>
+        </header>
+            <section class="temperature__section">
                 <h2>Temperature:</h2>
-            <div class="temperature_content">
-                <div class="temperature_controls">
+            <div class="temperature__content">
+                <div class="temperature__controls">
                     <span id="increaseTempControl">⬆️</span>
                     <span id="decreaseTempControl">⬇️</span>
                 </div>
-                <span id="tempValue" class="teal">0</span>
+                <span id="tempValue"></span>
                 </div>
             </section>
             <section class="sky__section">
@@ -32,16 +38,16 @@
             </section>
             <section class="city-name__section">
                 <h2>City Name</h2>
-                <input type="text" id="cityNameInput" value="Seattle">
+                <input type="text" id="cityNameInput" value="Seattle" />
                 <button id="cityNameReset" class="city-name__reset-btn">Reset</button>
             </section> 
-            <section class="garden_section">
+            <section class="garden__section">
                 <h2>Weather Garden</h2>
-                <div id="gardenContent" class="garden__content snowy">
-                    <div id="sky">🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨</div>
-                    <div id="landscape">🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲</div>
+                <div id="gardenContent" class="garden__content">
+                    <div id="sky"></div>
+                    <div id="landscape"></div>
                 </div>
             </section>
             <script src="scripts/index.js"></script>
-        </main>
     </body>
+</html>
