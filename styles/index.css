@@ -171,3 +171,21 @@ section input:focus {
     width: 80%;
     padding: 2rem;
 }
+
+/* ----- Sky Part ---- */
+.sky-section{
+    background-color: rgb(255 255 255 / 44%);
+    border-radius: 8px;
+    margin: 7px auto;
+    width: 80%;
+    padding: 2rem;
+}
+
+/*------- Weather Garden ----- */
+.garden-section {
+    background-color: rgb(255 255 255 / 44%);
+    border-radius: 8px;
+    margin: 7px auto;
+    width: 80%;
+    padding: 2rem;
+}
