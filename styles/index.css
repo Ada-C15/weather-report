@@ -7,8 +7,8 @@ body {
 }
 
 button, select, input{
-    font-size: 15px;
-    border-radius: 20px;
+    font-size: 17px;
+    border-radius: 25px;
     border-width: 0px;
     text-align: center;
     padding-left: 10px;
@@ -25,8 +25,17 @@ header, footer{
     font-size: 25px;
     text-decoration: underline dotted;
 }
-.image{
-    grid-column: 2;
-    grid-row: span 2;
-    padding: auto; 
+
+.temperature, .skyTheme, .mountainName{
+  border-radius: 3px;
+  padding: auto;
+  display: inline
+}
+
+
+#weatherWindow{
+    font-size: 25px;
+}
+#landscape {
+    padding-top: 250px;
 }
