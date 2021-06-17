@@ -3,7 +3,8 @@ console.log("hellooo!")
 //store current temp in a variable
 
 const state = {
-    tempCount : 70 
+    //color: "red",
+    tempCount : 70,
 };
 
 
@@ -12,39 +13,42 @@ const increaseTemp= () => {
     state.tempCount +=1
     const tempUp = document.querySelector("#temp")
     tempUp.textContent = `${state.tempCount}`
+    //updateTempColor();
 };
 
-//decrease temp
 const decreaseTemp= () => {
     state.tempCount -=1
     const tempDown = document.querySelector("#temp")
     tempDown.textContent = `${state.tempCount}`
-    console.log(decreaseTemp)
+    //updateTempColor();
 };
 
-// const updateTempStyles = (currentTemp) => {
-//     const tempValue = document.querySelector("#temp");
-//     let color = "orange";
-//     if ( currentTemp >= 80) {
-//         color = "red";
-//     } else if (currentTemp >= 70) {
-//         color = "orange";
-//     } else if (currentTemp >= 60) {
-//         color = "yellow";
-//     } else if (currentTemp >= 50) {
-//         color = "teal";
+
+// const updateTempColor = () => {
+//     const temp = state.tempcount
+//     if (temp>= 80) {
+//         state.color = "red";
+//     } else if (temp >= 70) {
+//         state.color = "orange";
+//     } else if (temp >= 60) {
+//         state.color = "yellow";
+//     } else if (temp >= 50) {
+//         state.color = "teal";
 //     }
-//     tempValue.classList = color;
 // };
 
 
 
 const registerEventHandlers = () => {
+    //updateTempColor(tempCount);
+
     const upButton = document.querySelector("#increase-temp");
     upButton.addEventListener("click", increaseTemp);
     
     const downButton = document.querySelector("#decrease-temp");
     downButton.addEventListener("click", decreaseTemp);
+
+
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
