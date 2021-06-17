@@ -92,6 +92,11 @@ const switchCity = (event) =>  {
             cityTempText = "30°F";
             cityPicSrc = "./assets/snowy.png";
             break;
+        default:
+            cityNameText = city + "? Type in a Weather World City";
+            cityTempText = "98°F";
+            cityPicSrc = "./assets/98degrees.png";
+            break;
     }
 
     const cityName = document.getElementById("cityName"); //STATE? - the thing to change
