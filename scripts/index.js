@@ -33,27 +33,74 @@ const cityName = (event) => {
 };
 
 const skyState = {
-    sky: 0
+    sky: "blue"
 };
 
 const selectSky = (event) => {
     skyState.sky = document.querySelector("#skyChoices").value;
+
+    if (skyState.sky === "blue") {
+        const selectedSky = document.querySelector("#comment")
+        selectedSky.className = "blue";
+        selectedSky.textContent = "It's wicked nice"
+    }
+
     if (skyState.sky === "hot") {
         const selectedSky = document.querySelector("#comment")
         selectedSky.className = "hotSky";
         selectedSky.textContent = "It's wicked hot"
     }
+
+    if (skyState.sky === "rainy") {
+        const selectedSky = document.querySelector("#comment")
+        selectedSky.className = "rainy";
+        selectedSky.textContent = "It's wicked rainy"
+    }
+
+    if (skyState.sky === "cloudy") {
+        const selectedSky = document.querySelector("#comment")
+        selectedSky.className = "cloudy";
+        selectedSky.textContent = "It's wicked cloudy"
+    }
+
+    if (skyState.sky === "night") {
+        const selectedSky = document.querySelector("#comment")
+        selectedSky.className = "night";
+        selectedSky.textContent = "It's wicked dahk"
+    }
+
 };
 
 const landState = {
-    land: 0
+    land: "green"
 };
 
 const selectLand = (event) => {
     landState.land = document.querySelector("#landChoices").value;
+
+    if (landState.land === "green") {
+        const selectedLand = document.querySelector("#landscapeContainer")
+        selectedLand.className = "green";
+    };
+
     if (landState.land === "desert") {
         const selectedLand = document.querySelector("#landscapeContainer")
         selectedLand.className = "desert";
+    };
+
+    if (landState.land === "icy") {
+        const selectedLand = document.querySelector("#landscapeContainer")
+        selectedLand.className = "icy";
+    }
+
+    if (landState.land === "lush") {
+        const selectedLand = document.querySelector("#landscapeContainer")
+        selectedLand.className = "lush";
+    }
+
+    if (landState.land === "tropical") {
+        const selectedLand = document.querySelector("#landscapeContainer")
+        selectedLand.className = "tropical";
     }
 };
 

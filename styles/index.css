@@ -1,6 +1,5 @@
-/* *{
-    border: 1px solid purple;
-} */
+
+
 div {
     font-size: 30px;
   }
@@ -15,7 +14,6 @@ div {
 
  header {
     text-align: center;
-    padding: 10px;
     background-color: rgb(255, 255, 255, 0.5); 
     font-size: 30px;
     width: 100%;
@@ -106,13 +104,8 @@ div {
     text-align: center;
     align-items: center;
     padding: 40px;
-    font-size: 50px;
     background-size: 100%;
-}
-
-.blue {
-    background-image: url(../images/wicked-nice-sky.jpeg);
-    color: white;
+    font-size: 50px;
 }
 
 #landscapeContainer{
@@ -121,20 +114,6 @@ div {
     align-items: center;
     text-align: center;
     background-size: 100%;
-    color: white;
-}
-
-.green {
-    background-image: url(../images/green-landscape.jpeg);
-}
-
-.hotSky {
-    background-image: url(../images/hot-sky.jpeg);
-    color: black;
-}
-
-.desert {
-    background-image: url(../images/desert.jpeg);
 }
 
 #landscapeContainer h3 {
@@ -144,8 +123,8 @@ div {
 
 #btn-group {
     background: transparent;
-
  }
+
 ul {
      float: left;
      clear: left;
@@ -157,14 +136,17 @@ ul {
  #inputs {
     display: grid;
     padding: 10px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 80px;
- } 
-
- .dropdown {
-     display: grid;
-     justify-content: center;
+    justify-content: flex-start;
  }
+
+
+.skyland {
+    font-size: 15px;
+    padding: 5px;
+    border-radius: 10px;
+}
 
  select {
      font-size: 20px;
@@ -172,3 +154,53 @@ ul {
      padding: 5px;
      border-radius: 10px;
  }
+
+ .blue {
+    background-image: url(../images/wicked-nice-sky.jpeg);
+    color: white;
+    font-size: 50px;
+}
+
+.icy {
+    background-image: url(../images/icy.jpeg);
+    color: white;
+
+}
+.green {
+    background-image: url(../images/green-landscape.jpeg);
+    color: white;
+}
+
+.hotSky {
+    background-image: url(../images/hot-sky.jpeg);
+    color: black;
+}
+
+.cloudy {
+    background-image: url(../images/cloudy.jpeg);
+    color: black;
+}
+.desert {
+    background-image: url(../images/desert.jpeg);
+    color: white;
+}
+
+.lush {
+    background-image: url(../images/lush.jpeg);
+    color: white; 
+}
+
+.tropical {
+    background-image: url(../images/tropical.jpeg);
+    color: white;
+}
+
+.rainy {
+    background-image: url(../images/rainy.gif);
+    color: white;
+}
+
+.night {
+    background-image: url(../images/night.jpeg);
+    color: white;
+}

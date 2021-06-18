@@ -32,12 +32,12 @@
           </ul></span>
       </section>
 
-      <span class = "green" id="landscapeContainer">
-          <h3>Landscape</h3>
-      </span>
-
       <span class="blue" id="comment">
           It's wicked nice. 
+      </span>
+
+      <span class = "green" id="landscapeContainer">
+        <h3>Landscape</h3>
       </span>
 
   </section>
@@ -45,21 +45,29 @@
   <span> </span>
 
     <section id="inputs">
+      <span></span>
+
       <section id="sky" class="dropdown">
         <select id="skyChoices">
-          <option value ="" disabled selected>Select a sky</option>
+          <option value ="blue">Select a sky</option>
           <option value="hot">Hot and Sunny</option>
+          <option value="rainy">Rainy</option>
+          <option value="cloudy">Cloudy</option>
+          <option value="night">Night</option>
         </select>
         </section>
 
         <section id="landscape" class="dropdown">
         <select id="landChoices">
-          <option value ="" disabled selected>Select a landscape</option>
+          <option value ="green">Select a landscape</option>
+          <option value="lush">Lush</option>
           <option value="desert">Desert</option>
+          <option value="icy">So Icy</option>
+          <option value="tropical">Tropical</option>
         </select>
         </section>
-
     </section>
+
 
     <script src="scripts/index.js"></script>
   </body>
