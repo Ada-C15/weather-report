@@ -34,7 +34,7 @@ function setGlobalTempValue(weather) {
 }
 
 function displayResults (weather) {
-    console.log(weather);
+    //console.log(weather);
     const city = document.querySelector('.location .city');
     city.innerText = `${weather.name}, ${weather.sys.country}`;
 
