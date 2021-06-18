@@ -2,22 +2,75 @@ const tempState = {
     temp: 70
 };
 
+const temperature = document.querySelector("#temperature");
+const landscape = document.querySelector("#landscapeContainer");
+
 const hotter = (event) => {
-    tempState.temp +=1
-    const temperature = document.querySelector("#temperature")
-    temperature.textContent = `${tempState.temp}F`
+    tempState.temp +=1;
+    temperature.textContent = `${tempState.temp}F`;
+    temperature.style.color = tempColor();
+    checkLand();
+    landText();
 };
 
 const colder = (event) => {
     tempState.temp -=1;
-    const temperature = document.querySelector("#temperature")
-    temperature.textContent = `${tempState.temp}F`
+    // const landscape = document.querySelector("#landscapeContainer");
+    temperature.textContent = `${tempState.temp}F`;
+    temperature.style.color = tempColor();
+    checkLand();
+    landText();
 };
 
 const reset = (event) => {
     tempState.temp = 70;
-    const temperature = document.querySelector("#temperature")
+    // const landscape = document.querySelector("#landscapeContainer");
     temperature.textContent = `${tempState.temp}F`
+    temperature.style.color = tempColor();
+    checkLand();
+    landscape.textContent = "Landscape"
+};
+
+const tempColor = () => {
+    if (tempState.temp >= 80) {
+        return "red";
+    } else if (tempState.temp >= 70) {
+        return "orange";
+    } else if (tempState.temp >= 60) {
+        return "yellow";
+    } else if (tempState.temp >= 50) {
+        return "green";
+    } else if (tempState.temp <= 49) {
+        return "rgb(0, 251, 255)";
+    }
+};
+
+const checkLand = () => {
+    if (tempState.temp >= 80) {
+        return landscape.className = "desert";
+    } else if (tempState.temp >= 70) {
+        return landscape.className = "tropical";
+    } else if (tempState.temp >= 60) {
+        return landscape.className = "green";
+    } else if (tempState.temp >= 50) {
+        return landscape.className = "cool";
+    } else if (tempState.temp <= 49) {
+        return landscape.className = "icy";
+    }
+};
+
+const landText = () => {
+    if (tempState.temp >= 80) {
+        return landscape.textContent = "It's a scorcha!";
+    } else if (tempState.temp >= 70) {
+        return landscape.textContent = "It's wicked nice";
+    } else if (tempState.temp >= 60) {
+        return landscape.textContent = "Take a walk in the pahk";
+    } else if (tempState.temp >= 50) {
+        return landscape.textContent = "Grab yah coat";
+    } else if (tempState.temp <= 49) {
+        return landscape.textContent = "Betta warm up the cah";
+    }
 };
 
 const cityState = {
@@ -34,74 +87,36 @@ const cityName = (event) => {
 
 const skyState = {
     sky: "blue"
-};
-
+}
 const selectSky = (event) => {
     skyState.sky = document.querySelector("#skyChoices").value;
+    const selectedSky = document.querySelector("#skyview");
 
     if (skyState.sky === "blue") {
-        const selectedSky = document.querySelector("#comment")
         selectedSky.className = "blue";
-        selectedSky.textContent = "It's wicked nice"
+        selectedSky.textContent = "It's wicked blue"
     }
 
-    if (skyState.sky === "hot") {
-        const selectedSky = document.querySelector("#comment")
+    else if (skyState.sky === "hot") {
         selectedSky.className = "hotSky";
-        selectedSky.textContent = "It's wicked hot"
+        selectedSky.textContent = "It's wicked sunny"
     }
 
-    if (skyState.sky === "rainy") {
-        const selectedSky = document.querySelector("#comment")
+    else if (skyState.sky === "rainy") {
         selectedSky.className = "rainy";
         selectedSky.textContent = "It's wicked rainy"
     }
 
     if (skyState.sky === "cloudy") {
-        const selectedSky = document.querySelector("#comment")
         selectedSky.className = "cloudy";
         selectedSky.textContent = "It's wicked cloudy"
     }
 
-    if (skyState.sky === "night") {
-        const selectedSky = document.querySelector("#comment")
+    else if (skyState.sky === "night") {
         selectedSky.className = "night";
         selectedSky.textContent = "It's wicked dahk"
     }
 
-};
-
-const landState = {
-    land: "green"
-};
-
-const selectLand = (event) => {
-    landState.land = document.querySelector("#landChoices").value;
-
-    if (landState.land === "green") {
-        const selectedLand = document.querySelector("#landscapeContainer")
-        selectedLand.className = "green";
-    };
-
-    if (landState.land === "desert") {
-        const selectedLand = document.querySelector("#landscapeContainer")
-        selectedLand.className = "desert";
-    };
-
-    if (landState.land === "icy") {
-        const selectedLand = document.querySelector("#landscapeContainer")
-        selectedLand.className = "icy";
-    }
-
-    if (landState.land === "lush") {
-        const selectedLand = document.querySelector("#landscapeContainer")
-        selectedLand.className = "lush";
-    }
-
-    if (landState.land === "tropical") {
-        const selectedLand = document.querySelector("#landscapeContainer")
-        selectedLand.className = "tropical";
-    }
 };
 
 const registerEventHandlers = (event) => {
@@ -119,9 +134,6 @@ const registerEventHandlers = (event) => {
 
     const skyPic = document.querySelector("#skyChoices");
     skyPic.addEventListener("change", selectSky);
-
-    const landPic = document.querySelector("#landChoices");
-    landPic.addEventListener("change", selectLand);
 };
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
