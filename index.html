@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html> 
+
+    <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="./styles/index.css" media="screen"/>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/index.js"></script>
+    <title>Weather World</title>
+    </head>
+
+    <body>
+
+        <div class="live">
+            <div class="container">🌞 Weather World. Where Weather Lives.🌞<a target="_blank" href="https://weather.com/">OR go to a Site that Works!</a>
+            </div>
+        </div>
+
+<!-- SECTION 1 TOP-BANNER, PRIMARY AND INPUT OPTIONS-->
+        <section class="top-banner">
+            <div class="container">
+            <h1 class="heading">Weather World</h1>
+<!-- INPUT FORM DISPLAY -->                         <!-- WAVE 5:-->   <!--INPUT --> 
+            <form>
+                <input type="text" placeholder="Search for a city" autofocus id="citySearch">
+                <button id="submitButton">RESET</button>
+            </form>
+            <h6 class="text">Weather World Cities: <br> Sunnyville, Cloudvile, Rainville, or Snowville</h6>
+<!-- FUN HEADER -->                                 <!-- codecademy tutorial switch() -->
+                <header onclick="newStyle();"> 
+                    <h1 class="centered" id="colorwords">Weather Changes</h1>
+                </header>                   
+<!-- DEFAULT CITY DISPLAY -->
+                <nav class="city-default."> 
+                    <h2 class="city-name" id="cityName">Weather World Forecast</h2>
+                        <span class="city-temp" id="cityTemp">degrees<sup>°F</sup></span>
+                            <figure>
+                                <img class="city-icon" id="cityPic" src="./assets/world.png" height="110" width="100" alt="World"/>
+                                <figcaption>There's a 100% chance of Weather!</figcaption>
+                            </figure>
+                        </nav>
+<!-- TEMPERATURE DISPLAY -->                        <!-- WAVE 2: -->   <!--TEMPERATURE DISPLAY -->
+            <h2 class="heading">Temperature</h2>
+            <h2 id="givenTemp">70</h2>
+<!-- CLICKABLE TEMPERATURE BUTTONS -->              <!-- WAVE 2: -->   <!-- CLICK UP/DOWN TEMP -->
+            <article>
+                <button id="addDownButton">DOWN</button>
+                <button id="addUpButton">UP</button>  
+            </article>
+
+            </div>
+        </section>
+<!-- changed the button from type to id to use the getElementById() -->
+
+<!-- SECTION 2 --> <!-- CITY SUMMARY DISPLAYS -->
+<!-- WAVE 4 --> <!-- Element(s) that displays the city name(s) -->
+<!-- Element that contains a <input type="text"> element, used to rename the city -->
+        <section class="city-section">
+            <div class="container">
+            <ul class="cities">
+
+                <li class="city">
+                    <h2 class="city-name">Sunnyville</h2>
+                    <span class="city-temp">80<sup>°F</sup></span>
+                    <figure>
+                        <img class="city-icon" src="./assets/sunny.png" height="100" width="100" alt="Sunny"/>
+                        <figcaption>Sunny with Temperatures between 70-120°F</figcaption>
+                    </figure>
+                </li>
+        
+                <li class="city">
+                    <h2 class="city-name">Rainville</h2>
+                    <span class="city-temp">55<sup>°F</sup></span>
+                    <figure>
+                        <img class="city-icon" src="./assets/rainy.png" height="100" width="100" alt="Rainy"/>
+                        <figcaption>Rainy with Temperatures between 40-65°F</figcaption>
+                    </figure>
+                </li>
+                
+                <li class="city">
+                    <h2 class="city-name">Cloudville</h2>
+                    <span class="city-temp">50<sup>°F</sup></span>
+                    <figure>
+                        <img class="city-icon" src="./assets/cloudy.png" height="100" width="100" alt="Cloudy"/>
+                        <figcaption>Cloudy with Temperatures between 40-65°F</figcaption>
+                    </figure>
+                </li>
+                
+                <li class="city">
+                    <h2 class="city-name">Snowville</h2>
+                    <span class="city-temp">30<sup>°F</sup></span>
+                    <figure>
+                        <img class="city-icon" src="./assets/snowy.png" height="100" width="100" alt="Snowy"/>
+                        <figcaption>Snowy with Temperatures between 0-40°F</figcaption>
+                    </figure>
+                </li>
+
+            </ul>
+
+            </div>
+        </section>
+
+
+<!-- SECTION 3 -->
+<!-- SKY DISPLAY SELECTOR -->                                   <!-- WAVE 3 -->  <!-- A <select> dropdown element to set the sky type --> <!-- An element that displays a sky -->
+    <section class="sky">
+        <label for="skies">Choose a sky:</label>
+
+        <select name="skies" id="skySelector">
+            <option value="./assets/world.png">World View</option>
+            <option value="./assets/sunny_sky.png">Sunny</option>
+            <option value="./assets/cloudy_sky.png">Cloudy</option>
+            <option value="./assets/rainy_sky.png">Rainy</option>
+            <option value="./assets/snowy_sky.png">Snowy</option>
+        </select>  
+
+        
+        <img id="displaySky" class="sky_display" src="./assets/world.png" height="320" width="300" alt="Sky View"/>
+
+    </section>
+
+
+<!-- FOOTER -->
+        <footer class="page-footer">
+            <div class="container">
+            <small>I <span>❤</span> Ada</small> 
+            </div>
+        </footer>
+
+
+	</body>
+</html>
+
+
+
+
+
+
+<!-- Wave 2 -->
+<!-- An element that displays the temperature -->
+<!-- A clickable element to increase temperature -->
+<!-- A clickable element to decrease temperature -->
+
+
+<!-- An element that displays a landscape -->
+
+
+<!-- Wave 3 -->
+<!-- A <select> dropdown element to set the sky type -->
+
+
+<!-- An element that displays a sky -->
+
+
+<!-- Wave 4: -->
+<!-- An element that displays the city name -->
+
+
+<!-- An element that contains a <input type="text"> element, used to rename the city -->
+
+
+<!-- Wave 5: -->
+
+<!-- A clickable element to reset the city name -->
