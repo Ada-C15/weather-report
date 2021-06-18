@@ -54,6 +54,20 @@
                         <div id="landscape"></div>
                     </div>
                 </section>
+                <section class="convert-section">
+                    <h2>Temperature Converter</h2>
+                    <p>Hit °F or °C, and click submit!</p>
+                    <form>
+                        <div id="radio-buttons">
+                            <input type="radio" name="select" id="fahrenheit" value="fahrenheit">convert to °C</input>
+                            <input type="radio" name="select" id="celsius" value="celsius">convert to °F</input>
+                        </div>
+                        <div id="submit-clear">
+                            <button type="button" onclick="getTemperature();">Convert it</button>
+                        </div>
+                        <div id="answer"></div>
+                    </form>
+                </section>
             </section>
         <script src="scripts/index.js"></script>
     </body>

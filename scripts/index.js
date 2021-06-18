@@ -147,6 +147,17 @@ function decreaseTemp() {
     updateTemp(globalTempValue);
 }
 
+/* -F to C Temp Change- */
+function getTemperature() {
+    if (document.getElementById("fahrenheit").checked == true) {
+        let newValue = Math.round((globalTempValue - 32) * 5 / 9);
+        document.getElementById("answer").innerText = newValue + "°C"
+    } else if (document.getElementById("celsius").checked == true) {
+        let newValue = Math.round(globalTempValue * 9 / 5 + 32);
+        document.getElementById("answer").innerText = newValue + "°F"
+    }
+}
+
 const registerEventHandlers = () => {
 
     updateCityName();
