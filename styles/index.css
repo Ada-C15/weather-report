@@ -224,7 +224,7 @@ section input:focus {
     background-image: radial-gradient(circle, rgb(251, 254, 254), rgb(74, 184, 192), rgb(144, 233, 240));
 }
 .sunny {
-    background-image: radial-gradient(circle, rgb(241, 112, 112), rgb(206, 164, 59), rgb(243, 237, 66));
+    background-image: radial-gradient(circle, rgb(241, 112, 112), rgb(231, 195, 104), rgb(249, 236, 179));
 }
 .rainy {
     background-image: radial-gradient(circle, rgb(126, 151, 221), rgb(177, 184, 219), rgb(115, 120, 121));

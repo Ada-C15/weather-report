@@ -3,6 +3,8 @@ const api = {
     baseurl: "https://api.openweathermap.org/data/2.5/"
 }
 
+let globalTempValue = 70;
+
 //set evenListener on search box keypress event
 const searchbox = document.querySelector('.search-box');
 searchbox.addEventListener('keypress', setQuery);
@@ -23,6 +25,12 @@ function getResults (query) {
         console.log(weather);
         return weather.json();
     }).then(displayResults);
+}
+
+//set data from openWeather's API - dynamic temperature value to my global variable
+function setGlobalTempValue(weather) {
+    globalTempValue = Math.round(weather.main.temp);
+    return weather
 }
 
 function displayResults (weather) {
@@ -56,18 +64,18 @@ function dateBuilder (date_attr) {
     return `${day} ${date} ${month} ${year}`;
 }
 
-const updateCityName = () => {
+function updateCityName() {
     const inputName = document.getElementById("inputSearchBox").value;
     const headerCityName = document.getElementById("headerCity");
     headerCityName.textContent = inputName;
 };
 
-const resetCityName = () => {
+function resetCityName() {
     const resetSearchBox = document.getElementById("inputSearchBox");
     resetSearchBox.value = "Search for a city";
 }
 
-const setSky = () => {
+function setSky() {
     const getSky = document.getElementById("skyDropdown").value;
     const displaySky = document.getElementById("sky");
 
@@ -91,7 +99,7 @@ const setSky = () => {
     gardenContent.classList = `garden_playground ${skyColor}`;
 };
 
-const tempChangeColor = (currentTemp) => {
+function tempChangeColor (currentTemp) {
     const tempValueContainer = document.getElementById("temp");
     let color = "fuchsia";
     if ( currentTemp >= 80) {
@@ -105,11 +113,11 @@ const tempChangeColor = (currentTemp) => {
     } else if (currentTemp >= 22) {
         color = "gainsboro";
     } else {
-        color = "blue";
+        color = "white";
     }
     tempValueContainer.classList = color;
 }
-const updateGarden = (currentTemp) => {
+function updateGarden (currentTemp) {
     const onLandscape = document.getElementById("landscape");
     let landscape = "⛄️🌲🍂🌲🍁⛄️🍂🌲";
     if ( currentTemp >= 70) {
@@ -120,6 +128,23 @@ const updateGarden = (currentTemp) => {
         landscape = "🌾🌾_🍃_🪨__🛤_🍃";
     }
     onLandscape.textContent = landscape;
+}
+
+function updateTemp (globalTempValue) {
+    const tempValueContainer = document.getElementById("temp");
+    tempValueContainer.textContent = globalTempValue;
+    tempChangeColor(globalTempValue);
+    updateGarden(globalTempValue);
+}
+
+function increaseTemp() {
+    globalTempValue += 1;
+    updateTemp(globalTempValue);
+};
+
+function decreaseTemp() {
+    globalTempValue -= 1;
+    updateTemp(globalTempValue);
 }
 
 const registerEventHandlers = () => {
