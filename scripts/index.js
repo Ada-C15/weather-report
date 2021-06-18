@@ -21,11 +21,11 @@ const changeColor = (event) => {
 const changeLandscape = (event) => {
     const landscapeContainer = document.querySelector("#landscapeContainer");
         if (state.clickCount >= 80) {
-            landscapeContainer.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+            landscapeContainer.textContent = "🌵🐍🦂🌵🌵🐍🏜🦂";
         } else if (state.clickCount >= 70 && state.clickCount <= 79) {
-            landscapeContainer.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
+            landscapeContainer.textContent = "🌸🌿🌼🌷🌻🌿☘️🌱🌻🌷";
         } else if (state.clickCount >= 60 && state.clickCount <= 69) {
-            landscapeContainer.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
+            landscapeContainer.textContent = "🌾🌾🍃🪨🛤🌾🌾🌾_🍃";
         } else if (state.clickCount < 59) {
             landscapeContainer.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
         }
@@ -61,7 +61,7 @@ const tempIncrease = () => {
     const tempCountContainer = document.getElementById("tempCount");
     state.clickCount +=1;
     changeColor();
-    tempCountContainer.textContent = state.clickCount;
+    tempCountContainer.textContent = state.clickCount + "°";
     changeLandscape();
 };
 
@@ -69,9 +69,14 @@ const tempDecrease = () => {
     const tempDecreaseCountContainer = document.getElementById("tempCount");
     state.clickCount -=1;
     changeColor();
-    tempDecreaseCountContainer.textContent = state.clickCount;
+    tempDecreaseCountContainer.textContent = state.clickCount + "°";
     changeLandscape();
 };
+
+const changeBackground = () => {
+    let body = document.body;
+    body.classList.toggle("day");
+}
 
 const registerEventHandlers = () => {
     const increaseButton = document.querySelector("#temperatureIncrease");
@@ -90,6 +95,9 @@ const registerEventHandlers = () => {
 
     const cityReset = document.getElementById("cityReset");
     cityReset.addEventListener("click", resetCity);
+
+    const dayModeButton = document.querySelector(".slider");
+    dayModeButton.addEventListener("click", changeBackground);
 }; 
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
