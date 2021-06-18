@@ -63,9 +63,9 @@ const landText = () => {
     if (tempState.temp >= 80) {
         return landscape.textContent = "It's a scorcha!";
     } else if (tempState.temp >= 70) {
-        return landscape.textContent = "It's wicked nice";
+        return landscape.textContent = "Feels like summah";
     } else if (tempState.temp >= 60) {
-        return landscape.textContent = "Take a walk in the pahk";
+        return landscape.textContent = "Throw a yahd pahty!";
     } else if (tempState.temp >= 50) {
         return landscape.textContent = "Grab yah coat";
     } else if (tempState.temp <= 49) {
@@ -79,10 +79,16 @@ const cityState = {
 
 const cityName = (event) => {
     cityState.city = document.querySelector('#cityInput').value;
-    if (cityState.city !== 0) {
+    if (cityState.city) {
         const cityName = document.querySelector("#cityName")
         cityName.textContent = `✨ ✨ Beautiful ${cityState.city}!! ✨ ✨ `
     };
+};
+
+const resetCity = (event) => {
+    cityState.city = 0
+    const cityName = document.querySelector("#cityName")
+    cityName.textContent = `Worcestah, kid`
 };
 
 const skyState = {
@@ -131,6 +137,9 @@ const registerEventHandlers = (event) => {
 
     const cityButton = document.querySelector('#submitBtn');
     cityButton.addEventListener("click", cityName);
+
+    const resetCityBtn = document.querySelector('#resetCityBtn');
+    resetCityBtn.addEventListener("click", resetCity);
 
     const skyPic = document.querySelector("#skyChoices");
     skyPic.addEventListener("change", selectSky);

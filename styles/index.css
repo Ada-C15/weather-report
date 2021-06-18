@@ -1,4 +1,4 @@
-/* *{ border: 1px solid purple;} */
+
 
 div {
     font-size: 30px;
@@ -46,28 +46,34 @@ h1{
 #cityInputBox {
      display: grid;
      flex-wrap: nowrap;
-     grid-template-columns: 1fr 1fr;
+     grid-template-columns: 1fr 1fr 1fr;
      padding: 10px;
-     justify-content: left;
+     float: left;
+     display: inline;
 }
 
 #cityInput {
     font-size: 15px;
     height: 30px;
     padding: 3px;
+    width: 250px;
 }
 
-#submitBtn {
-    padding: 2px;
+#cityBtn {
+    padding: 3px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 15px;
-    width: 60px;
-    height: 30px;
+    font-size: 20px;
     border-radius: 5px;
     align-self: center;
 }
+/* 
+#resetCity {
+    height: 30px;
+    width: 40px;  
+    align-self: center;
+} */
 
 /* ---- temp, sky, land boxes ---- */
 #boxRow {
@@ -75,8 +81,12 @@ h1{
     padding: 30px 40px;
     grid-template-columns: 2fr 3fr 3fr;
     justify-content: center;
-    flex-wrap: nowrap;
-    grid-gap: 80px;
+    /* flex-wrap: nowrap; */
+    grid-gap: 50px;
+    /* overflow: hidden;
+    position: relative;
+    max-width: 33%;
+    min-width: 150px; */
 }
 
 #tempContainer {
@@ -104,6 +114,7 @@ h1{
 }
 
 #skyview {
+    display: flex;
     border-radius: 20px;
     justify-content: center;
     text-align: center;
@@ -111,16 +122,20 @@ h1{
     padding: 40px;
     background-size: 100%;
     font-size: 50px;
+    max-width: 33%;
+    min-width: 250px;
 }
 
 #landscapeContainer {
+    display: flex;
     border-radius: 20px;
     justify-content: center;
     text-align: center;
     align-items: center;
     padding: 40px;
     background-size: 100%;
-    font-size: 50px;
+    max-width: 33%;
+    min-width: 250px;
 }
 
 #btn-group {
@@ -184,25 +199,31 @@ select {
  .green {
     background-image: url(../images/green-landscape.jpeg);
     color: white;
+    font-size: 45px;
 }
 
 .desert {
     background-image: url(../images/desert.jpeg);
     color: white;
+    font-size: 50px; 
 }
 
 .cool {
     background-image: url(../images/cool.jpeg);
     color: white; 
+    font-size: 50px; 
 }
+
 
 .tropical {
     background-image: url(../images/tropical.jpeg);
     color: white;
+    font-size: 50px;
 }
 
 .icy {
     background-image: url(../images/icy.jpeg);
     color: navy;
+    font-size: 45px; 
 
 }
