@@ -24,17 +24,11 @@ function getResults (query) {
     .then(weather => {
         console.log(weather);
         return weather.json();
-    }).then(displayResults);
-}
-
-//set data from openWeather's API - dynamic temperature value to my global variable
-function setGlobalTempValue(weather) {
-    globalTempValue = Math.round(weather.main.temp);
-    return weather
+    }).then(setGlobalTempValue).then(displayResults);
 }
 
 function displayResults (weather) {
-    //console.log(weather);
+    console.log(weather);
     const city = document.querySelector('.location .city');
     city.innerText = `${weather.name}, ${weather.sys.country}`;
 
@@ -50,6 +44,12 @@ function displayResults (weather) {
 
     const hilow = document.querySelector('.hi-low');
     hilow.innerText = `${Math.round(weather.main.temp_min)}°c / ${Math.round(weather.main.temp_max)}°c`;
+}
+
+//set data from openWeather's API - dynamic temperature value to my global variable
+function setGlobalTempValue(weather) {
+    globalTempValue = Math.round(weather.main.temp);
+    return weather
 }
 
 function dateBuilder (date_attr) {
@@ -118,7 +118,7 @@ function tempChangeColor (currentTemp) {
     tempValueContainer.classList = color;
 }
 function updateGarden (currentTemp) {
-    const onLandscape = document.getElementById("landscape");
+    const changeGarden = document.getElementById("landscape");
     let landscape = "⛄️🌲🍂🌲🍁⛄️🍂🌲";
     if ( currentTemp >= 70) {
         landscape = "🐍_🦂_🌵__🐍";
@@ -127,7 +127,7 @@ function updateGarden (currentTemp) {
     } else if (currentTemp >= 50) {
         landscape = "🌾🌾_🍃_🪨__🛤_🍃";
     }
-    onLandscape.textContent = landscape;
+    changeGarden.textContent = landscape;
 }
 
 function updateTemp (globalTempValue) {
@@ -159,7 +159,6 @@ function getTemperature() {
 }
 
 const registerEventHandlers = () => {
-
     updateCityName();
     const updateCity = document.getElementById("inputSearchBox");
     updateCity.addEventListener("input", updateCityName);
@@ -170,6 +169,14 @@ const registerEventHandlers = () => {
     setSky();
     const skySelect = document.getElementById("skyDropdown");
     skySelect.addEventListener("change", setSky);
+
+    updateTemp(globalTempValue);
+
+    const increaseTempControl = document.getElementById("increaseTempControl");
+    increaseTempControl.addEventListener("click", increaseTemp);
+    
+    const decreaseTempControl = document.getElementById("decreaseTempControl");
+    decreaseTempControl.addEventListener("click", decreaseTemp);
 
 }
 

@@ -29,7 +29,7 @@ body {
 
 .app-wrap {
     position: absolute;
-    top: 43%;
+    top: 44%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
