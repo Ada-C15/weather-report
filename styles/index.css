@@ -33,8 +33,9 @@ select {
     
 }
 
+/* weather box container  */
 .box-container {
-    background:white;
+    background:wheat;
     position: absolute;
     top: 100%;
     left: 500%;
@@ -45,16 +46,18 @@ select {
     
 }
 
-#garden-box {
-    background:	orange;
+/* Temp box  */
+#temp-box {
+    background:	transparent;
     width: 580x;
-    height: 45%;
+    height: 20%;
     text-align: center;
 }
 
-#garden {
-    background: teal;
-    height: 45%;
+/* Sky Aesthetic Box */
+#sky-box {
+    background: transparent;
+    height: 20%;
     text-align: center;
 }
 
@@ -67,7 +70,7 @@ select {
 .container .box .content h3 {
     margin: 0;
     padding: 0;
-    color: hotpink;
+    color:cornflowerblue;
     font-size: 30px;
 
 }

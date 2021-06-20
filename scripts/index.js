@@ -4,7 +4,7 @@ const resetDefaultCityName = "Seattle"
 // TEMP DECREASE
 const incrementTemp = () => {
     const tempCountContainer = document.querySelector("#tempCount");
-    const gardenContainer = document.querySelector("#garden-box");
+    const gardenContainer = document.querySelector("#temp-box");
     tempTrack += 1;
     if (tempTrack <= 59) {
         gardenContainer.textContent = "^❄️☃️⛷--🏔🌌☕️🍂--🥶🎄🏂--🏔️❄️⛄️--🧣🍁^";
@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded", registerEventHandlers);
 // TEMP DECREASE
 const decreasedTemp = () => {
     const tempCountCont = document.querySelector("#tempCount");
-    const gardenContainer = document.querySelector("#garden-box");
+    const gardenContainer = document.querySelector("#temp-box");
     tempTrack -= 1;
     if (tempTrack <= 59) {
         gardenContainer.textContent = "v❄️☃️⛷--🏔🌌☕️🍂--🥶🎄🏂--🏔️❄️⛄️--🧣🍁v";
@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", changeColorNumberEventHandlers);
 const skyAesthetic = () => {
     const newTemp = document.createElement("span");
     const skyContainer = document.querySelector("#weather-select");
-    const gardenBox = document.querySelector("#garden");
+    const gardenBox = document.querySelector("#sky-box");
 
     const sky = skyContainer.value
     console.log(sky)
