@@ -34,7 +34,7 @@ select {
 }
 
 .box-container {
-    background: rgba(138, 241, 216, 0.432);
+    background:white;
     position: absolute;
     top: 100%;
     left: 500%;
@@ -46,14 +46,14 @@ select {
 }
 
 #garden-box {
-    background:	transparent;
-    width: 600px;
+    background:	orange;
+    width: 580x;
     height: 45%;
     text-align: center;
 }
 
 #garden {
-    background: transparent;
+    background: teal;
     height: 45%;
     text-align: center;
 }
@@ -67,8 +67,28 @@ select {
 .container .box .content h3 {
     margin: 0;
     padding: 0;
-    color:teal;
+    color: hotpink;
     font-size: 30px;
 
 }
 
+
+.red {
+    color: red; 
+}
+
+.orange {
+    color: orange;
+}
+
+.purple {
+    color:rebeccapurple;
+}
+
+.green{
+    color:mediumspringgreen
+}
+
+.blue {
+    color: darkblue;
+}

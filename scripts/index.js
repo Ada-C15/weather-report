@@ -1,4 +1,4 @@
-var tempTrack = 57  // STARTING TEMP AT 57 SO I CAN TEST IT EASIER
+var tempTrack = 45  // STARTING TEMP AT 45 SO I CAN TEST IT EASIER
 const resetDefaultCityName = "Seattle"
 
 // TEMP DECREASE
@@ -16,6 +16,7 @@ const incrementTemp = () => {
         gardenContainer.textContent = "^🏜️🐪😵--♨️🏖️🦎--🌅🏝--🥵🌵--🔥💥🥀^";
     }
     tempCountContainer.textContent = `${tempTrack}`;
+    tempNumbersChangeColor()
 };
 const registerEventHandlers = () => {
     const upArrow = document.querySelector("#add-temp");
@@ -40,7 +41,7 @@ const decreasedTemp = () => {
         gardenContainer.textContent = "v🏜️🐪😵--♨️🏖️🦎--🌅🏝--🥵🌵--🔥💥🥀v";
     }
     tempCountCont.textContent = `${tempTrack}`;
-
+    tempNumbersChangeColor()
 };
 const decreasedEventHandlers = () => {
     const downArrow = document.querySelector("#dec-temp");
@@ -49,22 +50,25 @@ const decreasedEventHandlers = () => {
 document.addEventListener("DOMContentLoaded", decreasedEventHandlers);
 
 
-// COLOR TEMP CHANGER
-const tempNumbersChangeColor = () => {
-    console.log("we got here")
-    const tempContainor = document.querySelector("#temp-Container");
-    if (tempTrack >= 80) {
-        tempContainor.classList = ("too-hot");
-    } else if (tempTrack >= 70) {
-        tempContainor.classList = ("just-right");
-    } else if (tempTrack >= 60) {
-        tempContainor.classList = ("fresh");
-    } else if (tempTrack >= 50) {
-        tempContainor.classList = ("getting-cold");
-    } else if (tempTrack <= 49) {
-        tempContainor.classList = ("too-cold");
-    }
 
+
+
+
+// TEMP COLOR CHANGER 
+const tempNumbersChangeColor = () => {
+    const tempContainor = document.querySelector("#temp-Container");
+    if (tempTrack >= 80 ){
+        tempContainor.classList = ("red");
+    } else if (tempTrack >= 70){
+        tempContainor.classList =("orange");
+    }else if (tempTrack >= 60) {
+        tempContainor.classList =("green");
+    }else if (tempTrack >= 50) {
+        tempContainor.classList =("purple");
+    }else if (tempTrack <= 49) {
+        tempContainor.classList = ("blue");
+    }
+    
 };
 
 const changeColorNumberEventHandlers = () => {
@@ -72,6 +76,9 @@ const changeColorNumberEventHandlers = () => {
     downArrow.addEventListener("click", tempNumbersChangeColor);
 };
 document.addEventListener("DOMContentLoaded", changeColorNumberEventHandlers);
+
+
+
 
 
 // SKY AESTHETIC CHANGER 
@@ -132,3 +139,4 @@ const resetEventHandlers = () => {
 };
 
 document.addEventListener("DOMContentLoaded", resetEventHandlers);
+
