@@ -1,6 +1,74 @@
 
-body{
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
     background-color: lightpink;
+
 }
 
+
+select {
+    margin-top: 50px;
+}
+
+
+.container {
+    position: relative;
+    width: 100px;
+    height: 300px;
+    margin: 240px, auto;
+
+}
+
+.container .box {
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(250px - 30px);
+    background: rgb(248, 246, 246);
+    bottom: -100px;
+    margin: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    
+}
+
+.box-container {
+    background: rgba(138, 241, 216, 0.432);
+    position: absolute;
+    top: 100%;
+    left: 500%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 400px;
+    text-align: center;
+    
+}
+
+#garden-box {
+    background:	transparent;
+    width: 600px;
+    height: 45%;
+    text-align: center;
+}
+
+#garden {
+    background: transparent;
+    height: 45%;
+    text-align: center;
+}
+
+
+#tempCount {
+    font-size: 30px;
+}
+
+
+.container .box .content h3 {
+    margin: 0;
+    padding: 0;
+    color:teal;
+    font-size: 30px;
+
+}
 
