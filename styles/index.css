@@ -1,0 +1,150 @@
+html{ 
+  background: url("https://wallpapercave.com/wp/wp5250055.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto auto auto auto;
+  grid-gap: 1rem;
+
+  font-family: "Arial", sans-serif;
+  font-size: 18px;
+  margin: 2rem;
+}
+
+footer {
+  color: white;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.header {
+  color: white;
+  grid-column: span 2;
+  display: flex;
+  align-items: center;
+  margin: 2rem auto 3rem 0;
+}
+
+.header > h1 {
+  margin-right: 2rem;
+  font-size: 3em;
+}
+
+.header_city-name {
+  font-style: italic;
+  font-size: 2rem;
+}
+
+.temperature_section,
+.sky_section,
+.city_name_section {
+  border-radius: 8px;
+  padding: 1rem;
+  background-color: white;
+}
+
+.temperature_section {
+  grid-row: 2;
+}
+
+.sky_section {
+  grid-row: 3;
+}
+
+.garden_section {
+  grid-row: 2 / span 3;
+  grid-column: 2;
+  text-align: center;
+  align-self: center;
+}
+
+.temperature_content {
+  display: flex;
+  flex-direction: row;
+}
+
+#tempValue {
+  font-size: 3rem;
+  margin-left: 1.5rem;
+}
+
+.temperature__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.garden_section > h2 {
+  color: white;
+}
+
+.garden_content {
+  min-height: 200px;
+  max-width: fit-content;
+  margin: auto;
+  padding: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-radius: 8px;
+  font-size: 2em;
+}
+
+.city-name_reset-btn {
+  border: 0;
+  background-color: rgb(220, 106, 193);
+  color: white;
+  border-radius: 8px;
+  padding: 1rem;
+  font-family: "Arial", sans-serif;
+}
+
+.red {
+  color: red;
+}
+
+.orange {
+  color: orange;
+}
+
+.yellow {
+  color: gold;
+}
+
+.yellow-green {
+  color: yellowgreen;
+}
+
+.green {
+  color: green;
+}
+
+.teal {
+  color: teal;
+}
+
+.cloudy {
+  background-color: lightgrey;
+}
+
+.sunny {
+  background-color: white;
+}
+
+.rainy {
+  background-color: rgb(172, 210, 240);
+}
+
+.snowy {
+  background-color: grey;
+}
