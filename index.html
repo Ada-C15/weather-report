@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="./styles/index.css" rel="stylesheet" />
+<script src="./scripts/index.js"></script>
+<title>Weather Report</title>
+</head>
+<body>
+<!--Wave 2-->
+<div class="header">
+    <h1>Weather Report</h1>
+    <h2>For the loveley city of</h2>
+    <p class="city-name">🌊 🌙 Oceanville🌙🌊</p>
+</div>
+
+<div class="horizontal-container">
+    <div class="container">
+    <div class="card">
+        <!--Clickable element that displays the temp-->
+        <h3>Temperature</h3>
+        <!--Clickable element to increase temp-->
+        <div class="horizontal-container">
+        <div class="button-container">
+            <button id="upButton" class="temp-button">🔼</button>
+            <button id="downButton" class="temp-button">🔽</button>
+        </div>
+        <div id="value" class="temp-value">32</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>Sky</h3>
+    </div>
+    <div class="card">
+        <h3>City Name</h3>
+        <!--City Name Form-->
+        <form class="form" action="/action_page.php">
+        <input type="text" id="city-name" /><br /><br />
+        <input type="reset" value="Reset" />
+        </form>
+    </div>
+    </div>
+
+    <div class="weather-garden">
+    <h3>Weather Garden</h3>
+    <div class="grey-card"></div>
+    </div>
+</div>
+
+<!--Clickable element to decrease temp-->
+
+<!--Element that displays a landscape (Animal Crossing seasons)-->
+</body>
+</html>
