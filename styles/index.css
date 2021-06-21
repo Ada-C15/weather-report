@@ -1,0 +1,110 @@
+
+.header_header {
+    color: white;
+    grid-column: span3;
+        grid-column-start: span 3;
+        grid-column-end: auto;
+    display: flex;
+    margin: 2rem auto 3rem 0;
+        margin-top: 2rem;
+        margin-right: auto;
+        margin-bottom: 3rem;
+        margin-left: 0px;
+    align-content: center;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 1rem;
+    font-family: "Rubik", sans-serif;
+    font-size: 18px;
+    /* background-color: #1b69f9; */
+    background-image: url(https://c4.wallpaperflare.com/wallpaper/134/37/127/seasons-spring-summer-winter-wallpaper-preview.jpg);
+    background-size: 100%;
+    margin: 2rem;
+}
+
+.temperature_section {
+    grid-row: 2;
+}
+
+.temperature_content {
+    display: flex;
+    flex-direction: row;
+}
+
+.temperature_section, .sky_section, .city-name_section {
+    border-radius: 8px;
+    padding: 2rem;
+    background-color: white;
+}
+
+section {
+    display: block;
+}
+
+.temperature_controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div {
+    display: block;
+}
+
+#tempValue {
+    font-size: 3rem;
+    margin-left: 1.5rem;
+    /* padding-right: 1rem; */
+    /* margin-right: 1.5rem; */
+}
+
+.red {
+    color: rgb(255, 4, 4);
+}
+
+.orange {
+    color: rgb(255, 114, 6);
+}
+
+.yellow {
+    color: gold;
+}
+
+.green {
+    color: rgb(48, 255, 7);
+}
+
+.teal{
+    color: rgb(4, 255, 217);
+}
+
+.sky__section {
+    grid-row: 3
+    
+}
+
+.snowy {
+    background-color: lightsteelblue;
+}
+
+.garden_content {
+    min-height: 200px;
+    max-width: fit-content;
+    margin: auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    font-size: 2em;
+}
+.garden_section {
+    grid-row:  span 3;
+    grid-column: 2;
+    text-align: center;
+    align-self: center;
+}
