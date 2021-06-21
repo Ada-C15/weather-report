@@ -2,6 +2,7 @@ let btnAdd = document.getElementById('add');
 let btnSubtract = document.getElementById('subtract');
 let input = document.getElementById('temp_id');
 let landscape = document.getElementById('landscape');
+let skies = document.getElementById('sky-select');
 
 
 function countUp(element) {
@@ -38,6 +39,14 @@ function determineLandscape() {
     }
 }
 
+function determineSky() {
+    if (input.value === Sunny) {
+        skies.innerHTML = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️';
+    }
+
+
+}
+
 btnAdd.addEventListener('click', () => {
     countUp(input);
     determineColor();
@@ -48,4 +57,8 @@ btnSubtract.addEventListener('click', () =>{
     countDown(input);
     determineColor();
     determineLandscape();
+});
+
+skies.addEventListener('select', () =>{
+    determineSky();
 });
