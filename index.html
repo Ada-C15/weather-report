@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Weather Report</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles/index.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Weather Report</h1>
+        <h2 id="defaultCity">How is the weather today in Seattle?</h2>
+        <section id="container">
+            <section class="box coldWeather" id="temperature">
+                <h3>Temperature</h3>
+                <button id="upTemperature">⬆️</button>
+                <button id="downTemperature">⬇️</button>
+                <p id="currentTemp">45</p>
+            </section>
+            <section class="box" id="sky">
+                <h3>Sky</h3>
+                <select name="skies" id="skySelection">
+                    <option value="sunny">Sunny</option>
+                    <option value="rainy">Rainy</option>
+                    <option value="cloudy">Cloudy</option>
+                    <option value="snowy">Snowy</option>
+                </select>
+            </section>        
+            <section class="box" id="cityName">
+                <h3>City Name</h3>
+                <input id="userCity" type="text">
+                <button id="resetCity">Reset</button>
+            </section>    
+            <section id="weatherGarden">
+                <h3>Weather Garden</h3>
+                <p id="skyDisplay">☁️ ☁️ ☁️ ☀️ ☁️ ☁️</p>
+                <p id="landscape">⛄️🥶❄️⛄️🥶❄️⛄️🥶❄</p>
+            </section>
+        </section> 
+        <script src="scripts/index.js" type="text/javascript"></script>
+    </body>
+</html>
