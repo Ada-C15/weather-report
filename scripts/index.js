@@ -1,8 +1,13 @@
+// Variables that are representing Elements
 let btnAdd = document.getElementById('add');
 let btnSubtract = document.getElementById('subtract');
-let input = document.getElementById('temp_id');
+let tempInput = document.getElementById('temp_id');
 let landscape = document.getElementById('landscape');
-let skies = document.getElementById('sky-select');
+let skiesInput = document.getElementById('sky-select');
+let skiesLandscape = document.getElementById('sky-landscape');
+
+
+
 
 
 function countUp(element) {
@@ -14,51 +19,55 @@ function countDown(element) {
 }
 
 function determineColor() {
-    if (input.value >= 80) {
-        input.style.color = 'red';
-    } else if (input.value >= 70 && input.value <= 79) {
-        input.style.color = 'orange';
-    } else if (input.value >= 60 && input.value <= 69) {
-        input.style.color = 'yellow';
-    } else if (input.value >= 50 && input.value <= 59) {
-        input.style.color = 'green';
-    } else if (input.value <= 49) {
-        input.style.color = 'teal';
+    if (tempInput.value >= 80) {
+        tempInput.style.color = 'red';
+    } else if (tempInput.value >= 70 && tempInput.value <= 79) {
+        tempInput.style.color = 'orange';
+    } else if (tempInput.value >= 60 && tempInput.value <= 69) {
+        tempInput.style.color = 'yellow';
+    } else if (tempInput.value >= 50 && tempInput.value <= 59) {
+        tempInput.style.color = 'green';
+    } else if (tempInput.value <= 49) {
+        tempInput.style.color = 'teal';
     }
 }
 
 function determineLandscape() {
-    if (input.value >= 80) {
+    if (tempInput.value >= 80) {
         landscape.innerHTML = '🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂';
-    } else if (input.value >= 70 && input.value <= 79) {
+    } else if (tempInput.value >= 70 && tempInput.value <= 79) {
         landscape.innerHTML = '🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷';
-    } else if (input.value >= 60 && input.value <= 69) {
+    } else if (tempInput.value >= 60 && tempInput.value <= 69) {
         landscape.innerHTML = '🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃';
-    } else if (input.value <= 59) {
+    } else if (tempInput.value <= 59) {
         landscape.innerHTML = '🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲';
     }
 }
 
 function determineSky() {
-    if (input.value === Sunny) {
-        skies.innerHTML = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️';
+    if (skiesInput.value === 'Sunny') {
+        skiesLandscape.innerHTML = '☁️ ☁️ ☁️ ☀️ ☁️ ☁️';
+    } else if (skiesInput.value === 'Cloudy') {
+        skiesLandscape.innerHTML = "☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+    } else if (skiesInput.value === 'Rainy') {
+        skiesLandscape.innerHTML = "🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+    } else if (skiesInput.value === 'Snowy') {
+        skiesLandscape.innerHTML = "🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
     }
-
-
 }
 
 btnAdd.addEventListener('click', () => {
-    countUp(input);
+    countUp(tempInput);
     determineColor();
     determineLandscape();
 });
 
 btnSubtract.addEventListener('click', () =>{
-    countDown(input);
+    countDown(tempInput);
     determineColor();
     determineLandscape();
 });
 
-skies.addEventListener('select', () =>{
+skiesInput.addEventListener('change', () =>{
     determineSky();
 });
