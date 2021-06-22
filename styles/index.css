@@ -1,0 +1,33 @@
+
+#select by class
+.orange-temp {
+    color: orange;
+}
+
+.red-temp {
+    color: red;
+}
+
+.yellow-temp {
+    color: yellow;
+}
+
+.green-temp {
+    color: green;
+}
+
+.teal-temp {
+    color: teal;
+}
+
+#city-card input {
+    background-color: red
+}
+
+#city-card > h3 {
+    margin: 20px;
+}
+
+ 
+
+
