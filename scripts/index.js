@@ -5,23 +5,15 @@ const state={
     
 };
 
-const increatTemp = ()=>{
+const changeTemp = (increment)=>{
     const tempContainer=document.getElementById("temp")
-    state.temp +=1;
+    state.temp +=increment;
     tempContainer.textContent=`${state.temp}`;
     
     updateColorofTemp(state.temp);
     updateGarden(state.temp);
 };
 
-const decreatTemp = ()=>{
-    const tempContainer=document.getElementById("temp")
-    state.temp -=1;
-    tempContainer.textContent=`${state.temp}`;
-
-    updateColorofTemp(state.temp);
-    updateGarden(state.temp);
-};
 
 const updateColorofTemp=()=>{
     const tempContainer=document.getElementById("temp");
@@ -99,10 +91,10 @@ const changeBackground = () => {
 };
 const registerEventHandlers=()=>{
     const increaseTempValue=document.getElementById("plustemp")
-    increaseTempValue.addEventListener("click",increatTemp )
+    increaseTempValue.addEventListener("click",() => changeTemp( +1 ) )
 
     const decreaseTempValue=document.getElementById("subtemp")
-    decreaseTempValue.addEventListener("click",decreatTemp )
+    decreaseTempValue.addEventListener("click",() => changeTemp( -1 ) )
 
     updateSky();
     const skySelect = document.getElementById("selectSky");
