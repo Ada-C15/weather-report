@@ -16,7 +16,7 @@ const increatTemp = ()=>{
 
 const decreatTemp = ()=>{
     const tempContainer=document.getElementById("temp")
-    state.temp +=1;
+    state.temp -=1;
     tempContainer.textContent=`${state.temp}`;
 
     updateColorofTemp(state.temp);
@@ -26,21 +26,19 @@ const decreatTemp = ()=>{
 const updateColorofTemp=()=>{
     const tempContainer=document.getElementById("temp");
 
-    if (state.temp>=100) {
+    if(state.temp>=80){
         state.color="red";
     
-    }else if(state.temp>=90){
-        state.color="purple";
-    
-    }else if(state.temp>=80){
-        state.color="blue";
-    
     }else if(state.temp>=70){
-        state.color="green";
-        
-    }else if(state.temp>=60){
         state.color="orange";
         
+    }else if(state.temp>=60){
+        state.color="yellow";
+        
+    }else if(state.temp>=50) {
+        state.color="green";
+    }else{
+        state.color="teal";
     }
     tempContainer.classList=state.color;
 };
@@ -48,15 +46,13 @@ const updateColorofTemp=()=>{
 const updateGarden=()=>{
     const gardenContainer=document.getElementById("landscape");
 
-    if (state.temp>=100) {
+    if (state.temp>=80) {
         state.garden="🌾_🌻_🍀"
-    }else if(state.temp>=90){
-        state.garden="🍀_🌸_🎋";
-    }else if(state.temp>=80){
-        state.garden="💐_💐"
     }else if(state.temp>=70){
-        state.garden="🌸_🌺"
+        state.garden="🍀_🌸_🎋";
     }else if(state.temp>=60){
+        state.garden="💐_💐"
+    }else {
         state.garden="🌼_☘️"
     }
     gardenContainer.textContent=state.garden;
