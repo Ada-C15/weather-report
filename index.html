@@ -16,9 +16,13 @@
 
         <div class="card">
             <div class="weather" id="weather_id">
-                <div class="citytextbox" id="citytext_id">
-                    <h1 contenteditable="true"> City's Name</h1>
-                </div>
+                <form action="/action_page.php">
+                    <div class="citytextbox" id="citytext_id">
+                            <label for="city"> Enter your city Here:</label>
+                            <input type="text" id="citytext_id" name="city">
+                        </div>
+                    <input type="reset" value="Reset">
+                </form>
                 <h2><label for="sky-select">Choose a sky:</label></h2>
                     <select name="sky" id="sky-select">
                     <option value="">--Please choose an option--</option>
