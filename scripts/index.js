@@ -21,15 +21,15 @@ const reduceTemperature = () => {
 const changeTempColor = (currentTemp) => {
     const tempValue = document.querySelector("#temp-value");
     if (currentTemp >= 80) {
-        tempValue.classList = ["red"];
+        tempValue.className = "red";
     } else if (currentTemp >= 70) {
-        tempValue.classList = ["orange"];
+        tempValue.className = "orange";
     } else if (currentTemp >= 60){
-        tempValue.classList = ["yellow"];
+        tempValue.className = "yellow";
     } else if (currentTemp >= 50){
-        tempValue.classList = ["green"]; 
+        tempValue.className = "green"; 
     } else {
-        tempValue.classList = ["teal"]; 
+        tempValue.className = "teal"; 
     };
 };
 
@@ -51,13 +51,13 @@ const changeGradenBackground = () => {
     const weatherChoice = document.querySelector("#weather-choice").value;
     const gardenView = document.querySelector("#garden-view");
     if (weatherChoice === "Sunny") {
-        gardenView.classList = ["sunny"];
+        gardenView.className = "sunny";
     } else if (weatherChoice === "Cloudy") {
-        gardenView.classList = ["cloudy"];
+        gardenView.className = "cloudy";
     } else if (weatherChoice === "Rainy") {
-        gardenView.classList = ["rainy"];
+        gardenView.className = "rainy";
     } else if (weatherChoice === "Snowy") {
-        gardenView.classList = ["snowy"];
+        gardenView.className = "snowy";
     };
 };
 
