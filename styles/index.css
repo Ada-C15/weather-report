@@ -1,0 +1,97 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: lightpink;
+
+}
+
+
+select {
+    margin-top: 50px;
+}
+
+
+.container {
+    position: relative;
+    width: 100px;
+    height: 300px;
+    margin: 240px, auto;
+
+}
+
+.container .box {
+    position: relative;
+    width: calc(400px - 30px);
+    height: calc(250px - 30px);
+    background: rgb(248, 246, 246);
+    bottom: -100px;
+    margin: 30px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    
+}
+
+/* weather box container  */
+.box-container {
+    background:wheat;
+    position: absolute;
+    top: 100%;
+    left: 500%;
+    box-sizing: border-box;
+    border-radius: 10px;
+    height: 400px;
+    text-align: center;
+    
+}
+
+/* Temp box  */
+#temp-box {
+    background:	transparent;
+    width: 580x;
+    height: 20%;
+    text-align: center;
+}
+
+/* Sky Aesthetic Box */
+#sky-box {
+    background: transparent;
+    height: 20%;
+    text-align: center;
+}
+
+
+#tempCount {
+    font-size: 30px;
+}
+
+
+.container .box .content h3 {
+    margin: 0;
+    padding: 0;
+    color:cornflowerblue;
+    font-size: 30px;
+
+}
+
+
+.red {
+    color: red; 
+}
+
+.orange {
+    color: orange;
+}
+
+.purple {
+    color:rebeccapurple;
+}
+
+.green{
+    color:mediumspringgreen
+}
+
+.blue {
+    color: darkblue;
+}
