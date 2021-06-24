@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Aida's Weather Report</title>
+        <link rel="stylesheet" href="styles/index.css"/>
+    </head>
+    <body>
+        <header class="header_weather">
+            <h1>Weather Report</h1>
+            <p>For the lovely city of 
+                <span id="headerCity" class="header_city"> </span></p>
+        </header>
+            <section class="left-side">
+                <img class="left-image" src="assets/4season-vec (1).png" alt="weather background">
+                <div class="app-wrap">
+                    <section class="location">
+                        <div class="city">Seattle, WA</div>
+                        <div class="date">Have a great day!</div>
+                    </section>
+                    <section class="current">
+                        <div id="temp" class="temp">71<span>F</span></div>
+                        <div class="temperature__controls">
+                            <span id="increaseTempControl">➕</span>
+                            <span id="decreaseTempControl">➖</span>
+                        </div>
+                        <div class="weather">Sunny</div>
+                        <div class="hi-low">13c - 16c</div>
+                    </section>
+                </div>
+            </section>
+            <section class="right-side">
+                <section class="search-city">
+                    <h2>City Name</h2>
+                    <input type="text" autocomplete="off" id="inputSearchBox" class="search-box" placeholder="Search for a city ..." />
+                    <button id="searchReset" class="search-reset-btn">Reset</button>
+                </section>
+                
+                <section class="sky-section">
+                    <h2>Sky</h2>
+                    <select id="skyDropdown">
+                        <option>Sunny</option>
+                        <option>Cloudy</option>
+                        <option>Rainy</option>
+                        <option>Snowy</option>
+                    </select>
+                </section>
+                <section class="garden-section">
+                    <h2>Weather Garden</h2>
+                    <div id="gardenPlayground" class="garden_playground">
+                        <div id="sky"></div>
+                        <div id="landscape"></div>
+                    </div>
+                </section>
+                <section class="convert-section">
+                    <h2>Temperature Converter</h2>
+                    <p>Hit °F or °C, and click submit!</p>
+                    <form>
+                        <div id="radio-buttons">
+                            <input type="radio" name="select" id="fahrenheit" value="fahrenheit">convert to °C</input>
+                            <input type="radio" name="select" id="celsius" value="celsius">convert to °F</input>
+                        </div>
+                        <div id="submit-clear">
+                            <button type="button" onclick="getTemperature();">Convert it</button>
+                        </div>
+                        <div id="answer"></div>
+                    </form>
+                </section>
+            </section>
+        <script src="scripts/index.js"></script>
+    </body>
+</html>
