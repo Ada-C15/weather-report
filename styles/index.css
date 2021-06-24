@@ -1,0 +1,164 @@
+body {
+    font-family: Helvetica;
+    display: grid;
+    grid-template-rows: 1fr 2fr 3fr;
+    height: 100vh;
+    background-color:white;
+    color:black
+}
+
+h1 {
+    font-family:cursive;
+    margin-left: 250px;
+    font-size: 50px;
+}
+
+select {
+    width: 200px;
+    border: rgb(216, 224, 233);
+    border-style:inset;
+    border-radius: 5px;
+}
+
+input {
+    border: rgb(216, 224, 233);
+    border-style:inset;
+    border-radius: 5px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+}
+
+header button {
+    height: 30px;
+    margin-right: 250px;
+}
+
+.night {
+    background-color:rgb(53, 54, 58);
+    color:whitesmoke
+}
+
+.option-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.info-sec {
+    background-color:rgb(207, 226, 249);
+    border-radius: 15px;
+    width: 250px;
+    height: 120px;
+    color:black;
+}
+
+#city-name-sec h2,
+#sky-sec h2 {
+    margin-bottom: 45px;
+}
+
+#city-name-sec,
+#sky-sec {
+    padding: 20px;
+    padding-bottom: 40px;
+}
+
+#temperature-sec {
+    padding: 20px 40px 40px 40px;
+    width: 220px;
+}
+
+#temperature-array {
+    display: flex;
+    flex-direction: column;
+}
+
+#temperature-control {
+    display: flex;
+    flex-direction: row;
+}
+
+#temp-value {
+    padding-left: 50px;
+    font-size: 3em;
+}
+
+#weather-garden-sec {
+    color: black;
+    background-image: url("../images/weather_garden_bg.png");
+    background-size: cover;
+    text-align: center;
+    background-color: lightgray;
+    margin: 50px 300px 50px 300px;
+    border-radius: 15px;
+    padding: 0 50px 50px 50px
+}
+
+#weather-garden-sec h2 {
+    padding: 20px;
+}
+
+#garden-view {
+    text-align: center;
+    margin: 0 100px 0 100px;
+    border-radius: 5px;
+    border: rgb(216, 224, 233);
+    border-style:inset;
+}
+
+#add-temp-button {
+    margin-bottom: 2px;
+}
+
+#add-temp-button,
+#reduce-temp-button {
+    padding-right: 10px;
+}
+
+#sky-view,
+#ground-view {
+    padding: 40px 0 40px 0;
+    font-size: 30px;
+}
+
+.sunny {
+    background-color: lightskyblue;
+}
+
+.cloudy {
+    background-color: lightgrey;
+}
+
+.rainy {
+    background-color: darkgrey;
+} 
+
+.snowy {
+    background-color: ivory;
+}
+
+.red {
+    color: red;
+} 
+
+.orange {
+    color: orange;
+} 
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+} 
+
+.teal {
+    color: teal;
+}
