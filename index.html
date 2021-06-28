@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Weather Report</title>
+        <link href="./styles/index.css" rel="stylesheet" type="text/css"/>
+    </head>
+    <body>
+        <div id="heading">
+            <h1 id="default-city"> Weather Report for Seattle</h1>
+        </div>
+        <div class="box-content">
+            <div class="section-container">
+                <div class="left-boxes">
+                    <h3>Current Temperature: </h3>
+                    <button id="tempUpButton">up</button>
+                    <p id="temp" class="yellow">65 F</p>
+                    <button id="tempDownButton">down</button>
+                </div>
+                <section class="left-boxes">
+                        <h2><br>Sky View!</h2>
+                        <p>Change the sky view!</p>
+                    <label>What a beautiful sky:</label>
+                    <select name="skies" id="sky-dropdown">
+                        <option value="sunny">Sunny</option>
+                        <option value="cloudy">Cloudy</option>
+                        <option value="rainy">Rainy</option>
+                        <option value="snowy">Snowy</option>
+                    </select>
+                </section>
+                <section class="left-boxes">
+                    <h2>Current City:</h2>
+                    <div class="input">
+                        <input type="text" id="city-name" placeholder="seattle" required/>
+                        <br><button id="change-city">change city</button>
+                        <button id="reset-city">reset</button>
+                    </div>
+                </section>
+            </div>
+            <section class="garden-box">
+                <h2 class="weather_garden">Landscape View</h2>
+                <section id="weather_garden_container">
+                    <p id="garden-sky">☁️☁️☁️☁️☁️☁️☁️☁️</p>
+                    <br>
+                    <br>
+                    <br>
+                    <p id="garden-landscape">🌲🪨🌳🌲🪨🌳🌲🪨🌳</p>
+                </section>
+            </section>
+        </div>
+        <script src="./scripts/index.js"></script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
