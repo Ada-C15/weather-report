@@ -4,49 +4,62 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width">
         <title>Weather Report</title>
-        <link href="styles/index.css" rel="stylesheet" type="text/css" />
+        <link href="./styles/index.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <main>
-            <h1>Weather Report</h1>
-            <section>
-                <h2 id="cityName">For the City of Seattle</h2>
-            </section>
-            <section id="tempSection">
-                <h2><br>Change the Temperature!</h2>
-                <h3>Current Temperature: </h3>
-                    <section id="tempContainer"></section>
-                    <span id="currentTemp"></span>
-                <button id="tempUpButton">Up Temp</button>
-                <button id="tempDownButton">Down Temp</button>
-                
-            </section>
-            
-            <section id="skySection">
-                <h2><br>Sky View!</h2>
-                <p>Change the sky view!</p>
-                <select id="skyDropdown">
-                    <option><br>Cloudy</option>
-                    <option>Rainy</option>
-                    <option>Sunny</option>
-                    <option>Snowy</option>
-                </select>
-            </section>
-            <section id="citySection">
-                <h2><br>City Name!</h2>
-                <input id="changeCity" type="text" value="Seattle">
-                <br>
-                <button id="cityNameReset">Reset the City</button>
-            </section>
-            <section id="landscapeView">
-                <h2>Landscape View</h2>
-                <section id="landscapeDecorators">
-                    <p id="sky">☁️☁️☁️☁️☁️☁️☁️☁️</p>
-                    <p id="landscape"><br><br>🌲🪨🌳🌲🪨🌳🌲🪨🌳</p>
+        <div id="heading">
+            <h1 id="default-city"> Weather Report for Seattle</h1>
+        </div>
+        <div class="box-content">
+            <div class="section-container">
+                <div class="left-boxes">
+                    <h3>Current Temperature: </h3>
+                    <button id="tempUpButton">up</button>
+                    <p id="temp" class="yellow">65 F</p>
+                    <button id="tempDownButton">down</button>
+                </div>
+                <section class="left-boxes">
+                        <h2><br>Sky View!</h2>
+                        <p>Change the sky view!</p>
+                    <label>What a beautiful sky:</label>
+                    <select name="skies" id="sky-dropdown">
+                        <option value="sunny">Sunny</option>
+                        <option value="cloudy">Cloudy</option>
+                        <option value="rainy">Rainy</option>
+                        <option value="snowy">Snowy</option>
+                    </select>
+                </section>
+                <section class="left-boxes">
+                    <h2>Current City:</h2>
+                    <div class="input">
+                        <input type="text" id="city-name" placeholder="seattle" required/>
+                        <br><button id="change-city">change city</button>
+                        <button id="reset-city">reset</button>
+                    </div>
+                </section>
+            </div>
+            <section class="garden-box">
+                <h2 class="weather_garden">Landscape View</h2>
+                <section id="weather_garden_container">
+                    <p id="garden-sky">☁️☁️☁️☁️☁️☁️☁️☁️</p>
+                    <br>
+                    <br>
+                    <br>
+                    <p id="garden-landscape">🌲🪨🌳🌲🪨🌳🌲🪨🌳</p>
                 </section>
             </section>
-        </main>
-        <script src="scripts/index.js"></script>
+        </div>
+        <script src="./scripts/index.js"></script>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
 
