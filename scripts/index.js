@@ -1,3 +1,4 @@
+// setting the default variable to 70 
 const state = {
     tempCount: 70
 };
@@ -84,38 +85,12 @@ const updateCityName = () => {
 
 // Wave 5 - Resetting the City name 
 const resetCity = (event) => {
-    const resetCityContainer = document.querySelector("addRestButton")
-    resetCityContainer.textContent = 'Sunny Seattle';
+    const locationStatus = document.getElementById("locationStatus");
+    locationStatus.value = 'Sunny Seattle';
     };
     
     }
 
-
-
-const registerEventHandlers = () => {
-    updateTemp(tempValue);
-
-    // Wave 2 - Increase Temp
-    const adduparrow = document.querySelector("adduparrow");
-    adduparrow.addEventListener("click", addNum);
-    };
-    
-    // Wave 2 - Decrease Temp 
-    const adddownarrow = document.getElementById("adddownarrow");
-    adddownarrow.addEventListener("click", subNum);
-//const tempButton = document.querySelector("#adddownarrow");
-//tempButton.addEventListener("click", subNum);
-//};
-
-    // Wave 4 - Naming the City
-    updateCityName();
-    const cityNameInput = document.getElementById("cityNameInput");
-    cityNameInput.addEventListener("input", updateCityName);
-
-
-    // Wave 5 - Resetting the City Name
-    const cityNameResetButton = document.getElementById("addResetButton");
-    cityNameResetButton.addEventListener("click", resetCity);
 
 
     // Wave 3 - Selecting the Sky
@@ -123,6 +98,24 @@ const registerEventHandlers = () => {
     const skySelect = document.getElementById("skySelect");
     skySelect.addEventListener("change", updateSky);
 
-    
 
+
+    
+// one place to register all our event handlers for the whole page
+    const registerEventHandlers = () => {
+        // Wave 2 - Increase Temp
+        const adduparrow = document.querySelector("adduparrow");
+        adduparrow.addEventListener("click", addNum);
+        };
+        // Wave 2 - Decrease Temp 
+        const adddownarrow = document.getElementById("adddownarrow");
+        adddownarrow.addEventListener("click", subNum);;
+    // resting the city
+        const cityNameResetButton = document.getElementById("locationReset");
+        cityNameResetButton.addEventListener("click", resetCity);
+
+
+
+
+// registering all the event handlers and exporting them     
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
