@@ -1,17 +1,14 @@
 body {
-    color: hsl(246, 83%, 55%);
+  color: hsl(246, 83%, 55%);
   font-family: Gill Sans MT, Calibri, sans-serif;
   height: 100vh;
-    background: linear-gradient(98deg,hsla(181, 100%, 92%, 0.98) 20%,
+  Background-image: url(https://images.alphacoders.com/714/714927.jpg);
+  Background-size: cover;
+  background: linear-gradient(98deg,hsla(181, 100%, 92%, 0.98) 20%,
      hsl(206, 42%, 83%) 80%);
 }
 
-.Cloudy {
-  Background-image: url(https://images.alphacoders.com/714/714927.jpg);
-  Background-repeat: repeat;
-  Background-size: cover;
-  color: aliceblue;
-}
+
 .weather_header {
   padding-left: 5vh;
 }
@@ -60,18 +57,3 @@ body {
   text-align: center;
 }
 
-.red{
-  color: red;
-}
-.orange{
-  color: orange;
-}
-.yellow{
-  color: yellow;
-}
-.green{
-  color: green;
-}
-.teal{
-  color: teal;
-}
