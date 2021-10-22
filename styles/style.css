@@ -5,20 +5,9 @@ body {
     background: linear-gradient(98deg,hsla(181, 100%, 92%, 0.98) 20%,
      hsl(206, 42%, 83%) 80%);
 }
-.Rainy {
-  Background-image: url(https://images4.alphacoders.com/600/600599.jpg);
-  Background-repeat: repeat;
-  Background-size: cover;
-}
-
-.Snowy {
-  Background-image: url(https://images7.alphacoders.com/392/392863.jpg);
-  Background-repeat: repeat;
-  Background-size: cover;
-}
 
 .Cloudy {
-  Background-image: url(https://images3.alphacoders.com/536/53625.jpg);
+  Background-image: url(https://images.alphacoders.com/714/714927.jpg);
   Background-repeat: repeat;
   Background-size: cover;
   color: aliceblue;
