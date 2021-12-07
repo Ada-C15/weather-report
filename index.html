@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Weather Report</title>
+        <link href="styles/index.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body id="all">
+        <main>
+            <h1>Weather Report</h1>
+            <section id="core">
+                <section id="controls">
+                    <div>Temperature</div>
+                    <div><span id="down">🧊</span><span id="temp">   70   </span><span id="up">🔥</span></div>
+                    <div>Location: 
+                        <select id="location" name="location">
+                            <option value="leavenworth">Leavenworth</option>
+                            <option value="wapass">WA Pass</option>
+                            <option value="squamish">Squamish</option>
+                            <option value="bend">Bend</option>
+                        </select>
+                    </div>
+                    <div>
+                        <form onsubmit="return doForm()" id='addition'>
+                            <label for="feeling">How are you feeling????</label><br>
+                            <input type="text" id="feeling" name="feeling"><br>
+                            <input type="submit" value="Send It">
+                        </form>
+                    </div>
+                </section>
+                <section id="garden">
+                    <div>Garden</div>
+                </section>
+            </section>
+            <h2 id="sum"> </h2>
+            <ul id='facts'>
+            </ul>
+        </main>
+        <script src="scripts/index.js">
+        </script>
+    </body>
+</html>
