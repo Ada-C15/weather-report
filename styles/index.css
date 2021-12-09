@@ -58,3 +58,35 @@ header {
 .footer-quote blockquote {
     align-self: center
 }
+
+#tempTitle {
+    grid-area: tempTitle;
+}
+
+#tempButtons {
+    grid-area: tempButtons;
+}
+
+#tempValue {
+    grid-area: tempValue;
+}
+
+#temperature {
+    display: grid;
+    grid-template-rows: 50%, 50%;
+    grid-template-columns: 50%, 50%;
+    /* grid-template-areas:
+        ". . . ."
+        "tempTitle tempTitle tempTitle tempTitle"
+        ". tempButtons . tempValue ."
+        ". tempButtons . tempValue ."; */
+    grid-template-areas: 
+        "tempTitle tempTitle"
+        "tempButtons tempValue";
+}
+
+#tempButtons {
+    display: flex;
+    flex-direction: column;
+}
+
