@@ -18,7 +18,6 @@ body {
 
 main {
     display: grid;
-    /* column-gap: 10%; */
     row-gap: 10px;
     grid-template-rows: 20%, 20%, 20%, 20%, 20%;
     grid-template-columns: 15%, 20%, 5%, 45%, 15%;
@@ -28,16 +27,16 @@ main {
         ". sky . garden ."
         ". location . garden ."
         ". . . . .";
-    
 }
 
 main section {
     border: solid;
-    border-radius: 25px
+    border-radius: 15px
 }
 
-main section #small_box {
-    border-radius: 15px
+.small_box {
+    background-color: #00A383;
+    background-color: #004D7A;
 }
 
 header {
@@ -46,19 +45,16 @@ header {
     text-align: center;
 }
 
-
 .footer-quote {
     display: flex; 
     flex-direction: column;
-    /* justify-content: center; */
-    /* align-content: center; */
-    /* max-width: none; */
 }
 
 .footer-quote figcaption {
     margin: 0%;
     align-self: center;
 }
+
 .footer-quote blockquote {
     align-self: center
 }
