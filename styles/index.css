@@ -1,9 +1,76 @@
 body {
-    display: flex;
-    color: #0e4058;
-    font-family: 'caslon';
-    height: 100vh;
-    background: linear-gradient(to bottom,#d9ed92,#b5e48c,#99d98c,#76c893,#52b69a,#34a0a4,#168aad,#1a759f,#1e6091,#184e77);
+    color: #2E4C6D;
+    font-family: American Typewriter, serif;
+    background: #DADDFC;
     justify-content: center;
     text-align: center;
 }
+
+.main-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.controls{
+    display: grid;
+    grid-template-rows: 30% 30% 30%;
+}
+
+.subcontrols {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 15%;
+    border: #FC997C;
+    border-width: 20%;
+    border-style: solid;
+    background: #396EB0;
+    padding: 10px;
+    border-radius: 10px;
+    color: #DADDFC;
+    font-weight: bold;
+    text-align: center;
+}
+
+select{
+    text-align-last:center;
+}
+.garden-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.garden {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: #FC997C;
+    border-width: 20%;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    background: #396EB0;
+    justify-content: space-between;
+    gap: 200px;
+}
+
+.winter {
+    color:white
+}
+.fall {
+    color:green
+}
+.spring{
+    color:yellow
+}
+.summer {
+    color:orange
+}
+.tooextreme {
+    color:black
+} 
+
