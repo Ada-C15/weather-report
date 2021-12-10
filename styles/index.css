@@ -1,0 +1,51 @@
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12px;
+    background-color: yellow;
+    margin: 2rem;
+}
+
+h1 {
+    color: rgb(242, 141, 78);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.subheader {
+    display: flex;
+    font-size: 1rem;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.mainAarea {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.temperatureArea {
+    background-color: rgb(254, 250, 239);
+    padding: 0px 20px 0px 20px;
+    border-radius: 5px;
+}
+
+.temperatureText {
+    display:flex;
+    flex-direction: row-reverse;
+    padding: 0px 10px 5px 10px;
+}
+
+#tempValue {
+    font-size: 33px;
+    margin-right: 1rem;
+}
+.temperatureWheel {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    margin-right:3rem;
+    font-size: 14px;
+}
