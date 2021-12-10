@@ -27,7 +27,7 @@ h1 {
 }
 
 .temperatureArea {
-    background-color: rgb(254, 250, 239);
+    background-color: #01a775;
     padding: 0px 20px 0px 20px;
     border-radius: 5px;
 }
@@ -48,4 +48,14 @@ h1 {
     align-items: center;
     margin-right:3rem;
     font-size: 14px;
+}
+
+.skyArea {
+    background-color: rgb(179, 131, 0);
+    padding: 0px 60px 0px 60px;
+    border-radius: 5px;
+}
+
+#skySelect {
+    align-content: center;
 }
