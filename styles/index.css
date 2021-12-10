@@ -59,3 +59,16 @@ h1 {
 #skySelect {
     align-content: center;
 }
+
+.cityArea {
+    background-color: rgb(254, 250, 239);
+    padding: 0px 20px 0px 20px;
+    border-radius: 5px;
+}
+
+#temperatureCaption, #skyCaption, #cityCaption {
+    margin: 10px;
+    text-align: center;
+    font-size: 24px;
+}
+
