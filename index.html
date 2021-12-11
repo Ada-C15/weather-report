@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Weather Report</title>
+        <link href="styles/index.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body id="all">
+        <main>
+            <h1>Weather Report</h1>
+            <h3>For the lovely town of ✨<span id="city">Leavenworth</span>✨</h3>
+            <section class="main-container">
+                <section class="controls">
+                    <div class="subcontrols">Temperature
+                    <div><span id="down">🧊</span><span class="tempcol" id="temp">               70        </span><span id="up">🔥</span></div></div>
+                    <div class="subcontrols">Sky: 
+                        <select id="sky" name="sky">
+                            <option value="none">None</option>
+                            <option value="cloudy">Cloudy</option>
+                            <option value="snowy">Snowy</option>
+                            <option value="sunny">Sunny</option>
+                            <option value="rainy">Rainy</option>
+                        </select>
+                    </div>
+                    <div class="subcontrols">
+                        <form id="filltown">
+                            <label>Where are you???</label><br>
+                            <input type="text" id="filltownval" name="filltownval"><br>
+                            <input type="submit" value="Reset">
+                        </form>
+                    </div>
+                </section>
+                <section class="garden-container">Whats going on in Leavyyy??
+                    <section class="garden" id="gardenchange">
+                        <div id="gardenactivity">☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️</div>
+                        <div id="landscape">🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲🌲</div>
+                    </section>
+                    <div id="landscapetext"> </div>
+                </section>
+            </section>
+        </main>
+        <script src="scripts/index.js">
+        </script>
+    </body>
+</html>

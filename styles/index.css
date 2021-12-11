@@ -1,0 +1,80 @@
+body {
+    color: #D4B5B0;
+    font-family: American Typewriter, serif;
+    background: #383E56;
+    justify-content: center;
+    text-align: center;
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    width: 100vw;
+    height: 100vh;
+}
+
+.controls{
+    display: grid;
+    grid-template-rows: 30% 30% 30%;
+}
+
+.subcontrols {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin: 15%;
+    border: #EEDAD1;
+    border-width: 20%;
+    border-style: solid;
+    background: #F69E7B;
+    padding: 10px;
+    border-radius: 10px;
+    color: #383E56;
+    font-weight: bold;
+    text-align: center;
+}
+
+select{
+    text-align-last:center;
+}
+.garden-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+.garden {
+    display: flex;
+    flex-direction: column;
+    margin-left: 20%;
+    margin-right: 20%;
+    border: #EEDAD1;
+    border-width: 20%;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: solid;
+    background: #EEDAD1;
+    justify-content: space-between;
+    gap: 200px;
+}
+
+.winter {
+    color:white;
+}
+.fall {
+    color:green
+}
+.spring{
+    color:yellow
+}
+.summer {
+    color:red
+}
+.tooextreme {
+    color:black
+} 
+
+.temp {
+    color: yellow;
+}
+
