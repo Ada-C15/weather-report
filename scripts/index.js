@@ -1,5 +1,5 @@
 const state = {
-  temp: 69,
+  temp: parseInt(document.getElementById("tempValue")),
 };
 
 // Temperature Buttons --> Increase and Decrease
@@ -10,7 +10,6 @@ const deltaTemp = function (delta) {
   const temperature = document.getElementById("tempValue");
   temperature.textContent = parseInt(temperature.textContent) + delta;
   state.temp = temperature.textContent;
-  // console.log(state.temp);
   changeGarden();
 };
 
@@ -38,10 +37,6 @@ skyDrop.addEventListener("change", () => deltaSky());
 
 const deltaSky = () => {
   skyScape = document.getElementById("skyScape");
-  console.log("DeltaSky ran");
-  console.log(skyDrop.options);
-  console.log(skyDrop.options["selectedIndex"]);
-  console.log(skyDrop.options[[skyDrop.options["selectedIndex"]]]);
   let selectedValue = skyDrop.options[[skyDrop.options["selectedIndex"]]].value;
   if (selectedValue === "sunny") {
     skyScape.textContent = "☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
@@ -54,14 +49,11 @@ const deltaSky = () => {
   }
 };
 
-// e.options[e.selectedIndex].value)
+// Change city name based on user input
+const locationBox = document.getElementById("locationBox");
+locationBox.addEventListener("input", () => deltaCity());
 
-// document.getElementById('mySelect').addEventListener('change', warn, true);
-// function warn(e) {
-//   e.preventDefault();
-//   e.stopPropagation();
-//   if (e.currentTarget.value === 'the value you want') {
-//     // do something
-//   } else {
-//   return;
-// }
+const deltaCity = () => {
+  const cityName = document.getElementById("cityName");
+  console.log(cityName);
+};
