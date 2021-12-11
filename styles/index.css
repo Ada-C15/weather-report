@@ -1,7 +1,7 @@
 body {
-    color: #2E4C6D;
+    color: #D4B5B0;
     font-family: American Typewriter, serif;
-    background: #DADDFC;
+    background: #383E56;
     justify-content: center;
     text-align: center;
 }
@@ -23,13 +23,13 @@ body {
     justify-content: space-evenly;
     flex-direction: column;
     margin: 15%;
-    border: #FC997C;
+    border: #EEDAD1;
     border-width: 20%;
     border-style: solid;
-    background: #396EB0;
+    background: #F69E7B;
     padding: 10px;
     border-radius: 10px;
-    color: #DADDFC;
+    color: #383E56;
     font-weight: bold;
     text-align: center;
 }
@@ -48,18 +48,18 @@ select{
     flex-direction: column;
     margin-left: 20%;
     margin-right: 20%;
-    border: #FC997C;
+    border: #EEDAD1;
     border-width: 20%;
     padding: 10px;
     border-radius: 10px;
     border-style: solid;
-    background: #396EB0;
+    background: #EEDAD1;
     justify-content: space-between;
     gap: 200px;
 }
 
 .winter {
-    color:white
+    color:white;
 }
 .fall {
     color:green
@@ -68,9 +68,13 @@ select{
     color:yellow
 }
 .summer {
-    color:orange
+    color:red
 }
 .tooextreme {
     color:black
 } 
+
+.temp {
+    color: yellow;
+}
 
