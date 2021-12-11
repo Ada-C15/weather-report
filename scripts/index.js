@@ -13,11 +13,12 @@ let temperature = 80
 const increaseTemp=()=> {
 // When clicked the temperature will rise by 1 degree
     ++temperature
-    console.log("i am clicking the up button")
-    console.log(temperature)
+    // console.log("i am clicking the up button")
+    // console.log(temperature)
     document.getElementById("temperature-number").innerHTML=temperature
-    console.log('I am the color', color)    
+    // console.log('I am the color', color)    
 }
+
 
 const decreaseTemp=()=> {
     // When clicked the temperature will drop by 1 degree
@@ -27,6 +28,58 @@ const decreaseTemp=()=> {
     document.getElementById("temperature-number").innerHTML=temperature
     console.log(color)
 }
+
+// New Function will change the sky in Weather Garden
+// based on the selected sky in the drop down menu
+const setTypeOfWeather=()=> {
+    let skyValue = document.getElementById("sky").value
+    let sky = document.getElementById("selected-weather")
+
+    // if skyValue == "Sunny"
+    // set sky innerHtml to a sun
+    if (skyValue=="Sunny") {
+        sky.innerHTML="☁️ ☁️ ☁️ ☀️ ☁️ ☁️";
+    } else if (skyValue=="Cloudy") {
+        sky.innerHTML="☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️";
+    } else if (skyValue=="Rainy") {
+        sky.innerHTML="🌧🌈⛈🌧🌧💧⛈🌧🌦🌧💧🌧🌧";
+    } else if (skyValue=="Snowy") {
+        sky.innerHTML="🌨❄️🌨🌨❄️❄️🌨❄️🌨❄️❄️🌨🌨";
+    };
+    console.log(skyValue)
+}
+setTypeOfWeather()
+
+const setCityName=()=> {
+    let cityValue= document.getElementById("city").value
+    let sky = document.getElementById("city-display")
+    sky.textContent = cityValue
+}
+
+
+const registerEventHandlers = () => {
+    // Get up arrow HTML element by ID
+    const upArrowButton = document.querySelector("#up-arrow");
+
+    // Add Click event listener to up arrow button
+    // "click" -> event type
+    // increaseTemp -> function that gets called
+    upArrowButton.addEventListener("click", increaseTemp);
+    
+    const downArrowButton = document.querySelector("#down-arrow");
+
+    downArrowButton.addEventListener("click", decreaseTemp);
+
+    // when sky dropdown changes (onChange)
+    // call setTypeOfWeather()
+    const skyDropdown = document.querySelector("#sky");
+    skyDropdown.addEventListener("change", setTypeOfWeather);
+
+    const cityInputText = document.querySelector("#city");
+    cityInputText.addEventListener("input", setCityName);
+};
+
+document.addEventListener("DOMContentLoaded", registerEventHandlers);
 
 
 
@@ -50,4 +103,3 @@ if (temperature >=80) {
 }
 
 document.getElementsByClassName("color").innerHTML=color
-
