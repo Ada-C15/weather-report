@@ -18,13 +18,26 @@ decreaseTempButton.addEventListener("click", () => deltaTemp(-1));
 
 // Garden Based on Temp Value
 // TODO: THIS FUNCTIONALLY WORKS FINE BUT NEEDS LOGIC IMPROVEMENTS
+// changeGarden = () => {
+//   garden = document.getElementById("gardenScape");
+//   if (state.temp >= 80) {
+//     garden.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
+//   } else if (70 >= state.temp < 80) {
+//     garden.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
+//   } else if (60 >= state.temp < 70) {
+//     garden.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
+//   } else {
+//     garden.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
+//   }
+// };
+
 changeGarden = () => {
   garden = document.getElementById("gardenScape");
   if (state.temp >= 80) {
     garden.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
-  } else if (70 >= state.temp < 80) {
+  } else if (state.temp >= 70 && state.temp < 80) {
     garden.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
-  } else if (60 >= state.temp < 70) {
+  } else if (state.temp >= 60 && state.temp < 70) {
     garden.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
   } else {
     garden.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
@@ -57,17 +70,5 @@ cityInput.addEventListener("change", (event) => {
 
 const deltaCity = (event) => {
   let cityName = document.getElementById("cityName");
-  console.log(cityName.textContent);
   cityName.textContent = event.target.value;
-  console.log(cityName.textContent);
 };
-
-// const descriptionInput = document.createElement("input");
-// descriptionInput.value = task.description;
-// descriptionInput.addEventListener("change", (event) => {
-//   updateDescription(event, task)
-// });
-
-// const updateDescription = (event, task) => {
-//   task.description = event.target.value;
-//   renderTasks();
