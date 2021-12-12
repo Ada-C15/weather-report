@@ -50,10 +50,24 @@ const deltaSky = () => {
 };
 
 // Change city name based on user input
-const locationBox = document.getElementById("locationBox");
-locationBox.addEventListener("input", () => deltaCity());
+const cityInput = document.getElementById("cityInput");
+cityInput.addEventListener("change", (event) => {
+  deltaCity(event);
+});
 
-const deltaCity = () => {
-  const cityName = document.getElementById("cityName");
-  console.log(cityName);
+const deltaCity = (event) => {
+  let cityName = document.getElementById("cityName");
+  console.log(cityName.textContent);
+  cityName.textContent = event.target.value;
+  console.log(cityName.textContent);
 };
+
+// const descriptionInput = document.createElement("input");
+// descriptionInput.value = task.description;
+// descriptionInput.addEventListener("change", (event) => {
+//   updateDescription(event, task)
+// });
+
+// const updateDescription = (event, task) => {
+//   task.description = event.target.value;
+//   renderTasks();
