@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link href="../styles/index.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <p>Weather Report for the city of <span id=cityName>Seattle</span></p>
+    </header>
+    <main>
+        <section id=temperature class="small_box tempBox">
+            <h2 id=tempTitle>TEMPERATURE</h2>
+            <div id=tempButtons>
+                <button id=upButton>hotter</button>
+                <button id=downButton>cooler</button>
+            </div>
+            <div id=tempValue>69</div>
+
+        </section>
+        <section id=sky class=small_box>
+            <form>
+                <select id=skyDrop name="sky">
+                    <option value="sunny" selected>Sunny</option>
+                    <option value="cloudy">Cloudy</option>
+                    <option value="rainy">Rainy</option>
+                    <option value="snowy">Snowy</option>
+                </select>
+            </form>
+            <h2>SKY</h2>
+        </section>
+        <section id=location class=small_box>
+            <h2>LOCATION</h2>
+            <input type="text" size="32" value="Seattle" name="locationBox" id="cityInput"/>
+            <button id=resetButton>reset</button>
+        </section>
+        <section id=garden class=large_box>
+            <div id=skyScape>☁️☁️ ☁️ ☁️☁️ ☁️ 🌤 ☁️ ☁️☁️</div>
+            <h2>Weather Garden</h2>
+            <div id=gardenScape>🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲</div>
+        </section>
+
+    </main> 
+    <footer class=footer-quote>
+        <blockquote>When life throws you a rainy day, jump in the puddles.</blockquote>
+        <cite>Winnie the Pooh</cite>
+    </footer>
+    <script 
+        src="../scripts/index.js">
+    </script>
+</body>
+</html>

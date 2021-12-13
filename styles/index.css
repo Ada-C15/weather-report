@@ -1,0 +1,96 @@
+body {
+    background-image: linear-gradient(to bottom, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+    font-family: sans-serif;
+}
+
+#temperature {
+    grid-area: temperature; 
+}
+#sky {
+    grid-area: sky;
+}
+#location {
+    grid-area: location;
+}
+#garden {
+    grid-area: garden;
+}
+
+main {
+    display: grid;
+    row-gap: 10px;
+    grid-template-rows: 20%, 20%, 20%, 20%, 20%;
+    grid-template-columns: 15%, 20%, 5%, 45%, 15%;
+    grid-template-areas:
+        ". . . . ."
+        ". temperature . garden ."
+        ". sky . garden ."
+        ". location . garden ."
+        ". . . . .";
+}
+
+main section {
+    border: solid;
+    border-radius: 15px
+}
+
+.small_box {
+    background-color: #00A383;
+    background-color: #004D7A;
+}
+
+header {
+    font-size: 40px;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.footer-quote {
+    display: flex; 
+    flex-direction: column;
+}
+
+.footer-quote cite {
+    margin: 0%;
+    align-self: center;
+}
+
+.footer-quote blockquote {
+    align-self: center
+}
+
+#tempTitle {
+    grid-area: tempTitle;
+}
+
+#tempButtons {
+    grid-area: tempButtons;
+}
+
+#tempValue {
+    grid-area: tempValue;
+}
+
+#temperature {
+    display: grid;
+    grid-template-rows: 50%, 50%;
+    grid-template-columns: 50%, 50%;
+    /* grid-template-areas:
+        ". . . ."
+        "tempTitle tempTitle tempTitle tempTitle"
+        ". tempButtons . tempValue ."
+        ". tempButtons . tempValue ."; */
+    grid-template-areas: 
+        "tempTitle tempTitle"
+        "tempButtons tempValue";
+}
+
+#tempButtons {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .weatherGarden {
+    display: flex;
+    flex-direction: column;
+} */
