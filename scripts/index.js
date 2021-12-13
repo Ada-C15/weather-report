@@ -7,7 +7,7 @@ const skyWeather = document.querySelector('.sky-weather');
 const skyType = document.getElementById('sky-type');
 const resetButton = document.getElementById('resetButton');
 const cityName = document.querySelector('.city');
-const cityInput = document.querySelector('.cityInput')
+let cityInput = document.querySelector('.cityInput')
 
 const landscapeImage= {
   summer:	"🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂",
@@ -60,7 +60,6 @@ const changeTempTextColor = () => {
 }
 // Change sky type
 const changeSkyType = (event) => {
-  console.log(event.target.value)
   if(event.target.value === "Sunny") {    
     skyWeather.innerHTML = skyImage.sunny;
   }
@@ -80,26 +79,19 @@ const changeSkyType = (event) => {
 const changeCityName = (event) => {
   cityName.innerHTML = event.target.value 
 }
-// resets the cityname inputgit
-
+// resets the cityname input
 const resetCityName = (event) =>{
-  console.log(event.target.value)
-  cityInput = cityInput
-
+  console.log(cityInput.defaultValue)
+  cityInput = cityInput.defaultValue
 }
 
 const registerEventHandlers = (event) => {
-  // const increaseButton = document.querySelector("#increaseButton");
   increaseButton.addEventListener("click", addTemperature);
   decreaseButton.addEventListener("click", decreaseTemperature);
   skyType.addEventListener("change", changeSkyType);
   cityInput.addEventListener("input", changeCityName);
-  resetButton.addEventListener("click", resetCityName(event){
-    event.preventDefault()
-  })
+  resetButton.addEventListener("click", resetCityName);
 
 };
-
-
 
 document.addEventListener("DOMContentLoaded", registerEventHandlers);
