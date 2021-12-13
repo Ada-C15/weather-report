@@ -50,7 +50,7 @@ header {
     flex-direction: column;
 }
 
-.footer-quote figcaption {
+.footer-quote cite {
     margin: 0%;
     align-self: center;
 }

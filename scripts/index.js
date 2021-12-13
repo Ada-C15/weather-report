@@ -1,5 +1,6 @@
 const state = {
   temp: parseInt(document.getElementById("tempValue")),
+  defaultCity: "Seattle",
 };
 
 // Temperature Buttons --> Increase and Decrease
@@ -17,20 +18,6 @@ increaseTempButton.addEventListener("click", () => deltaTemp(1));
 decreaseTempButton.addEventListener("click", () => deltaTemp(-1));
 
 // Garden Based on Temp Value
-// TODO: THIS FUNCTIONALLY WORKS FINE BUT NEEDS LOGIC IMPROVEMENTS
-// changeGarden = () => {
-//   garden = document.getElementById("gardenScape");
-//   if (state.temp >= 80) {
-//     garden.textContent = "🌵__🐍_🦂_🌵🌵__🐍_🏜_🦂";
-//   } else if (70 >= state.temp < 80) {
-//     garden.textContent = "🌸🌿🌼__🌷🌻🌿_☘️🌱_🌻🌷";
-//   } else if (60 >= state.temp < 70) {
-//     garden.textContent = "🌾🌾_🍃_🪨__🛤_🌾🌾🌾_🍃";
-//   } else {
-//     garden.textContent = "🌲🌲⛄️🌲⛄️🍂🌲🍁🌲🌲⛄️🍂🌲";
-//   }
-// };
-
 changeGarden = () => {
   garden = document.getElementById("gardenScape");
   if (state.temp >= 80) {
@@ -65,10 +52,17 @@ const deltaSky = () => {
 // Change city name based on user input
 const cityInput = document.getElementById("cityInput");
 cityInput.addEventListener("change", (event) => {
-  deltaCity(event);
+  deltaCity(event.target.value);
 });
 
-const deltaCity = (event) => {
+const deltaCity = (newCity) => {
   let cityName = document.getElementById("cityName");
-  cityName.textContent = event.target.value;
+  cityName.textContent = newCity;
+  document.getElementById("cityInput").value = newCity;
 };
+
+// Reset city name
+const resetButton2 = document.getElementById("resetButton");
+resetButton2.addEventListener("click", () => {
+  deltaCity(state.defaultCity);
+});
