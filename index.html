@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+    <link rel="stylesheet" href="styles/style.css" >
+</head>
+<body>
+    <header class="header_section">
+        <h1>Weather Report</h1>
+        <span class="subheader">
+            <span id="headerCityName" class="header_city"></span>
+        </span>
+    </header>
+</body>
+<div class="mainArea">
+    <section class="temperatureArea">
+        <h2 id = "temperatureCaption" >Temperature</h2>
+        <div class="temperatureText">
+            <div class="temperatureWheel">
+                <span id="increaseTemp">⬆️</span>
+                <span id="decreaseTemp">⬇️</span>
+            </div>
+            <span id="tempValue"></span>
+        </div>
+    </section>
+    <section class="skyArea">
+        <h2 id= "skyCaption" >Sky</h2>
+        <select id="skySelect">
+            <option>Sunny</option>
+            <option>Cloudy</option>
+            <option>Rainy</option>
+            <option>Snowy</option>
+        </select>
+    </section>
+    <section class="city_section">
+        <h2 id="cityTitle">City Name</h2>
+        <input type="text" id="cityNameInput" value="Seattle 🌧" />
+        <button id="cityNameReset" class="resetButton">Reset</button>
+    </section>
+    <section class="gardenArea">
+        <h2 id="gardenCaption">Weather Garden</h2>
+        <div id="gardenStuff" class="garden">
+            <div id="sky"></div>
+            <div id="landscape"></div>
+        </div>
+    </section>
+    <script src="scripts/index.js" ></script>
+</body>
+</div>
+</html>
+
+
