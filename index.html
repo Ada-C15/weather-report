@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div class="head-title"> Weather Report</div>
+        <p>For the lovely city of <span id="city-display">Honolulu</span></p>
+    </header>
+    <main>
+        <section id="Temperature">
+            <h2> Temperature </h2>
+            <button id="up-arrow">⬆️</button>
+            <button id="down-arrow">⬇️</button>
+            <div id="temperature-number" class="color"></div>
+        </section>
+
+        <section id="Sky-Container">
+            <h3> Sky </h3>
+            <select id="sky">
+                <option value="Sunny">Sunny</option>
+                <option value="Cloudy">Cloudy</option>
+                <option value="Rainy">Rainy</option>
+                <option value="Snowy">Snowy</option>
+            </select>
+        </section>
+
+        <section id="Weather-Garden">
+            <h4> Weather Garden</h4> 
+            <div id ="selected-weather"></div>
+        </section>
+
+
+        <section id="City-Name">
+            <h3> City Name </h3>
+            <input type="text" id="city">
+        </section>
+    </main>
+    <script src="scripts/index.js" type="text/javascript"></script>
+</body>
+
+</html>
