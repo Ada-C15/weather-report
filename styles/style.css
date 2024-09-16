@@ -1,0 +1,59 @@
+body {
+  color: hsl(246, 83%, 55%);
+  font-family: Gill Sans MT, Calibri, sans-serif;
+  height: 100vh;
+  Background-image: url(https://images.alphacoders.com/714/714927.jpg);
+  Background-size: cover;
+  background: linear-gradient(98deg,hsla(181, 100%, 92%, 0.98) 20%,
+     hsl(206, 42%, 83%) 80%);
+}
+
+
+.weather_header {
+  padding-left: 5vh;
+}
+.earthly_delights{
+  display: block;
+  background-color: rgba(128, 128, 128, 0.123);
+  min-width: 20vh;
+  max-width: 30vh;
+  margin: 20px;
+  padding: 10px;
+  margin-right: 90vh;
+  border-radius: 25px;
+  text-align: center;
+}
+.temp{
+  display: block;
+  background-color: rgba(128, 128, 128, 0.123);
+  min-width: 20vh;
+  max-width: 30vh;
+  margin: 20px;
+  padding: 10px;
+  margin-right: 90vh;
+  border-radius: 25px;
+  text-align: center;
+}
+#skyContainer{
+  display: block;
+  background-color: rgba(128, 128, 128, 0.123);
+  min-width: 20vh;
+  max-width: 30vh;
+  margin: 20px;
+  padding: 10px;
+  margin-right: 90vh;
+  border-radius: 25px;
+  text-align: center;
+}
+.reset_location{
+  display: block;
+  background-color: rgba(128, 128, 128, 0.123);
+  min-width: 20vh;
+  max-width: 30vh;
+  margin: 20px;
+  padding: 10px;
+  margin-right: 90vh;
+  border-radius: 25px;
+  text-align: center;
+}
+
